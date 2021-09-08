@@ -1,0 +1,73 @@
+/* Global variables */
+/* ======================================================================== */
+$main_font_family: 'Roboto', sans-serif;
+$second_font_family: 'Igra Sans', sans;
+$main_color: #1D1D1B;
+$main_line_height: 1.16;
+$main_font_size: 16px;
+
+$container_width: 100em;
+
+$footer_height: auto;
+
+// Color collection for elements
+$color_primary: #006EFF;
+$color_seccondary: #3D3098;
+$color_success: #36a566;
+$color_info: #03a9f4;
+$color_warning: #fca33e;
+$color_danger: #ff1a1a;
+$color_withe: #ffffff;
+
+$el-colors: (
+	primary: $color_primary, // color for .element__primary
+	success: $color_success, // color for .element__success
+	info: $color_info, // color for .element__info
+	warning: $color_warning, // color for .element__warning
+	danger: $color_danger, // color for .element__danger
+);
+
+/* Grid */
+/* ======================================================================== */
+$grid_padding: 20px;
+
+/* Form */
+/* ======================================================================== */
+// Input variables
+
+// Input color
+$input_color: $main_color;
+$input_bg_color: #fff;
+$input_border_color: #ddd;
+$input_placeholder_color: #ddd;
+
+// Input hover color
+$input_hover_color: $main_color;
+$input_hover_bg_color: $input_bg_color;
+$input_hover_border_color: $input_border_color;
+$input_hover_placeholder_color: $input_placeholder_color;
+
+// Input focus color
+$input_focus_color: $main_color;
+$input_focus_bg_color: $input_bg_color;
+$input_focus_border_color: $input_border_color;
+$input_focus_placeholder_color: $input_placeholder_color;
+
+// Input disabled color
+$input_disabled_color: #fff;
+$input_disabled_bg_color: #ccc;
+$input_disabled_border_color: #ccc;
+$input_disabled_placeholder_color: #fff;
+
+// Input error color
+$input_error_color: red;
+$input_error_bg_color: $input_bg_color;
+$input_error_border_color: red;
+$input_error_placeholder_color: red;
+
+// Button variables
+$btn_default_bg_color: $color_withe;
+$btn_default_text_color: $main_color;
+$btn_contrast_text_color: $color_withe;
+$btn_default_bg_color_hover: darken($btn_default_bg_color, 7%);
+$btn_default_bg_color_active: darken($btn_default_bg_color, 10%);

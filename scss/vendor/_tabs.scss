@@ -1,0 +1,71 @@
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+    @extend %clear_a;
+    &> li {
+        float: left;
+        margin-bottom: -1px;
+        &> a {
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 1px solid transparent;
+            border-radius: 4px 4px 0 0;
+            &:hover {
+                border-color: #eee #eee #ddd;
+            }
+        }
+        &.active > a,
+        &.active > a:hover,
+        &.active > a:focus {
+            color: #555;
+            cursor: default;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+        }
+    }
+    &.nav-justified {
+        width: 100%;
+        border-bottom: 0;
+        &> li {
+            float: none;
+            &> a {
+                margin-bottom: 5px;
+                text-align: center;
+                margin-right: 0;
+                border-radius: 4px;
+            }
+        }
+        @media (min-width: 768px) {
+            &> li {
+                display: table-cell;
+                width: 1%;
+                &> a {
+                    margin-bottom: 0;
+                    border-bottom: 1px solid #ddd;
+                    border-radius: 4px 4px 0 0;
+                }
+            }
+        }
+        &> .dropdown .dropdown-menu {
+            top: auto;
+            left: auto;
+        }
+        &> .active > a,
+        &> .active > a:hover,
+        &> .active > a:focus {
+            border: 1px solid #ddd;
+            @media (min-width: 768px) {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+}
+
+.tab-content {
+    &> .tab-pane {
+        display: none;
+    }
+    &> .active {
+        display: block;
+    }
+} 

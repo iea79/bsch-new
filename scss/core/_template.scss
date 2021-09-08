@@ -1,0 +1,68 @@
+// Main wrappers =====================================
+
+body {
+	display: flex;
+	flex-direction: column;
+	// font-size: calc(.034 * 100vw + 0px);
+	font-size: 14px;
+	height: auto;
+	min-height: 100%;
+	background: #F6F6F6;
+	// color: $color_withe;
+
+	// background-color: #101010;
+
+	@media (min-width: 768px) {
+		// font-size: calc(.012 * 100vw + 0px);
+		font-size: calc(.00991 * 100vw + 0px);
+	}
+
+	@media (min-width: 1400px) {
+		// font-size: calc(.00838 * 100vw + 0px);
+	}
+
+	@media (min-width: 1599px) {
+		font-size: $main_font_size;
+	}
+
+}
+
+.wrapper {
+	font-size: $main_font_size;
+	// margin: 0 auto (-$footer_height); // отрицательный нижний отступ на высоту футера
+}
+
+/* Middle
+ ----------------------------------------------------------------------------- */
+.main_content {
+	flex-grow: 1;
+	padding-bottom: $quat_size_sm*2.1;
+
+	@media (min-width: 768px) {
+		padding-bottom: $quat_size*2.1;
+
+	}
+}
+
+.container_center {
+	max-width: $container_width;
+	padding: 0 1.1em;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: 768px) {
+		padding: 0 1.9em;
+	}
+}
+
+.desktop {
+	@media (max-width: 767px) {
+		display: none !important;
+	}
+}
+
+.mobile {
+	@media (min-width: 768px) {
+		display: none !important;
+	}
+}

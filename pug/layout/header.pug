@@ -1,0 +1,15 @@
+header.header
+    .header__content
+        .header__left
+            a.logo(href="/")
+                img(src="img/logo.svg", alt="alt")
+        nav.header__nav.nav
+            ul.navbar
+                each navLink in [{name: 'О школе ', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programs.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'}]
+                    li.navbar__item
+                        a.navbar__link(href= navLink.href)= navLink.name
+
+        .header__login
+            a.btn.btn_sm(href="") Вход
+
+        .navbar__toggle

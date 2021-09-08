@@ -1,0 +1,81 @@
+/* Header
+ ----------------------------------------------------------------------------- */
+.header {
+	padding: 0.9em 0 0.7em;
+	background-color: $color_withe;
+	z-index: 10;
+
+	@media (min-width: 768px) {
+		padding: 1.5em 0 1.6em;
+	}
+
+	&__left {
+		width: 7.88em;
+
+		img {
+			height: auto;
+		}
+
+		@media (min-width: 768px) {
+			width: 14.38em;
+
+		}
+	}
+
+	&__content {
+		@extend .container_center;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 0 1.8em;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+	}
+
+	&__login {
+
+		@media (min-width: 768px) {
+			min-width: 10em;
+		}
+
+		.btn {
+			width: 100%;
+			background-color: transparent;
+			border-color: $main_color;
+
+			&:hover {
+				background-color: transparent;
+				color: rgba(29, 29, 27, 0.5);
+			}
+
+			&:active,
+			&:focus {
+				background-color: transparent;
+				color: rgba(29, 29, 27, 0.5);
+			}
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+}
+
+// stiky menu
+.stiky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}

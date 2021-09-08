@@ -1,0 +1,141 @@
+/* Navbar
+-------------------------------------------------------------------------------*/
+.navbar {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@media (min-width: 768px) {
+		padding: 0 5em 0 0;
+		display: flex;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 53em;
+	}
+
+	&__item {
+		// display: inline-block;
+		margin: 0 0.5em;
+
+		.header & {
+			@media (max-width: 767px) {
+				text-align: right;
+				margin: 0 0 1.7em;
+			}
+		}
+	}
+
+	&__link {
+		color: rgba(29, 29, 27, 0.5);
+		text-decoration: none;
+		font-size: $size_xxs;
+
+		.header & {
+			@media (max-width: 767px) {
+				font-size: 1.3em;
+				font-family: $second_font_family;
+				max-width: 11em;
+				display: inline-block;
+				color: #1D1D1B;
+			}
+		}
+	}
+
+	&__toggle {
+		display: none;
+		@media (max-width: 767px) {
+			display: block;
+			position: relative;
+			// position: absolute;
+			color: #1D1D1B;
+			border-top: 0.22em solid;
+			border-bottom: 0.22em solid;
+			// left: 1.3em;
+			// top: 1.3em;
+			flex: none;
+			width: 1.8em;
+			height: 1.2em;
+			cursor: pointer;
+			z-index: 51;
+			transition: border-color 0.3s;
+
+			&:after,
+			&:before {
+				content: '';
+				position: absolute;
+				border-top: 0.22em solid;
+				width: 100%;
+				left: 0;
+				top: 50%;
+				margin-top: -0.11em;
+				transition: transform 0.3s;
+			}
+
+			&.active {
+				border-top-color: transparent;
+				border-bottom-color: transparent;
+
+				&:before {
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+
+			&:hover {
+				// color: rgba($color_withe, .8);
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.nav {
+		position: fixed;
+		right: -18.36em;
+		top: 3.15em;
+		bottom: 0;
+		background: #F6F6F6 url("../img/nav-mob-footer.svg") left bottom no-repeat;
+		background-size: 100%;
+		width: 18.36em;
+		z-index: 9;
+		overflow: hidden;
+		padding: 2em 1em 9em;
+		transition: left 0.3s;
+		// box-shadow: 0 0 1em rgba(#000, .1);
+		display: none;
+
+		&.open {
+			right: 0;
+			animation: showMenu 0.3s linear;
+			display: block;
+		}
+
+		.btn {
+			width: 100%;
+		}
+
+		&__overlay {
+			background: rgba(0, 110, 255, 0.79);
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 8;
+		}
+	}
+}
+
+@keyframes showMenu {
+	from {
+		right: -18.36em;
+	}
+
+	to {
+		right: 0;
+	}
+}

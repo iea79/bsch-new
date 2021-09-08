@@ -1,0 +1,319 @@
+// Mixin =======================================================================
+
+// Style for columns text
+// Используется для многоколоночного адаптивного текста, а также для списков
+// $width - минимальная ширина колонок
+// $count - количество колонок (при уменьшении экрана меняются автоматически в зависимости от первого значения)
+// $padding - отступ между колонками
+// $divider_widh - ширина разделительной линии между колонками
+// $divider_line - стиль разделительной линии
+// $divider_color - цвет разделительной линии
+// Лишнее можно просто закомментировать
+// ---------------------------------
+// Example for html
+// div class="column"
+// ---------------------------------
+// Example for scss
+// .column {
+// 	@include columns-text(300px, 3, 40px);
+// }
+@mixin columns($count, $padding, $width) {
+	-webkit-column-count: $count; // Count and width or columns
+	column-count: $count; // Count and width or columns
+	-webkit-column-gap: $padding; // Padding for columns
+	column-gap: $padding; // Padding for columns
+	-webkit-column-width: $width; // Min width for columns
+	column-width: $width; // Min width for columns
+}
+
+// Float el clear
+%clear_a {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_b {
+	&:before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_all {
+	@extend %clear_a;
+	@extend %clear_b;
+}
+
+// Transition speed for element
+@mixin trs($trs_speed) {
+	-webkit-transition: all $trs_speed+s;
+	transition: all $trs_speed+s;
+}
+
+// Placeholder for input
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content
+	};
+
+	&:-moz-placeholder {
+		@content
+	};
+
+	&::-moz-placeholder {
+		@content
+	};
+
+	&:-ms-input-placeholder {
+		@content
+	};
+}
+
+// %form_field {
+// 	background-color: transparent;
+// 	border: 1px solid transparentize($input_border_color, .8);
+// 	padding: 8px 12px 8px;
+// 	outline: none;
+// 	font-size: 14px;
+// 	font-weight: normal;
+// 	font-family: $main_font_family;
+//     height: auto;
+//     line-height: 1;
+// 	@include trs(.3);
+//     border-radius: 20px;
+// 	&:hover {
+// 	}
+// 	&:focus {
+// 		@include placeholder {
+// 			text-indent: -600px;
+// 		}
+// 	}
+// 	&.input_error {
+// 		background-color: $input_bg_errore_color;
+// 		border: 1px solid $input_placeholder_errore_color;
+// 	}
+// 	// Placeholder for input +++++++++++++++
+// 	@include placeholder {
+// 		color: $input_placeholder_color;
+//         @include trs(.3);
+// 	}
+// }
+
+%caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	@include trs(0.3);
+}
+
+%caret_up {
+	@extend %caret;
+	transform: rotate(180deg);
+}
+
+// Определяем поддержку flexbox (задается скриптом атрибут data-browser)
+// Так же определяем название браузера
+// Варианты с браузерами chrome, firefox, safari, ios
+@mixin browser($browsers: flexible) {
+	@each $browser in $browsers {
+		html[data-browser*="#{$browser}"] & {
+			@content;
+		}
+	}
+}
+
+// Example
+// .wrapper {
+// 	Стиль только для браузера Chrome
+// 	@include browserName("chrome") {
+// 		&:before {
+// 			content: '';
+// 			display: block;
+// 			height: 20px;
+// 		}
+// 	}
+// }
+
+// Ширина колонок сетки
+// Использование
+// @include grid(2, .5em); две колонки
+@mixin grid($size: 1, $gup: 20px) {
+	margin-left: -$gup;
+	display: flex;
+	flex-wrap: wrap;
+
+	> div,
+	> a {
+		display: flex;
+		padding-left: $gup;
+		width: 100% / $size;
+		// margin-bottom: $gup / 2;
+	}
+}
+// Ширина колонок сетки при смене ширины окна
+// @include xs-size(2); две колонки при меньше 767 пикселей
+@mixin xs-grid($size, $gup: 20px) {
+	@media (min-width: 768px) {
+		@include grid($size, $gup);
+	}
+}
+@mixin sm-grid($size, $gup: 20px) {
+	@media (min-width: 992px) {
+		@include grid($size, $gup);
+	}
+}
+@mixin md-grid($size, $gup: 20px) {
+	@media (min-width: 1200px) {
+		@include grid($size, $gup);
+	}
+}
+
+//
+// @TODO: Add docs to flexbox!
+//
+@mixin flex() {
+	@include browser("flexible") {
+		display: flex;
+		flex-wrap: wrap;
+
+		& > div {
+			display: block;
+			min-height: 1px;
+			flex: none;
+		}
+	}
+	@include browser("not-flex") {
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -1px;
+
+		& > div {
+			// display: -moz-inline-stack!important;
+			min-height: 1px;
+			display: inline-block;
+			vertical-align: top;
+			letter-spacing: normal;
+			line-height: $main_line_height;
+			font-size: $main_font_size;
+		}
+	}
+}
+
+@mixin order($val) {
+	@include browser("flexible") {
+		// -webkit-order: $val;
+		order: $val;
+	}
+}
+
+//
+// @TODO: Add docs to flex-flow!
+// flex-flow: flex-direction flex-wrap|initial|inherit;
+//
+@mixin flex-flow($params) {
+	@include browser("flexible") {
+		// -webkit-flex-flow: $params; /* Safari 6.1+ */
+		flex-flow: $params;
+	}
+}
+
+//
+// @TODO: Add docs to justify-content!
+// justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+//
+@mixin justify-content($params) {
+	@include browser("flexible") {
+		// -webkit-justify-content: $params; /* Safari 6.1+ */
+		justify-content: $params;
+	}
+}
+
+//
+// @TODO: Add docs to     -webkit-align-content!
+//
+@mixin align-content($params) {
+	@include browser("flexible") {
+		// -webkit-align-content: $params;
+		align-content: $params;
+	}
+}
+
+// =============================================================================
+// Fonts
+// =============================================================================
+// @include font-face(Samplino, fonts/Samplino);
+// @font-face {
+// 	font-family: "Samplino";
+// 	src: url("fonts/Samplino.eot?") format("eot"),
+// 		 url("fonts/Samplino.woff2") format("woff2"),
+// 		 url("fonts/Samplino.woff") format("woff"),
+// 		 url("fonts/Samplino.ttf") format("truetype"),
+// 		 url("fonts/Samplino.svg#Samplino") format("svg");
+// }
+// @include font-face("Samplina Neue", fonts/SamplinaNeue, bold, italic);
+// @font-face {
+// 	font-family: "Samplina Neue";
+// 	font-style: italic;
+// 	font-weight: bold;
+// 	src: url("fonts/SamplinaNeue.eot?") format("eot"),
+// 	     url("fonts/SamplinaNeue.woff2") format("woff2"),
+// 	     url("fonts/SamplinaNeue.woff") format("woff"),
+// 	     url("fonts/SamplinaNeue.ttf") format("truetype"),
+// 	     url("fonts/SamplinaNeue.svg#Samplina_Neue") format("svg");
+// }
+//
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+		font-display: swap;
+	}
+}

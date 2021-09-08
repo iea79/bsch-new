@@ -1,0 +1,182 @@
+/*!
+ *
+ * Evgeniy Ivanov - 2018
+ * busforward@gmail.com
+ * Skype: ivanov_ea
+ *
+ */
+
+@font-face {
+    font-family: 'Igra Sans';
+    src: url("../fonts/IgraSans.eot");
+    src: local('Igra Sans'), local('IgraSans'), url("../fonts/IgraSans.eot?#iefix") format('embedded-opentype'), url("../fonts/IgraSans.woff") format('woff'), url("../fonts/IgraSans.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+// Fonts size variables
+$size_xxxs: 0.9375em;
+$size_xxs: 1.0625em; //
+$size_xs: 1.25em; // 20
+$size_s: 1.375em;
+$size_m: 1.5em;
+$size_l: 1.625em;
+$size_xl: 1.75em;
+$size_xxl: 3.25em;
+$size_xxxl: 7.5em;
+
+// Размер кубиков
+$quat_size: 5.88em;
+$quat_size_sm: 2.6em;
+
+// Icon
+$icomoon-font-family: "bsch" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon_facebook: "\e900";
+$icon_instagram: "\e901";
+$icon_telegram: "\e902";
+$icon_whatsapp: "\e903";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?birnkt") format('truetype'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?birnkt") format('woff'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?birnkt##{$icomoon-font-family}") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"],
+[class*=" icon_"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_facebook {
+    &:before {
+        content: $icon_facebook;
+    }
+}
+
+.icon_instagram {
+    &:before {
+        content: $icon_instagram;
+    }
+}
+
+.icon_telegram {
+    &:before {
+        content: $icon_telegram;
+    }
+}
+
+.icon_whatsapp {
+    &:before {
+        content: $icon_whatsapp;
+    }
+}
+
+@import 'mixins/mixin';
+// Import files
+@import 'variables/variables';
+@import 'core/reset';
+@import 'core/template';
+@import 'core/header';
+@import 'core/navbar';
+@import 'core/footer';
+@import 'core/form';
+@import 'core/grid';
+@import 'core/soc';
+@import 'core/breadcrumb';
+@import 'core/pagination';
+@import 'core/buttons';
+@import 'core/video';
+@import 'core/section';
+@import './vendor/slick';
+@import './vendor/modal';
+
+@import "./component/firstScreen";
+@import "./component/homeThumbs";
+@import "./component/homeSlider";
+@import "./component/programs";
+@import "./component/programsList";
+@import "./component/programsInfo";
+
+.parthnersLine {
+    padding: 0 0 1em;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 4.8em 0 3.2em;
+    }
+
+    &__list {
+        margin: 0 -0.6em;
+        // display: flex;
+
+        @media (min-width: 768px) {
+            margin: 0 -0.9em;
+        }
+
+        .slick-dots {
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .slick-list {
+                overflow: inherit;
+                margin-right: 3em;
+            }
+        }
+    }
+
+    &__item {
+        .slick-initialized & {
+            display: flex;
+        }
+        align-items: center;
+        justify-content: center;
+        width: calc(20% - 1.2em);
+        margin: 0 0.6em 1.2em;
+        background: $color_withe;
+        filter: grayscale(1);
+        padding: 1.2em 0.1em;
+        transition: filter 0.3s;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            padding: 2em;
+            height: 12em;
+            width: calc(20% - 1.8em);
+            margin: 0 0.9em 1.8em;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        img {
+            display: block;
+            // max-width: 14em;
+            height: auto;
+        }
+
+    }
+
+}

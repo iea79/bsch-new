@@ -1,0 +1,15 @@
+.section {
+    &__title {
+        font-size: 1.64em;
+        font-family: $second_font_family;
+        font-weight: 400;
+        margin: 0 0 1.3em;
+        color: #1D1D1B;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxl;
+            margin: 0 0 1.6em;
+        }
+    }
+
+}

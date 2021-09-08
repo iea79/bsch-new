@@ -1,0 +1,172 @@
+extends layout/layout.pug
+
+block content
+    // begin firstScreen
+    section#firstScreen.firstScreen.section
+        .container_center
+            .homeSlider
+                .homeSlider__item
+                    .firstScreen__content
+                        .firstScreen__img
+                            .firstScreen__pict
+                                img(src="img/home-slide-1.jpg", alt="")
+                            .firstScreen__quatro
+                                span
+                                span
+                                span
+                        .firstScreen__left
+                            h1.firstScreen__title Двигаем вперед компании через развитие культуры мышления
+                            .firstScreen__sub 
+                                p Школа предлагает программы, направленные на развитие стратегического, системного и других ключевых видов мышления и востребованные в условиях высокой волатильности экономики и бизнес-среды.
+                            .firstScreen__action
+                                a.btn(href="about.html") Подробнее о Школе
+
+                .homeSlider__item
+                    .firstScreen__content
+                        .firstScreen__img
+                            .firstScreen__pict
+                                img(src="img/home-slide-2.jpg", alt="")
+                            .firstScreen__quatro
+                                span
+                                span
+                                span
+                        .firstScreen__left
+                            h2.firstScreen__title Стратегическое мышление для бизнеса и жизни
+
+                            .firstScreen__sub 
+                                p Курс сфокусирован на развитии soft skills при работе со сложными задачами в разных сферах принятия решений, индивидуального и коллективного стратегического управления бизнесом в условиях неопределенности внешней среды. 
+                            .firstScreen__action
+                                a.btn(href="about.html") Подробнее о курсе
+
+                .homeSlider__item
+                    .firstScreen__content
+                        .firstScreen__img
+                            .firstScreen__pict
+                                img(src="img/home-slide-3.jpg", alt="")
+                            .firstScreen__quatro
+                                span
+                                span
+                                span
+                        .firstScreen__left
+                            h2.firstScreen__title Образовательные программы
+                            .firstScreen__sub
+                                p Программы Бизнес-школы нацелены на развитие наиболее востребованных компетенций и навыков, связанных со стратегическим, системным, инновационным и другими типами мышления. 
+
+                                p Мы считаем, что в основе успеха любого начинания лежит правильный способ мышления и стремимся пропагандировать и прививать его в бизнес-среде.
+
+                            .firstScreen__action
+                                a.btn(href="programs.html") Выбрать программу
+
+            .homeSlider__arrow
+                .slick-arrow.slick-prev.homeSlider__prev
+                .slick-arrow.slick-next.homeSlider__next
+            .homeThumbs
+                .homeThumbs__item
+                    .homeThumbs__content
+                        .homeThumbs__img
+                            img(src="img/home-slide-1.jpg", alt="")
+                        .homeThumbs__text Двигаем вперед компании через развитие культуры мышления
+                        .homeThumbs__progress
+                            span
+                .homeThumbs__item
+                    .homeThumbs__content
+                        .homeThumbs__img
+                            img(src="img/home-slide-2.jpg", alt="")
+                        .homeThumbs__text Стратегическое мышление для бизнеса и жизни
+                        .homeThumbs__progress
+                            span
+                .homeThumbs__item
+                    .homeThumbs__content
+                        .homeThumbs__img
+                            img(src="img/home-slide-3.jpg", alt="")
+                        .homeThumbs__text Образовательные программы
+                        .homeThumbs__progress
+                            span
+
+    // end firstScreen
+
+    // begin programs
+    section#programs.programs.section
+        .container_center
+            h2.section__title Новые программы
+            .programsList
+                - 
+                    program = [
+                        {
+                            name: 'Стратегическое мышление для бизнеса и жизни', 
+                            tags: ['#стратегическоемышление', '#стратегическое планирование', '#управление рисками', '#корпоративное управление', '#VUCA world'],
+                            text: 'Курс сфокусирован на развитии soft skills при работе со сложными задачами в разных сферах принятия решений, индивидуального и коллективного стратегического управления бизнесом в условиях неопределенности внешней среды.'
+                        },
+                        {
+                            name: 'От mvp до pitchdeck: инновационное мышление в бизнес-процессах ', 
+                            tags: ['#инновационноемышление', '#креативность', '#работа в команде', '#бизнес решение'],
+                            text: 'По итогам программы слушатели научатся применять инновационное мышление для создания новых продуктов и технологий, пройдя реальный путь от идеи до Pitch-Deck.'
+                        },
+                        {
+                            name: 'Системное мышление <br>как основа принятия управленческих решений ', 
+                            tags: ['#системноемышление', '#системный подход', '#закономерность процессов', '#причинно - следственные связи', '#иерархичность факторов', '#системные уровни'], 
+                            text: 'Программа ориентирована на развитие системного видения организации и актуальных задач бизнеса. Вы научитесь оценивать ситуацию в целостности и учитывать иерархичность и влияние факторов, влияющих на развитие компании.'
+                        },
+                        {
+                            name: 'Критическое мышление в управлении и предпринимательстве', 
+                            tags: ['#критическоемышление', '#problemsolving', '#анализ информации', '#оценка гипотез', '#аргументация'],
+                            text: 'Программа призвана сформировать симбиоз критического и креативного мышления для решения нестандартных задач и принятия правильных решений как в жизни, так и в бизнесе.'
+                        },
+                        {
+                            name: 'Бизнес-психология', 
+                            tags: ['#мышление', '#soft skills', '#принятие решений'],
+                            text: 'Бизнес психология — молодое направление практической психологии, направленное на развитие человека, команды и организации во всем многообразии рабочих контекстов: эффективности сотрудников и руководителя, корпоративной культуры, групповой сплоченности, профессионального здоровья, внедрения инноваций.<br>Стоимость и тэги остаются временно без изменений.'
+                        },
+                        {
+                            name: 'Говорим и показываем', 
+                            tags: ['#мышление', '#soft skills','#принятие решений'],
+                            text: 'Образовательная программа, раскрывающая специфику публичных выступлений и обучающая тому, как сделать успешным каждый элемент выступления на сцене. <br>Стоимость и тэги остаются временно без изменений.'
+                        }
+                    ]
+                each item, i in program
+                    .programsList__item
+                        .programsList__head
+                            .programsList__img
+                                img(src="img/program-"+(i+1)+".jpg", alt="")
+                            .programsList__bages
+                                .programsList__bage
+                                    i.programsList__clock
+                                        img(src="img/clock.svg", alt="")
+                                    .programsList__time 16 часов
+                                .programsList__bage.programsList__bage_secondary
+                            .programsList__text!=item.text
+                        .programsList__body
+                            .programsList__name!=item.name
+                            .programsList__action
+                                a.btn.btn_primary(href="") Подробнее
+                                .programsList__price 38 000 
+                                    small ₽
+                            .programsList__tags
+                                each tag in item.tags
+                                    a(href="")=tag 
+                                    | 
+
+    // end programs
+
+    // begin programsInfo
+    .container_center
+        .programsInfo
+            each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
+                .programsInfo__item
+                    .programsInfo__number=item.num
+                    .programsInfo__text!=item.text
+
+
+    // end programsInfo
+
+    // begin parthnersLine
+    section#parthnersLine.parthnersLine.section
+        .container_center
+            h2.section__title Партнеры школы
+            .parthnersLine__list
+                each item in [1,2,3,4,5]
+                    // parthnersLine__item
+                    a.parthnersLine__item
+                        img(src="img/parthners-"+item+".png", alt="")
+
+    // end parthnersLine

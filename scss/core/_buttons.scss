@@ -1,0 +1,57 @@
+// Style for button and pseudo button for input and link
+
+.btn {
+	color: $btn_default_text_color;
+	font-family: $main_font_family;
+	font-size: 1em;
+	font-weight: 400;
+	padding: 1.1em 2em;
+	border: 2px solid;
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	background-color: $btn_default_bg_color;
+	text-align: center;
+	max-width: 100%;
+	cursor: pointer;
+	border-radius: 0;
+	transition: 0.3s;
+	transition-property: background, color, border-color;
+
+	@media (min-width: 768px) {
+		padding: 1.4em 2em;
+	}
+
+	&:hover {
+		background-color: $btn_default_bg_color_hover;
+		color: $btn_default_text_color;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $btn_default_bg_color_active;
+		color: $btn_default_text_color;
+	}
+	@each $status_el, $color_bg in $el_colors {
+		&_#{$status_el} {
+			background-color: $color_bg;
+			border-color: $color_bg;
+			color: $btn_contrast_text_color;
+
+			&:hover {
+				background-color: darken($color_bg, 7%);
+				color: $btn_contrast_text_color;
+			}
+
+			&:active,
+			&:focus {
+				background-color: darken($color_bg, 10%);
+				color: $btn_contrast_text_color;
+			}
+		}
+	}
+
+	&_sm {
+		padding: 0.5em 1em;
+	}
+}

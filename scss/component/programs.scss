@@ -1,0 +1,33 @@
+.programs {
+    padding: 3.7em 0 2.5em;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding: 9.4em 0 4.7em;
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: $quat_size_sm;
+        height: $quat_size_sm;
+        background: $color_withe;
+        right: 0;
+        top: 0;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &:before {
+        width: $quat_size_sm*2;
+    }
+
+    &:after {
+        height: $quat_size_sm*2;
+    }
+
+}
