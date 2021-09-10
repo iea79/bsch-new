@@ -118,13 +118,27 @@
     li {
         width: 0.65em;
         height: 0.65em;
+        border: 0.065em solid rgba(29, 29, 27, 0.15);
         background: rgba(29, 29, 27, 0.15);
         margin: 0 0.7em;
         cursor: pointer;
+        flex: none;
+
+        @media (min-width: 768px) {
+            width: 0.4em;
+            height: 0.4em;
+            background: transparent;
+        }
 
         &.slick-active {
+            border: 0.065em solid #006EFF;
             background: #006EFF;
             cursor: default;
+
+            @media (min-width: 768px) {
+                border: 0.065em solid #3D3098;
+                background: #3D3098;
+            }
         }
     }
 

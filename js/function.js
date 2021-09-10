@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 });
 
-$(window).resize(function(event) {
+$(window).resize(function() {
     var windowWidth = $(window).width();
     // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
     if (app.resized == windowWidth) { return; }
@@ -59,6 +59,7 @@ function checkOnResize() {
     repalceHeaderElem();
     replaceProgramsElem();
     initParthnersSlider();
+    initCampusSliders();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -81,7 +82,7 @@ function stikyMenu() {
             $('header').removeClass('stiky');
         }
 
-        $('.navbar__link').each(function(index, el) {
+        $('.navbar__link').each(function() {
             let section = $(this).attr('href');
 
             if ($('section').is(section)) {
@@ -178,6 +179,33 @@ function initParthnersSlider() {
     // }
 }
 
+function initCampusSliders() {
+    const sliders = $('.campusSlider:not(.slick-initialized)');
+
+    sliders.each(function(i, slider) {
+        $(slider).slick({
+            dots: true,
+            infinite: false,
+            // speed: 300,
+            arrows: false,
+            // nextArrow: '<button class="slick-next"></button>',
+            // prevArrow: '<button class="slick-prev"></button>',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+    });
+
+}
+
 function openMobileNav() {
     let wrapp = $('nav');
 
@@ -257,7 +285,7 @@ function toggleTabs() {
 }
 toggleTabs();
 
-function onVisible(selector, callback) {
+function onVisible(selector, callback, repeat = false) {
 
     let options = {threshold: [0.5] };
     let observer = new IntersectionObserver(onEntry, options);
@@ -273,14 +301,13 @@ function onVisible(selector, callback) {
             // console.log(change);
             // console.log(elem.innerHTML);
             if (change.isIntersecting) {
-                if (!elem.classList.contains('show')) {
+                if (!elem.classList.contains('show') || repeat) {
                     elem.classList.add('show');
                     callback(elem);
                 }
             }
         });
     }
-
 }
 
 onVisible('.programsInfo__number',  function(e) {

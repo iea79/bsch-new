@@ -7,8 +7,11 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+
         @media (min-width: 768px) {
-            display: flex;
+            flex-direction: row;
         }
     }
 
@@ -118,94 +121,228 @@
         width: 100%;
         height: 100%;
 
-        span {
-            &:after,
-            &:before {
-                content: '';
-                width: 102%;
-                height: 102%;
-                top: 50%;
-                left: 50%;
-                display: block;
-                position: absolute;
-                background: #006EFF;
-                transform: translate(-50%, -50%);
-                transition-duration: 0.5s;
-                transition-delay: 0.6s;
-                transition-property: width, height, left, top;
+        .slick-slider & {
+            span {
+                &:after,
+                &:before {
+                    content: '';
+                    width: 102%;
+                    height: 102%;
+                    top: 50%;
+                    left: 50%;
+                    display: block;
+                    position: absolute;
+                    background: #006EFF;
+                    transform: translate(-50%, -50%);
+                    transition-duration: 0.5s;
+                    transition-delay: 0.6s;
+                    transition-property: width, height, left, top;
+
+                    .slick-current & {
+                        width: $quat_size_sm;
+                        height: $quat_size_sm;
+                        top: calc(#{$quat_size_sm} / 2);
+                        left: calc(#{$quat_size_sm} / 2);
+
+                        @media (min-width: 768px) {
+                            width: $quat_size;
+                            height: $quat_size;
+                            top: calc(#{$quat_size} / 2);
+                            left: calc(#{$quat_size} / 2);
+                        }
+                    }
+                }
+
+                &:before {}
+
+                &:after {}
 
                 .slick-current & {
-                    width: $quat_size_sm;
-                    height: $quat_size_sm;
-                    top: calc(#{$quat_size_sm} / 2);
-                    left: calc(#{$quat_size_sm} / 2);
+                    &:nth-child(1) {
+                        &:before {
+                            background: #3D3098;
+                        }
 
-                    @media (min-width: 768px) {
-                        width: $quat_size;
-                        height: $quat_size;
-                        top: calc(#{$quat_size} / 2);
-                        left: calc(#{$quat_size} / 2);
+                        &:after {
+                            top: calc(100% - (#{$quat_size_sm} / 2));
+                            z-index: 3;
+                            @media (min-width: 768px) {
+                                top: calc(82% - (#{$quat_size} / 2));
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &:before {
+                            left: calc(100% - (#{$quat_size_sm} / 2));
+                            @media (min-width: 768px) {
+                                left: calc(100% - (#{$quat_size} / 2));
+                            }
+                        }
+
+                        &:after {
+                            left: calc(100% - (#{$quat_size_sm} / 2));
+                            top: calc((#{$quat_size_sm} * 2) + (#{$quat_size_sm} / 2));
+
+                            @media (min-width: 768px) {
+                                left: calc(100% - (#{$quat_size} / 2));
+                                top: calc((#{$quat_size} * 2) + (#{$quat_size} / 2));
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &:before {
+                            top: calc(100% - (#{$quat_size_sm} / 2));
+                            left: calc(100% - (#{$quat_size_sm} / 2));
+                            background: $color_withe;
+
+                            @media (min-width: 768px) {
+                                top: calc(100% - (#{$quat_size} / 2));
+                                left: calc(100% - (#{$quat_size} / 2));
+                            }
+                        }
+
+                        &:after {
+                            top: calc(100% - (#{$quat_size_sm} / 2));
+                            left: calc(100% - #{$quat_size_sm} - (#{$quat_size_sm} / 2));
+
+                            @media (min-width: 768px) {
+                                top: calc(100% - (#{$quat_size} / 2));
+                                left: calc(100% - #{$quat_size} - (#{$quat_size} / 2));
+                            }
+                        }
                     }
                 }
             }
+        }
+    }
 
-            &:before {}
+    &_campus {
+        .firstScreen {
+            &__content {
+                margin: 0 -1.1em;
+                padding: 1.4em 0 0;
 
-            &:after {}
+                @media (min-width: 768px) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
 
-            .slick-current & {
-                &:nth-child(1) {
-                    &:before {
-                        background: #3D3098;
-                    }
+            &__left {
+                order: 1;
 
-                    &:after {
-                        top: calc(100% - (#{$quat_size_sm} / 2));
-                        z-index: 3;
-                        @media (min-width: 768px) {
-                            top: calc(82% - (#{$quat_size} / 2));
-                        }
-                    }
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 3.4em;
+                }
+            }
+
+            &__title {
+                flex-grow: 1;
+            }
+
+            &__subtitle {
+                font-family: $second_font_family;
+                font-size: 1.22em;
+                margin-bottom: 0.5em;
+
+                @media (min-width: 768px) {
+                    font-size: 1.85em;
+                }
+            }
+
+            &__sub {
+                color: $color_withe;
+
+                @media (min-width: 768px) {
+                    font-size: 1.25em;
+                    line-height: 1.4;
+                    max-width: 24em;
+                }
+            }
+
+            &__img {
+                order: 2;
+                overflow: inherit;
+
+                img {
+                    display: block;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
 
-                &:nth-child(2) {
-                    &:before {
-                        left: calc(100% - (#{$quat_size_sm} / 2));
-                        @media (min-width: 768px) {
-                            left: calc(100% - (#{$quat_size} / 2));
-                        }
-                    }
-
-                    &:after {
-                        left: calc(100% - (#{$quat_size_sm} / 2));
-                        top: calc((#{$quat_size_sm} * 2) + (#{$quat_size_sm} / 2));
-
-                        @media (min-width: 768px) {
-                            left: calc(100% - (#{$quat_size} / 2));
-                            top: calc((#{$quat_size} * 2) + (#{$quat_size} / 2));
-                        }
-                    }
+                @media (min-width: 768px) {
+                    margin-right: -2em;
                 }
+            }
 
-                &:nth-child(3) {
+            &__pict {
+                height: 13.1em;
+
+                @media (min-width: 768px) {
+                    height: 30.6em;
+                }
+            }
+
+            &__quatro {
+                span {
+                    &:after,
                     &:before {
-                        top: calc(100% - (#{$quat_size_sm} / 2));
-                        left: calc(100% - (#{$quat_size_sm} / 2));
-                        background: $color_withe;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: $quat_size_sm;
+                        height: $quat_size_sm;
+                        background: #F6F6F6;
 
                         @media (min-width: 768px) {
-                            top: calc(100% - (#{$quat_size} / 2));
-                            left: calc(100% - (#{$quat_size} / 2));
+                            background: $color_withe;
+                            width: $quat_size;
+                            height: $quat_size;
                         }
                     }
 
-                    &:after {
-                        top: calc(100% - (#{$quat_size_sm} / 2));
-                        left: calc(100% - #{$quat_size_sm} - (#{$quat_size_sm} / 2));
+                    &:before {}
 
-                        @media (min-width: 768px) {
-                            top: calc(100% - (#{$quat_size} / 2));
-                            left: calc(100% - #{$quat_size} - (#{$quat_size} / 2));
+                    &:after {}
+
+                    &:nth-child(1) {
+                        &:before {
+                            right: 0;
+                            bottom: 0;
+                        }
+
+                        &:after {
+                            left: 0;
+                            bottom: 0;
+
+                            @media (min-width: 768px) {
+                                left: -$quat_size;
+                                bottom: $quat_size;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &:before {
+                            background: #006EFF;
+                            right: 0;
+                            bottom: 0;
+
+                            @media (min-width: 768px) {
+                                left: 0;
+                                right: auto;
+                            }
+                        }
+
+                        &:after {
+                            background: #3D3098;
+                            right: 0;
+                            top: 0;
                         }
                     }
                 }
