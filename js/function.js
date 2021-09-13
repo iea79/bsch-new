@@ -60,6 +60,8 @@ function checkOnResize() {
     replaceProgramsElem();
     initParthnersSlider();
     initCampusSliders();
+    initReviewSliders();
+    toggleProgramSteps();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -205,6 +207,71 @@ function initCampusSliders() {
     });
 
 }
+
+function initReviewSliders() {
+    const slider = $('.programReview__list:not(.slick-initialized)'),
+          sliderMob = $('.programReview__list.slick-initialized');
+
+    if (isXsWidth()) {
+        slider.slick({
+            dots: true,
+            arrows: false,
+        });
+    } else {
+        sliderMob.slick('destroy');
+    }
+
+}
+
+function collapsed() {
+    $('[data-collapsed-toggle]').on('click', function() {
+        const wrap = $(this).closest('[data-collapsed-wrap]'),
+              body = wrap.find('[data-collapsed-body]');
+
+        body.toggleClass('open');
+    });
+}
+collapsed();
+
+function toggleProgramSteps() {
+    let list = $('.programSteps__list'),
+        item = list.find('.programSteps__item'),
+        open = $('.programSteps__item:nth-of-type(4) .programSteps__count'),
+        hide = $('.programSteps__item:last-of-type .programSteps__count'),
+        label = $('.programSteps__action span'),
+        labelText = label.text();
+
+    if (isXsWidth()) {
+        let toggle = $('.programSteps__action .programSteps__count')
+
+        toggle.on('click', () => {
+            list.toggleClass('open');
+            item.toggleClass('show');
+            toggleText();
+        });
+    } else {
+        open.on('click', () => {
+            list.addClass('open');
+            item.addClass('show');
+            toggleText();
+        });
+        hide.on('click', () => {
+            list.removeClass('open');
+            item.removeClass('show');
+            toggleText();
+        });
+    }
+
+    function toggleText() {
+        if (list.hasClass('open')) {
+            label.text('Скрыть программу');
+        } else {
+            label.text(labelText);
+        }
+    }
+
+}
+
 
 function openMobileNav() {
     let wrapp = $('nav');

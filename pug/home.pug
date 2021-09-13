@@ -159,14 +159,4 @@ block content
 
     // end programsInfo
 
-    // begin parthnersLine
-    section#parthnersLine.parthnersLine.section
-        .container_center
-            h2.section__title Партнеры школы
-            .parthnersLine__list
-                each item in [1,2,3,4,5]
-                    // parthnersLine__item
-                    a.parthnersLine__item
-                        img(src="img/parthners-"+item+".png", alt="")
-
-    // end parthnersLine
+    include inc/parthnersLine.pug

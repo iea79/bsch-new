@@ -1,19 +1,295 @@
 extends layout/layout.pug
 
 block content
-    // begin firstScreen
-    section#firstScreen.firstScreen.firstScreen_page.section
-        .container_center
-            .firstScreen__content
-                .firstScreen__img
-                    .firstScreen__pict
-                        img(src="img/program-home.jpg", alt="")
-                    .firstScreen__quatro
-                        span
-                        span
-                .firstScreen__left
-                    h1.firstScreen__title Критическое мышление в управлении и предпринимательстве
-                    .firstScreen__action
-                        a.btn(href="#") Записаться
+    .programPage
+        // begin firstScreen
+        section#firstScreen.firstScreen.firstScreen_page.section
+            .container_center
+                .firstScreen__content
+                    .firstScreen__img
+                        .firstScreen__pict
+                            img(src="img/program-home.jpg", alt="")
+                        .firstScreen__quatro.firstScreen__quatro_program
+                            span
+                            span
+                            span
+                    .firstScreen__left
+                        h1.firstScreen__title Критическое мышление <br>в управлении <br>и предпринимательстве
+                        .firstScreen__action
+                            a.btn(href="#") Записаться
+                            .firstScreen__price 30 000 
+                                small ₽
 
-    // end firstScreen
+        // end firstScreen
+
+        .container_center
+            // begin programDetails
+            .programDetails
+                each item in [{name: 'Длительность', prop: '16 часов, 2 дня'},{name: 'Формат обучения', prop: 'смешанный'},{name: 'Язык обучения', prop: 'русский'},{name: 'Старт', prop: 'ноябрь'}]
+                    .programDetails__item
+                        .programDetails__label=item.name
+                        .programDetails__prop=item.prop
+
+            // end programDetails
+
+            // begin programAbout
+            section.programAbout.section
+                .programAbout__row
+                    .programAbout__title
+                        h2 О программе
+                    .programAbout__descr
+                        p Программа <b>«Критическое мышление в управлении и предпринимательстве»</b> направлена на изучение потенциала критического и креативного мышления, на прокачку навыков мышления по моделям Блума, Грэма Уолласа (основателя Лондонской школы экономики), Де Боно, Михая Чиксентмихайи, Питера Друкера, ТРИЗ и другим.
+
+                        ul
+                            li Изучаем потенциал критического и креативного мышления с использованием реальных бизнес-кейсов;
+                            li Определяем ключевые характеристики критического и креативного мышления и их взаимосвязанность;
+                            li Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления;
+                            li Практикуем нестандартные решения проблем в течение курса.
+
+                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                    .programAbout__title
+                        h3 Преимущества программы
+                        .programAbout__toggle(data-collapsed-toggle="")
+                    .programAbout__descr(data-collapsed-body="")
+                        ul
+                            li Новые подходы курса основаны на исключительном симбиозе опыта тренеров и уникальных методик мышления с применением их на практике. 
+                            li Работа над реальными кейсами и рефлексивными заданиями;
+                            li Формат семинарной работы группы с двумя тренерами; 
+                            li Скрытое обучение при помощи самых последних цифровых инструментов командной работы, Project Management и др. приложений.
+
+                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                    .programAbout__title
+                        h3 Для кого эта <br>программа 
+                        .programAbout__toggle(data-collapsed-toggle="")
+                    .programAbout__descr(data-collapsed-body="")
+                        p Для тех, кто хочет улучшить навыки целеполагания, размышления, принятия решений в жизни и в любой бизнес-структуре, включая собственный бизнес. 
+
+                        p При этом ключевые модели прорабатываются на практике: применяются на кейсах и в командных играх.
+
+                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                    .programAbout__title
+                        h3 В результате обучения вы научитесь
+                        .programAbout__toggle(data-collapsed-toggle="")
+                    .programAbout__descr(data-collapsed-body="")
+                        ul
+                            li Видеть ситуацию в целостности, находить черты системности в окружающих явлениях, проблемах и задачах;
+                            li Определять точки приложения усилий для решения рабочих задач и проблемных ситуаций;
+                            li Выделять основные элементы системы, понимать взаимосвязи подсистем и элементов, учитывать иерархичность и влияние факторов при поиске решений для проблем и задач бизнеса;
+                            li Составлять системные диаграммы;
+                            li Производить полный причинно-следственный анализ;
+                            li Принимать коллективные системные решения.
+
+                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                    .programAbout__title
+                        h3 Преподаватели
+                        .programAbout__toggle(data-collapsed-toggle="")
+                    .programAbout__descr(data-collapsed-body="")
+                        .teachersList
+                            .teachersList__teacher
+                                .teachersList__photo
+                                    img(src="img/pr-teacher-1.jpg", alt="")
+                                    .teachersList__info i
+                                .teachersList__name Михаил Фридман
+                                .teachersList__text Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ
+                            .teachersList__teacher
+                                .teachersList__photo
+                                    img(src="img/pr-teacher-2.jpg", alt="")
+                                    .teachersList__info i
+                                .teachersList__name Ольга Малиновская
+                                .teachersList__text Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления
+
+            // end programAbout
+
+        // begin programSteps
+        section#programSteps.programSteps.section
+            .container_center
+                .programSteps__content
+                    .programSteps__left
+                        h2.section__title Программа обучения
+                    .programSteps__right
+                        .programSteps__list
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Биологические и социальные факторы, влияющие на наше мышление
+                                    .programSteps__descr
+                                        ul
+                                            li ассоциативно-рефлекторная теория И.П. Павлова; 
+                                            li когнитивные искажения;
+                                            li бихевиоризм, концепция наименьшего усилия Даниэля Канемана.
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Скептицизм и объективность. Быстрое и медленное мышление. Принятие решений в бизнесе.  
+                                    .programSteps__descr
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Четыре типа эвристических правил. Когда стоит доверять и не доверять эвристике. Искажения подачи фактов.
+                                    .programSteps__descr
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                                    .programSteps__descr
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                                    .programSteps__descr
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                                    .programSteps__descr
+
+                            .programSteps__item
+                                .programSteps__count
+                                .programSteps__body
+                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                                    .programSteps__descr
+
+                            label.programSteps__action 
+                                .programSteps__count.mobile
+                                span Показать всю программу
+
+                .programSteps__quatro
+                    span
+                    span
+
+        // end programSteps
+
+        // begin programReview
+        section#programReview.programReview.section
+            .container_center
+                .programReview__content
+                    .programReview__left
+                        h2.section__title Отзывы <br>о курсе
+                        .programReview__stats
+                            .programReview__full
+                                .programReview__total (4.2)
+                                .programReview__rate
+                                    .programReview__label 1045 оценок
+                                    .rating
+                                        .rating__stars
+                                        .rating__full(style="width: 88%")
+                            .programReview__lines
+                                each item in [{ball: '5', percent: '35%'}, {ball: '4', percent: '55%'}, {ball: '3', percent: '5%'}, {ball: '2', percent: '4.77%'}, {ball: '1', percent: '0.33%'}]
+                                    .programReview__line
+                                        .programReview__data=item.ball
+                                        .programReview__progress
+                                            span(style="width: "+item.percent+"")
+                                        .programReview__data=item.percent
+
+                    .programReview__right
+                        - 
+                            review = [
+                                {name: 'Светлана Рудык', rate: '(4.2)', percent: '88%', text: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации'}, 
+                                {name: 'Даниил Кирса', rate: '(4)', percent: '80%', text: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона'}, 
+                                {name: 'Александр Колодюк', rate: '(4.1)', percent: '84%', text: 'Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. '}, 
+                            ]
+                        .programReview__list
+                            each item, i in review
+                                .programReview__plate
+                                    .programReview__photo
+                                        img(src="img/review-"+(i+1)+".jpg", alt="")
+                                    .programReview__body
+                                        .programReview__name=item.name
+                                        .programReview__date Закончил курс в декабре 2020
+                                        .programReview__grade
+                                            .rating
+                                                .rating__stars
+                                                .rating__full(style="width: "+item.percent+"")
+                                            .programReview__count=item.rate
+                                        .programReview__text=item.text
+
+        // end programReview
+
+        // begin programOrder
+        section#programOrder.programOrder.section
+            .container_center
+                .programOrder__content
+                    .programOrder__left
+                        h2.section__title Остались вопросы <br>о программе?
+                        .programOrder__sub Вы можете запросить обратный звонок, заполнив заявку на курс или самостоятельно связаться с нашими консультантами 
+                        .programOrder__call
+                            a(href="tel: +7 499 110-90-08")
+                                i.icon_phone 
+                                | +7 499 110-90-08
+                            a(href="tel: +7 977 329-77-57")
+                                i.icon_phone 
+                                | +7 977 329-77-57
+                        .programOrder__messanger
+                            a(href="", target="_blank")
+                                i.icon_whatsapp 
+                                span Поговорить <br>с БШГ в вотсап
+                            a(href="", target="_blank")
+                                i.icon_telegram 
+                                span Поговорить <br>с БШГ в телеграм
+                    .programOrder__right
+                        .programOrder__form
+                            .form__legend Запись на курс
+                            form.form
+                                .form_grid
+                                    .form__row
+                                        input(type="text", placeholder="Имя")
+                                    .form__row
+                                        input(type="text", placeholder="Фамилия")
+                                    .form__row
+                                        input(type="text", placeholder="E-mail")
+                                    .form__row
+                                        input(type="text", placeholder="Телефон")
+                                .form__action
+                                    button.btn.btn_primary(type="submit") Записаться
+                                .form__privacy
+                                    input(type="checkbox" checked="") 
+                                    span Отправляя форму, 
+                                        a(href="", target="_blank") я даю согласие на обработку моих персональных данных
+
+        // end programOrder
+
+        // begin programSertificate
+        section#programSertificate.programSertificate.section
+            .container_center
+                .programSertificate__content
+                    .programSertificate__left
+                        h2.section__title Документы об окончании обучения
+                        .programSertificate__text Вы получите сертификат Бизнес-школы на Газетном и удостоверение о повышении квалификации установленного образца МВШСЭН и сможете получить налоговый вычет.
+                    .programSertificate__right
+                        .programSertificate__img
+                            img(src="img/sertifacate.jpg", alt="")
+
+        // end programSertificate
+
+        // begin programFaq
+        section#programFaq.programFaq.section
+            .container_center
+                .programFaq__content
+                    .programFaq__left
+                        h2.section__title Часто задаваемые вопросы
+                    .programFaq__right
+                        .programFaq__list
+                            each item, i in ['Какой график обучения? Получится ли совмещать его с работой?', 'Сколько часов в неделю нужно будет уделять учебе?', 'Смогу ли я общаться с преподавателями курса?']
+                                -active = '';
+                                if i == 0 
+                                    -active = 'open';
+                                .programFaq__wrap(data-collapsed-wrap="")
+                                    .programFaq__item(class=active data-collapsed-body="")
+                                        .programFaq__head(data-collapsed-toggle="")
+                                            .programFaq__title=item
+                                            .programFaq__toggle
+                                        .programFaq__text Вы можете работать с материалами курса в удобное время, двигаясь по программе в подходящем вам темпе. Более того, все уроки будут доступны и по окончании курса, навсегда, так что вы сможете освежить свои знания в любой момент. Обучение организовано таким образом, чтобы вы могли совмещать его с работой, учёбой и личной жизнью.
+
+                        .programFaq__doc
+                            a(href="", download)
+                                i.icon_doc 
+                                span Полное описание образовательной программы
+        // end programFaq
+
+
+        include inc/parthnersLine.pug

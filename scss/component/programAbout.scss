@@ -1,0 +1,179 @@
+.programAbout {
+    padding: 1.6em 0;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding: 2.3em 0 5.8em;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            left: -1.8em;
+            width: $quat_size;
+            height: $quat_size;
+            background: $color_withe;
+        }
+
+        &:before {
+            top: 29.8%;
+            left: $quat_size - 1.8em;
+        }
+
+        &:after {
+            top: calc(29.8% + #{$quat_size});
+            height: $quat_size*2;
+        }
+    }
+
+    &__row {
+        padding-bottom: 1.2em;
+        margin-bottom: 1.2em;
+
+        @media (min-width: 768px) {
+            border-bottom: 1px solid rgba(29, 29, 27, 0.15);
+            margin-bottom: 2.5em;
+            padding-bottom: 0.8em;
+            margin-left: 16.4em;
+            display: flex;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__title {
+        flex: none;
+        font-family: $second_font_family;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            margin-right: 10em;
+            width: 22.8em;
+        }
+
+        h2,
+        h3 {
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.64em;
+            margin: 0 0 1em;
+
+            @media (min-width: 768px) {
+                font-size: 3.23em;
+            }
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin: 0;
+            min-width: 0;
+
+            @media (min-width: 768px) {
+                font-size: 1.85em;
+            }
+        }
+    }
+
+    &__descr {
+        // font-size: 19px;
+        color: rgba(29, 29, 27, 0.5);
+        line-height: 1.25;
+
+        @media (min-width: 768px) {
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 0 0 1.6em;
+
+            @media (min-width: 768px) {
+                font-size: $size_xs;
+                margin: 0 0 1.3em;
+
+                + ul {
+                    margin-top: 2.1em;
+                }
+            }
+        }
+
+        ul {
+            font-size: $size_xxs;
+            line-height: 1.2;
+            margin: 0 -1em -0.8em 0;
+            padding: 0;
+            list-style: none;
+
+            @media (min-width: 768px) {
+                margin: 0 -2em -0.8em 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            li {
+                padding-left: 2.2em;
+                padding-right: 1.2em;
+                margin-bottom: 0.7em;
+                position: relative;
+
+                @media (min-width: 768px) {
+                    width: 50%;
+                    margin-bottom: 2.6em;
+                    padding-right: 4.02em;
+                }
+
+                &:before {
+                    font-family: 'bsch';
+                    content: $icon_check-square;
+                    color: #3D3098;
+                    position: absolute;
+                    left: 0;
+                    top: 0.2em;
+                }
+            }
+        }
+    }
+
+    &__collapsed {
+        border-bottom: 1px solid rgba(29, 29, 27, 0.15);
+
+        .programAbout__descr {
+            @media (max-width: 767px) {
+                display: none;
+
+                &.open {
+                    display: block;
+                    margin-top: 1.5em;
+                }
+            }
+        }
+    }
+
+    &__toggle {
+        @media (max-width: 767px) {
+            flex: none;
+            margin-left: 1em;
+            width: 2.3em;
+            height: 2.3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color_withe;
+
+            &:before {
+                font-family: 'bsch';
+                content: $icon_trangle;
+                font-size: 0.9em;
+
+            }
+        }
+    }
+
+}

@@ -1,6 +1,10 @@
 .form {
 	&__row {
-		margin-bottom: 15px;
+		margin-bottom: 1.4em;
+
+		@media (min-width: 768px) {
+			margin-bottom: 3.4em;
+		}
 
 		.btn,
 		input:not([type]),
@@ -37,29 +41,31 @@ input[type=text],
 input[type=url],
 textarea {
 	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
+	border: 0;
+	border-bottom: 1px solid $input_border_color;
 	font-family: $main_font_family;
 	color: $input_color;
-	padding: 6px 15px;
+	padding: 0 0 1.1em;
 	outline: none;
-	font-size: 16px;
+	font-size: $size_xxs;
 	font-weight: 400;
-	border-radius: 5px;
+	border-radius: 0;
 	transition: 0.3s;
+	transition-property: color background border;
 
 	&:hover {
-		border: 1px solid $input_hover_border_color;
+		border-color: $input_hover_border_color;
 		background-color: $input_hover_bg_color;
 	}
 
 	&:focus {
-		border: 1px solid $input_focus_border_color;
+		border-color: $input_focus_border_color;
 		background-color: $input_focus_bg_color;
 	}
 
 	&.invalid {
 		background-color: $input_error_bg_color;
-		border: 1px solid $input_error_border_color;
+		border-color: $input_error_border_color;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
@@ -92,8 +98,8 @@ input[type=radio] {
 	align-items: center;
 	justify-content: center;
 	flex: none;
-	height: 14px;
-	width: 14px;
+	height: 1.5em;
+	width: 1.5em;
 	color: #aaa;
 	background: 0 0;
 	border: 1px solid;
@@ -103,6 +109,11 @@ input[type=radio] {
 	outline: 0;
 	text-align: center;
 	position: relative;
+
+	@media (min-width: 768px) {
+		height: 2em;
+		width: 2em;
+	}
 
 	&:not(:disabled),
 	&:not(:disabled) {
@@ -143,7 +154,7 @@ input[type=checkbox] {
 		content: "";
 		width: 40%;
 		height: 60%;
-		color: #000;
+		color: #006EFF;
 		margin-top: -3px;
 		border-right: 1px solid;
 		border-bottom: 1px solid;

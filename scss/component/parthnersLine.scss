@@ -1,0 +1,65 @@
+.parthnersLine {
+    padding: 0 0 1em;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 4.8em 0 3.2em;
+    }
+
+    &__list {
+        margin: 0 -0.6em;
+        // display: flex;
+
+        @media (min-width: 768px) {
+            margin: 0 -0.9em;
+        }
+
+        .slick-dots {
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .slick-list {
+                overflow: inherit;
+                margin-right: 3em;
+            }
+        }
+    }
+
+    &__item {
+        .slick-initialized & {
+            display: flex;
+        }
+        align-items: center;
+        justify-content: center;
+        width: calc(20% - 1.2em);
+        margin: 0 0.6em 1.2em;
+        background: $color_withe;
+        filter: grayscale(1);
+        padding: 1.2em 0.1em;
+        transition: filter 0.3s;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            padding: 2em;
+            height: 12em;
+            width: calc(20% - 1.8em);
+            margin: 0 0.9em 1.8em;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        img {
+            display: block;
+            // max-width: 14em;
+            height: auto;
+        }
+
+    }
+
+}

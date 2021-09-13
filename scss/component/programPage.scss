@@ -1,0 +1,47 @@
+.programPage {
+    .firstScreen_page {
+        .firstScreen__content {
+            @media (max-width: 767px) {
+                padding-top: 0;
+                padding-bottom: 1.8em;
+            }
+        }
+
+        .firstScreen__title {
+            @media (max-width: 767px) {
+                margin-bottom: 1.2em;
+            }
+        }
+
+        .firstScreen__img {
+            @media (max-width: 767px) {
+                order: 0;
+            }
+        }
+
+        .firstScreen__pict {
+            @media (max-width: 767px) {
+                height: 12.6em;
+            }
+        }
+
+        .firstScreen__left {
+            @media (max-width: 767px) {
+                padding-right: 0.9em;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .firstScreen__action {
+            @media (max-width: 767px) {
+                .btn {
+                    width: 10.6em;
+                    margin-right: 1em;
+                }
+            }
+        }
+    }
+}

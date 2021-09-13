@@ -1,0 +1,60 @@
+.programDetails {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+
+    &__item {
+        width: 50%;
+        position: relative;
+        padding: 1.7em 0.3em 0.2em 1.6em;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            padding: 2.3em 2.4em 2.4em;
+            width: 25%;
+
+            &:last-child {
+                width: 23%;
+            }
+
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2em;
+            left: 0;
+            width: 0.5em;
+            height: 0.5em;
+            background: #3D3098;
+
+            @media (min-width: 768px) {
+                top: 2.5em;
+                width: 0.94em;
+                height: 0.94em;
+            }
+        }
+    }
+
+    &__label {
+        // font-size: 1em;
+        margin-bottom: 0.2em;
+        color: rgba(29, 29, 27, 0.5);
+
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+    }
+
+    &__prop {
+        @media (min-width: 768px) {
+            font-size: 1.38em;
+        }
+    }
+
+}
