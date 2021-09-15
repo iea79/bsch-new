@@ -363,12 +363,12 @@
     &__action {
         line-height: 1.1;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 11em;
 
         @media (min-width: 768px) {
+            flex-direction: column;
             align-items: flex-start;
             text-align: center;
             width: 8.6em;
