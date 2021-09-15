@@ -44,6 +44,7 @@
         @media (min-width: 768px) {
             display: flex;
             margin-bottom: 1.8em;
+            float: none;
         }
     }
 
@@ -88,6 +89,7 @@
 
     &__lines {
         margin-top: -0.2em;
+        overflow: hidden;
         @media (min-width: 768px) {
             margin-top: 0;
         }

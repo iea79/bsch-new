@@ -239,17 +239,20 @@ function toggleProgramSteps() {
         open = $('.programSteps__item:nth-of-type(4) .programSteps__count'),
         hide = $('.programSteps__item:last-of-type .programSteps__count'),
         label = $('.programSteps__action span'),
-        labelText = label.text();
+        labelText = label.text(),
+        toggle = $('.programSteps__action .programSteps__count');
 
-    if (isXsWidth()) {
-        let toggle = $('.programSteps__action .programSteps__count')
-
-        toggle.on('click', () => {
+    toggle.on('click', () => {
+        if (isXsWidth()) {
             list.toggleClass('open');
             item.toggleClass('show');
-            toggleText();
-        });
-    } else {
+        } else {
+            list.removeClass('open');
+            item.removeClass('show');
+        }
+        toggleText();
+    });
+    if (!isXsWidth()) {
         open.on('click', () => {
             list.addClass('open');
             item.addClass('show');
