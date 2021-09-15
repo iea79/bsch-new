@@ -1,0 +1,296 @@
+.programReview {
+    padding: 3.2em 0;
+
+    @media (min-width: 768px) {
+        padding: 3em 0;
+    }
+
+    .section {
+        &__title {
+            margin-bottom: 0.9em;
+            @media (min-width: 768px) {
+                margin-bottom: 1em;
+            }
+            @media (max-width: 767px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            padding-left: 16.2em;
+            display: flex;
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            flex: none;
+            width: 21em;
+            margin-right: 3.7em;
+        }
+    }
+
+    &__stats {}
+
+    &__full {
+        margin-bottom: 1.8em;
+        float: left;
+
+        @media (min-width: 768px) {
+            display: flex;
+            margin-bottom: 1.8em;
+        }
+    }
+
+    &__total {
+        font-size: 2.5em;
+        margin-bottom: 0.6em;
+        margin-right: 1.2em;
+
+        @media (min-width: 768px) {
+            margin-right: 0.5em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__rate {
+        .rating {
+            &__full,
+            &__stars {
+                &:before {
+                    font-size: 1.06em;
+                    letter-spacing: 0.36em;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.3em;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+    &__label {
+        color: rgba(29, 29, 27, 0.5);
+        margin-bottom: 0.2em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.3em;
+        }
+    }
+
+    &__lines {
+        margin-top: -0.2em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+        padding-left: 0.3em;
+        margin-bottom: 0.3em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.8em;
+        }
+    }
+
+    &__data {
+        color: rgba(29, 29, 27, 0.5);
+        min-width: 1.5em;
+    }
+
+    &__progress {
+        position: relative;
+        width: 7.2em;
+        height: 0.44em;
+        background: rgba(0, 110, 255, 0.1);
+        margin-right: 0.9em;
+
+        @media (min-width: 768px) {
+            width: 13em;
+        }
+
+        span {
+            display: block;
+            background: #FFC700;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__right {
+        padding-top: 3.3em;
+        margin: 0 -1.1em;
+
+        @media (min-width: 768px) {
+            padding-top: 8.8em;
+            max-width: 47.2em;
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            position: relative;
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: $quat_size_sm;
+                height: $quat_size_sm;
+                background: $color_withe;
+            }
+
+            &:before {
+                bottom: -0.6em;
+                width: $quat_size_sm*2;
+                left: 0;
+            }
+
+            &:after {
+                left: $quat_size_sm*2;
+                bottom: -3.2em;
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+
+        @media (min-width: 768px) {
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -$quat_size;
+                right: 0;
+                background: $color_withe;
+                width: $quat_size;
+                height: $quat_size;
+            }
+
+            &:before {
+                width: $quat_size*2;
+
+            }
+
+            &:after {
+                right: $quat_size*2;
+                top: -$quat_size*2;
+            }
+        }
+
+        &.slick-initialized {
+            .slick-track {
+                display: flex;
+            }
+        }
+    }
+
+    &__plate {
+        margin-bottom: 1.3em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.6em;
+        }
+
+        .slick-initialized & {
+            display: flex;
+            height: auto;
+            flex-direction: column;
+        }
+    }
+
+    &__photo {
+        flex: none;
+        width: 5.15em;
+        height: 5.15em;
+        box-shadow: 0.3em 0.3em 0 #3D3098;
+        margin-bottom: -2em;
+        margin-left: 1.1em;
+        position: relative;
+
+        @media (min-width: 768px) {
+            margin: 1.9em 1.9em 0 0;
+            width: 6.25em;
+            height: 6.25em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__body {
+        background: $color_withe;
+        padding: 4.2em 2.1em 2.6em 1.1em;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            flex-grow: 0;
+            padding: 2.4em 3em 2.4em 2em;
+        }
+    }
+
+    &__name {
+        font-family: $second_font_family;
+        font-size: 1.25em;
+        margin-bottom: 0.4em;
+
+        @media (min-width: 768px) {
+            font-size: 1.47em;
+            margin-bottom: 0.1em;
+        }
+    }
+
+    &__date {
+        color: rgba(29, 29, 27, 0.5);
+        margin-bottom: 0.4em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxxs;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__grade {
+        padding-left: 0.1em;
+        margin-bottom: 1.6em;
+        display: flex;
+        align-items: center;
+    }
+
+    &__count {
+        color: rgba(29, 29, 27, 0.5);
+        font-size: 0.85em;
+        margin-left: 0.3em;
+        line-height: 1;
+    }
+
+    &__text {
+        color: rgba(29, 29, 27, 0.5);
+        line-height: 1.2;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.rating {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    color: transparent;
+    overflow: hidden;
+
+    &__full {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #FFC700;
+
+        &:before {
+            -webkit-text-stroke: 1px #FFC700;
+            text-stroke: 1px #FFC700;
+        }
+    }
+
+    &__full,
+    &__stars {
+        &:before {
+            content: "\2605\2605\2605\2605\2605";
+            font-size: 0.98em;
+            letter-spacing: 0.62em;
+
+            @media (min-width: 768px) {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    &__stars {
+        &:before {
+            -webkit-text-stroke: 1px #FFC700;
+            text-stroke: 1px #FFC700;
+        }
+    }
+}
