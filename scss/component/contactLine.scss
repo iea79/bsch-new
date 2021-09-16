@@ -1,0 +1,151 @@
+.contactLine {
+    padding: 1.7em 0;
+
+    .container_center {
+        @media (min-width: 768px) {
+            max-width: 83.9em;
+        }
+    }
+
+    .section {
+        &__title {}
+
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            display: flex;
+
+        }
+    }
+
+    &__form {
+
+        @media (min-width: 768px) {
+            order: 2;
+        }
+
+        .form {
+            &__legend {
+
+                @media (min-width: 768px) {
+                    max-width: 15em;
+                    margin-bottom: 0.7em;
+                }
+            }
+
+            &__sub {}
+        }
+    }
+
+    &__descr {
+        flex: none;
+
+        @media (min-width: 768px) {
+            width: 39.2em;
+            margin-right: 1.8em;
+            padding-top: 3.5em;
+            padding-left: 8.4em;
+        }
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-size: 1.59em;
+        margin-bottom: 0.9em;
+        line-height: 1.35;
+
+        @media (min-width: 768px) {
+            font-size: 2.06em;
+            line-height: 1.2;
+            margin-bottom: 0.6em;
+        }
+    }
+
+    &__adress {
+        color: rgba(29, 29, 27, 0.5);
+        max-width: 16em;
+        line-height: 1.3;
+        margin-bottom: 2em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+            margin-bottom: 3em;
+
+        }
+    }
+
+    &__phone {
+        font-family: $second_font_family;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.4em;
+
+        @media (min-width: 768px) {
+            font-size: 1.45em;
+            margin-bottom: 2.4em;
+        }
+
+        a {
+            color: #3D3098;
+            text-decoration: none;
+
+            &:hover {
+                color: #006EFF;
+            }
+        }
+
+        .icon_phone {
+            font-size: 1em;
+            margin-right: 0.7em;
+
+            @media (min-width: 768px) {
+                font-size: 0.8em;
+                margin-right: 0.7em;
+            }
+        }
+    }
+
+    &__img {
+        margin: 0 -1.1em;
+        height: 9.9em;
+
+        @media (min-width: 768px) {
+            height: 22em;
+            margin: 0 0 0 -18.4em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__map {
+        margin-bottom: -7.2em;
+        height: 18.2em;
+        position: relative;
+        // background: blue;
+        background: #eee;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            margin-top: -11.2em;
+            margin-bottom: -14.1em;
+            height: 39.5em;
+        }
+
+        > div {}
+
+        .ymaps-layers-pane {
+            filter: grayscale(100%);
+        }
+    }
+
+}

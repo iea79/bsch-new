@@ -1,0 +1,124 @@
+.textBox {
+    color: rgba(29, 29, 27, 0.5);
+
+    h2,
+    h3,
+    h4 {
+        color: $main_color;
+        font-family: $second_font_family;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        line-height: 1.3;
+        margin-bottom: 1.2em;
+
+        @media (min-width: 768px) {
+            font-size: 1.87em;
+            margin-bottom: 1.6em;
+        }
+    }
+
+    h3 {
+        font-size: 1.05em;
+        margin-bottom: 1em;
+        line-height: 1.5;
+
+        @media (min-width: 768px) {
+            font-size: 1.47em;
+        }
+    }
+
+    ol,
+    p,
+    ul {
+        // line-height: 1.2;
+
+        @media (min-width: 768px) {
+            line-height: 1.45;
+            font-size: $size_xxs;
+        }
+    }
+
+    &__grid {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5em;
+        }
+
+        &Item {
+            margin-bottom: 1.8em;
+            @media (min-width: 768px) {
+                padding-left: 5em;
+                margin-bottom: -0.1em;
+                width: 50%;
+            }
+
+            h3 {
+                margin-bottom: 0.9em;
+                font-size: 1.27em;
+
+                @media (min-width: 768px) {
+                    margin-bottom: 0.5em;
+                    font-size: 1.47em;
+                }
+            }
+        }
+    }
+
+    &__columns {
+        margin-bottom: 1.8em;
+
+        @media (min-width: 768px) {
+            columns: 2;
+            column-gap: 6em;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.2em;
+
+            @media (min-width: 768px) {
+                margin-bottom: 1.4em;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                overflow: hidden;
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    }
+
+    ul {
+        line-height: 1.2;
+        margin: 0 0 1em;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width: 768px) {
+            // margin: 0 0 1em;
+            font-size: $size_xxs;
+        }
+
+        li {
+            padding-left: 2.2em;
+            margin-bottom: 1.3em;
+            position: relative;
+
+            @media (min-width: 768px) {
+                margin-bottom: 1.1em;
+            }
+
+            &:before {
+                font-family: 'bsch';
+                content: $icon_check-square;
+                color: #3D3098;
+                position: absolute;
+                left: 0;
+                top: 0.2em;
+            }
+        }
+    }
+}
