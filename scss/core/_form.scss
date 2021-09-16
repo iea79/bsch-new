@@ -1,6 +1,6 @@
 .form {
 	&__row {
-		margin-bottom: 1.4em;
+		margin-bottom: 2.2em;
 
 		@media (min-width: 768px) {
 			margin-bottom: 3.4em;
@@ -43,11 +43,26 @@
 
 	&__legend {
 		font-family: $second_font_family;
-		font-size: 1.5em;
-		margin-bottom: 1.8em;
+		font-size: 1.6em;
+		margin-bottom: 1em;
+		line-height: 1.3;
 
 		@media (min-width: 768px) {
 			font-size: 1.85em;
+			line-height: 1.2;
+			margin-bottom: 1.8em;
+		}
+	}
+
+	&__sub {
+		color: rgba(29, 29, 27, 0.5);
+		margin-bottom: 1.9em;
+		line-height: 1.4;
+
+		@media (min-width: 768px) {
+			font-size: $size_xxs;
+			// line-height: 1.4;
+			margin-bottom: 2.4em;
 		}
 	}
 
@@ -83,6 +98,18 @@
 				margin-right: 2em;
 			}
 		}
+	}
+
+	&__wrapper {
+		background: $color_withe;
+		padding: 3.2em 1.1em;
+		margin: 0 -1.1em 3.4em;
+
+		@media (min-width: 768px) {
+			padding: 3.9em 1.9em;
+			margin: 0;
+		}
+
 	}
 }
 // Input text and textarea ================================================

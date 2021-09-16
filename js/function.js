@@ -447,6 +447,32 @@ function uploadYoutubeVideo() {
     }
 };
 
+function mapInit() {
+    ymaps.ready(init);
+
+    function init () {
+        let center = [55.76, 37.64];
+
+        var myMap = new ymaps.Map("map", {
+                center: center,
+                zoom: 10
+            }),
+
+            myPlacemark = new ymaps.Placemark(center, {
+                // Свойства.
+                balloonContent: 'Собственный значок метки'
+            }, {
+                iconImageHref: 'img/map-marker.svg',
+                iconImageSize: [39, 39],
+                iconImageOffset: [-15, -15]
+            });
+
+        myMap.geoObjects
+            .add(myPlacemark);
+    }
+
+}
+mapInit();
 
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
