@@ -38,8 +38,8 @@ $grid_padding: 20px;
 // Input color
 $input_color: $main_color;
 $input_bg_color: #fff;
-$input_border_color: #ddd;
-$input_placeholder_color: #ddd;
+$input_border_color: rgba(29, 29, 27, 0.25);
+$input_placeholder_color: rgba(29, 29, 27, 0.5);
 
 // Input hover color
 $input_hover_color: $main_color;

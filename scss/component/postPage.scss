@@ -73,14 +73,24 @@
             content: '';
             display: block;
             position: absolute;
-            width: $quat_size;
-            height: $quat_size;
+            width: $quat_size_sm;
+            height: $quat_size_sm;
+
+            @media (min-width: 768px) {
+                width: $quat_size;
+                height: $quat_size;
+            }
         }
 
         &:before {
             background: #FFFFFF;
             right: 0;
-            top: 0;
+            bottom: 0;
+
+            @media (min-width: 768px) {
+                top: 0;
+                bottom: auto;
+            }
         }
 
         &:after {

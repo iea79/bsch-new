@@ -1,4 +1,5 @@
 // Modal / bootstrap ------------------------------------------
+
 .modal {
     display: none;
     overflow: auto;
@@ -11,59 +12,75 @@
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+
     &-open {
         overflow: hidden;
     }
+
     &-close {
         position: absolute;
-        width: 21px;
-        height: 21px;
-        right: 23px;
-        top: 23px;
+        width: 1.5em;
+        height: 1.5em;
+        right: 1em;
+        top: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main_color;
         // background: image-url('close.svg') no-repeat center center;
-        &:before,&:after {
+        &:after,
+        &:before {
             content: '';
             position: absolute;
             display: block;
-            width: 20px;
-            border-top: 1px solid $main_color;
-            top: 10px;
+            width: 100%;
+            border-top: 2px solid;
         }
+
         &:before {
             transform: rotate(45deg);
         }
+
         &:after {
             transform: rotate(-45deg);
         }
+
         &:hover {
-            opacity: .8;
+            opacity: 0.8;
         }
     }
+
     &.fade .modal-dialog {
         transform: translate(0, -25%);
         transition: transform 0.3s ease-out;
     }
-    &.in .modal-dialog {
-        transform: translate(0, 0);
-        position: relative;
+
+    &.in {
+        display: flex !important;
+        align-items: center;
+
+        .modal-dialog {
+            transform: translate(0, 0);
+            position: relative;
+        }
     }
+
     &-dialog {
         position: relative;
-        width: auto;
-        margin: 10px auto;
-        max-width: 690px;
+        margin: auto;
+        max-width: 40em;
+        width: 100%;
     }
 
     &-content {
         position: relative;
         background-color: #fff;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 6px;
-        box-shadow: 0 3px 9px rgba(0,0,0,.5);
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
         background-clip: padding-box;
         outline: 0;
-        padding: 46px 53px;
+        padding: 1em 1.1em;
     }
 
     &-backdrop {
@@ -74,13 +91,14 @@
         left: 0;
         z-index: 1040;
         background-color: #000;
+
         &.fade {
             opacity: 0;
             filter: alpha(opacity=0);
         }
 
         &.in {
-            opacity: .5;
+            opacity: 0.5;
             filter: alpha(opacity=50);
         }
     }
@@ -90,6 +108,7 @@
         min-height: 16.42857143px;
         color: #666;
         font-size: 18px;
+
         .close {
             margin-top: -2px;
         }
@@ -110,6 +129,7 @@
         padding: 19px 20px 20px;
         text-align: right;
         border-top: 1px solid #e5e5e5;
+
         .btn+.btn {
             margin-left: 5px;
             margin-bottom: 0;
@@ -125,6 +145,3 @@
     }
 
 }
-
-
-

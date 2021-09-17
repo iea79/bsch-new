@@ -88,15 +88,47 @@ block content
                             .teachersList__teacher
                                 .teachersList__photo
                                     img(src="img/pr-teacher-1.jpg", alt="")
-                                    .teachersList__info i
+                                    .teachersList__info(data-toggle="modal" data-target="#teacher-1") i
                                 .teachersList__name Михаил Фридман
                                 .teachersList__text Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ
+
+                                // Begin Modal teacher
+                                .modal.fade.teacherModal#teacher-1
+                                    .modal-dialog
+                                        .modal-content
+                                            a(href="#" class="modal-close" data-dismiss="modal")
+                                            .teacherModal__content
+                                                .teacherModal__photo
+                                                    img(src="img/pr-teacher-1.jpg", alt="")
+                                                .teacherModal__descr
+                                                    .teacherModal__name Михаил Фридман
+                                                    .teacherModal__text
+                                                        p Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ, академик Международной академии информатизации в генеральном консультативном статусе ООН, член Зиновьевского клуба МИА «Россия сегодня», бизнес-тренер, коуч, консультант.
+
+                                // End modal teacher
+
                             .teachersList__teacher
                                 .teachersList__photo
                                     img(src="img/pr-teacher-2.jpg", alt="")
-                                    .teachersList__info i
+                                    .teachersList__info(data-toggle="modal" data-target="#teacher-2") i
                                 .teachersList__name Ольга Малиновская
                                 .teachersList__text Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления
+
+                                // Begin Modal teacher
+                                .modal.fade.teacherModal#teacher-2
+                                    .modal-dialog
+                                        .modal-content
+                                            a(href="#" class="modal-close" data-dismiss="modal")
+                                            .teacherModal__content
+                                                .teacherModal__photo
+                                                    img(src="img/pr-teacher-2.jpg", alt="")
+                                                .teacherModal__descr
+                                                    .teacherModal__name Ольга Малиновская
+                                                    .teacherModal__text
+                                                        p (PhD/DPhil, Oxon) выпускница Оксфордского университета, Университета Сорбонны (МА), Кларк университета (МА), Северо-восточного университета в Бостоне (BA). Является обладателем диплома в сфере бизнес-администрирования Associate Degree Quincy College. Имеет богатый опыт работы в бизнес-структурах («Бостон Консалтинг» USA, «Герсон» London, UK), а также преподавательский и административный опыт в высших учебных заведениях США, Франции, Испании и Великобритании. В РАНХиГС с 2019 года заведует кафедрой гуманитарных дисциплин.
+
+                                // End modal teacher
+
 
             // end programAbout
 

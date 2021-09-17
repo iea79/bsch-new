@@ -1,0 +1,135 @@
+extends layout/layout.pug
+
+block content
+    .postPage
+        .container_center
+            ul.breadcrumb
+                li
+                    a(href="") Новости
+                li
+                    a(href="") События
+                li
+                    a(href="") Презентация программы «Предпринимательское мышление»
+
+            .postPage__body
+                .postPage__media
+                    .postPage__img
+                        img(src="img/event.jpg", alt="")
+
+                .postPage__content
+                    h1.pageTitle Презентация программы «Предпринимательское мышление»
+
+                    .textBox.event
+                        .event__date
+                            i.icon_calendar 
+                            span 21 ноября 2021 с 19:00 до 20:00
+
+
+                        h3 Подробнее о программе 
+                        a.event__link(href="") «Предприним мышление»
+
+                        h3 О программе: 
+                        ul
+                            li О чем
+                            li Когда проходит обучение
+                            li Формат
+                            li Стоимость
+                            li Сертификат
+
+                        p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют 
+
+            .teachersList__title Спикеры:
+            .teachersList
+                .teachersList__teacher
+                    .teachersList__label Автор программы
+                    .teachersList__photo
+                        img(src="img/pr-teacher-1.jpg", alt="")
+                        .teachersList__info(data-toggle="modal" data-target="#teacher-1") i
+                    .teachersList__descr
+                        .teachersList__name Михаил Фридман
+                        .teachersList__text Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ
+
+                    // Begin Modal teacher
+                    .modal.fade.teacherModal#teacher-1
+                        .modal-dialog
+                            .modal-content
+                                a(href="#" class="modal-close" data-dismiss="modal")
+                                .teacherModal__content
+                                    .teacherModal__photo
+                                        img(src="img/pr-teacher-1.jpg", alt="")
+                                    .teacherModal__descr
+                                        .teacherModal__name Михаил Фридман
+                                        .teacherModal__text
+                                            p Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ, академик Международной академии информатизации в генеральном консультативном статусе ООН, член Зиновьевского клуба МИА «Россия сегодня», бизнес-тренер, коуч, консультант.
+
+                    // End modal teacher
+
+                .teachersList__teacher
+                    .teachersList__label Приглашенный эксперт
+                    .teachersList__photo
+                        img(src="img/pr-teacher-2.jpg", alt="")
+                        .teachersList__info(data-toggle="modal" data-target="#teacher-2") i
+                    .teachersList__descr
+                        .teachersList__name Ольга Малиновская
+                        .teachersList__text Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления
+
+                    // Begin Modal teacher
+                    .modal.fade.teacherModal#teacher-2
+                        .modal-dialog
+                            .modal-content
+                                a(href="#" class="modal-close" data-dismiss="modal")
+                                .teacherModal__content
+                                    .teacherModal__photo
+                                        img(src="img/pr-teacher-2.jpg", alt="")
+                                    .teacherModal__descr
+                                        .teacherModal__name Ольга Малиновская
+                                        .teacherModal__text
+                                            p (PhD/DPhil, Oxon) выпускница Оксфордского университета, Университета Сорбонны (МА), Кларк университета (МА), Северо-восточного университета в Бостоне (BA). Является обладателем диплома в сфере бизнес-администрирования Associate Degree Quincy College. Имеет богатый опыт работы в бизнес-структурах («Бостон Консалтинг» USA, «Герсон» London, UK), а также преподавательский и административный опыт в высших учебных заведениях США, Франции, Испании и Великобритании. В РАНХиГС с 2019 года заведует кафедрой гуманитарных дисциплин.
+
+                    // End modal teacher
+
+                .teachersList__teacher
+                    .teachersList__label Приглашенный эксперт
+                    .teachersList__photo
+                        img(src="img/pr-teacher-3.jpg", alt="")
+                        .teachersList__info(data-toggle="modal" data-target="#teacher-3") i
+                    .teachersList__descr
+                        .teachersList__name Александр Александров
+                        .teachersList__text Имя выдающегося русского композитора, хормейстера и дирижера, профессора Московской консерватории
+
+                    // Begin Modal teacher
+                    .modal.fade.teacherModal#teacher-3
+                        .modal-dialog
+                            .modal-content
+                                a(href="#" class="modal-close" data-dismiss="modal")
+                                .teacherModal__content
+                                    .teacherModal__photo
+                                        img(src="img/pr-teacher-3.jpg", alt="")
+                                    .teacherModal__descr
+                                        .teacherModal__name Александр Александров
+                                        .teacherModal__text
+                                            p (PhD/DPhil, Oxon) выпускница Оксфордского университета, Университета Сорбонны (МА), Кларк университета (МА), Северо-восточного университета в Бостоне (BA). Является обладателем диплома в сфере бизнес-администрирования Associate Degree Quincy College. Имеет богатый опыт работы в бизнес-структурах («Бостон Консалтинг» USA, «Герсон» London, UK), а также преподавательский и административный опыт в высших учебных заведениях США, Франции, Испании и Великобритании. В РАНХиГС с 2019 года заведует кафедрой гуманитарных дисциплин.
+                    // End modal teacher
+
+        // begin presentationOrder
+        section#presentationOrder.presentationOrder.section
+            .container_center
+                .form
+                    h2.form__legend Запись на презентацию
+                    .form_grid
+                        .form__row
+                            input(type="text", placeholder="Имя")
+                        .form__row
+                            input(type="text", placeholder="Фамилия")
+                        .form__row
+                            input(type="text", placeholder="E-mail")
+                        .form__row
+                            input(type="text", placeholder="Телефон")
+                    .form__action
+                        button.btn.btn_primary(type="submit") Записаться
+                    .form__privacy
+                        input(type="checkbox" checked="") 
+                        span Отправляя форму, 
+                            a(href="", target="_blank") я даю согласие на обработку моих персональных данных
+
+        // end presentationOrder
