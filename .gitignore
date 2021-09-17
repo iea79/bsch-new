@@ -1,3 +1,5 @@
 /node_modules
-/prepros.config
+prepros.config
 .idea
+*.html
+/css
