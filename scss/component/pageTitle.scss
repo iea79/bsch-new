@@ -1,0 +1,12 @@
+.pageTitle {
+    font-family: $second_font_family;
+    font-weight: 400;
+    font-size: 1.61em;
+    margin: 0 0 0.35em;
+    line-height: 1.05;
+
+    @media (min-width: 768px) {
+        font-size: 3.2em;
+        line-height: 1.2;
+    }
+}
