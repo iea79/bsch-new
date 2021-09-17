@@ -1,0 +1,74 @@
+.teacherModal {
+    .modal-content {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .modal-dialog {
+        max-width: 47.6em;
+        padding: 2em 0;
+    }
+
+    .modal-close {
+        color: #006EFF;
+        width: 2.1em;
+        height: 2.1em;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__photo {
+        flex: none;
+        width: 14.4em;
+        height: 19.4em;
+        position: relative;
+
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2em;
+            height: 2em;
+        }
+
+        &:before {
+            background: #006EFF;
+            right: -2em;
+            top: 0;
+        }
+
+        &:after {
+            background: #3D3098;
+            right: 0;
+            top: -2em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1);
+        }
+    }
+
+    &__descr {
+        padding: 4.7em 2em;
+    }
+
+    &__name {
+        font-family: $second_font_family;
+        font-size: 1.7em;
+        margin-bottom: 1.0em;
+    }
+
+    &__text {
+        font-size: 1.1em;
+        line-height: 1.15;
+        color: rgba(29, 29, 27, 0.5);
+    }
+}

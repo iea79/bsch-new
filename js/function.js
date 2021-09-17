@@ -44,6 +44,24 @@ $(document).ready(function() {
 
     checkOnResize();
 
+    $('.fancybox').fancybox({
+        padding : 0,
+        margin : 0,
+        // openEffect  : 'elastic',
+        // beforeLoad: function (fancybox) {
+        //     // console.log(fancybox);
+        //     // console.log(slide);
+        //     console.log('beforeLoad');
+        //     // $('.fancybox-close').hide();
+        //     $('.fancybox-close').appendTo('.fancybox-overlay');
+        // },
+        // afterLoad: function (fancybox) {
+        //     console.log(fancybox);
+        //     console.dir(fancybox);
+        //     console.log('afterLoad');
+        // }
+    });
+
 });
 
 $(window).resize(function() {
@@ -448,7 +466,9 @@ function uploadYoutubeVideo() {
 };
 
 function mapInit() {
-    ymaps.ready(init);
+    try {
+        ymaps.ready(init);
+    } catch (e) {}
 
     function init () {
         let center = [55.76, 37.64];
