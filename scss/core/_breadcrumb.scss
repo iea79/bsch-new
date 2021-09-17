@@ -1,29 +1,47 @@
 // Breadcrumb ==================================================================
 
 .breadcrumb {
-	margin: 15px 0;
-	padding: 0;
+	display: none;
 
-	li {
-		display: inline-block;
-		vertical-align: baseline;
+	@media (min-width: 768px) {
+		margin: 1.1em 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
 
-		&:not(:first-child) {
-			&:before {
-				content: '/';
-				display: inline-block;
+		li {
+			display: inline-block;
+			display: flex;
+			align-items: center;
+
+			&:not(:first-child) {
+				&:before {
+					content: '/';
+					display: inline-block;
+					margin: 0 1.2em;
+					color: rgba(29, 29, 27, 0.5);
+				}
 			}
-		}
 
-		&:last-child {
+			&:last-child {
+				a {
+					cursor: default;
+					text-decoration: none;
+					color: $main_color;
+					text-decoration: none;
+				}
+			}
+
 			a {
-				cursor: default;
+				font-size: $size_xxxs;
+				color: rgba(29, 29, 27, 0.5);
 				text-decoration: none;
-			}
-		}
 
-		a {
-			font-size: 12px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

@@ -33,10 +33,9 @@
     ol,
     p,
     ul {
-        // line-height: 1.2;
+        line-height: 1.45;
 
         @media (min-width: 768px) {
-            line-height: 1.45;
             font-size: $size_xxs;
         }
     }
