@@ -2,4 +2,4 @@
 prepros.config
 .idea
 *.html
-/css
+css/
