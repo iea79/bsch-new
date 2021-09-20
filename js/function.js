@@ -108,7 +108,7 @@ function initHomeSlider() {
         infinite: true,
         fade: true,
         speed: 500,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: playSpeed *1000,
         pauseOnHover: false,
         pauseOnFocus: false,

@@ -12,7 +12,7 @@ block content
                         .firstScreen__quatro
                             span
                             span
-                        .play
+                        .play(data-toggle="modal" data-target="#videoModal")
                     .firstScreen__left
                         h1.firstScreen__title О школе
 
@@ -23,6 +23,12 @@ block content
 
         // end firstScreen
 
+        // Begin Modal videoModal
+        .modal.fade.videoModal#videoModal
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-dialog.videoModal__content
+                video(autoplay="" src="video/Sunrise.mp4" poster="img/about-video.jpg" controls="")
+        // End modal videoModal
 
         section.textBox
             .container_center
