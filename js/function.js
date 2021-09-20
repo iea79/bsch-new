@@ -44,24 +44,6 @@ $(document).ready(function() {
 
     checkOnResize();
 
-    $('.fancybox').fancybox({
-        padding : 0,
-        margin : 0,
-        // openEffect  : 'elastic',
-        // beforeLoad: function (fancybox) {
-        //     // console.log(fancybox);
-        //     // console.log(slide);
-        //     console.log('beforeLoad');
-        //     // $('.fancybox-close').hide();
-        //     $('.fancybox-close').appendTo('.fancybox-overlay');
-        // },
-        // afterLoad: function (fancybox) {
-        //     console.log(fancybox);
-        //     console.dir(fancybox);
-        //     console.log('afterLoad');
-        // }
-    });
-
 });
 
 $(window).resize(function() {
@@ -198,6 +180,51 @@ function initParthnersSlider() {
     //
     // }
 }
+
+function openLightboxModal() {
+    let modal = $('#lightboxModal'),
+        slider = $('.lightboxSlider'),
+        toggl = $('[data-target="#lightboxModal"]');
+
+
+    toggl.on('click', function(e) {
+        e.preventDefault();
+        let images = $(this).closest('.campusSlider').find('a'),
+            index = $(this).parent().attr('data-slick-index');
+
+        images.each((i, item) => {
+            slider.append(`
+                <div class="lightboxSlider__item">
+                    <img src="${item.href}" />
+                    <div class="lightboxSlider__title">${item.title}</div>
+                </div>
+                `);
+        });
+
+        console.log(index);
+
+        slider.slick({
+            dots: false,
+            infinite: false,
+            speed: 500,
+            arrows: true,
+            nextArrow: $('.lightboxSlider__next'),
+            prevArrow: $('.lightboxSlider__prev'),
+        });
+
+        slider.slick('slickGoTo', index);
+
+        modal.modal('show');
+
+    });
+
+    modal.on('hidden.bs.modal', () => {
+        slider.slick('destroy');
+        slider.html('');
+    });
+
+}
+openLightboxModal();
 
 function initCampusSliders() {
     const sliders = $('.campusSlider:not(.slick-initialized)');
