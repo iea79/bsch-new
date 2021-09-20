@@ -35,7 +35,7 @@
                   <video src="" poster="img/about-video.jpg"></video>
                 </div>
                 <div class="firstScreen__quatro"><span></span><span></span></div>
-                <div class="play"></div>
+                <div class="play" data-toggle="modal" data-target="#videoModal"></div>
               </div>
               <div class="firstScreen__left">
                 <h1 class="firstScreen__title">О школе</h1>
@@ -48,6 +48,13 @@
           </div>
         </section>
         <!-- end firstScreen-->
+        <!-- Begin Modal videoModal-->
+        <div class="modal fade videoModal" id="videoModal"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-dialog videoModal__content">
+            <video autoplay="" src="video/Sunrise.mp4" poster="img/about-video.jpg" controls=""></video>
+          </div>
+        </div>
+        <!-- End modal videoModal-->
         <section class="textBox">
           <div class="container_center">
             <div class="textBox__columns">
