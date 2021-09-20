@@ -1,20 +1,19 @@
-extends layout.pug
+extends layout/layout.pug
 block content
 
     // begin news
     section#news.newsPage.section
         .container_center
             h2.pageTitle Новости и мероприятия
-            .newsMenu
-                .newsMenu__item.active Все
-                .newsMenu__item События
-                .newsMenu__item Новости
+            .newsSorts
+                a.newsSorts__item.active(href="") Все
+                a.newsSorts__item(href="") События
+                a.newsSorts__item(href="") Новости    
 
             .newsPage__content
 
                 .newsPage__item
                     .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_1.jpg", alt="")
                         img.newsPage__color-img(src="img/news_color_1.jpg", alt="")
                     .newsPage__date 22.07.2021
                     a.newsPage__heading(href="#") Бизнес-школа на Газетном вошла в топ-10 лучших бизнес-школ Европы.
@@ -23,7 +22,6 @@ block content
 
                 .newsPage__item
                     .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_2.jpg", alt="")
                         img.newsPage__color-img(src="img/news_color_2.jpg", alt="")
                     .newsPage__date 22.07.2021
                     a.newsPage__heading(href="#") Предпринимательское мышление
@@ -32,44 +30,13 @@ block content
 
                 .newsPage__item
                     .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_3.jpg", alt="")
-                        img.newsPage__color-img(src="img/news_color_3.jpg", alt="")
+                        img.newsPage__color-img(src="img/news_color_1.jpg", alt="")
                     .newsPage__date 22.07.2021
                     a.newsPage__heading(href="#") Давно выяснено, что при оценке дизайна
                     .newsPage__desc Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
 
 
             a.newsPage__more(href="#") Показать еще
-
-            .newsPage__content.newsPage__content-hidden
-
-                .newsPage__item
-                    .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_1.jpg", alt="")
-                        img.newsPage__color-img(src="img/news_color_1.jpg", alt="")
-                    .newsPage__date 22.07.2021
-                    a.newsPage__heading(href="#") Бизнес-школа на Газетном вошла в топ-10 лучших бизнес-школ Европы.
-                    .newsPage__desc Бизнес-школа на Газетном заняла 9-ю строчку в рейтинге ведущих бизнес-школ по версии Financial Times.
-
-
-                .newsPage__item
-                    .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_2.jpg", alt="")
-                        img.newsPage__color-img(src="img/news_color_2.jpg", alt="")
-                    .newsPage__date 22.07.2021
-                    a.newsPage__heading(href="#") Предпринимательское мышление
-                    .newsPage__desc 21 ноября 2021 с 19:00 до 20:00 Презентация программы «Предпринимательское мышление»
-
-
-                .newsPage__item
-                    .newsPage__img
-                        img.newsPage__gray-img(src="img/news_gray_3.jpg", alt="")
-                        img.newsPage__color-img(src="img/news_color_3.jpg", alt="")
-                    .newsPage__date 22.07.2021
-                    a.newsPage__heading(href="#") Давно выяснено, что при оценке дизайна
-                    .newsPage__desc Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
-
-
 
 
     // end news

@@ -55,6 +55,31 @@
     &__next {}
 
     &__item {
+        .firstScreen__img {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                background: #006EFF;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                // transition-duration: 1s;
+                // transition-delay: 1s;
+                // transition-property: width, left;
+                z-index: 3;
+
+                .slick-initialized & {
+                    // width: 0;
+                    // left: 100%;
+                    animation: sliderImgOpen 1s forwards;
+                    animation-delay: 1s;
+                }
+            }
+
+        }
+
         .firstScreen__quatro {
             position: absolute;
             top: 0;
@@ -66,17 +91,17 @@
                 &:after,
                 &:before {
                     content: '';
-                    width: 102%;
-                    height: 102%;
-                    top: 50%;
-                    left: 50%;
+                    // width: 102%;
+                    // height: 102%;
+                    // top: 50%;
+                    // left: 50%;
                     display: block;
                     position: absolute;
                     background: #006EFF;
-                    transform: translate(-50%, -50%);
-                    transition-duration: 0.5s;
-                    transition-delay: 0.6s;
-                    transition-property: width, height, left, top;
+                    // transform: translate(-50%, -50%);
+                    // transition-duration: 0.5s;
+                    // transition-delay: 0.6s;
+                    // transition-property: width, height, left, top;
                     z-index: 3;
 
                 }
@@ -88,21 +113,23 @@
             }
         }
 
-        &.slick-current {
+        &.slick-slide {
             .firstScreen__quatro {
                 span {
                     &:after,
                     &:before {
                         width: $quat_size_sm;
                         height: $quat_size_sm;
-                        top: calc(#{$quat_size_sm} / 2);
-                        left: calc(#{$quat_size_sm} / 2);
+                        top: 0;
+                        left: 0;
+                        // top: calc(#{$quat_size_sm} / 2);
+                        // left: calc(#{$quat_size_sm} / 2);
 
                         @media (min-width: 768px) {
                             width: $quat_size;
                             height: $quat_size;
-                            top: calc(#{$quat_size} / 2);
-                            left: calc(#{$quat_size} / 2);
+                            // top: calc(#{$quat_size} / 2);
+                            // left: calc(#{$quat_size} / 2);
                         }
                     }
 
@@ -112,52 +139,52 @@
                         }
 
                         &:after {
-                            top: calc(100% - (#{$quat_size_sm} / 2));
-                            z-index: 3;
+                            top: calc(100% - (#{$quat_size_sm}));
+
                             @media (min-width: 768px) {
-                                top: calc(82% - (#{$quat_size} / 2));
+                                top: calc(82% - (#{$quat_size}));
                             }
                         }
                     }
 
                     &:nth-child(2) {
                         &:before {
-                            left: calc(100% - (#{$quat_size_sm} / 2));
+                            left: calc(100% - (#{$quat_size_sm}));
                             @media (min-width: 768px) {
-                                left: calc(100% - (#{$quat_size} / 2));
+                                left: calc(100% - (#{$quat_size}));
                             }
                         }
 
                         &:after {
-                            left: calc(100% - (#{$quat_size_sm} / 2));
-                            top: calc((#{$quat_size_sm} * 2) + (#{$quat_size_sm} / 2));
+                            left: calc(100% - (#{$quat_size_sm}));
+                            top: calc((#{$quat_size_sm} * 2) + (#{$quat_size_sm}));
 
                             @media (min-width: 768px) {
-                                left: calc(100% - (#{$quat_size} / 2));
-                                top: calc((#{$quat_size} * 2) + (#{$quat_size} / 2));
+                                left: calc(100% - (#{$quat_size}));
+                                top: calc((#{$quat_size} * 2) + (#{$quat_size}));
                             }
                         }
                     }
 
                     &:nth-child(3) {
                         &:before {
-                            top: calc(100% - (#{$quat_size_sm} / 2));
-                            left: calc(100% - (#{$quat_size_sm} / 2));
+                            top: calc(100% - (#{$quat_size_sm}));
+                            left: calc(100% - (#{$quat_size_sm}));
                             background: $color_withe;
 
                             @media (min-width: 768px) {
-                                top: calc(100% - (#{$quat_size} / 2));
-                                left: calc(100% - (#{$quat_size} / 2));
+                                top: calc(100% - (#{$quat_size}));
+                                left: calc(100% - (#{$quat_size}));
                             }
                         }
 
                         &:after {
-                            top: calc(100% - (#{$quat_size_sm} / 2));
-                            left: calc(100% - #{$quat_size_sm} - (#{$quat_size_sm} / 2));
+                            top: calc(100% - (#{$quat_size_sm}));
+                            left: calc(100% - #{$quat_size_sm} - (#{$quat_size_sm}));
 
                             @media (min-width: 768px) {
-                                top: calc(100% - (#{$quat_size} / 2));
-                                left: calc(100% - #{$quat_size} - (#{$quat_size} / 2));
+                                top: calc(100% - (#{$quat_size}));
+                                left: calc(100% - #{$quat_size} - (#{$quat_size}));
                             }
                         }
                     }
@@ -165,7 +192,187 @@
 
             }
 
+            &[data-slick-index="1"] {
+                .firstScreen__quatro {
+                    span {
+                        &:after,
+                        &:before {
+                            width: $quat_size_sm;
+                            height: $quat_size_sm;
+                            top: 0;
+                            left: 0;
+                            // top: calc(#{$quat_size_sm} / 2);
+                            // left: calc(#{$quat_size_sm} / 2);
+
+                            @media (min-width: 768px) {
+                                width: $quat_size;
+                                height: $quat_size;
+                                // top: calc(#{$quat_size} / 2);
+                                // left: calc(#{$quat_size} / 2);
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            &:before {
+                                background: #3D3098;
+                            }
+
+                            &:after {
+                                top: auto;
+                                bottom: $quat_size_sm;
+
+                                @media (min-width: 768px) {
+                                    bottom: $quat_size;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            &:before {
+                                left: calc(100% - (#{$quat_size_sm}));
+                                @media (min-width: 768px) {
+                                    left: calc(100% - (#{$quat_size}));
+                                }
+                            }
+
+                            &:after {
+                                left: auto;
+                                top: auto;
+                                // left: calc(100% - (#{$quat_size_sm}));
+                                // top: calc((#{$quat_size_sm} * 2) + (#{$quat_size_sm}));
+                                bottom: $quat_size_sm;
+
+                                @media (min-width: 768px) {
+                                    right: 0;
+                                    bottom: $quat_size;
+                                    // left: calc(100% - (#{$quat_size}));
+                                    // top: calc(100% - #{$quat_size});
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &:before {
+                                top: calc(100% - (#{$quat_size_sm}));
+                                left: calc(100% - (#{$quat_size_sm}));
+                                background: $color_withe;
+
+                                @media (min-width: 768px) {
+                                    top: calc(100% - (#{$quat_size}));
+                                    left: calc(100% - (#{$quat_size}));
+                                }
+                            }
+
+                            &:after {
+                                top: auto;
+                                left: $quat_size_sm;
+                                bottom: 0;
+
+                                @media (min-width: 768px) {
+                                    // top: calc(100% - (#{$quat_size}));
+                                    left: $quat_size;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            &[data-slick-index="2"] {
+                .firstScreen__quatro {
+                    span {
+                        &:after,
+                        &:before {
+                            width: $quat_size_sm;
+                            height: $quat_size_sm;
+                            top: 0;
+                            left: 0;
+                            // top: calc(#{$quat_size_sm} / 2);
+                            // left: calc(#{$quat_size_sm} / 2);
+
+                            @media (min-width: 768px) {
+                                width: $quat_size;
+                                height: $quat_size;
+                                // top: calc(#{$quat_size} / 2);
+                                // left: calc(#{$quat_size} / 2);
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            &:before {
+                                background: #3D3098;
+                            }
+
+                            &:after {
+                                top: calc(100% - (#{$quat_size_sm}));
+
+                                @media (min-width: 768px) {
+                                    top: calc(82% - (#{$quat_size}));
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            &:before {
+                                left: calc(100% - (#{$quat_size_sm}));
+                                @media (min-width: 768px) {
+                                    left: calc(100% - (#{$quat_size}));
+                                }
+                            }
+
+                            &:after {
+                                left: auto;
+                                top: auto;
+                                right: 0;
+                                bottom: $quat_size_sm;
+
+                                @media (min-width: 768px) {
+                                    bottom: $quat_size;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &:before {
+                                top: calc(100% - (#{$quat_size_sm}));
+                                left: calc(100% - (#{$quat_size_sm}));
+                                background: $color_withe;
+
+                                @media (min-width: 768px) {
+                                    top: calc(100% - (#{$quat_size}));
+                                    left: calc(100% - (#{$quat_size}));
+                                }
+                            }
+
+                            &:after {
+                                top: calc(100% - (#{$quat_size_sm}));
+                                left: calc(100% - #{$quat_size_sm} - (#{$quat_size_sm}));
+
+                                @media (min-width: 768px) {
+                                    top: calc(100% - (#{$quat_size}));
+                                    left: calc(100% - #{$quat_size} - (#{$quat_size}));
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
         }
     }
 
+}
+
+@keyframes sliderImgOpen {
+    from {
+        width: 100%;
+        left: 0;
+    }
+
+    to {
+        width: 0;
+        left: 100%;
+    }
 }
