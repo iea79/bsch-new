@@ -1,44 +1,32 @@
-$news_fonts_heading: Igra Sans;
 $news_fonts_heading_size: 1.5em;
-$news_fonts_heading_size_mob: 1em;
+$news_fonts_heading_size_mob: 1.25em;
 $news_fonts_heading_color: #1D1D1B;
 $news_fonts_desc: Roboto;
 
-$pageTitle_fonts: Igra Sans;
 $pageTitle_fonts_size: 3.25em;
-$pageTitle_fonts_size_mob: 1.43em;
+$pageTitle_fonts_size_mob: 1.33em;
 $pageTitle_fonts_color: #1D1D1B;
-
-.pageTitle {
-    font-family: $pageTitle_fonts;
-    font-size: $pageTitle_fonts_size;
-    line-height: 120%;
-    color: $pageTitle_fonts_color;
-
-    @media (max-width: 767px) {
-        font-size: $pageTitle_fonts_size_mob;
-    }
-}
 
 .newsPage {
     &__content {
-        display: flex;
-        margin-left: -0.8em;
-        @media (max-width: 767px) {
-            flex-direction: column;
-            align-items: center;
+
+        @media (min-width: 767px) {
+            margin-left: -0.8em;
+            display: flex;
         }
     }
 
     &__item {
-        width: 33.3%;
-        margin-left: 0.7em;
+        width: 100%;
         filter: grayscale(1);
         transition: filter 0.3s;
         // cursor: pointer;
 
-        @media (max-width: 767px) {
-            width: 100%;
+        @media (min-width: 768px) {
+            width: 33.3%;
+            margin-left: 0.7em;
+            display: flex;
+            flex-direction: column;
         }
 
         &:hover {
@@ -54,28 +42,42 @@ $pageTitle_fonts_color: #1D1D1B;
 
     &__img {
         display: block;
-        max-width: 30.750em;
+        height: 15.3em;
+
+        @media (min-width: 768px) {
+            max-width: 30.750em;
+            height: 22.8em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__date {
-        padding-top: 1.5em;
-        padding-bottom: 1em;
+        margin-bottom: 1em;
+        color: rgba(29, 29, 27, 0.5);
 
-        @media (max-width: 767px) {
-            font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+            padding-top: 1.5em;
+            margin-bottom: 1.3em;
         }
     }
 
     &__heading {
-        font-family: $news_fonts_heading;
-        font-size: $news_fonts_heading_size;
+        font-family: $second_font_family;
+        font-size: $news_fonts_heading_size_mob;
         color: $news_fonts_heading_color;
         line-height: 141.4%;
         text-decoration: none;
 
-        @media (max-width: 767px) {
-            font-size: $news_fonts_heading_size_mob;
-
+        @media (min-width: 768px) {
+            font-size: $news_fonts_heading_size;
+            flex-grow: 1;
         }
 
     }
@@ -83,28 +85,34 @@ $pageTitle_fonts_color: #1D1D1B;
     &__desc {
         font-family: $news_fonts_desc;
         font-weight: normal;
-        font-size: 1em;
-        line-height: 141.4%;
+        line-height: 1.7;
         color: rgba(29, 29, 27, 0.5);
-        padding-top: 0.8em;
+        padding-bottom: 3.8em;
+        padding-top: 1.3em;
+        // font-size: 0.8em;
 
-        @media (max-width: 767px) {
-            padding-bottom: 4em;
-            font-size: 0.875em;
+        @media (min-width: 768px) {
+            line-height: 141.4%;
+            font-size: 1em;
+            padding-top: 1.4em;
+            padding-bottom: 0;
         }
     }
 
     &__more {
         display: flex;
         justify-content: center;
-        padding-top: 4em;
-        font-family: $news_fonts_heading;
-        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 1.3em;
+        font-family: $second_font_family;
+        font-size: 1.3em;
         text-decoration-line: underline;
         color: #006EFF;
 
-        @media (max-width: 767px) {
-            padding-top: 1em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+            margin-top: 4.1em;
+            margin-bottom: 0;
         }
     }
 
@@ -112,17 +120,24 @@ $pageTitle_fonts_color: #1D1D1B;
 
 .newsSorts {
     display: flex;
-    padding-bottom: 2em;
+    flex-wrap: wrap;
+    margin-bottom: 1.8em;
+
+    @media (min-width: 768px) {
+        margin-bottom: 2.8em;
+    }
 
     &__item {
-        font-family: $news_fonts_heading;
-        font-size: 1.5em;
+        font-family: $second_font_family;
+        font-size: 1.2em;
         line-height: 125.4%;
-        margin-right: 1em;
-        cursor: pointer;
+        margin-right: 2em;
+        color: $main_color;
+        text-decoration: none;
 
-        @media (max-width: 767px) {
-            font-size: 1em;
+        @media (min-width: 767px) {
+            margin-right: 1.8em;
+            font-size: 1.5em;
         }
 
         &.active {
