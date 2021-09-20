@@ -250,8 +250,21 @@ function initCampusSliders() {
             ]
         });
     });
-
 }
+
+function toggleVideoModal() {
+    let modal = document.querySelector('#videoModal'),
+        video = modal.querySelector('video');
+
+    $(modal).on('show.bs.modal', () => {
+        video.play();
+    });
+
+    $(modal).on('hide.bs.modal', () => {
+        video.pause();
+    });
+}
+toggleVideoModal();
 
 function initReviewSliders() {
     const slider = $('.programReview__list:not(.slick-initialized)'),

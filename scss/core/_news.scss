@@ -10,7 +10,7 @@ $pageTitle_fonts_color: #1D1D1B;
 .newsPage {
     &__content {
 
-        @media (min-width: 767px) {
+        @media (min-width: 768px) {
             margin-left: -0.8em;
             display: flex;
         }
