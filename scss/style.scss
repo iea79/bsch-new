@@ -196,117 +196,110 @@ $icon_whatsapp: "\e903";
 @import "./component/presentationOrder";
 @import "./component/teacherModal";
 @import "./component/lightbox";
+@import "./component/videoModal";
+@import "./component/messageModal";
 
-.videoModal {
-    .modal-close {
-        color: $color_withe;
-        right: 0;
-        top: 0;
-        width: 4.4em;
-        height: 4.4em;
-        background: #006EFF;
-        z-index: 11;
-
-        &:after,
-        &:before {
-            width: 50%;
-        }
-
-        &:before {}
-
-        &:after {}
-    }
-
-    &__content {
-        max-width: none;
-        padding: 3em 0;
-
-        video {
-            max-height: 90vh;
-            width: auto;
-            margin: auto;
-            display: block;
-        }
-    }
+.lk {
+    a {}
 }
 
-.infoModal {
-    .modal-close {
-        @media (min-width: 768px) {
-            width: 2.2em;
-            height: 2.2em;
-        }
+.container_center {}
+
+.lkContent {
+    display: flex;
+    padding: 2em 0;
+
+    &__aside {
+        margin-right: 2em;
+        padding-top: 2.9em;
+        width: 14.4em;
+        flex: none;
     }
 
-    .form__wrapper {}
-}
+    &__center {
+        flex-grow: 1;
+        min-width: 0;
+    }
 
-.messageModal {
-    &__content {
+    &__head {
+        margin-bottom: 2em;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        min-height: 68vh;
+        justify-content: space-between;
 
         @media (min-width: 768px) {
-            min-height: 23em;
-        }
-    }
-
-    &__icon {
-        color: #169F62;
-        margin-bottom: 2.5em;
-
-        i {
-            border: 0.1875em solid;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.5em;
-            height: 2.5em;
-
-            @media (min-width: 768px) {
-                width: 2.88em;
-                height: 2.88em;
-            }
-
-            &:before {
-                content: '';
-                margin-top: -0.45em;
-                width: 40%;
-                height: 55%;
-                border-right: 0.1875em solid;
-                border-bottom: 0.1875em solid;
-                transform: rotate(45deg);
-            }
+            font-size: $size_xxxs;
         }
 
-        &_error {
-            color: red;
-
-            i {}
-        }
+        a {}
     }
 
     &__title {
-        font-family: $second_font_family;
-        font-size: 1.5em;
-        margin-bottom: 0.5em;
-
-        @media (min-width: 768px) {
-            font-size: 1.88em;
-        }
-    }
-
-    &__text {
-        color: rgba(29, 29, 27, 0.35);
-        line-height: 1.25;
-        max-width: 16em;
+        color: #006EFF;
 
         @media (min-width: 768px) {
             font-size: $size_xxs;
         }
     }
+
+    &__right {
+        flex: none;
+        padding-top: 3.2em;
+        width: 22.7em;
+        margin-left: 2em;
+    }
+
+}
+
+.lkNav {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 1.9em;
+        }
+
+        a {
+            color: $main_color;
+            font-size: 1.5em;
+
+            &.active {
+                color: #006EFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.lkAdvSlider {
+    &__item {
+        margin-bottom: 1.1em;
+        background: $color_withe;
+    }
+
+    &__img {
+        height: 21.5em;
+        // margin-bottom: 1.8em;
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name {
+        font-family: $second_font_family;
+        font-size: 1.35em;
+        padding: 1.4em 2.6em 1.4em 1.1em;
+    }
+
+    &__action {
+        .btn {
+            width: 100%;
+            padding: 0.9em;
+        }
+    }
+
 }

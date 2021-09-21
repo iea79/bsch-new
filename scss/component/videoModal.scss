@@ -1,0 +1,32 @@
+.videoModal {
+    .modal-close {
+        color: $color_withe;
+        right: 0;
+        top: 0;
+        width: 4.4em;
+        height: 4.4em;
+        background: #006EFF;
+        z-index: 11;
+
+        &:after,
+        &:before {
+            width: 50%;
+        }
+
+        &:before {}
+
+        &:after {}
+    }
+
+    &__content {
+        max-width: none;
+        padding: 3em 0;
+
+        video {
+            max-height: 90vh;
+            width: auto;
+            margin: auto;
+            display: block;
+        }
+    }
+}

@@ -66,3 +66,12 @@ body {
 		display: none !important;
 	}
 }
+
+a {
+	color: #006EFF;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

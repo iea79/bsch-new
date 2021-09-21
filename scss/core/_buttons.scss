@@ -25,6 +25,7 @@
 	&:hover {
 		background-color: $btn_default_bg_color_hover;
 		color: $btn_default_text_color;
+		text-decoration: none;
 	}
 
 	&:active,
