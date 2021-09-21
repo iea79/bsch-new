@@ -1,6 +1,6 @@
 nav.lkNav
     ul
-        each item in [{name: 'Мои данные', href: ''}, {name: 'Личный кабинет', href: ''}, {name: 'Мои курсы', href: ''}, {name: 'Мои сертификаты', href: ''}, {name: 'Настройки', href: ''}]
+        each item in [{name: 'Мои данные', href: 'lk-data.html'}, {name: 'Личный кабинет', href: ''}, {name: 'Мои курсы', href: ''}, {name: 'Мои сертификаты', href: ''}, {name: 'Настройки', href: ''}]
             -active = '';
             if item.name == lkPage
                 -active = 'active';
