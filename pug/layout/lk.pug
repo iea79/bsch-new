@@ -1,0 +1,26 @@
+extends layout.pug
+
+block variables
+    - lk = true;
+    - lkPage = '';
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            .lkContent
+                .lkContent__aside
+                    include ../inc/lkNav.pug
+
+                .lkContent__center
+                    block lkcontent
+
+                .lkContent__right
+                    .lkAdvSlider
+                        each item in ['', '', '']
+                            .lkAdvSlider__item
+                                .lkAdvSlider__img
+                                    img(src="img/lkAdvSlider.jpg", alt="")
+                                .lkAdvSlider__name Стратегическое мышление для бизнеса и жизни
+                                .lkAdvSlider__action
+                                    a.btn.btn_primary.btn_sm(href="#") Подробнее

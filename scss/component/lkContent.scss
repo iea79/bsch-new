@@ -1,0 +1,45 @@
+.lkContent {
+    display: flex;
+    padding: 2em 0;
+
+    &__aside {
+        margin-right: 2em;
+        padding-top: 2.9em;
+        width: 14.4em;
+        flex: none;
+    }
+
+    &__center {
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    &__head {
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxxs;
+        }
+
+        a {}
+    }
+
+    &__title {
+        color: #006EFF;
+        margin-bottom: 1.9em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+
+    &__right {
+        flex: none;
+        padding-top: 3.2em;
+        width: 22.7em;
+        margin-left: 1.8em;
+    }
+
+}

@@ -128,22 +128,24 @@
         position: relative;
 
         &:not(.open) {
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                left: 2.9em;
-                right: -1em;
-                bottom: 3em;
-                height: 8em;
-                background-image: linear-gradient(to top, #006EFF, #006EFF 40%, rgba(#006EFF, 0) 100%);
+            .programSteps__item:nth-child(n+4):not(:last-child) {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 2.9em;
+                    right: -1em;
+                    bottom: 3em;
+                    height: 8em;
+                    background-image: linear-gradient(to top, #006EFF, #006EFF 40%, rgba(#006EFF, 0) 100%);
 
-                @media (min-width: 768px) {
-                    left: 6.9em;
-                    height: 13em;
-                    bottom: 0;
-                    right: 0;
+                    @media (min-width: 768px) {
+                        left: 6.9em;
+                        height: 13em;
+                        bottom: 0;
+                        right: 0;
 
+                    }
                 }
             }
         }
@@ -172,6 +174,12 @@
         .programSteps__body {
             border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         }
+
+        &:last-child {
+            .programSteps__body {
+                border: 0;
+            }
+        }
         // }
 
         &:nth-of-type(n+4) {
@@ -186,21 +194,24 @@
                     // border-bottom: 0;
                 }
 
-                .programSteps__count {
-                    @media (min-width: 768px) {
-                        cursor: pointer;
+                &:not(:last-child) {
+                    .programSteps__count {
+                        @media (min-width: 768px) {
+                            cursor: pointer;
 
-                        &:before {
-                            content: '';
-                            width: 0.6em;
-                            height: 0.6em;
-                            border-right: 1px solid;
-                            border-bottom: 1px solid;
-                            transform: rotate(45deg);
-                            margin-top: -.3em;
+                            &:before {
+                                content: '';
+                                width: 0.6em;
+                                height: 0.6em;
+                                border-right: 1px solid;
+                                border-bottom: 1px solid;
+                                transform: rotate(45deg);
+                                margin-top: -.3em;
+                            }
                         }
                     }
                 }
+
             }
         }
 

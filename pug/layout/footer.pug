@@ -57,3 +57,36 @@ footer.footer
 
             .footer__policy
                 a(href="") Пользовательское соглашение
+
+
+// Begin Modal infoModal
+
+.modal.fade.infoModal#loginModal
+    .modal-dialog
+        a(href="#" class="modal-close" data-dismiss="modal")
+        .form__wrapper
+            form.form
+                .form__legend Авторизация
+                .form__row
+                    input(type="text", placeholder="E-mail")
+                .form__row
+                    input(type="password", placeholder="Пароль")
+                .form__action
+                    button.btn.btn_primary(type="submit") Войти
+                .form__link
+                    a(href="") Напомнить пароль
+
+// End modal infoModal
+
+// Begin Modal messageModal
+.modal.fade.messageModal#messageModal
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .messageModal__content
+                .messageModal__icon
+                    i.icon_check
+                .messageModal__title Спасибо. <br>Ваша заявка принята.
+                .messageModal__text Наш менеджер свяжется с Вами в ближайшее время.
+
+// End modal messageModal

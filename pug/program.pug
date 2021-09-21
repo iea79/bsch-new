@@ -16,11 +16,36 @@ block content
                     .firstScreen__left
                         h1.firstScreen__title Критическое мышление <br>в управлении <br>и предпринимательстве
                         .firstScreen__action
-                            a.btn(href="#") Записаться
+                            button.btn(data-toggle="modal" data-target="#programmOrder") Записаться
                             .firstScreen__price 30 000 
                                 small ₽
 
         // end firstScreen
+
+        // Begin Modal infoModal
+        .modal.fade.infoModal#programmOrder
+            .modal-dialog
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .form__wrapper
+                    form.form
+                        .form__legend Запись на курс
+                        .form_grid
+                            .form__row
+                                input(type="text", placeholder="Имя")
+                            .form__row
+                                input(type="text", placeholder="Фамилия")
+                            .form__row
+                                input(type="email", placeholder="E-mail")
+                            .form__row
+                                input(type="tel", placeholder="Телефон")
+                        .form__action
+                            button.btn.btn_primary(type="submit") Войти
+                        .form__privacy
+                            input(type="checkbox" checked="") 
+                            span Отправляя форму, 
+                                a(href="", target="_blank") я даю согласие на обработку моих персональных данных
+
+        // End modal infoModal
 
         .container_center
             // begin programDetails
@@ -46,31 +71,31 @@ block content
                             li Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления;
                             li Практикуем нестандартные решения проблем в течение курса.
 
-                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                .programAbout__row.programAbout__collapsed(data-accordion-wrap="")
                     .programAbout__title
                         h3 Преимущества программы
-                        .programAbout__toggle(data-collapsed-toggle="")
-                    .programAbout__descr(data-collapsed-body="")
+                        .programAbout__toggle(data-accordion-toggle="")
+                    .programAbout__descr(data-accordion-body="")
                         ul
                             li Новые подходы курса основаны на исключительном симбиозе опыта тренеров и уникальных методик мышления с применением их на практике. 
                             li Работа над реальными кейсами и рефлексивными заданиями;
                             li Формат семинарной работы группы с двумя тренерами; 
                             li Скрытое обучение при помощи самых последних цифровых инструментов командной работы, Project Management и др. приложений.
 
-                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                .programAbout__row.programAbout__collapsed(data-accordion-wrap="")
                     .programAbout__title
                         h3 Для кого эта <br>программа 
-                        .programAbout__toggle(data-collapsed-toggle="")
-                    .programAbout__descr(data-collapsed-body="")
+                        .programAbout__toggle(data-accordion-toggle="")
+                    .programAbout__descr(data-accordion-body="")
                         p Для тех, кто хочет улучшить навыки целеполагания, размышления, принятия решений в жизни и в любой бизнес-структуре, включая собственный бизнес. 
 
                         p При этом ключевые модели прорабатываются на практике: применяются на кейсах и в командных играх.
 
-                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                .programAbout__row.programAbout__collapsed(data-accordion-wrap="")
                     .programAbout__title
                         h3 В результате обучения вы научитесь
-                        .programAbout__toggle(data-collapsed-toggle="")
-                    .programAbout__descr(data-collapsed-body="")
+                        .programAbout__toggle(data-accordion-toggle="")
+                    .programAbout__descr(data-accordion-body="")
                         ul
                             li Видеть ситуацию в целостности, находить черты системности в окружающих явлениях, проблемах и задачах;
                             li Определять точки приложения усилий для решения рабочих задач и проблемных ситуаций;
@@ -79,11 +104,11 @@ block content
                             li Производить полный причинно-следственный анализ;
                             li Принимать коллективные системные решения.
 
-                .programAbout__row.programAbout__collapsed(data-collapsed-wrap="")
+                .programAbout__row.programAbout__collapsed(data-accordion-wrap="")
                     .programAbout__title
                         h3 Преподаватели
-                        .programAbout__toggle(data-collapsed-toggle="")
-                    .programAbout__descr(data-collapsed-body="")
+                        .programAbout__toggle(data-accordion-toggle="")
+                    .programAbout__descr(data-accordion-body="")
                         .teachersList
                             .teachersList__teacher
                                 .teachersList__photo
@@ -168,27 +193,27 @@ block content
                                     .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
                                     .programSteps__descr
 
-                            .programSteps__item
-                                .programSteps__count
-                                .programSteps__body
-                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
-                                    .programSteps__descr
-
-                            .programSteps__item
-                                .programSteps__count
-                                .programSteps__body
-                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
-                                    .programSteps__descr
-
-                            .programSteps__item
-                                .programSteps__count
-                                .programSteps__body
-                                    .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
-                                    .programSteps__descr
-
-                            label.programSteps__action 
-                                .programSteps__count
-                                span Показать всю программу
+                            //- .programSteps__item
+                            //-     .programSteps__count
+                            //-     .programSteps__body
+                            //-         .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                            //-         .programSteps__descr
+                            //- 
+                            //- .programSteps__item
+                            //-     .programSteps__count
+                            //-     .programSteps__body
+                            //-         .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                            //-         .programSteps__descr
+                            //- 
+                            //- .programSteps__item
+                            //-     .programSteps__count
+                            //-     .programSteps__body
+                            //-         .programSteps__title Данные, информация, знание, правда. Поиск, обнаружение и категории знания. Социальное доказательство и системные искажения.
+                            //-         .programSteps__descr
+                            //- 
+                            //- label.programSteps__action 
+                            //-     .programSteps__count
+                            //-     span Показать всю программу
 
                 .programSteps__quatro
                     span

@@ -1,0 +1,69 @@
+.messageModal {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 68vh;
+
+        @media (min-width: 768px) {
+            min-height: 23em;
+        }
+    }
+
+    &__icon {
+        color: #169F62;
+        margin-bottom: 2.5em;
+
+        i {
+            border: 0.1875em solid;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5em;
+            height: 2.5em;
+
+            @media (min-width: 768px) {
+                width: 2.88em;
+                height: 2.88em;
+            }
+
+            &:before {
+                content: '';
+                margin-top: -0.45em;
+                width: 40%;
+                height: 55%;
+                border-right: 0.1875em solid;
+                border-bottom: 0.1875em solid;
+                transform: rotate(45deg);
+            }
+        }
+
+        &_error {
+            color: red;
+
+            i {}
+        }
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+
+        @media (min-width: 768px) {
+            font-size: 1.88em;
+        }
+    }
+
+    &__text {
+        color: rgba(29, 29, 27, 0.35);
+        line-height: 1.25;
+        max-width: 16em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+}
