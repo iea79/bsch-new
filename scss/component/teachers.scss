@@ -110,7 +110,7 @@
         max-width: 2em;
 
         @media (min-width: 768px) {
-            width: 100%;
+            max-width: none;
             margin-bottom: 1.6em;
             line-height: 1.2;
             font-size: 1.75em;
