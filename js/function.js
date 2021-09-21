@@ -378,6 +378,15 @@ function openMobileNav() {
 }
 openMobileNav();
 
+function initLkAdvSlider() {
+    $('.lkAdvSlider').slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+    });
+}
+initLkAdvSlider();
+
 function repalceHeaderElem() {
     const loginBtn = $('.header .btn');
     if (isXsWidth()) {

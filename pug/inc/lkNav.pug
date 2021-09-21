@@ -1,0 +1,8 @@
+nav.lkNav
+    ul
+        each item in [{name: 'Мои данные', href: ''}, {name: 'Личный кабинет', href: ''}, {name: 'Мои курсы', href: ''}, {name: 'Мои сертификаты', href: ''}, {name: 'Настройки', href: ''}]
+            -active = '';
+            if item.name == lkPage
+                -active = 'active';
+            li
+                a(href=item.href class=active)=item.name
