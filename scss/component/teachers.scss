@@ -1,0 +1,133 @@
+.teachers {
+    &__content {
+        margin-top: 4em;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        margin-bottom: 5.5em;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+
+    }
+
+    &__more {
+        font-family: $second_font_family;
+        color: #006EFF;
+        font-size: 1em;
+    }
+
+    &__text {
+
+        max-width: 60%;
+        margin: 1em 0 0 1em;
+
+        @media (min-width: 768px) {
+            max-width: 30.875em;
+            margin: 3em 0 0 3em;
+            padding-right: 2em;
+        }
+    }
+
+    &__imgBox {
+        position: relative;
+        height: 7.44em;
+        max-width: 5.38em;
+
+        @media (min-width: 768px) {
+            max-width: 14.3em;
+            height: 19.75em;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -0.75em;
+            background-color: #006EFF;
+            width: 0.75em;
+            height: 0.75em;
+
+            @media (min-width: 768px) {
+
+                width: 2em;
+                height: 2em;
+                right: -2em;
+            }
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -0.75em;
+            right: 0;
+            background-color: #3D3098;
+            width: 0.75em;
+            height: 0.75em;
+
+            @media (min-width: 768px) {
+
+                width: 2em;
+                height: 2em;
+                top: -2em;
+            }
+
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+
+    }
+
+    &__name {
+        font-family: $second_font_family;
+        font-size: 1.13em;
+        line-height: 1;
+        color: #1D1D1B;
+        margin-bottom: 1em;
+        max-width: 2em;
+
+        @media (min-width: 768px) {
+            width: 100%;
+            margin-bottom: 1.6em;
+            line-height: 1.2;
+            font-size: 1.75em;
+        }
+
+    }
+
+    &__desc {
+        font-family: $main_font_family;
+        font-size: 1em;
+        line-height: 1.4;
+        color: rgba(29, 29, 27, 0.5);
+        height: 8em;
+        overflow: hidden;
+        position: relative;
+        @media (min-width: 768px) {
+            height: auto;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        height: 2.18em;
+        opacity: 1;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(246, 246, 246, 0.71) 0%, #F6F6F6 85.71%);
+    }
+
+}
