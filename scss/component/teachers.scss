@@ -93,7 +93,12 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: filter 0.4s;
+        filter: grayscale(1);
 
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 
     &__name {
@@ -121,23 +126,69 @@
         height: 8.2em;
         overflow: hidden;
         position: relative;
+
         @media (min-width: 768px) {
             height: auto;
             font-size: 1em;
         }
-    }
 
-    &__bottom {
-
-        position: absolute;
-        bottom: 0;
-        height: 3em;
-        opacity: 1;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(246, 246, 246, 0.71) 0%, #F6F6F6 85.71%);
-        @media (min-width: 768px) {
-            display: none;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 3em;
+            opacity: 1;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(246, 246, 246, 0.71) 0%, #F6F6F6 85.71%);
+            @media (min-width: 768px) {
+                display: none;
+            }
         }
     }
 
+    .teacherModal {
+        @media (max-width: 767px) {
+            .modal-dialog {
+                padding: 0;
+            }
+
+            .modal-content {
+                padding: 2em 1.1em;
+                min-height: 100vh;
+            }
+
+            &__photo {
+                width: 8.7em;
+                height: 12em;
+                margin-bottom: 1.8em;
+
+                &:after,
+                &:before {
+                    width: 1.2em;
+                    height: 1.2em;
+                }
+
+                &:before {
+                    top: 0;
+                    right: -1.2em;
+                }
+
+                &:after {
+                    right: 0;
+                    top: -1.2em;
+                }
+            }
+
+            &__name {
+                font-size: 1.3em;
+                margin-bottom: 0.6em;
+            }
+
+            &__text {
+                font-size: 1em;
+                line-height: 1.2;
+            }
+        }
+    }
 }
