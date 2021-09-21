@@ -161,8 +161,6 @@ $icon_whatsapp: "\e903";
 @import 'core/buttons';
 @import 'core/video';
 @import 'core/section';
-@import 'core/news';
-@import 'core/teachers';
 @import './vendor/slick';
 @import './vendor/modal';
 
@@ -201,6 +199,8 @@ $icon_whatsapp: "\e903";
 @import "./component/lkContent";
 @import "./component/lkNav";
 @import "./component/lkAdvSlider";
+@import "./component/news";
+@import "./component/teachers";
 
 .lkProgress {
     margin-bottom: 3em;
