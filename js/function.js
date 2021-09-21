@@ -254,13 +254,15 @@ function initCampusSliders() {
 
 function toggleVideoModal() {
     let modal = document.querySelector('#videoModal'),
-        video = modal.querySelector('video');
+        video;
 
     $(modal).on('show.bs.modal', () => {
+        video = modal.querySelector('video');
         video.play();
     });
 
     $(modal).on('hide.bs.modal', () => {
+        video = modal.querySelector('video');
         video.pause();
     });
 }
@@ -290,6 +292,17 @@ function collapsed() {
     });
 }
 collapsed();
+
+function accordion() {
+    $('[data-accordion-toggle]').on('click', function() {
+        const wrap = $(this).closest('[data-accordion-wrap]'),
+              body = wrap.find('[data-accordion-body]');
+
+        $('[data-accordion-body]').not(body).removeClass('open');
+        body.toggleClass('open');
+    });
+}
+accordion();
 
 function toggleProgramSteps() {
     let list = $('.programSteps__list'),
