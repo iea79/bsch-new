@@ -20,7 +20,9 @@
             <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
           </ul>
         </nav>
-        <div class="header__login"><a class="btn btn_sm" href="">Вход</a></div>
+        <div class="header__login">
+          <button class="btn btn_sm" data-toggle="modal" data-target="#loginModal">Вход</button>
+        </div>
         <div class="navbar__toggle"></div>
       </div>
     </header>
@@ -311,6 +313,40 @@
         </div>
       </div>
     </footer>
+    <!-- Begin Modal infoModal-->
+    <div class="modal fade infoModal" id="loginModal">
+      <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="form__wrapper">
+          <form class="form">
+            <div class="form__legend">Авторизация</div>
+            <div class="form__row">
+              <input type="text" placeholder="E-mail"/>
+            </div>
+            <div class="form__row">
+              <input type="password" placeholder="Пароль"/>
+            </div>
+            <div class="form__action">
+              <button class="btn btn_primary" type="submit">Войти</button>
+            </div>
+            <div class="form__link"><a href="">Напомнить пароль</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End modal infoModal-->
+    <!-- Begin Modal messageModal-->
+    <div class="modal fade messageModal" id="messageModal">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="messageModal__content">
+            <div class="messageModal__icon"><i class="icon_check"></i></div>
+            <div class="messageModal__title">Спасибо. <br>Ваша заявка принята.</div>
+            <div class="messageModal__text">Наш менеджер свяжется с Вами в ближайшее время.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal messageModal-->
     <script src="js/jquery.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/modal.js"></script>
