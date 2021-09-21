@@ -198,89 +198,25 @@ $icon_whatsapp: "\e903";
 @import "./component/lightbox";
 @import "./component/videoModal";
 @import "./component/messageModal";
+@import "./component/lkContent";
+@import "./component/lkNav";
+@import "./component/lkAdvSlider";
 
-.lk {
-    a {}
-}
+.lkProgress {
+    margin-bottom: 3em;
 
-.container_center {}
-
-.lkContent {
-    display: flex;
-    padding: 2em 0;
-
-    &__aside {
-        margin-right: 2em;
-        padding-top: 2.9em;
-        width: 14.4em;
-        flex: none;
-    }
-
-    &__center {
-        flex-grow: 1;
-        min-width: 0;
-    }
-
-    &__head {
-        margin-bottom: 2em;
-        display: flex;
-        justify-content: space-between;
-
-        @media (min-width: 768px) {
-            font-size: $size_xxxs;
-        }
-
-        a {}
-    }
-
-    &__title {
-        color: #006EFF;
-
-        @media (min-width: 768px) {
-            font-size: $size_xxs;
-        }
-    }
-
-    &__right {
-        flex: none;
-        padding-top: 3.2em;
-        width: 22.7em;
-        margin-left: 2em;
-    }
-
-}
-
-.lkNav {
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-
-        li {
-            margin-bottom: 1.9em;
-        }
-
-        a {
-            color: $main_color;
-            font-size: 1.5em;
-
-            &.active {
-                color: #006EFF;
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-.lkAdvSlider {
-    &__item {
-        margin-bottom: 1.1em;
+    &__row {
+        margin-bottom: 1.88em;
         background: $color_withe;
+        display: flex;
+        align-items: flex-start;
+        // min-height: 7.8em;
     }
 
     &__img {
-        height: 21.5em;
-        // margin-bottom: 1.8em;
+        width: 7.5em;
+        height: 7.8em;
+
         img {
             display: block;
             object-fit: cover;
@@ -289,16 +225,38 @@ $icon_whatsapp: "\e903";
         }
     }
 
-    &__name {
-        font-family: $second_font_family;
-        font-size: 1.35em;
-        padding: 1.4em 2.6em 1.4em 1.1em;
+    &__content {
+        padding: 1.3em 1.4em 1.3em 1.2em;
+        flex-grow: 1;
+        min-width: 0;
     }
 
-    &__action {
-        .btn {
-            width: 100%;
-            padding: 0.9em;
+    &__name {
+        font-family: $second_font_family;
+        font-size: 1.365em;
+        margin-bottom: 0.8em;
+    }
+
+    &__bar {
+        position: relative;
+        background: rgba(0, 110, 255, 0.1);
+        height: 0.55em;
+        width: 100%;
+        margin-bottom: 0.5em;
+
+        span {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__label {
+        color: rgba(29, 29, 27, 0.5);
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
         }
     }
 

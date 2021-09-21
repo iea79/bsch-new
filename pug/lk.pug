@@ -4,5 +4,24 @@ block variables
     - lkPage = 'Личный кабинет';
 
 block lkcontent
-    .lkContent__head
-        .lkContent__title Сводка по курсам
+    .lkContent__title Сводка по курсам
+
+    .lkProgress
+        .lkProgress__row
+            .lkProgress__img
+                img(src="img/program-1.jpg", alt="")
+            .lkProgress__content
+                .lkProgress__name Стратегическое мышление для бизнеса и жизни
+                .lkProgress__bar
+                    span(style="width: 33%; background: #FFA800")
+                .lkProgress__label 33% выполнено
+
+
+        .lkProgress__row
+            .lkProgress__img
+                img(src="img/program-4.jpg", alt="")
+            .lkProgress__content
+                .lkProgress__name Критическое мышление в управлении и предпринимательстве
+                .lkProgress__bar
+                    span(style="width: 77%; background: #169F62")
+                .lkProgress__label 77% выполнено

@@ -1,0 +1,21 @@
+.lkNav {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 1.9em;
+        }
+
+        a {
+            color: $main_color;
+            font-size: 1.5em;
+
+            &.active {
+                color: #006EFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
