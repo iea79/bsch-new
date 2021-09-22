@@ -154,6 +154,7 @@ textarea {
 	border-radius: 0;
 	transition: 0.3s;
 	transition-property: color background border;
+	width: 100%;
 
 	&:hover {
 		border-color: $input_hover_border_color;

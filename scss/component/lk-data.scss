@@ -1,0 +1,164 @@
+$lkData_font-family: Open Sans;
+
+.lkSecurity {
+    background-color: #fff;
+    padding: 2.75em 1.875em 3.1875em;
+
+    &__title {
+        font-family: $main_font_family;
+        font-size: 1.25em;
+        line-height: 1.1;
+        color: #1D1D1B;
+
+    }
+
+    &__content {
+        display: flex;
+        margin-top: 1.625em;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+    }
+
+    &__item {
+
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            max-width: 16em;
+            width: 100%;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-family: $lkData_font-family;
+        font-size: 1.0625em;
+        line-height: 1.2;
+        padding-bottom: 1em;
+
+    }
+
+    &__input {
+        font-family: $lkData_font-family;
+        font-size: 1.0625em;
+        line-height: 1.2;
+        color: rgba(29, 29, 27, 0.5);
+        // width: 256px;
+
+    }
+
+    &__action {
+        margin-top: 3.125em;
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+}
+
+.lkData__head {
+    background-color: #fff;
+    padding-left: 1.875em;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+    margin-bottom: 3.125em;
+}
+
+.lkData__content {
+    display: flex;
+    align-items: center;
+}
+
+.lkData__imgBox {
+    position: relative;
+}
+
+.lkData__img {}
+
+.lkData__userImg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0.3125em;
+    right: -0.25em;
+    height: 2.25em;
+    width: 2.25em;
+    background-color: #006EFF;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.lkData__fileInput {
+    display: none;
+}
+
+.lkData__nameBox {
+    padding-left: 3.125em;
+}
+
+.lkData__prompt {
+    font-family: $lkData_font-family;
+    font-size: 0.9375em;
+    line-height: 1.2;
+    color: rgba(29, 29, 27, 0.5);
+}
+
+.lkData__name {
+    font-family: $lkData_font-family;
+    font-size: 1.375em;
+    line-height: 1.2;
+    color: #1D1D1B;
+    padding-top: 1em;
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
