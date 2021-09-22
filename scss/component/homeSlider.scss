@@ -14,47 +14,49 @@
     }
 
     &__arrow {
-        position: absolute;
-        left: 50.85em;
-        bottom: 0;
-        z-index: 10;
-        display: flex;
-        background: #006EFF;
+        @media (min-width: 768px) {
+            position: absolute;
+            left: 50.85em;
+            bottom: 0;
+            z-index: 10;
+            display: flex;
+            background: #006EFF;
 
-        .slick {
-            &-arrow {
-                color: $color_withe;
-                width: 2.951em;
-                height: 8.58em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: $color_withe;
-                cursor: pointer;
-                padding-right: 0.9em;
+            .slick {
+                &-arrow {
+                    color: $color_withe;
+                    width: 2.951em;
+                    height: 8.58em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color_withe;
+                    cursor: pointer;
+                    padding-right: 0.9em;
 
-                &.slick-disabled {
-                    color: rgba($color_withe, 0.65);
-                    cursor: default;
+                    &.slick-disabled {
+                        color: rgba($color_withe, 0.65);
+                        cursor: default;
+                    }
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 0.8em;
+                        height: 0.8em;
+                        border-right: 1px solid;
+                        border-bottom: 1px solid;
+                        transform: rotate(-45deg);
+                    }
                 }
 
-                &:before {
-                    content: '';
-                    display: block;
-                    width: 0.8em;
-                    height: 0.8em;
-                    border-right: 1px solid;
-                    border-bottom: 1px solid;
-                    transform: rotate(-45deg);
+                &-prev {
+                    transform: rotate(180deg);
+                    // pl1.
                 }
-            }
 
-            &-prev {
-                transform: rotate(180deg);
-                // pl1.
+                &-next {}
             }
-
-            &-next {}
         }
     }
 
