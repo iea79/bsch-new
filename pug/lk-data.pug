@@ -1,0 +1,51 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Мои данные';
+
+block lkcontent
+    .lkContent__title Основные данные
+    .lkData__head
+        .lkData__content
+            .lkData__img
+                img(src="img/lk-data.jpg", alt="")
+                a(href="#" download="") +
+            .lkData__nameBox
+                .lkData__prompt ФИО
+                .lkData__name Стручков  Будимир  Егорович
+
+    .lkContent__title Безпасность
+    .lkSecurity
+        .lkSecurity__title Смена пароля
+        .lkSecurity__content
+            .lkSecurity__item
+                label(for="") Старый пароль
+                input(type="text", placeholder="Введите старый пароль")
+
+            .lkSecurity__item
+                label(for="") Введите новый пароль
+                input(type="text", placeholder="Придумайте новый пароль")
+
+            .lkSecurity__item
+                label(for="") Новый пароль повторно
+                input(type="text", placeholder="Повторите новый пароль")
+        .lkSecurity__action
+            button(type="submit" ) Обновить пароль
+
+
+    .lkSecurity
+        .lkSecurity__title Смена e-mail
+        .lkSecurity__content
+            .lkSecurity__item
+                label(for="") Старый e-mail
+                input(type="email", placeholder="test@test.ru")
+
+            .lkSecurity__item
+                label(for="") Введите новый email
+                input(type="email", placeholder="Введите новый e-mail")
+
+            .lkSecurity__item
+                label(for="") Введите пароль
+                input(type="email", placeholder="Введите пароль")
+        .lkSecurity__action
+            button(type="submit" ) Подтвердить email
