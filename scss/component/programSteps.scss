@@ -176,6 +176,10 @@
         }
 
         &:last-child {
+            &:before {
+                display: none;
+            }
+
             .programSteps__body {
                 border: 0;
             }

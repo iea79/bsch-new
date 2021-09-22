@@ -7,7 +7,7 @@
     }
 
     &__list {
-        margin: 0 -0.6em;
+        margin: 0 -1.1em;
         // display: flex;
 
         @media (min-width: 768px) {
@@ -26,6 +26,10 @@
                 overflow: inherit;
                 margin-right: 3em;
             }
+
+            .slick-track {
+                display: flex;
+            }
         }
     }
 
@@ -35,7 +39,6 @@
         }
         align-items: center;
         justify-content: center;
-        width: calc(20% - 1.2em);
         margin: 0 0.6em 1.2em;
         background: $color_withe;
         filter: grayscale(1);

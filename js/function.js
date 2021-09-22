@@ -158,7 +158,7 @@ function initHomeSlider() {
 function initParthnersSlider() {
     const slider = $('.parthnersLine__list:not(.slick-initialized)');
 
-    $(slider).slick({
+    slider.slick({
         dots: true,
         infinite: false,
         arrows: false,
