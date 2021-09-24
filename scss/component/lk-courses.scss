@@ -1,0 +1,71 @@
+.lkCourses {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    &__titleBox {}
+
+    &__level,
+    &__progress {
+        font-family: $main_font_family;
+        font-style: italic;
+        font-size: 0.9375em;
+        line-height: 1;
+        color: rgba(29, 29, 27, 0.5);
+    }
+
+    &__level {
+        font-size: 1.0625em;
+        margin-left: 0.625em;
+    }
+
+    &__content {
+        background-color: rgb(255, 255, 255);
+        padding: 1.25em 1.875em;
+        margin-top: 1em;
+
+        ul {
+            margin: 0;
+            list-style: none;
+            padding-bottom: 2em;
+        }
+    }
+
+    &__title,
+    &__titleNumber {
+        font-family: $main_font_family;
+        font-weight: 500;
+        font-size: 1.375em;
+        line-height: 1.2;
+        color: #1D1D1B;
+    }
+
+    &__titleNumber {
+        color: rgba(29, 29, 27, 0.5);
+    }
+
+    &__link {
+        padding-bottom: 1em;
+        color: rgba(29, 29, 27, 0.5);
+        padding-left: 1em;
+
+        &:hover {
+            color: #006EFF;
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+.lkContent__title-courses {
+    margin-bottom: 0.6875em;
+}
