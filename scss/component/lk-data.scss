@@ -1,8 +1,12 @@
 $lkData_font-family: Open Sans;
 
 .lkSecurity {
+    margin: 0 -0.9375em;
     background-color: #fff;
-    padding: 2.75em 1.875em 3.1875em;
+    padding: 0.75em 1em 1.875em;
+    @media (min-width: 768px) {
+        padding: 2.75em 1.875em 3.1875em;
+    }
 
     &__title {
         font-family: $main_font_family;
@@ -14,10 +18,10 @@ $lkData_font-family: Open Sans;
 
     &__content {
         display: flex;
-        margin-top: 1.625em;
         flex-direction: column;
-
+        margin-top: 0;
         @media (min-width: 768px) {
+            margin-top: 1.625em;
             justify-content: space-between;
             flex-direction: row;
 
@@ -26,7 +30,7 @@ $lkData_font-family: Open Sans;
 
     &__item {
 
-        margin-top: 30px;
+        margin-top: 1.875em;
 
         @media (min-width: 768px) {
             margin-top: 0;
@@ -65,10 +69,12 @@ $lkData_font-family: Open Sans;
 
 .lkData__head {
     background-color: #fff;
-    padding-left: 1.875em;
-    padding-top: 3.125em;
-    padding-bottom: 3.125em;
-    margin-bottom: 3.125em;
+    padding: 1.25em 1.25em 1.25em 1em;
+    margin: 0 -15px 2.125em;
+    @media (min-width: 768px) {
+        padding: 3.125em 0 3.125em 1.875em;
+        margin-bottom: 3.125em;
+    }
 }
 
 .lkData__content {
@@ -78,9 +84,17 @@ $lkData_font-family: Open Sans;
 
 .lkData__imgBox {
     position: relative;
+    max-width: 4.4375em;
+    @media (min-width: 768px) {
+        max-width: 8.5625em;
+    }
 }
 
-.lkData__img {}
+.lkData__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .lkData__userImg {
     display: inline-flex;
@@ -89,11 +103,18 @@ $lkData_font-family: Open Sans;
     position: absolute;
     bottom: 0.3125em;
     right: -0.25em;
-    height: 2.25em;
-    width: 2.25em;
+    height: 1.125em;
+    width: 1.125em;
+
     background-color: #006EFF;
     color: #fff;
-    cursor: pointer;
+
+    @media (min-width: 768px) {
+        height: 2.25em;
+        width: 2.25em;
+        cursor: pointer;
+
+    }
 
     &:hover {
         text-decoration: none;
@@ -105,22 +126,35 @@ $lkData_font-family: Open Sans;
 }
 
 .lkData__nameBox {
-    padding-left: 3.125em;
+    padding-left: 1.5em;
+    @media (min-width: 768px) {
+        padding-left: 3.125em;
+
+    }
 }
 
 .lkData__prompt {
     font-family: $lkData_font-family;
-    font-size: 0.9375em;
     line-height: 1.2;
     color: rgba(29, 29, 27, 0.5);
+    font-size: 0.8125em;
+
+    @media (min-width: 768px) {
+        font-size: 0.9375em;
+
+    }
 }
 
 .lkData__name {
     font-family: $lkData_font-family;
-    font-size: 1.375em;
     line-height: 1.2;
     color: #1D1D1B;
     padding-top: 1em;
+    font-size: 17px;
+    @media (min-width: 768px) {
+        font-size: 1.375em;
+
+    }
 }
 
 input::-webkit-input-placeholder {

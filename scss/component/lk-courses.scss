@@ -7,7 +7,7 @@
     &__item {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         padding: 1em 0;
     }
 
@@ -23,29 +23,48 @@
     }
 
     &__level {
-        font-size: 1.0625em;
-        margin-left: 0.625em;
+        font-size: 0.86em;
+        font-weight: 500;
+        margin-left: 0.63em;
+        padding-top: 0.3em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
     }
 
     &__content {
         background-color: rgb(255, 255, 255);
-        padding: 1.25em 1.875em;
-        margin-top: 1em;
+        padding: 1em 0.9375em 1em 0.625em;
+        margin: 1em -0.9375em;
+
+        @media (min-width: 768px) {
+            padding: 1.25em 1.875em;
+            margin-top: 1em;
+
+        }
 
         ul {
             margin: 0;
             list-style: none;
-            padding-bottom: 2em;
+            padding: 0.5em 0 0.5em 1em;
+            @media (min-width:768px) {
+                padding: 1em 0 1em 2em;
+
+            }
         }
     }
 
     &__title,
     &__titleNumber {
+        font-size: 0.875em;
         font-family: $main_font_family;
         font-weight: 500;
-        font-size: 1.375em;
-        line-height: 1.2;
         color: #1D1D1B;
+        line-height: 1.2;
+        @media (min-width: 768px) {
+            font-size: 1.375em;
+
+        }
     }
 
     &__titleNumber {
@@ -53,9 +72,11 @@
     }
 
     &__link {
-        padding-bottom: 1em;
+        font-size: 0.875em;
         color: rgba(29, 29, 27, 0.5);
-        padding-left: 1em;
+        @media (min-width: 768px) {
+            font-size: 1.0625em;
+        }
 
         &:hover {
             color: #006EFF;
@@ -67,5 +88,10 @@
 }
 
 .lkContent__title-courses {
+    font-size: 0.875em;
     margin-bottom: 0.6875em;
+    @media (min-width: 768px) {
+
+        font-size: 1.0625em;
+    }
 }
