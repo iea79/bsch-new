@@ -81,6 +81,7 @@ function checkOnResize() {
     initParthnersSlider();
     initCampusSliders();
     initReviewSliders();
+    initRecommendSliders();
     toggleProgramSteps();
 }
 
@@ -587,7 +588,6 @@ function initRecommendSliders() {
     }
 
 }
-initRecommendSliders();
 
 
 
