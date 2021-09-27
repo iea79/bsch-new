@@ -43,7 +43,94 @@
 		}
 	}
 
+	&__user {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__userImg {
+		width: 3.875em;
+		height: 3.875em;
+		margin-left: 1.5em;
+		flex: none;
+
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__userNotif {
+		width: 2.3125em;
+		height: 2.0625em;
+
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		top: 5.5em;
+		right: 0;
+		width: 14.0625em;
+		min-height: 17.375em;
+		background-color: #006EFF;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 0.7em 1em 0.7em 1.1875em;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+		transition: 0.3s;
+
+		a {
+			padding-left: 1em;
+			display: block;
+			color: #fff;
+			font-size: 1.0625em;
+
+			&:hover {
+				text-decoration: none;
+
+			}
+
+		}
+
+		img {
+			max-width: 1.5em;
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background-color: rgba(29, 29, 27, 0.25);
+			cursor: pointer;
+			transition: 0.3s;
+			padding: 1em 1em 1em 1.1875em;
+
+		}
+	}
+
 	&__login {
+		position: relative;
 
 		@media (min-width: 768px) {
 			min-width: 10em;

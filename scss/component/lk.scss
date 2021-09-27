@@ -9,6 +9,7 @@
 
 .lkRecommend {
     margin: 0 -1.1em;
+
     @media (min-width: 768px) {
         margin: 0;
 
@@ -16,18 +17,22 @@
 
     &__slider {}
 
-    &__item {
+    &__plate {
+
         background-color: #fff;
-        display: flex !important;
-        align-items: flex-start;
         width: 100%;
-        padding: 0.9375em 1.25em;
         margin-bottom: 2em;
-        min-height: 14.8125em;
+        min-height: 16.375em;
+        padding: 1.1em;
         @media (min-width: 768px) {
             padding: 0;
 
         }
+    }
+
+    &__item {
+        display: flex !important;
+
     }
 
     &__left {
@@ -50,15 +55,13 @@
     }
 
     &__right {
-        flex-grow: 0;
-        width: 100%;
-        padding-bottom: 1em;
-        padding-left: 1em;
-        @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
 
-            padding: 1.44em 4.38em 1em 2em;
-            height: 16.375em;
-        }
+        flex-grow: 1;
+        width: 100%;
+        padding: 1em 1em 0;
+        @media (min-width: 768px) {}
 
     }
 
@@ -88,6 +91,7 @@
         margin-top: 1em;
 
         @media (min-width: 768px) {
+            flex-grow: 1;
             font-size: 1.625em;
 
         }
@@ -97,17 +101,17 @@
     &__action {
         display: flex;
         flex-direction: column;
+        padding-bottom: 1em;
         @media (min-width: 768px) {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin-top: 2em;
+            // margin-top: 2em;
 
         }
     }
 
     &__buttonBox {
-        // margin-left: 0 -3.5625em 0 -3.5625em;
         @media (min-width: 768px) {
             width: 50%;
         }
@@ -115,7 +119,6 @@
 
     &__button {
         width: 100%;
-        @media (min-width: 768px) {}
     }
 
     &__ratingBox {
