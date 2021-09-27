@@ -36,6 +36,17 @@ $quat_size_sm: 2.6em;
 $icomoon-font-family: "bsch" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon_docx: "\e915";
+$icon_pdf: "\e916";
+$icon_angle: "\e914";
+$icon_paperclip: "\e913";
+$icon_briefcase: "\e90c";
+$icon_video: "\e90d";
+$icon_cube: "\e90e";
+$icon_comments: "\e90f";
+$icon_tasks: "\e910";
+$icon_pencil: "\e911";
+$icon_bullhorn: "\e912";
 $icon_calendar: "\e90b";
 $icon_quote: "\e90a";
 $icon_play: "\e909";
@@ -71,6 +82,72 @@ $icon_whatsapp: "\e903";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_docx {
+    &:before {
+        content: $icon_docx;
+    }
+}
+
+.icon_pdf {
+    &:before {
+        content: $icon_pdf;
+    }
+}
+
+.icon_angle {
+    &:before {
+        content: $icon_angle;
+    }
+}
+
+.icon_paperclip {
+    &:before {
+        content: $icon_paperclip;
+    }
+}
+
+.icon_briefcase {
+    &:before {
+        content: $icon_briefcase;
+    }
+}
+
+.icon_video {
+    &:before {
+        content: $icon_video;
+    }
+}
+
+.icon_cube {
+    &:before {
+        content: $icon_cube;
+    }
+}
+
+.icon_comments {
+    &:before {
+        content: $icon_comments;
+    }
+}
+
+.icon_tasks {
+    &:before {
+        content: $icon_tasks;
+    }
+}
+
+.icon_pencil {
+    &:before {
+        content: $icon_pencil;
+    }
+}
+
+.icon_bullhorn {
+    &:before {
+        content: $icon_bullhorn;
+    }
 }
 
 .icon_calendar {
@@ -206,3 +283,340 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-data";
 @import "./component/lk-courses";
 @import "./component/lk";
+
+.coursNav {
+    display: flex;
+    padding-left: 1.1em;
+
+    &__item {
+        text-decoration: none;
+        width: 2.6875em;
+        height: 2.6875em;
+        background: rgba(0, 110, 255, 0.19);
+        color: #006EFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5em;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        i {
+            font-size: 1.5em;
+        }
+
+        &.active {
+            background: #006EFF;
+            color: #fff;
+            cursor: default;
+
+            &:after {
+                content: '';
+                position: absolute;
+                border: 0.6em solid #006EFF;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                transform: rotate(45deg);
+                top: calc(100% + 1em);
+            }
+
+        }
+    }
+}
+
+.lkCoursePage {
+    position: relative;
+
+    &__aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background: #1D1D1B;
+        padding-top: 5.8em;
+        padding-right: 0.125em;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__content {
+        padding-left: 26.4em;
+    }
+
+    &__head {
+        background: #E6F1FF;
+        display: flex;
+        padding: 1.1em 0;
+        margin-left: -26.4em;
+        padding-left: 26.4em;
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-size: 1.125em;
+        max-width: 21em;
+        margin-right: 8em;
+    }
+
+    &__condition {
+        display: inline-flex;
+        align-items: center;
+        padding: 1.1em 1.9em;
+        background: #E6F1FF;
+        color: #006EFF;
+        margin-bottom: 2em;
+
+        i {
+            width: 1.4em;
+            height: 1.4em;
+            margin-right: 1.2em;
+            border: 2px solid;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                font-size: 1em;
+                font-weight: 600;
+            }
+        }
+
+        span {
+            font-size: 1.4em;
+        }
+    }
+
+    &__state {
+        font-size: $size_xxs;
+        font-style: italic;
+        color: $color_primary;
+        padding-top: 0.1em;
+    }
+
+    &__body {
+        padding-top: 2em;
+        max-width: 60em;
+
+        h2 {
+            font-family: $second_font_family;
+            font-weight: 400;
+            font-size: 1.34em;
+            margin: 0 0 1.9em;
+        }
+
+        h3 {
+            font-family: $second_font_family;
+            font-weight: 400;
+            font-size: 1.25em;
+            margin: 0 0 1.3em;
+        }
+
+        ol,
+        p,
+        ul {
+            font-size: $size_xxs;
+            color: rgba(29, 29, 27, 0.5);
+
+            + h3 {
+                margin-top: 2em;
+            }
+
+        }
+
+        p {
+            margin: 1.9em 0;
+        }
+    }
+
+    &__docs {
+        padding: 0;
+        margin: 0 0 2em;
+        list-style: none;
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(29, 29, 27, 0.5);
+            display: inline-flex;
+            align-items: center;
+
+            i {
+                color: $color_primary;
+                margin-right: 0.7em;
+                font-size: 1.4em;
+            }
+
+        }
+    }
+
+}
+
+.lkCourseAside {
+    width: 14.875em;
+    height: 100%;
+
+    &__toggle {
+        background: #3D3098;
+        width: 1.8125em;
+        height: 1.8125em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color_withe;
+        position: absolute;
+        right: 0;
+        top: 7em;
+        cursor: pointer;
+
+        &:before {
+            font-family: 'bsch';
+            content: $icon_angle;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__head {
+        padding: 1.3em 1em;
+    }
+
+    &__title {
+        color: $color_withe;
+        font-size: $size_xxxs;
+        margin-bottom: 0.65em;
+        padding-right: 1.7em;
+    }
+
+    &__bar {
+        position: relative;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.19);
+        margin-bottom: 0.4em;
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #169F62;
+        }
+    }
+
+    &__progress {
+        color: rgba(255, 255, 255, 0.5);
+        font-style: italic;
+    }
+
+    &__parent {
+        a {
+            color: $color_withe;
+            text-decoration: none;
+            display: block;
+            padding: 0.74em 1em;
+
+            &.active {
+                background: #006EFF;
+            }
+        }
+    }
+
+    &__list {
+        padding: 0;
+        flex-grow: 1;
+        max-height: 100%;
+        overflow-y: auto;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: $size_xxxs;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            a {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            li {
+                // margin-bottom: 1.48em;
+            }
+
+            ul {
+                padding-left: 0.7em;
+
+                a {
+                    color: rgba(255, 255, 255, 0.5);
+                    text-decoration: none;
+                    display: block;
+                    padding: 0.74em 0.74em 0.74em 1.8em;
+                    margin-left: -.7em;
+
+                    &.active {
+                        background: #006EFF;
+                    }
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0.25em;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba($color_withe, 0);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background: #C8C8C8;
+            margin: 0.125em;
+        }
+    }
+
+}
+
+.lkCoursMessage {
+    &__title {}
+
+    &__content {}
+
+    &__row {}
+
+    &__user {}
+
+    &__body {}
+
+    &__area {}
+
+    &__upload {}
+
+    &__submit {}
+
+    &__nav {}
+
+}
+
+.lkFormUpload {
+    &__label {}
+
+}
+
+.icon_paperclip {}
+
+.btn {}
+
+.btn_primary {}
+
+.btn_secondary {}
+
+.icon_angle {}

@@ -5,11 +5,30 @@ header.header
                 img(src="img/logo.svg", alt="alt")
         nav.header__nav.nav
             ul.navbar
-                each navLink in [{name: 'О школе ', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programs.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'}]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+                if isCourse
+                    .coursNav
+                        a.coursNav__item.active(href="")
+                            i.icon_bullhorn
+                        a.coursNav__item(href="")
+                            i.icon_pencil
+                        a.coursNav__item(href="")
+                            i.icon_tasks
+                        a.coursNav__item(href="")
+                            i.icon_comments
+                        a.coursNav__item(href="")
+                            i.icon_cube
+                        a.coursNav__item(href="")
+                            i.icon_video
+                        a.coursNav__item(href="")
+                            i.icon_briefcase
+                else
+                    each navLink in [{name: 'О школе ', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programs.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'}]
+                        li.navbar__item
+                            a.navbar__link(href= navLink.href)= navLink.name
 
         .header__login
-            button.btn.btn_sm(data-toggle="modal" data-target="#loginModal") Вход
+            if isLogin
+            else
+                button.btn.btn_sm(data-toggle="modal" data-target="#loginModal") Вход
 
         .navbar__toggle

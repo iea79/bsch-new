@@ -1,0 +1,80 @@
+extends layout.pug
+
+block variables
+    - isLogin = true;
+    - isCourse = true;
+
+block content
+    .lkCoursePage
+        // begin lkCourseAside
+        .lkCoursePage__aside
+            .lkCourseAside
+                .lkCourseAside__toggle
+                .lkCourseAside__head
+                    .lkCourseAside__title Системное мышление как основа принятия управленческих решений
+                    .lkCourseAside__bar
+                        span(style="width: 80%")
+                    .lkCourseAside__progress 20/29 выполнено
+
+                .lkCourseAside__list
+                    ul
+                        li.lkCourseAside__parent
+                            a(href="") 1 Зачем нужно работать с м Lorem ipsum.
+                        ul
+                            li 
+                                a(href="").active 1.1 Знакомство с препода Lorem ipsum.
+                            li
+                                a(href="") 1.2 Подходы к критическо Lorem ipsum.
+                            li
+                                a(href="") Формирование команд
+                            li
+                                a(href="") Задание
+                    ul
+                        li.lkCourseAside__parent
+                            a(href="") 2 Призмы мышления. Заче Lorem ipsum.
+                        ul
+                            li
+                                a(href="") 2.1 Скептицизм и обьекти Lorem ipsum.
+                            li
+                                a(href="") 2.2 Современные процесс Lorem ipsum.
+                    ul
+                        li.lkCourseAside__parent
+                            a(href="") 3 Как научиться распознав Lorem ipsum.
+                        ul
+                            li
+                                a(href="") 3.1 Искажения восприяти Lorem ipsum.
+                            li
+                                a(href="") 3.2 Искажения подачи фа Lorem ipsum.
+                            li
+                                a(href="") 3.3 Выявление и описани Lorem ipsum.
+                            li
+                                a(href="") 3.4 Анализ ситуации
+                    ul
+                        li.lkCourseAside__parent
+                            a(href="") 4 Как эффективно работать Lorem ipsum.
+                        ul
+                            li
+                                a(href="") 4.1 Данные, информация, Lorem ipsum.
+                            li
+                                a(href="") 3.2 Искажения подачи фа Lorem ipsum.
+                            li
+                                a(href="") 3.3 Выявление и описани Lorem ipsum.
+                            li
+                                a(href="") 3.4 Анализ ситуации
+                    ul
+                        li.lkCourseAside__parent
+                            a(href="") 4 Как эффективно работать Lorem ipsum.
+                        ul
+                            li
+                                a(href="") 4.1 Данные, информация, Lorem ipsum.
+                            li
+                                a(href="") 3.2 Искажения подачи фа Lorem ipsum.
+                            li
+                                a(href="") 3.3 Выявление и описани Lorem ipsum.
+                            li
+                                a(href="") 3.4 Анализ ситуации
+
+        // end lkCourseAside
+
+        .lkCoursePage__content
+            block course
