@@ -7,9 +7,10 @@ block lkcontent
     .lkContent__title Основные данные
     .lkData__head
         .lkData__content
-            .lkData__img
-                img(src="img/lk-data.jpg", alt="")
-                a(href="#" download="") +
+            .lkData__imgBox
+                img.lkData__img(src="img/lk-data.jpg", alt="")
+                input.lkData__fileInput(id="file-input" type="file" name="file")
+                label.lkData__userImg(for="file-input") +
             .lkData__nameBox
                 .lkData__prompt ФИО
                 .lkData__name Стручков  Будимир  Егорович
@@ -19,33 +20,33 @@ block lkcontent
         .lkSecurity__title Смена пароля
         .lkSecurity__content
             .lkSecurity__item
-                label(for="") Старый пароль
-                input(type="text", placeholder="Введите старый пароль")
+                label.lkSecurity__label(for="") Старый пароль
+                input.lkSecurity__input(type="text", placeholder="Введите старый пароль")
 
             .lkSecurity__item
-                label(for="") Введите новый пароль
-                input(type="text", placeholder="Придумайте новый пароль")
+                label.lkSecurity__label(for="") Введите новый пароль
+                input.lkSecurity__input(type="text", placeholder="Придумайте новый пароль")
 
             .lkSecurity__item
-                label(for="") Новый пароль повторно
-                input(type="text", placeholder="Повторите новый пароль")
+                label.lkSecurity__label(for="") Новый пароль повторно
+                input.lkSecurity__input(type="text", placeholder="Повторите новый пароль")
         .lkSecurity__action
-            button(type="submit" ) Обновить пароль
+            button.btn.btn_primary.lkSecurity__button(type="submit" ) Обновить пароль
 
 
     .lkSecurity
         .lkSecurity__title Смена e-mail
         .lkSecurity__content
             .lkSecurity__item
-                label(for="") Старый e-mail
-                input(type="email", placeholder="test@test.ru")
+                label.lkSecurity__label(for="") Старый e-mail
+                input.lkSecurity__input(type="email", placeholder="test@test.ru")
 
             .lkSecurity__item
-                label(for="") Введите новый email
-                input(type="email", placeholder="Введите новый e-mail")
+                label.lkSecurity__label(for="") Введите новый email
+                input.lkSecurity__input(type="email", placeholder="Введите новый e-mail")
 
             .lkSecurity__item
-                label(for="") Введите пароль
-                input(type="email", placeholder="Введите пароль")
+                label.lkSecurity__label(for="") Введите пароль
+                input.lkSecurity__input(type="email", placeholder="Введите пароль")
         .lkSecurity__action
-            button(type="submit" ) Подтвердить email
+            button.btn.btn_primary.lkSecurity__button(type="submit" ) Подтвердить email
