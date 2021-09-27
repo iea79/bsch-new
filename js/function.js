@@ -81,6 +81,7 @@ function checkOnResize() {
     initParthnersSlider();
     initCampusSliders();
     initReviewSliders();
+    initRecommendSliders();
     toggleProgramSteps();
 }
 
@@ -587,10 +588,42 @@ function initRecommendSliders() {
     }
 
 }
-initRecommendSliders();
 
 
+$( '.header__menu' ).hide( '', function () {
+    $( '.header__userImg' ).on( 'click', function ( event ) {
+        $( '.header__menu' ).toggle( '', function () {
 
+        } );
+    } );
+
+} );
+
+
+// function replaceRecommendButton() {
+//     const recBtn = $( '.lkRecommend__button' );
+//     if ( isXsWidth() ) {
+//         recBtn.appendTo( '.lkRecommend__plate' );
+//     } else {
+//         recBtn.appendTo( '.lkRecommend__action' );
+//     }
+// }
+// replaceRecommendButton();
+
+// function replaceRecommendButton() {
+//     const recBtn = $( '.lkRecommend__buttonBox' );
+//
+//     $( '.lkRecommend__plate' ).each( function ( el ) {
+//         $( '.lkRecommend__button' );
+//         if ( isXsWidth() ) {
+//             recBtn.appendTo( '.lkRecommend__plate' );
+//         } else {
+//             recBtn.appendTo( '.lkRecommend__action' );
+//         }
+//     } );
+// }
+// replaceRecommendButton();
+//
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
 // function thousandSeparator(str) {

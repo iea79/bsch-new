@@ -28,6 +28,42 @@ header.header
 
         .header__login
             if isLogin
+                .header__user
+                    .header__userNotif
+                        a(href="#")
+                            img(src="img/notification.svg", alt="")
+                    .header__userImg
+                        img(src="img/lk-data.jpg", alt="")
+                //Ава и меню выпадайка
+                .header__menu
+                    .header__item
+                        img(src="img/user-solid.svg", alt="")
+                        a(href="#") Личный кабинет
+
+                    .header__item
+                        img(src="img/book-open-solid.svg", alt="")
+                        a(href="#") Мои курсы
+
+                    .header__item
+                        img(src="img/certificate-solid.svg", alt="")
+                        a(href="#") Мои сертификаты
+
+                    .header__item
+                        img(src="img/bell-solid.svg", alt="")
+                        a(href="#") Уведомления
+
+                    .header__item
+                        img(src="img/address-card.svg", alt="")
+                        a(href="#") Мои данные
+
+                    .header__item
+                        img(src="img/cog-solid.svg", alt="")
+                        a(href="#") Настройки
+
+                    .header__item
+                        img(src="img/sign-out-alt-solid.svg", alt="")
+                        a(href="#") Выход
+
             else
                 button.btn.btn_sm(data-toggle="modal" data-target="#loginModal") Вход
 

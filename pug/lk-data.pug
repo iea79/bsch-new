@@ -7,10 +7,11 @@ block lkcontent
     .lkContent__title Основные данные
     .lkData__head
         .lkData__content
-            .lkData__imgBox
-                img.lkData__img(src="img/lk-data.jpg", alt="")
-                input.lkData__fileInput(id="file-input" type="file" name="file")
-                label.lkData__userImg(for="file-input") +
+            .lkData__avatar
+                .lkData__img
+                    img(src="img/lk-data.jpg", alt="")
+                label.lkData__userImg() +
+                    input.lkData__fileInput(type="file" name="file")
             .lkData__nameBox
                 .lkData__prompt ФИО
                 .lkData__name Стручков  Будимир  Егорович
