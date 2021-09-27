@@ -1,0 +1,48 @@
+.advProg {
+    display: block;
+    margin-top: 2em;
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    &__content {
+        margin: 0 -15px;
+    }
+
+    &__img {
+        img {
+            display: block;
+        }
+    }
+
+    &__body {
+        padding: 1.4375em 0.9375em;
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-size: 1.125em;
+        line-height: 1.2;
+        color: #1D1D1B;
+        padding-bottom: 15px;
+    }
+
+    &__desc {
+        font-size: 0.875em;
+        line-height: 1.1;
+        color: rgba(29, 29, 27, 0.5);
+
+    }
+
+    &__action {}
+
+    &__button {
+        width: 100%;
+
+    }
+
+}
+
+.btn {}
+
+.btn_primary {}

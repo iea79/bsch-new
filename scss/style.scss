@@ -161,6 +161,7 @@ $icon_whatsapp: "\e903";
 @import 'core/buttons';
 @import 'core/video';
 @import 'core/section';
+@import 'core/advProg';
 @import './vendor/slick';
 @import './vendor/modal';
 
@@ -202,3 +203,6 @@ $icon_whatsapp: "\e903";
 @import "./component/lkNav";
 @import "./component/lkAdvSlider";
 @import "./component/lkProgress";
+@import "./component/lk-data";
+@import "./component/lk-courses";
+@import "./component/lk";

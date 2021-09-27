@@ -1,0 +1,201 @@
+$lkData_font-family: Open Sans;
+
+.lkSecurity {
+    margin: 0 -1.1em;
+    background-color: #fff;
+    padding: 0.75em 1em 1.875em;
+    @media (min-width: 768px) {
+        padding: 2.75em 1.875em 3.1875em;
+    }
+
+    &__title {
+        font-family: $main_font_family;
+        font-size: 1.25em;
+        line-height: 1.1;
+        color: #1D1D1B;
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        @media (min-width: 768px) {
+            margin-top: 1.625em;
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+    }
+
+    &__item {
+
+        margin-top: 1.875em;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            max-width: 16em;
+            width: 100%;
+        }
+    }
+
+    &__label {
+        display: block;
+        // font-family: $lkData_font-family;
+        font-size: 1.0625em;
+        line-height: 1.2;
+        padding-bottom: 1em;
+
+    }
+
+    &__input {
+        // font-family: $lkData_font-family;
+
+    }
+
+    &__action {
+        margin-top: 3.125em;
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+}
+
+.lkData__head {
+    background-color: #fff;
+    padding: 1.25em 1.25em 1.25em 1em;
+    margin: 0 -1.1em 2.125em;
+    @media (min-width: 768px) {
+        padding: 3.125em 0 3.125em 1.875em;
+        margin-bottom: 3.125em;
+    }
+}
+
+.lkData__content {
+    display: flex;
+    align-items: center;
+}
+
+.lkData__avatar {
+    position: relative;
+
+}
+
+.lkData__img {
+    max-width: 4.4375em;
+
+    @media (min-width: 768px) {
+        max-width: 8.5625em;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+}
+
+.lkData__userImg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0.3125em;
+    height: 1.125em;
+    width: 1.125em;
+    left: 3.25em;
+    background-color: #006EFF;
+    color: #fff;
+
+    @media (min-width: 768px) {
+        left: 6.5em;
+        height: 2.25em;
+        width: 2.25em;
+        cursor: pointer;
+
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.lkData__fileInput {
+    display: none;
+}
+
+.lkData__nameBox {
+    padding-left: 1.5em;
+    @media (min-width: 768px) {
+        padding-left: 3.125em;
+
+    }
+}
+
+.lkData__prompt {
+    font-family: $lkData_font-family;
+    line-height: 1.2;
+    color: rgba(29, 29, 27, 0.5);
+    font-size: 0.8125em;
+
+    @media (min-width: 768px) {
+        font-size: 0.9375em;
+
+    }
+}
+
+.lkData__name {
+    font-family: $lkData_font-family;
+    line-height: 1.2;
+    color: #1D1D1B;
+    padding-top: 1em;
+    font-size: 17px;
+    @media (min-width: 768px) {
+        font-size: 1.375em;
+
+    }
+}
+
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

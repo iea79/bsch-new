@@ -2,6 +2,7 @@ extends layout/lk.pug
 
 block variables
     - lkPage = 'Личный кабинет';
+    - isLogin = true;
 
 block lkcontent
     .lkContent__title Сводка по курсам
@@ -25,3 +26,57 @@ block lkcontent
                 .lkProgress__bar
                     span(style="width: 77%; background: #169F62")
                 .lkProgress__label 77% выполнено
+
+    .lkContent__title Календарь событий
+    .lkCalendar
+        .lkCalendar__content
+            img(src="img/calendar.jpg", alt="")
+
+    .lkContent__title Рекомендации
+    .lkRecommend
+        .lkRecommend__slider
+
+            .lkRecommend__plate
+                .lkRecommend__item
+                    .lkRecommend__left
+                        img(src="img/recommend-1.jpg", alt="")
+                    .lkRecommend__right
+                        .lkRecommend__timeBox
+                            img.time__icon(src="img/time.svg", alt="")
+                            span.lkRecommend__time 16 часов
+                        a.lkRecommend__title(href="#") От mvp до pitchdeck: инновационное мышление в бизнес-процессах 
+                        .lkRecommend__action
+                            .lkRecommend__buttonBox
+                                button.btn.btn_primary.lkRecommend__button(type="button" ) Подробнее
+                            .lkRecommend__ratingBox
+                                .lkRecommend__full
+                                    .lkRecommend__total (4.2)
+                                    .lkRecommend__rate
+                                        .lkRecommend__label 1045 оценок
+                                        .rating
+                                            .rating__stars
+                                            .rating__full(style="width: 84%")
+                //- .lkRecommend__buttonBox.lkRecommend__buttonBox-mob
+                //-     button.btn.btn_primary.lkRecommend__button(type="button" ) Подробнее
+
+            .lkRecommend__plate
+                .lkRecommend__item
+                    .lkRecommend__left
+                        img(src="img/recommend-2.jpg", alt="")
+                    .lkRecommend__right
+                        .lkRecommend__timeBox
+                            img.time__icon(src="img/time.svg", alt="")
+                            span.lkRecommend__time 16 часов
+                        a.lkRecommend__title(href="#") Бизнес-психология
+                        .lkRecommend__action
+                            .lkRecommend__buttonBox
+                                button.btn.btn_primary.lkRecommend__button(type="button" ) Подробнее
+                            .lkRecommend__ratingBox
+                                .lkRecommend__full
+                                    //- .lkRecommend__total (4.2)
+                                    //- .lkRecommend__rate
+                                    //-     .lkRecommend__label 1045 оценок
+                                    //-     .rating
+                                    //-         .rating__stars
+                                    //-         .rating__full(style="width: 84%")
+    include ../pug/inc/advProg

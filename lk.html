@@ -21,7 +21,20 @@
           </ul>
         </nav>
         <div class="header__login">
-          <button class="btn btn_sm" data-toggle="modal" data-target="#loginModal">Вход</button>
+          <div class="header__user">
+            <div class="header__userNotif"><a href="#"><img src="img/notification.svg" alt=""/></a></div>
+            <div class="header__userImg"><img src="img/lk-data.jpg" alt=""/></div>
+          </div>
+          <!--Ава и меню выпадайка-->
+          <div class="header__menu">
+            <div class="header__item"><img src="img/user-solid.svg" alt=""/><a href="#">Личный кабинет</a></div>
+            <div class="header__item"><img src="img/book-open-solid.svg" alt=""/><a href="#">Мои курсы</a></div>
+            <div class="header__item"><img src="img/certificate-solid.svg" alt=""/><a href="#">Мои сертификаты</a></div>
+            <div class="header__item"><img src="img/bell-solid.svg" alt=""/><a href="#">Уведомления</a></div>
+            <div class="header__item"><img src="img/address-card.svg" alt=""/><a href="#">Мои данные</a></div>
+            <div class="header__item"><img src="img/cog-solid.svg" alt=""/><a href="#">Настройки</a></div>
+            <div class="header__item"><img src="img/sign-out-alt-solid.svg" alt=""/><a href="#">Выход</a></div>
+          </div>
         </div>
         <div class="navbar__toggle"></div>
       </div>
@@ -33,9 +46,9 @@
             <div class="lkContent__aside">
               <nav class="lkNav">
                 <ul>
-                  <li><a href="">Мои данные</a></li>
-                  <li><a class="active" href="">Личный кабинет</a></li>
-                  <li><a href="">Мои курсы</a></li>
+                  <li><a href="lk-data.html">Мои данные</a></li>
+                  <li><a class="active" href="lk.html">Личный кабинет</a></li>
+                  <li><a href="lk-courses.html">Мои курсы</a></li>
                   <li><a href="">Мои сертификаты</a></li>
                   <li><a href="">Настройки</a></li>
                 </ul>
@@ -58,6 +71,68 @@
                     <div class="lkProgress__name">Критическое мышление в управлении и предпринимательстве</div>
                     <div class="lkProgress__bar"><span style="width: 77%; background: #169F62"></span></div>
                     <div class="lkProgress__label">77% выполнено</div>
+                  </div>
+                </div>
+              </div>
+              <div class="lkContent__title">Календарь событий</div>
+              <div class="lkCalendar">
+                <div class="lkCalendar__content"><img src="img/calendar.jpg" alt=""/></div>
+              </div>
+              <div class="lkContent__title">Рекомендации</div>
+              <div class="lkRecommend">
+                <div class="lkRecommend__slider">
+                  <div class="lkRecommend__plate">
+                    <div class="lkRecommend__item">
+                      <div class="lkRecommend__left"><img src="img/recommend-1.jpg" alt=""/></div>
+                      <div class="lkRecommend__right">
+                        <div class="lkRecommend__timeBox"><img class="time__icon" src="img/time.svg" alt=""/><span class="lkRecommend__time">16 часов</span></div><a class="lkRecommend__title" href="#">От mvp до pitchdeck: инновационное мышление в бизнес-процессах </a>
+                        <div class="lkRecommend__action">
+                          <div class="lkRecommend__buttonBox">
+                            <button class="btn btn_primary lkRecommend__button" type="button">Подробнее</button>
+                          </div>
+                          <div class="lkRecommend__ratingBox">
+                            <div class="lkRecommend__full">
+                              <div class="lkRecommend__total">(4.2)</div>
+                              <div class="lkRecommend__rate">
+                                <div class="lkRecommend__label">1045 оценок</div>
+                                <div class="rating">
+                                  <div class="rating__stars"></div>
+                                  <div class="rating__full" style="width: 84%"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lkRecommend__plate">
+                    <div class="lkRecommend__item">
+                      <div class="lkRecommend__left"><img src="img/recommend-2.jpg" alt=""/></div>
+                      <div class="lkRecommend__right">
+                        <div class="lkRecommend__timeBox"><img class="time__icon" src="img/time.svg" alt=""/><span class="lkRecommend__time">16 часов</span></div><a class="lkRecommend__title" href="#">Бизнес-психология</a>
+                        <div class="lkRecommend__action">
+                          <div class="lkRecommend__buttonBox">
+                            <button class="btn btn_primary lkRecommend__button" type="button">Подробнее</button>
+                          </div>
+                          <div class="lkRecommend__ratingBox">
+                            <div class="lkRecommend__full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="advProg">
+                <div class="advProg__content">
+                  <div class="advProg__img"><img src="img/program-home.jpg" alt=""/></div>
+                  <div class="advProg__body">
+                    <div class="advProg__title">Критическое мышление в управлении и предпринимательстве</div>
+                    <div class="advProg__desc">Программа призвана сформировать симбиоз критического и креативного мышления для решения нестандартных задач и принятия правильных решений как в жизни, так и в бизнесе.</div>
+                  </div>
+                  <div class="advProg__action">
+                    <button class="btn btn_primary advProg__button" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>

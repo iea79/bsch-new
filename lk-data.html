@@ -27,22 +27,99 @@
       </div>
     </header>
     <main class="main_content">
-      <div class="container_center">
-        <ul>
-          <li><a href="home.html">Главная</a></li>
-          <li><a href="campus.html">Кампус</a></li>
-          <li><a href="program.html">Программа</a></li>
-          <li><a href="about.html">О школе</a></li>
-          <li><a href="news.html">Новости и события</a></li>
-          <li><a href="event-single.html">Событие</a></li>
-          <li><a href="news-single.html">Новость</a></li>
-          <li><a href="teachers.html">Преподаватели</a></li>
-          <li><a href="lk.html">Личный кабинет - Календарь</a></li>
-          <li><a href="lk-data.html">Личный кабинет - Мои данные</a></li>
-          <li><a href="lk-courses.html">Личный кабинет - Курсы</a></li>
-        </ul>
-        <!-- Button trigger modal messageModal-->
-        <button class="btn btn_primary" data-toggle="modal" data-target="#messageModal">Успешная модалка</button>
+      <div class="lk">
+        <div class="container_center">
+          <div class="lkContent">
+            <div class="lkContent__aside">
+              <nav class="lkNav">
+                <ul>
+                  <li><a class="active" href="lk-data.html">Мои данные</a></li>
+                  <li><a href="lk.html">Личный кабинет</a></li>
+                  <li><a href="lk-courses.html">Мои курсы</a></li>
+                  <li><a href="">Мои сертификаты</a></li>
+                  <li><a href="">Настройки</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="lkContent__center">
+              <div class="lkContent__title">Основные данные</div>
+              <div class="lkData__head">
+                <div class="lkData__content">
+                  <div class="lkData__avatar">
+                    <div class="lkData__img"><img src="img/lk-data.jpg" alt=""/></div>
+                    <label class="lkData__userImg">+
+                      <input class="lkData__fileInput" type="file" name="file"/>
+                    </label>
+                  </div>
+                  <div class="lkData__nameBox">
+                    <div class="lkData__prompt">ФИО</div>
+                    <div class="lkData__name">Стручков  Будимир  Егорович</div>
+                  </div>
+                </div>
+              </div>
+              <div class="lkContent__title">Безпасность</div>
+              <div class="lkSecurity">
+                <div class="lkSecurity__title">Смена пароля</div>
+                <div class="lkSecurity__content">
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Старый пароль</label>
+                    <input class="lkSecurity__input" type="text" placeholder="Введите старый пароль"/>
+                  </div>
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Введите новый пароль</label>
+                    <input class="lkSecurity__input" type="text" placeholder="Придумайте новый пароль"/>
+                  </div>
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Новый пароль повторно</label>
+                    <input class="lkSecurity__input" type="text" placeholder="Повторите новый пароль"/>
+                  </div>
+                </div>
+                <div class="lkSecurity__action">
+                  <button class="btn btn_primary lkSecurity__button" type="submit">Обновить пароль</button>
+                </div>
+              </div>
+              <div class="lkSecurity">
+                <div class="lkSecurity__title">Смена e-mail</div>
+                <div class="lkSecurity__content">
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Старый e-mail</label>
+                    <input class="lkSecurity__input" type="email" placeholder="test@test.ru"/>
+                  </div>
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Введите новый email</label>
+                    <input class="lkSecurity__input" type="email" placeholder="Введите новый e-mail"/>
+                  </div>
+                  <div class="lkSecurity__item">
+                    <label class="lkSecurity__label" for="">Введите пароль</label>
+                    <input class="lkSecurity__input" type="email" placeholder="Введите пароль"/>
+                  </div>
+                </div>
+                <div class="lkSecurity__action">
+                  <button class="btn btn_primary lkSecurity__button" type="submit">Подтвердить email</button>
+                </div>
+              </div>
+            </div>
+            <div class="lkContent__right">
+              <div class="lkAdvSlider">
+                <div class="lkAdvSlider__item">
+                  <div class="lkAdvSlider__img"><img src="img/lkAdvSlider.jpg" alt=""/></div>
+                  <div class="lkAdvSlider__name">Стратегическое мышление для бизнеса и жизни</div>
+                  <div class="lkAdvSlider__action"><a class="btn btn_primary btn_sm" href="#">Подробнее</a></div>
+                </div>
+                <div class="lkAdvSlider__item">
+                  <div class="lkAdvSlider__img"><img src="img/lkAdvSlider.jpg" alt=""/></div>
+                  <div class="lkAdvSlider__name">Стратегическое мышление для бизнеса и жизни</div>
+                  <div class="lkAdvSlider__action"><a class="btn btn_primary btn_sm" href="#">Подробнее</a></div>
+                </div>
+                <div class="lkAdvSlider__item">
+                  <div class="lkAdvSlider__img"><img src="img/lkAdvSlider.jpg" alt=""/></div>
+                  <div class="lkAdvSlider__name">Стратегическое мышление для бизнеса и жизни</div>
+                  <div class="lkAdvSlider__action"><a class="btn btn_primary btn_sm" href="#">Подробнее</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">

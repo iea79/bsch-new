@@ -1,0 +1,159 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Мои курсы';
+
+block lkcontent
+
+    .lkCourses
+        .lkCourses__head
+            .lkContent__title.lkContent__title-courses Системное мышление как основа принятия управленческих решений
+            .lkCourses__progress 20/29 выполнено
+        .lkProgress__bar
+            span(style="width: 72%; background: #169F62")
+
+
+        .lkCourses__content
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 1. 
+                    span.lkCourses__title Зачем нужно работать с мышлением
+
+                .lkCourses__level 1/10
+
+            ul
+                li
+                    a.lkCourses__link(href="#") 1.1 Знакомство с преподавателем и введение в курс
+            ul
+                li
+                    a.lkCourses__link(href="#") 1.2 Подходы к критическому мышлению
+            ul
+                li
+                    a.lkCourses__link(href="#") Формирование команд
+            ul
+                li
+                    a.lkCourses__link(href="#") Задание
+
+
+
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 2. 
+                    span.lkCourses__title Призмы мышления. Зачем нужны максимально четкие картины мира?
+                .lkCourses__level 0/10
+            ul
+                li
+                    a.lkCourses__link(href="#") 2.1 Скептицизм и объективность 
+            ul
+                li
+                    a.lkCourses__link(href="#") 2.2 Современные процессы и критическое мышление
+
+
+
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 3. 
+                    span.lkCourses__title Как научиться распознавать эвристики и манипуляции?
+                .lkCourses__level 0/10
+            ul
+                li
+                    a.lkCourses__link(href="#") 3.1 Искажения восприятия фактов
+            ul
+                li
+                    a.lkCourses__link(href="#") 3.2 Искажения подачи фактов
+            ul
+                li
+                    a.lkCourses__link(href="#") 3.3 Выявление и описание проблемы
+            ul
+                li
+                    a.lkCourses__link(href="#") 3.4 Анализ ситуации
+
+
+
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 4. 
+                    span.lkCourses__title Как эффективно работать с информацией?
+                .lkCourses__level 2/6
+            ul
+                li
+                    a.lkCourses__link(href="#") 4.1 Данные, информация, знание, правда
+            ul
+                li
+                    a.lkCourses__link(href="#") 4.2 Социальное доказательство и системные искажения
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «Хонда» 
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «DNS»
+            ul
+                li
+                    a.lkCourses__link(href="#") Сообщество студентов
+
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 5. 
+                    span.lkCourses__title Азы конструктивного мышления
+                .lkCourses__level 0/7
+            ul
+                li
+                    a.lkCourses__link(href="#") 5.1 Синтез и креативность
+            ul
+                li
+                    a.lkCourses__link(href="#") 5.2 Конструктивный подход к решению проблем
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «Хонда» 
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «DNS»
+
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 6. 
+                    span.lkCourses__title Креативное мышление
+                .lkCourses__level 0/9
+            ul
+                li
+                    a.lkCourses__link(href="#")  6.1 Модели креативного мышления (часть 1)
+            ul
+                li
+                    a.lkCourses__link(href="#")  6.1 Модели креативного мышления (часть 2)
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 7. 
+                    span.lkCourses__title Выявление проблем
+                .lkCourses__level 0/5
+            ul
+                li
+                    a.lkCourses__link(href="#") 7.1 Выявление проблем
+            ul
+                li
+                    a.lkCourses__link(href="#") 7.2 Анализ ситуации
+
+            .lkCourses__item
+                .lkCourses__titleBox
+                    span.lkCourses__titleNumber 8. 
+                    span.lkCourses__title Решение проблем
+                .lkCourses__level 0/1
+            ul
+                li
+                    a.lkCourses__link(href="#") 8.1 Подготовка, принятие и оформление решений
+            ul
+                li
+                    a.lkCourses__link(href="#") 8.2 Оценка решения или суждения
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «Хонда» 
+            ul
+                li
+                    a.lkCourses__link(href="#") Кейс «DNS»
+
+    include ../pug/inc/advProg
