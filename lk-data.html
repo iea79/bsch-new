@@ -11,17 +11,41 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
-        <nav class="header__nav nav">
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
-            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="programs.html">Программы обучения</a></li>
-            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
-          </ul>
+        <nav class="header__nav nav desktop">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
+                <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="programs.html">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              </ul>
+        </nav>
+        <nav class="header__nav nav mobile">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="lk.html">Личный кабинет</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-courses.html">Мои курсы</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Мои сертификаты</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Уведомления</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-data.html">Мои данные</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-settings.html">Настройки</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="home.html">Выход</a></li>
+              </ul>
         </nav>
         <div class="header__login">
-          <button class="btn btn_sm" data-toggle="modal" data-target="#loginModal">Вход</button>
+          <div class="header__user">
+            <div class="header__userNotif"><a href="#"><img src="img/notification.svg" alt=""/></a></div>
+            <div class="header__userImg"><img src="img/lk-data.jpg" alt=""/></div>
+          </div>
+          <!--Ава и меню выпадайка-->
+          <div class="header__menu">
+            <div class="header__item"><img src="img/user-solid.svg" alt=""/><a href="#">Личный кабинет</a></div>
+            <div class="header__item"><img src="img/book-open-solid.svg" alt=""/><a href="#">Мои курсы</a></div>
+            <div class="header__item"><img src="img/certificate-solid.svg" alt=""/><a href="#">Мои сертификаты</a></div>
+            <div class="header__item"><img src="img/bell-solid.svg" alt=""/><a href="#">Уведомления</a></div>
+            <div class="header__item"><img src="img/address-card.svg" alt=""/><a href="#">Мои данные</a></div>
+            <div class="header__item"><img src="img/cog-solid.svg" alt=""/><a href="#">Настройки</a></div>
+            <div class="header__item"><img src="img/sign-out-alt-solid.svg" alt=""/><a href="#">Выход</a></div>
+          </div>
         </div>
         <div class="navbar__toggle"></div>
       </div>
