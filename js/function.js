@@ -58,6 +58,7 @@ $( document ).ready( function () {
     // formSubmit();
 
     initHomeSlider();
+    toggleDropdownUserMenu();
 
 
     checkOnResize();
@@ -610,8 +611,6 @@ function initRecommendSliders() {
 
 }
 
-function headerMenuToggle() {
-
 function replaceCourseActionbar() {
     const bar = $('.coursNav');
     if (isXsWidth()) {
@@ -624,8 +623,8 @@ function replaceCourseActionbar() {
 function replaceNameInCourseMessageFromMobile() {
     $('.lkCoursMessage__row').each(function(index, el) {
         let name = $(el).find('.lkCoursMessage__name'),
-            left = $(el).find('.lkCoursMessage__left'),
-            text = $(el).find('.lkCoursMessage__txt');
+        left = $(el).find('.lkCoursMessage__left'),
+        text = $(el).find('.lkCoursMessage__txt');
 
         if (isXsWidth()) {
             name.appendTo(left);
@@ -635,14 +634,19 @@ function replaceNameInCourseMessageFromMobile() {
     });
 }
 
-$( '.header__menu' ).hide( '', function () {
-    $( '.header__userImg' ).on( 'click', function ( event ) {
-        $( '.header__menu' ).toggle( '', function () {
 
-        } );
-    } );
+function toggleDropdownUserMenu() {
+    const menu = $('.header__menu');
 
-} );
+    $('.header__userImg').on('click', () => {
+        menu.fadeToggle();
+    });
+
+    menu.on('mouseleave', () => {
+        menu.fadeToggle();
+    })
+
+}
 
 
 function replaceRecommendButton() {
