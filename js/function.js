@@ -84,6 +84,7 @@ function checkOnResize() {
     initRecommendSliders();
     toggleProgramSteps();
     replaceCourseActionbar();
+    replaceNameInCourseMessageFromMobile();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -617,6 +618,20 @@ function replaceCourseActionbar() {
     } else {
         bar.insertAfter('.header__left');
     }
+}
+
+function replaceNameInCourseMessageFromMobile() {
+    $('.lkCoursMessage__row').each(function(index, el) {
+        let name = $(el).find('.lkCoursMessage__name'),
+            left = $(el).find('.lkCoursMessage__left'),
+            text = $(el).find('.lkCoursMessage__txt');
+
+        if (isXsWidth()) {
+            name.appendTo(left);
+        } else {
+            name.prependTo(text);
+        }
+    });
 }
 
 $( '.header__menu' ).hide( '', function () {
