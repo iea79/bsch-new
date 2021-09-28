@@ -1,0 +1,68 @@
+extends layout/course.pug
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition_success
+            .lkCoursePage__condition
+                i.icon_success-square
+                span Принято
+            .lkCoursePage__conditionTotal 
+                i Максимум 25 баллов за решение.
+                | 20 из 25 баллов получено
+        h2 "Откуда берутся мысли? Нейробиология о мышлении. <br>Мышление как когнитивный процесс. Мышление изучает как философия, так и психология. 
+        p Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+
+        h3 Файлы к заданию
+
+        ul.lkCoursePage__docs
+            li
+                a(href="document.docx") 
+                    i.icon_docx
+                    span Документ для пример..docx
+            li
+                a(href="document.pdf")
+                    i.icon_pdf
+                    span Документ для пример.pdf
+
+    .lkCoursMessage
+        .lkCoursMessage__title Ваш ответ на задание
+        .lkCoursMessage__content
+            .lkCoursMessage__row
+                .lkCoursMessage__left
+                    .lkCoursMessage__user
+                        img(src="img/lk-data.jpg", alt="")
+                .lkCoursMessage__body
+                    .lkCoursMessage__txt
+                        .lkCoursMessage__name Стручков  Будимир
+                        .lkCoursMessage__text Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: 
+                        a.lkCoursMessage__file(href="")
+                            .lkCoursMessage__fileName Бизнес школа.doc
+
+            .lkCoursMessage__row
+                .lkCoursMessage__left
+                    .lkCoursMessage__user
+                        img(src="img/pr-teacher-2.jpg", alt="")
+                .lkCoursMessage__body
+                    .lkCoursMessage__txt
+                        .lkCoursMessage__name Ольга Малиновская
+                        .lkCoursMessage__text Нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+                        a.lkCoursMessage__file(href="")
+                            .lkCoursMessage__fileName Решение.doc
+
+            .lkCoursMessage__row
+                .lkCoursMessage__left
+                    .lkCoursMessage__user
+                        img(src="img/lk-data.jpg", alt="")
+                .lkCoursMessage__body
+                    .lkCoursMessage__txt
+                        .lkCoursMessage__name Стручков  Будимир
+                        .lkCoursMessage__text Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. 
+                        a.lkCoursMessage__file(href="")
+                            .lkCoursMessage__fileName Бизнес школа.doc
+
+        .lkCoursMessage__nav
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle

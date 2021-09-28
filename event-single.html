@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.2"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+        <nav class="header__nav nav">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
+                <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="programs.html">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              </ul>
+        </nav>
+        <div class="header__login">
+          <button class="btn btn_sm" data-toggle="modal" data-target="#loginModal">Вход</button>
+        </div>
+        <div class="navbar__toggle"></div>
+      </div>
+    </header>
+    <main class="main_content">
+      <div class="postPage">
+        <div class="container_center">
+          <ul class="breadcrumb">
+            <li><a href="">Новости</a></li>
+            <li><a href="">События</a></li>
+            <li><a href="">Презентация программы «Предпринимательское мышление»</a></li>
+          </ul>
+          <div class="postPage__body">
+            <div class="postPage__media">
+              <div class="postPage__img"><img src="img/event.jpg" alt=""/></div>
+            </div>
+            <div class="postPage__content">
+              <h1 class="pageTitle">Презентация программы «Предпринимательское мышление»</h1>
+              <div class="textBox event">
+                <div class="event__date"><i class="icon_calendar"> </i><span>21 ноября 2021 с 19:00 до 20:00</span></div>
+                <h3>Подробнее о программе </h3><a class="event__link" href="">«Предприним мышление»</a>
+                <h3>О программе: </h3>
+                <ul>
+                  <li>О чем</li>
+                  <li>Когда проходит обучение</li>
+                  <li>Формат</li>
+                  <li>Стоимость</li>
+                  <li>Сертификат</li>
+                </ul>
+                <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют </p>
+              </div>
+            </div>
+          </div>
+          <div class="teachersList__title">Спикеры:</div>
+          <div class="teachersList">
+            <div class="teachersList__teacher">
+              <div class="teachersList__label">Автор программы</div>
+              <div class="teachersList__photo"><img src="img/pr-teacher-1.jpg" alt=""/>
+                <div class="teachersList__info" data-toggle="modal" data-target="#teacher-1">i</div>
+              </div>
+              <div class="teachersList__descr">
+                <div class="teachersList__name">Михаил Фридман</div>
+                <div class="teachersList__text">Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ</div>
+              </div>
+              <!-- Begin Modal teacher-->
+              <div class="modal fade teacherModal" id="teacher-1">
+                <div class="modal-dialog">
+                  <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="teacherModal__content">
+                      <div class="teacherModal__photo"><img src="img/pr-teacher-1.jpg" alt=""/></div>
+                      <div class="teacherModal__descr">
+                        <div class="teacherModal__name">Михаил Фридман</div>
+                        <div class="teacherModal__text">
+                          <p>Доктор философских наук, кандидат педагогических наук, профессор РАНХиГС при президенте РФ, академик Международной академии информатизации в генеральном консультативном статусе ООН, член Зиновьевского клуба МИА «Россия сегодня», бизнес-тренер, коуч, консультант.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End modal teacher-->
+            </div>
+            <div class="teachersList__teacher">
+              <div class="teachersList__label">Приглашенный эксперт</div>
+              <div class="teachersList__photo"><img src="img/pr-teacher-2.jpg" alt=""/>
+                <div class="teachersList__info" data-toggle="modal" data-target="#teacher-2">i</div>
+              </div>
+              <div class="teachersList__descr">
+                <div class="teachersList__name">Ольга Малиновская</div>
+                <div class="teachersList__text">Осваиваем основные понятия, подходы, принципы и модели критического и креативного мышления</div>
+              </div>
+              <!-- Begin Modal teacher-->
+              <div class="modal fade teacherModal" id="teacher-2">
+                <div class="modal-dialog">
+                  <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="teacherModal__content">
+                      <div class="teacherModal__photo"><img src="img/pr-teacher-2.jpg" alt=""/></div>
+                      <div class="teacherModal__descr">
+                        <div class="teacherModal__name">Ольга Малиновская</div>
+                        <div class="teacherModal__text">
+                          <p>(PhD/DPhil, Oxon) выпускница Оксфордского университета, Университета Сорбонны (МА), Кларк университета (МА), Северо-восточного университета в Бостоне (BA). Является обладателем диплома в сфере бизнес-администрирования Associate Degree Quincy College. Имеет богатый опыт работы в бизнес-структурах («Бостон Консалтинг» USA, «Герсон» London, UK), а также преподавательский и административный опыт в высших учебных заведениях США, Франции, Испании и Великобритании. В РАНХиГС с 2019 года заведует кафедрой гуманитарных дисциплин.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End modal teacher-->
+            </div>
+            <div class="teachersList__teacher">
+              <div class="teachersList__label">Приглашенный эксперт</div>
+              <div class="teachersList__photo"><img src="img/pr-teacher-3.jpg" alt=""/>
+                <div class="teachersList__info" data-toggle="modal" data-target="#teacher-3">i</div>
+              </div>
+              <div class="teachersList__descr">
+                <div class="teachersList__name">Александр Александров</div>
+                <div class="teachersList__text">Имя выдающегося русского композитора, хормейстера и дирижера, профессора Московской консерватории</div>
+              </div>
+              <!-- Begin Modal teacher-->
+              <div class="modal fade teacherModal" id="teacher-3">
+                <div class="modal-dialog">
+                  <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="teacherModal__content">
+                      <div class="teacherModal__photo"><img src="img/pr-teacher-3.jpg" alt=""/></div>
+                      <div class="teacherModal__descr">
+                        <div class="teacherModal__name">Александр Александров</div>
+                        <div class="teacherModal__text">
+                          <p>(PhD/DPhil, Oxon) выпускница Оксфордского университета, Университета Сорбонны (МА), Кларк университета (МА), Северо-восточного университета в Бостоне (BA). Является обладателем диплома в сфере бизнес-администрирования Associate Degree Quincy College. Имеет богатый опыт работы в бизнес-структурах («Бостон Консалтинг» USA, «Герсон» London, UK), а также преподавательский и административный опыт в высших учебных заведениях США, Франции, Испании и Великобритании. В РАНХиГС с 2019 года заведует кафедрой гуманитарных дисциплин.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End modal teacher-->
+            </div>
+          </div>
+        </div>
+        <!-- begin presentationOrder-->
+        <section class="presentationOrder section" id="presentationOrder">
+          <div class="container_center">
+            <div class="form">
+              <h2 class="form__legend">Запись на презентацию</h2>
+              <div class="form_grid">
+                <div class="form__row">
+                  <input type="text" placeholder="Имя"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Фамилия"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="E-mail"/>
+                </div>
+                <div class="form__row">
+                  <input type="text" placeholder="Телефон"/>
+                </div>
+              </div>
+              <div class="form__action">
+                <button class="btn btn_primary" type="submit">Записаться</button>
+              </div>
+              <div class="form__privacy">
+                <input type="checkbox" checked=""/><span>Отправляя форму, <a href="" target="_blank">я даю согласие на обработку моих персональных данных</a></span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end presentationOrder-->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__quatro"><span></span><span></span><span></span></div>
+      </div>
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__col"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+          <div class="footer__col">
+            <div class="footer__head">Контакты</div>
+            <div class="footer__contact"><a href="mailto: gazetny@universitas.ru">gazetny@universitas.ru</a><a href="tel: + 7 (499) 110-90-08">+ 7 (499) 110-90-08</a></div>
+            <div class="footer__message"><a href=""><i class="icon_whatsapp"> </i>Поговорить <br>с БШГ в вотсап</a><a href=""> <i class="icon_telegram"> </i>Поговорить <br>с БШГ в телеграм</a></div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__head">Меню</div>
+            <nav class="footer__nav">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Преподаватели и спикеры</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">О школе</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Кампус</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col">
+            <div class="footer__head">Мы в соцсетях</div>
+            <div class="footer__soc">
+              <div class="soc"><a class="icon_instagram" href="" target="_blank"></a><a class="icon_facebook" href="" target="_blank"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__temp">
+            <div class="footer__copy">&copy; 2021</div>Бизнес-Школа на Газетном. <br>Московская высшая школа социальных и экономических наук
+          </div>
+          <div class="footer__policy"><a href="">Пользовательское соглашение</a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal infoModal-->
+    <div class="modal fade infoModal" id="loginModal">
+      <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="form__wrapper">
+          <form class="form">
+            <div class="form__legend">Авторизация</div>
+            <div class="form__row">
+              <input type="text" placeholder="E-mail"/>
+            </div>
+            <div class="form__row">
+              <input type="password" placeholder="Пароль"/>
+            </div>
+            <div class="form__action">
+              <button class="btn btn_primary" type="submit">Войти</button>
+            </div>
+            <div class="form__link"><a href="">Напомнить пароль</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End modal infoModal-->
+    <!-- Begin Modal messageModal-->
+    <div class="modal fade messageModal" id="messageModal">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="messageModal__content">
+            <div class="messageModal__icon"><i class="icon_check"></i></div>
+            <div class="messageModal__title">Спасибо. <br>Ваша заявка принята.</div>
+            <div class="messageModal__text">Наш менеджер свяжется с Вами в ближайшее время.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal messageModal-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/function.js?0.2"></script>
+  </body>
+</html>

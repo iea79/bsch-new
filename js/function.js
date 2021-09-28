@@ -85,8 +85,11 @@ function checkOnResize() {
     initRecommendSliders();
     toggleProgramSteps();
     replaceCourseActionbar();
+<<<<<<< HEAD
     replaceRecommendButton();
     lkCoursesProgress();
+=======
+>>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
     replaceNameInCourseMessageFromMobile();
 }
 
@@ -623,6 +626,7 @@ function replaceCourseActionbar() {
 }
 
 function replaceNameInCourseMessageFromMobile() {
+<<<<<<< HEAD
     $( '.lkCoursMessage__row' ).each( function ( index, el ) {
         let name = $( el ).find( '.lkCoursMessage__name' ),
             left = $( el ).find( '.lkCoursMessage__left' ),
@@ -650,6 +654,34 @@ function toggleDropdownUserMenu() {
 
 }
 
+=======
+    $('.lkCoursMessage__row').each(function(index, el) {
+        let name = $(el).find('.lkCoursMessage__name'),
+        left = $(el).find('.lkCoursMessage__left'),
+        text = $(el).find('.lkCoursMessage__txt');
+
+        if (isXsWidth()) {
+            name.appendTo(left);
+        } else {
+            name.prependTo(text);
+        }
+    });
+}
+
+
+function toggleDropdownUserMenu() {
+    const menu = $('.header__menu');
+
+    $('.header__userImg').on('click', () => {
+        menu.fadeToggle();
+    });
+
+    menu.on('mouseleave', () => {
+        menu.fadeToggle();
+    })
+
+}
+>>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
 
 
 function replaceRecommendButton() {
