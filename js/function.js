@@ -610,6 +610,7 @@ function initRecommendSliders() {
 
 }
 
+function headerMenuToggle() {
 
 function replaceCourseActionbar() {
     const bar = $('.coursNav');
@@ -644,15 +645,28 @@ $( '.header__menu' ).hide( '', function () {
 } );
 
 
+function replaceRecommendButton() {
+    let progress = $( '.lkCourses__progress' );
+        progressBar = $( '.lkProgress__bar' );
+        head = $( '.lkCourses__head' );
+    if ( isXsWidth() ) {
+        progress.appendTo(progressBar);
+    } else {
+        progress.appendTo(head);
+    }
+}
+replaceRecommendButton();
 // function replaceRecommendButton() {
-//     const recBtn = $( '.lkRecommend__button' );
+//     const btn = $( '.lkRecommend__button' );
+//     console.log(btn);
 //     if ( isXsWidth() ) {
-//         recBtn.appendTo( '.lkRecommend__plate' );
+//         btn.appendTo( '.lkRecommend__plate' );
 //     } else {
-//         recBtn.appendTo( '.lkRecommend__action' );
+//         btn.appendTo('.lkRecommend__action');
 //     }
 // }
 // replaceRecommendButton();
+
 
 // function replaceRecommendButton() {
 //     const recBtn = $( '.lkRecommend__buttonBox' );
