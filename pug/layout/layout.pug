@@ -3,6 +3,7 @@ block variables
     - lk = false;
     - lkPage = false;
     - isLogin = false;
+    - isCourse = false;
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -18,6 +19,7 @@ html(lang="en")
         main.main_content
             block content
 
-        include footer.pug
+        if !isCourse
+            include footer.pug
 
         include scripts.pug
