@@ -6,7 +6,7 @@ block course
         .lkCoursePage__state 1 из 4 уроков пройден
     .lkCoursePage__body
         .lkCoursePage__condition
-            i.icon_angle 
+            i.icon_success-square 
             span Назначено
         h2 "Откуда берутся мысли? Нейробиология о мышлении. <br>Мышление как когнитивный процесс. Мышление изучает как философия, так и психология. 
         p Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
@@ -23,25 +23,26 @@ block course
                     i.icon_pdf
                     span Документ для пример.pdf
 
-        .lkCoursMessage
-            .lkCoursMessage__title 
-            .lkCoursMessage__content
-                .lkCoursMessage__row
-                    .lkCoursMessage__user
-                        img(src="img/lk-data.jpg", alt="")
-                    .lkCoursMessage__body
-                        .lkCoursMessage__area
-                            img(src="img/area.png", alt="")
+    .lkCoursMessage
+        .lkCoursMessage__title Ваш ответ на задание
+        .lkCoursMessage__content
+            .lkCoursMessage__row
+                .lkCoursMessage__user
+                    img(src="img/lk-data.jpg", alt="")
+                .lkCoursMessage__body
+                    .lkCoursMessage__area
+                        img(src="img/area.png", alt="")
 
-                        label.lkCoursMessage__upload
-                            .lkFormUpload
-                                .lkFormUpload__label Прикрепить документ (Перетащите для загрузки)
-                                i.icon_paperclip
-                                input(type="file")
+                    .lkCoursMessage__upload
+                        label.lkFormUpload
+                            .lkFormUpload__label Прикрепить документ 
+                                span.desktop (Перетащите для загрузки)
+                            i.icon_paperclip
+                            input(type="file")
 
-                        .lkCoursMessage__submit
-                            button.btn.btn_primary(type="submit") Отправить на проверку
+                    .lkCoursMessage__submit
+                        button.btn.btn_primary(type="submit") Отправить на проверку
 
-                        .lkCoursMessage__nav
-                            a.btn.btn_secondary(href="") Следующий урок 
-                                i.icon_angle
+                    .lkCoursMessage__nav
+                        a.btn.btn_secondary(href="") Следующий урок 
+                            i.icon_angle

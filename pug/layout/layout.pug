@@ -19,6 +19,7 @@ html(lang="en")
         main.main_content
             block content
 
-        include footer.pug
+        if !isCourse
+            include footer.pug
 
         include scripts.pug

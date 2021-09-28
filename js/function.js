@@ -83,6 +83,7 @@ function checkOnResize() {
     initReviewSliders();
     initRecommendSliders();
     toggleProgramSteps();
+    replaceCourseActionbar();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -175,7 +176,7 @@ function initHomeSlider() {
 function initParthnersSlider() {
     const slider = $( '.parthnersLine__list:not(.slick-initialized)' );
 
-    slider.slick( {
+    slider.slick({
         dots: true,
         infinite: false,
         arrows: false,
@@ -240,6 +241,16 @@ function openLightboxModal() {
 
 }
 openLightboxModal();
+
+function toggleCoursePageNavbar() {
+    let toggl = $('.lkCourseAside__toggle'),
+        body = $('.lkCoursePage');
+
+    toggl.on('click', () => {
+        body.toggleClass('nav_hidden');
+    })
+}
+toggleCoursePageNavbar();
 
 function initCampusSliders() {
     const sliders = $( '.campusSlider:not(.slick-initialized)' );
@@ -438,6 +449,15 @@ function srollToId() {
     } );
 }
 
+function srollToTop() {
+    $( '.lkToTop' ).on( 'click', function () {
+        $( 'html, body' ).animate( {
+            scrollTop: 0
+        }, 500 );
+    } );
+}
+srollToTop();
+
 function toggleTabs() {
     let toggle = $( '[data-tab]' );
     toggle.on( 'click', ( e ) => {
@@ -589,6 +609,15 @@ function initRecommendSliders() {
 
 }
 
+
+function replaceCourseActionbar() {
+    const bar = $('.coursNav');
+    if (isXsWidth()) {
+        bar.insertAfter('.header');
+    } else {
+        bar.insertAfter('.header__left');
+    }
+}
 
 $( '.header__menu' ).hide( '', function () {
     $( '.header__userImg' ).on( 'click', function ( event ) {
