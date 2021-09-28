@@ -1,13 +1,49 @@
+mixin navbar()
+    ul.navbar
+        each navLink in [{name: 'О школе ', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programs.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'}]
+            li.navbar__item
+                a.navbar__link(href= navLink.href)= navLink.name
+
+mixin lkNavbar()
+    ul.navbar
+        each navLink in [{name: 'Личный кабинет', href: 'lk.html'},{name: 'Мои курсы', href: 'lk-courses.html'},{name: 'Мои сертификаты', href: ''},{name: 'Уведомления', href: ''},{name: 'Мои данные', href: 'lk-data.html'},{name: 'Настройки', href: 'lk-settings.html'},{name: 'Выход', href: 'home.html'}]
+            li.navbar__item
+                a.navbar__link(href= navLink.href)= navLink.name
+
 header.header
     .header__content
         .header__left
             a.logo(href="/")
                 img(src="img/logo.svg", alt="alt")
-        nav.header__nav.nav
-            ul.navbar
-                each navLink in [{name: 'О школе ', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programs.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'}]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+        if isLogin
+            if isCourse
+                .coursNav
+                    a.coursNav__item.active(href="")
+                        i.icon_bullhorn
+                    a.coursNav__item(href="")
+                        i.icon_pencil
+                    a.coursNav__item(href="")
+                        i.icon_tasks
+                    a.coursNav__item(href="")
+                        i.icon_comments
+                    a.coursNav__item(href="")
+                        i.icon_cube
+                    a.coursNav__item(href="")
+                        i.icon_video
+                    a.coursNav__item(href="")
+                        i.icon_briefcase
+
+                nav.header__nav.nav.mobile
+                    +lkNavbar()
+            else
+                nav.header__nav.nav.desktop
+                    +navbar()
+                nav.header__nav.nav.mobile
+                    +lkNavbar()
+
+        else
+            nav.header__nav.nav
+                +navbar()
 
         .header__login
             if isLogin
@@ -48,7 +84,6 @@ header.header
                         a(href="#") Выход
 
             else
-                //- code
                 button.btn.btn_sm(data-toggle="modal" data-target="#loginModal") Вход
 
         .navbar__toggle
