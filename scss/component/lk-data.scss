@@ -1,5 +1,3 @@
-$lkData_font-family: Open Sans;
-
 .lkSecurity {
     margin: 0 -1.1em;
     background-color: #fff;
@@ -132,7 +130,7 @@ $lkData_font-family: Open Sans;
 }
 
 .lkData__prompt {
-    font-family: $lkData_font-family;
+    font-family: $main_font_family;
     line-height: 1.2;
     color: rgba(29, 29, 27, 0.5);
     font-size: 0.8125em;
@@ -144,7 +142,7 @@ $lkData_font-family: Open Sans;
 }
 
 .lkData__name {
-    font-family: $lkData_font-family;
+    font-family: $main_font_family;
     line-height: 1.2;
     color: #1D1D1B;
     padding-top: 1em;

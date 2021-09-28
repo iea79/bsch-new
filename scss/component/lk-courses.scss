@@ -19,7 +19,13 @@
 
     &__level,
     &__progress {
-        display: inline;
+        @media (min-width: 768px) {
+            display: inline;
+            padding: 0;
+        }
+        display: block;
+        padding-top: 0.8em;
+        margin-bottom: 0.625em;
         font-family: $main_font_family;
         font-style: italic;
         font-size: 0.9375em;
@@ -40,11 +46,11 @@
     &__content {
         background-color: rgb(255, 255, 255);
         padding: 1em 0.9375em 1em 0.625em;
-        margin: 1em -0.9375em;
+        margin: 2.1em -0.9375em;
 
         @media (min-width: 768px) {
             padding: 1.25em 1.875em;
-            margin-top: 1em;
+            margin: 1em -0.9375em;
 
         }
 
