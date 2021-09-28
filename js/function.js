@@ -176,7 +176,7 @@ function initHomeSlider() {
 function initParthnersSlider() {
     const slider = $( '.parthnersLine__list:not(.slick-initialized)' );
 
-    slider.slick({
+    slider.slick( {
         dots: true,
         infinite: false,
         arrows: false,
@@ -243,12 +243,12 @@ function openLightboxModal() {
 openLightboxModal();
 
 function toggleCoursePageNavbar() {
-    let toggl = $('.lkCourseAside__toggle'),
-        body = $('.lkCoursePage');
+    let toggl = $( '.lkCourseAside__toggle' ),
+        body = $( '.lkCoursePage' );
 
-    toggl.on('click', () => {
-        body.toggleClass('nav_hidden');
-    })
+    toggl.on( 'click', () => {
+        body.toggleClass( 'nav_hidden' );
+    } )
 }
 toggleCoursePageNavbar();
 
@@ -611,197 +611,188 @@ function initRecommendSliders() {
 
 function headerMenuToggle() {
 
-function replaceCourseActionbar() {
-    const bar = $('.coursNav');
-    if (isXsWidth()) {
-        bar.insertAfter('.header');
-    } else {
-        bar.insertAfter('.header__left');
+    function replaceCourseActionbar() {
+        const bar = $( '.coursNav' );
+        if ( isXsWidth() ) {
+            bar.insertAfter( '.header' );
+        } else {
+            bar.insertAfter( '.header__left' );
+        }
     }
-}
-
-$( '.header__menu' ).hide( '', function () {
-    $( '.header__userImg' ).on( 'click', function ( event ) {
-        $( '.header__menu' ).toggle( '', function () {
-
-        } );
-    } );
-
-} );
 
 
-function replaceRecommendButton() {
-    let progress = $( '.lkCourses__progress' );
+    function replaceRecommendButton() {
+        let progress = $( '.lkCourses__progress' );
         progressBar = $( '.lkProgress__bar' );
         head = $( '.lkCourses__head' );
-    if ( isXsWidth() ) {
-        progress.appendTo(progressBar);
-    } else {
-        progress.appendTo(head);
+        if ( isXsWidth() ) {
+            progress.appendTo( progressBar );
+        } else {
+            progress.appendTo( head );
+        }
     }
-}
-replaceRecommendButton();
-// function replaceRecommendButton() {
-//     const btn = $( '.lkRecommend__button' );
-//     console.log(btn);
-//     if ( isXsWidth() ) {
-//         btn.appendTo( '.lkRecommend__plate' );
-//     } else {
-//         btn.appendTo('.lkRecommend__action');
-//     }
-// }
-// replaceRecommendButton();
+    replaceRecommendButton();
+    // function replaceRecommendButton() {
+    //     const btn = $( '.lkRecommend__button' );
+    //     console.log(btn);
+    //     if ( isXsWidth() ) {
+    //         btn.appendTo( '.lkRecommend__plate' );
+    //     } else {
+    //         btn.appendTo('.lkRecommend__action');
+    //     }
+    // }
+    // replaceRecommendButton();
 
 
-// function replaceRecommendButton() {
-//     const recBtn = $( '.lkRecommend__buttonBox' );
-//
-//     $( '.lkRecommend__plate' ).each( function ( el ) {
-//         $( '.lkRecommend__button' );
-//         if ( isXsWidth() ) {
-//             recBtn.appendTo( '.lkRecommend__plate' );
-//         } else {
-//             recBtn.appendTo( '.lkRecommend__action' );
-//         }
-//     } );
-// }
-// replaceRecommendButton();
-//
-// Деление чисел на разряды Например из строки 10000 получаем 10 000
-// Использование: thousandSeparator(1000) или используем переменную.
-// function thousandSeparator(str) {
-//     var parts = (str + '').split('.'),
-//         main = parts[0],
-//         len = main.length,
-//         output = '',
-//         i = len - 1;
+    // function replaceRecommendButton() {
+    //     const recBtn = $( '.lkRecommend__buttonBox' );
+    //
+    //     $( '.lkRecommend__plate' ).each( function ( el ) {
+    //         $( '.lkRecommend__button' );
+    //         if ( isXsWidth() ) {
+    //             recBtn.appendTo( '.lkRecommend__plate' );
+    //         } else {
+    //             recBtn.appendTo( '.lkRecommend__action' );
+    //         }
+    //     } );
+    // }
+    // replaceRecommendButton();
+    //
+    // Деление чисел на разряды Например из строки 10000 получаем 10 000
+    // Использование: thousandSeparator(1000) или используем переменную.
+    // function thousandSeparator(str) {
+    //     var parts = (str + '').split('.'),
+    //         main = parts[0],
+    //         len = main.length,
+    //         output = '',
+    //         i = len - 1;
 
-//     while(i >= 0) {
-//         output = main.charAt(i) + output;
-//         if ((len - i) % 3 === 0 && i > 0) {
-//             output = ' ' + output;
-//         }
-//         --i;
-//     }
+    //     while(i >= 0) {
+    //         output = main.charAt(i) + output;
+    //         if ((len - i) % 3 === 0 && i > 0) {
+    //             output = ' ' + output;
+    //         }
+    //         --i;
+    //     }
 
-//     if (parts.length > 1) {
-//         output += '.' + parts[1];
-//     }
-//     return output;
-// };
-
-
-// Хак для яндекс карт втавленных через iframe
-// Страуктура:
-//<div class="map__wrap" id="map-wrap">
-//  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
-//</div>
-// Обязательное свойство в style которое и переключет скрипт
-// document.addEventListener('click', function(e) {
-//     var map = document.querySelector('#map-wrap iframe')
-//     if(e.target.id === 'map-wrap') {
-//         map.style.pointerEvents = 'all'
-//     } else {
-//         map.style.pointerEvents = 'none'
-//     }
-// })
-
-// Простая проверка форм на заполненность и отправка аяксом
-// function formSubmit() {
-//     $("[type=submit]").on('click', function (e){
-//         e.preventDefault();
-//         var form = $(this).closest('.form');
-//         var url = form.attr('action');
-//         var form_data = form.serialize();
-//         var field = form.find('[required]');
-//         // console.log(form_data);
-
-//         empty = 0;
-
-//         field.each(function() {
-//             if ($(this).val() == "") {
-//                 $(this).addClass('invalid');
-//                 // return false;
-//                 empty++;
-//             } else {
-//                 $(this).removeClass('invalid');
-//                 $(this).addClass('valid');
-//             }
-//         });
-
-//         // console.log(empty);
-
-//         if (empty > 0) {
-//             return false;
-//         } else {
-//             $.ajax({
-//                 url: url,
-//                 type: "POST",
-//                 dataType: "html",
-//                 data: form_data,
-//                 success: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('success');
-//                     console.log(response);
-//                     // console.log(data);
-//                     // document.location.href = "success.html";
-//                 },
-//                 error: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('error');
-//                     console.log(response);
-//                 }
-//             });
-//         }
-
-//     });
-
-//     $('[required]').on('blur', function() {
-//         if ($(this).val() != '') {
-//             $(this).removeClass('invalid');
-//         }
-//     });
-
-//     $('.form__privacy input').on('change', function(event) {
-//         event.preventDefault();
-//         var btn = $(this).closest('.form').find('.btn');
-//         if ($(this).prop('checked')) {
-//             btn.removeAttr('disabled');
-//             // console.log('checked');
-//         } else {
-//             btn.attr('disabled', true);
-//         }
-//     });
-// }
+    //     if (parts.length > 1) {
+    //         output += '.' + parts[1];
+    //     }
+    //     return output;
+    // };
 
 
-// Проверка на возможность ввода только русских букв, цифр, тире и пробелов
-// $('#u_l_name').on('keypress keyup', function () {
-//     var that = this;
-//
-//     setTimeout(function () {
-//         if (that.value.match(/[ -]/) && that.value.length == 1) {
-//             that.value = '';
-//         }
-//
-//         if (that.value.match(/-+/g)) {
-//             that.value = that.value.replace(/-+/g, '-');
-//         }
-//
-//         if (that.value.match(/ +/g)) {
-//             that.value = that.value.replace(/ +/g, ' ');
-//         }
-//
-//         var res = /[^а-яА-Я -]/g.exec(that.value);
-//
-//         if (res) {
-//             removeErrorMsg('#u_l_name');
-//             $('#u_l_name').after('<div class="j-required-error b-check__errors">Измените язык ввода на русский</div>');
-//         }
-//         else {
-//             removeErrorMsg('#u_l_name');
-//         }
-//
-//         that.value = that.value.replace(res, '');
-//     }, 0);
-// });
+    // Хак для яндекс карт втавленных через iframe
+    // Страуктура:
+    //<div class="map__wrap" id="map-wrap">
+    //  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
+    //</div>
+    // Обязательное свойство в style которое и переключет скрипт
+    // document.addEventListener('click', function(e) {
+    //     var map = document.querySelector('#map-wrap iframe')
+    //     if(e.target.id === 'map-wrap') {
+    //         map.style.pointerEvents = 'all'
+    //     } else {
+    //         map.style.pointerEvents = 'none'
+    //     }
+    // })
+
+    // Простая проверка форм на заполненность и отправка аяксом
+    // function formSubmit() {
+    //     $("[type=submit]").on('click', function (e){
+    //         e.preventDefault();
+    //         var form = $(this).closest('.form');
+    //         var url = form.attr('action');
+    //         var form_data = form.serialize();
+    //         var field = form.find('[required]');
+    //         // console.log(form_data);
+
+    //         empty = 0;
+
+    //         field.each(function() {
+    //             if ($(this).val() == "") {
+    //                 $(this).addClass('invalid');
+    //                 // return false;
+    //                 empty++;
+    //             } else {
+    //                 $(this).removeClass('invalid');
+    //                 $(this).addClass('valid');
+    //             }
+    //         });
+
+    //         // console.log(empty);
+
+    //         if (empty > 0) {
+    //             return false;
+    //         } else {
+    //             $.ajax({
+    //                 url: url,
+    //                 type: "POST",
+    //                 dataType: "html",
+    //                 data: form_data,
+    //                 success: function (response) {
+    //                     // $('#success').modal('show');
+    //                     // console.log('success');
+    //                     console.log(response);
+    //                     // console.log(data);
+    //                     // document.location.href = "success.html";
+    //                 },
+    //                 error: function (response) {
+    //                     // $('#success').modal('show');
+    //                     // console.log('error');
+    //                     console.log(response);
+    //                 }
+    //             });
+    //         }
+
+    //     });
+
+    //     $('[required]').on('blur', function() {
+    //         if ($(this).val() != '') {
+    //             $(this).removeClass('invalid');
+    //         }
+    //     });
+
+    //     $('.form__privacy input').on('change', function(event) {
+    //         event.preventDefault();
+    //         var btn = $(this).closest('.form').find('.btn');
+    //         if ($(this).prop('checked')) {
+    //             btn.removeAttr('disabled');
+    //             // console.log('checked');
+    //         } else {
+    //             btn.attr('disabled', true);
+    //         }
+    //     });
+    // }
+
+
+    // Проверка на возможность ввода только русских букв, цифр, тире и пробелов
+    // $('#u_l_name').on('keypress keyup', function () {
+    //     var that = this;
+    //
+    //     setTimeout(function () {
+    //         if (that.value.match(/[ -]/) && that.value.length == 1) {
+    //             that.value = '';
+    //         }
+    //
+    //         if (that.value.match(/-+/g)) {
+    //             that.value = that.value.replace(/-+/g, '-');
+    //         }
+    //
+    //         if (that.value.match(/ +/g)) {
+    //             that.value = that.value.replace(/ +/g, ' ');
+    //         }
+    //
+    //         var res = /[^а-яА-Я -]/g.exec(that.value);
+    //
+    //         if (res) {
+    //             removeErrorMsg('#u_l_name');
+    //             $('#u_l_name').after('<div class="j-required-error b-check__errors">Измените язык ввода на русский</div>');
+    //         }
+    //         else {
+    //             removeErrorMsg('#u_l_name');
+    //         }
+    //
+    //         that.value = that.value.replace(res, '');
+    //     }, 0);
+    // });
