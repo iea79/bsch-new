@@ -48,9 +48,13 @@
 	}
 
 	&__user {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+		display: none;
+
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
 	}
 
 	&__userImg {
