@@ -341,6 +341,13 @@
 	}
 
 	&__policy {
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 		@media (max-width: 767px) {
 			max-width: 10em;
 		}
