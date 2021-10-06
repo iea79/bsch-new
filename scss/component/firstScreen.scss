@@ -405,6 +405,21 @@
                         }
                     }
                 }
+
+                &_campus {
+                    span {
+                        &:first-child {
+                            &:after {
+                                @media (min-width: 768px) {
+                                    background: $color_withe;
+                                    right: auto;
+                                    left: -$quat_size;
+                                    bottom: $quat_size;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -478,5 +493,6 @@
             }
 
         }
+
     }
 }
