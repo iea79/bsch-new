@@ -339,6 +339,7 @@
             font-size: 1.8em;
             max-width: 25em;
             margin-bottom: 0.6em;
+            min-height: 1.8em;
 
         }
         // font-family: $second_font_family;
@@ -413,7 +414,7 @@
 
             @media (min-width: 768px) {
                 margin-right: 0;
-                margin-left: 2.2em;
+                margin-left: 2.1em;
                 margin-bottom: 1.88em;
                 display: none;
 
