@@ -85,12 +85,12 @@ function checkOnResize() {
     initRecommendSliders();
     toggleProgramSteps();
     replaceCourseActionbar();
-<<<<<<< HEAD
     replaceRecommendButton();
     lkCoursesProgress();
-=======
->>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
-    replaceNameInCourseMessageFromMobile();
+// <<<<<<< HEAD
+// =======
+// >>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
+//     replaceNameInCourseMessageFromMobile();
 }
 
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
@@ -318,6 +318,8 @@ function collapsed() {
     $( '[data-collapsed-toggle]' ).on( 'click', function () {
         const wrap = $( this ).closest( '[data-collapsed-wrap]' ),
             body = wrap.find( '[data-collapsed-body]' );
+
+            $('[data-collapsed-body]').not(wrap).removeClass('open');
 
         body.toggleClass( 'open' );
     } );
@@ -626,7 +628,7 @@ function replaceCourseActionbar() {
 }
 
 function replaceNameInCourseMessageFromMobile() {
-<<<<<<< HEAD
+// <<<<<<< HEAD
     $( '.lkCoursMessage__row' ).each( function ( index, el ) {
         let name = $( el ).find( '.lkCoursMessage__name' ),
             left = $( el ).find( '.lkCoursMessage__left' ),
@@ -654,7 +656,7 @@ function toggleDropdownUserMenu() {
 
 }
 
-=======
+// =======
     $('.lkCoursMessage__row').each(function(index, el) {
         let name = $(el).find('.lkCoursMessage__name'),
         left = $(el).find('.lkCoursMessage__left'),
@@ -666,7 +668,7 @@ function toggleDropdownUserMenu() {
             name.prependTo(text);
         }
     });
-}
+
 
 
 function toggleDropdownUserMenu() {
@@ -678,10 +680,10 @@ function toggleDropdownUserMenu() {
 
     menu.on('mouseleave', () => {
         menu.fadeToggle();
-    })
+    });
 
 }
->>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
+// >>>>>>> f22ec199e0e3c90abf0c0c83d725ce4ed863fa6d
 
 
 function replaceRecommendButton() {
