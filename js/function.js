@@ -316,6 +316,8 @@ function collapsed() {
         const wrap = $( this ).closest( '[data-collapsed-wrap]' ),
             body = wrap.find( '[data-collapsed-body]' );
 
+            $('[data-collapsed-body]').not(wrap).removeClass('open');
+
         body.toggleClass( 'open' );
     } );
 }
@@ -634,7 +636,7 @@ function replaceNameInCourseMessageFromMobile() {
             name.prependTo(text);
         }
     });
-}
+
 
 
 function toggleDropdownUserMenu() {
@@ -646,7 +648,7 @@ function toggleDropdownUserMenu() {
 
     menu.on('mouseleave', () => {
         menu.fadeToggle();
-    })
+    });
 
 }
 

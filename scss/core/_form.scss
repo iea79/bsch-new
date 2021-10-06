@@ -90,6 +90,7 @@
 
 		a {
 			color: rgba(29, 29, 27, 0.5);
+			text-decoration: underline;
 		}
 
 		input {
@@ -120,9 +121,10 @@
 	&__link {
 		a {
 			color: #006EFF;
+			text-decoration: underline;
 
 			&:hover {
-				text-decoration: none;
+				// text-decoration: none;
 			}
 
 			@media (min-width: 768px) {
