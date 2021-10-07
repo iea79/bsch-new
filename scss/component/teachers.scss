@@ -130,6 +130,27 @@
         @media (min-width: 768px) {
             height: auto;
             font-size: 1em;
+
+            &.collapsed {
+                .open & {
+                    height: auto !important;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    height: 3em;
+                    opacity: 1;
+                    width: 100%;
+                    background: linear-gradient(180deg, rgba(246, 246, 246, 0.71) 0%, #F6F6F6 85.71%);
+                }
+            }
         }
 
         &:after {
@@ -144,6 +165,18 @@
             @media (min-width: 768px) {
                 display: none;
             }
+        }
+    }
+
+    &__collapse {
+        margin-top: 0.2em;
+        display: inline-block;
+        color: $color_primary;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
         }
     }
 

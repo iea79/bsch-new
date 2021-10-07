@@ -675,6 +675,36 @@ function lkCoursesProgress() {
         progress.appendTo( '.lkCourses__head' );
     }
 }
+
+function teachersDescriptionCollapse() {
+    if (!isXsWidth()) {
+        let lh = +$('.teachers__desc').css('lineHeight').replace('px', ''),
+        max = +(lh * 11).toFixed();
+        console.log(max);
+        $('.teachers__desc').each(function(index, el) {
+            let hei = $(el).innerHeight(),
+            parent = $(el).parent();
+            if (hei > max) {
+                $(el)
+                .toggleClass('collapsed')
+                .css('height', max);
+                parent.append('<span class="teachers__collapse">Подробнее</span>');
+            }
+        });
+
+        $('body').on('click', '.teachers__collapse', function() {
+            let parent = $(this).parent();
+            parent.toggleClass('open');
+            if (parent.hasClass('open')) {
+                $(this).html('Скрыть');
+            } else {
+                $(this).html('Подробнее');
+            }
+
+        });
+    }
+}
+teachersDescriptionCollapse();
 //
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
