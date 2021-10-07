@@ -9,7 +9,8 @@ block content
                     .firstScreen__content
                         .firstScreen__img
                             .firstScreen__pict
-                                video(autoplay="" src="video/Sunrise.mp4")
+                                video(preload autoplay muted loop playsinline poster="")
+                                    source(src="video/Sunrise.mp4" type="video/mp4")
                                 //- img(src="img/home-slide-1.jpg", alt="")
                             .firstScreen__quatro
                                 span
