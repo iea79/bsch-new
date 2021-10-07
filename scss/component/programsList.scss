@@ -14,7 +14,7 @@
         box-shadow: none;
         display: flex;
         flex-direction: column;
-        cursor: pointer;
+        // cursor: pointer;
         transition: box-shadow 0.3s;
 
         @media (min-width: 768px) {
@@ -175,6 +175,12 @@
         font-size: 1.28em;
         max-width: 16em;
         margin-bottom: 0.8em;
+        color: $main_color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
 
         @media (min-width: 768px) {
             font-size: $size_s;
@@ -233,7 +239,8 @@
             line-height: 1.64;
         }
 
-        a {
+        a,
+        span {
             color: rgba(29, 29, 27, 0.5);
             display: inline-block;
 

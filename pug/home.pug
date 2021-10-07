@@ -126,7 +126,7 @@ block content
                     ]
                 each item, i in program
                     .programsList__item
-                        .programsList__head
+                        a.programsList__head(href="")
                             .programsList__img
                                 img(src="img/program-"+(i+1)+".jpg", alt="")
                             .programsList__bages
@@ -137,14 +137,14 @@ block content
                                 .programsList__bage.programsList__bage_secondary
                             .programsList__text!=item.text
                         .programsList__body
-                            .programsList__name!=item.name
+                            a.programsList__name(href="")!=item.name
                             .programsList__action
                                 a.btn.btn_primary(href="") Подробнее
                                 .programsList__price 38 000 
                                     small ₽
                             .programsList__tags
                                 each tag in item.tags
-                                    a(href="")=tag 
+                                    span=tag 
                                     | 
 
     // end programs
