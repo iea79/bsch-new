@@ -343,7 +343,7 @@ function toggleProgramSteps() {
         hide = $( '.programSteps__item:last-of-type .programSteps__count' ),
         label = $( '.programSteps__action span' ),
         labelText = label.text(),
-        toggle = $( '.programSteps__action .programSteps__count' );
+        toggle = $( '.programSteps__action .programSteps__count, .programSteps__action span' );
 
     toggle.on( 'click', () => {
         if ( isXsWidth() ) {
