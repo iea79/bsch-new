@@ -43,10 +43,12 @@ $pageTitle_fonts_color: #1D1D1B;
     &__img {
         display: block;
         height: 15.3em;
+        margin-bottom: 1em;
 
         @media (min-width: 768px) {
             max-width: 30.750em;
             height: 22.8em;
+            margin-bottom: 0;
         }
 
         img {

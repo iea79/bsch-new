@@ -306,6 +306,8 @@
         margin-right: -0.2em;
         transition: 0.3s;
         transition-property: margin, padding;
+        flex-grow: 1;
+        min-width: 0;
 
         .programSteps__item:nth-of-type(n+5):not(.show) & {
             margin-bottom: 0;
