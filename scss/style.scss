@@ -36,6 +36,8 @@ $quat_size_sm: 2.6em;
 $icomoon-font-family: "bsch" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon_bell: "\e91b";
+$icon_close: "\e91c";
 $icon_success-square: "\e917";
 $icon_caret-square: "\e918";
 $icon_attention: "\e919";
@@ -86,6 +88,18 @@ $icon_whatsapp: "\e903";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_bell {
+    &:before {
+        content: $icon_bell;
+    }
+}
+
+.icon_close {
+    &:before {
+        content: $icon_close;
+    }
 }
 
 .icon_success-square {
@@ -961,4 +975,99 @@ $icon_whatsapp: "\e903";
             font-size: 26px;
         }
     }
+}
+
+.lkNotif {
+    margin: 0 -1.1em 27px;
+
+    @media (min-width: 768px) {
+        margin: 0 0 50px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: 1em 0.9375em;
+        background: $color_withe;
+        margin-bottom: 0.8em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+        }
+    }
+
+    &__icon {
+        flex: none;
+        font-size: 0.8em;
+        width: 2.5em;
+        height: 2.5em;
+        margin-right: 1em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        .icon_close {
+            font-size: 0.875em;
+        }
+
+        .icon_bell {
+            font-size: 0.9375em;
+        }
+
+        .icon_check {
+            font-size: 0.875em;
+        }
+
+        &.danger {
+            background: rgba(248, 43, 55, 0.1);
+            color: #F82B37;
+        }
+
+        &.primary {
+            background: rgba(#006EFF, 0.1);
+            color: #006EFF;
+        }
+
+        &.success {
+            background: #E6FBE6;
+            color: #04CF00;
+            font-weight: 600;
+        }
+    }
+
+    &__body {
+        min-width: 0;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0.65em;
+        }
+    }
+
+    &__text {
+        @media (min-width: 768px) {
+            font-size: 1.0625em;
+        }
+    }
+
+    &__date {
+        color: rgba($main_color, 0.5);
+        margin-top: 0.5em;
+        font-size: 0.85em;
+
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+            flex: none;
+            margin-top: 0;
+            margin-left: 2em;
+        }
+    }
+
 }

@@ -1,0 +1,51 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+
+block lkcontent
+    .lkContent__title Новые уведомления
+    - 
+        notiffications = [
+            {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Бизнес психология» закрыт', date: '12:12'},
+            {staus: 'primary', icon: 'bell', text: 'Добавлен <a href="">новый курс</a>', date: '11:23'},
+            {staus: 'success', icon: 'check', text: 'Доступ к курсу «Основы ведения бизнеса» открыт', date: '10:50'},
+            {staus: 'success', icon: 'check', text: 'Петров В.В. оценил <a href="">вашу работу</a>', date: '10:45'},
+            {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Стратегическое мышление как конкурентное преимущество» закрыт', date: '9:54'},
+            {staus: 'danger', icon: 'close', text: 'Доступ к курсу «От mvp до pitchdeck: инновационное мышление в бизнес-процессах» закрыт', date: '9:15'},
+            {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Менеджер по персоналу» закрыт', date: '8:15'},
+        ]
+
+    .lkNotif
+        each item in notiffications
+            // Notif item
+            .lkNotif__item
+                .lkNotif__icon(class=item.staus)
+                    i(class="icon_"+item.icon+"")
+                .lkNotif__body
+                    .lkNotif__text!=item.text
+                    .lkNotif__date=item.date
+
+    .lkContent__title Ранее прочитанные
+
+    .lkNotif
+        - 
+            notiffications = [
+                {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Бизнес психология» закрыт', date: '12 марта 2021 12:23'},
+                {staus: 'primary', icon: 'bell', text: 'Добавлен <a href="">новый курс</a>', date: '11 марта 2021 10:45'},
+                {staus: 'success', icon: 'check', text: 'Доступ к курсу «Стратегическое мышление для бизнеса  и жизни » открыт', date: '11 марта 2021 10:44'},
+                {staus: 'success', icon: 'check', text: 'Адреева О.Л. оценилa <a href="">вашу работу</a>', date: '2 февраля 2021 22:34'},
+                {staus: 'danger', icon: 'close', text: 'Доступ к курсу «HR-профессионал» закрыт', date: '29 января 2021 13:01'},
+                {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Управление кадрами» закрыт', date: '30 декабря 2020 23:59'},
+                {staus: 'danger', icon: 'close', text: 'Доступ к курсу «Основы ведения бизнеса» закрыт', date: '16 декабря 2020 01:34'},
+            ]
+        each item in notiffications
+            // Notif item
+            .lkNotif__item
+                .lkNotif__icon(class=item.staus)
+                    i(class="icon_"+item.icon+"")
+                .lkNotif__body
+                    .lkNotif__text!=item.text
+                    .lkNotif__date=item.date
