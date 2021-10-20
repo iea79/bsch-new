@@ -59,6 +59,7 @@ $( document ).ready( function () {
 
     initHomeSlider();
     toggleDropdownUserMenu();
+    toggleProgramSteps();
 
 
     checkOnResize();
@@ -83,7 +84,6 @@ function checkOnResize() {
     initCampusSliders();
     initReviewSliders();
     initRecommendSliders();
-    toggleProgramSteps();
     replaceCourseActionbar();
     replaceRecommendButton();
     lkCoursesProgress();
@@ -338,58 +338,28 @@ accordion();
 
 function toggleProgramSteps() {
     let list = $('.programSteps__list'),
-    item = list.find('.programSteps__item'),
-    open = $('.programSteps__item:nth-of-type(4) .programSteps__count'),
-    hide = $('.programSteps__item:last-of-type .programSteps__count'),
-    label = $('.programSteps__action span'),
-    labelText = label.text(),
-    toggle = $('.programSteps__action .programSteps__count, .programSteps__action span');
+        item = $('.programSteps__item'),
+        label = $('.programSteps__action span'),
+        labelText = label.text(),
+        toggle = $('.programSteps__action');
 
-    list.change(function(e){
-        if (!$(e.target).hasClass('open')){
-            scrollToElement($(".programSteps.section"))
-        }
+    toggle.on('click', function() {
+        toggleVisible();
     });
-    toggle.on('click', () => {
 
-        if (isXsWidth()) {
-            list.toggleClass('open').change();
-            item.toggleClass('show');
-        } else {
-            list.removeClass('open').change();
-            item.removeClass('show');
-        }
-        toggleText();
-    });
-    if (!isXsWidth()) {
-        open.on('click', () => {
-            list.addClass('open');
-            item.addClass('show');
-            toggleText();
-        });
-        hide.on('click', () => {
-            list.removeClass('open');
-            item.removeClass('show');
-            toggleText();
-        });
-    }
-
-    function toggleText() {
+    function toggleVisible() {
+        list.toggleClass('open');
+        item.toggleClass('show');
         if (list.hasClass('open')) {
             label.text('Скрыть программу');
         } else {
             label.text(labelText);
         }
+        $('html').animate({
+            scrollTop: $(".programSteps.section").offset().top
+        }, 500);
     }
-
 }
-
-function scrollToElement(element) {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $(element).offset().top
-    }, 500);
-}
-
 
 
 function openMobileNav() {
