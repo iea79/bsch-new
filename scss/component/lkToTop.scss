@@ -1,0 +1,27 @@
+.lkToTop {
+    display: none;
+
+    @media (min-width: 768px) {
+        width: 42px;
+        height: 42px;
+        background: rgba(0, 110, 255, 0.19);
+        color: #006EFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 16.3em;
+        bottom: 1.3em;
+        cursor: pointer;
+        transition: left 0.4s;
+
+        .nav_hidden & {
+            left: 1.3em;
+        }
+
+        .icon_angle {
+            transform: rotate(-90deg);
+            font-size: 26px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+.lkCoursMessage {
+    margin-top: 3.6em;
+
+    @media (min-width: 768px) {
+        margin-top: 5.6em;
+        max-width: 63.9em;
+    }
+
+    &__title {
+        font-size: 1.45em;
+        margin-bottom: 1.6em;
+
+        @media (min-width: 768px) {
+            font-size: 2.1em;
+            margin-bottom: 2.15em;
+        }
+    }
+
+    &__content {}
+
+    &__row {
+        margin-bottom: 2em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 2.625em;
+            display: flex;
+        }
+    }
+
+    &__user {
+        width: 3.875em;
+        height: 3.875em;
+        margin-bottom: 1em;
+        margin-right: 1.1em;
+
+        @media (min-width: 768px) {
+            margin-right: 1.875em;
+            flex: none;
+            margin-bottom: 0;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__body {
+        min-width: 0;
+        flex-grow: 1;
+    }
+
+    &__area {
+        margin-bottom: 1em;
+    }
+
+    &__upload {
+        margin-bottom: 1em;
+    }
+
+    &__submit {
+        margin-bottom: 1em;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        text-align: right;
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+
+            i {
+                margin-left: 0.8em;
+            }
+        }
+    }
+
+    &__file {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        color: rgba(29, 29, 27, 0.5);
+
+        &Name {
+            @media (min-width: 768px) {
+                font-size: $size_xxs;
+            }
+        }
+
+        .delete {
+            width: 1.125em;
+            height: 1.125em;
+            margin-left: 0.5em;
+            border: 1px solid;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 70%;
+                border-top: 1px solid;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__txt {
+
+        @media (min-width: 768px) {
+            margin-top: -1.6em;
+        }
+    }
+
+    &__name {
+        font-family: $second_font_family;
+        margin-bottom: 0.5em;
+        font-size: 1.15em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+
+    &__text {
+        color: rgba(29, 29, 27, 0.5);
+        background: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        padding: 0.8em 1em;
+        margin-bottom: 0.5em;
+
+        @media (min-width: 768px) {
+            padding: 1em 1.5em;
+            font-size: $size_xxs;
+        }
+    }
+
+    &__left {
+        @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__answer {
+        font-size: $size_xxxs;
+        color: #006EFF;
+        display: inline-block;
+        margin-bottom: 3em;
+    }
+
+}

@@ -1,0 +1,58 @@
+.coursNav {
+    padding: 1.1em;
+    background: $color_withe;
+    border-bottom: 2px solid rgba(0, 110, 255, 0.3);
+    white-space: nowrap;
+    overflow: auto hidden;
+
+    @media (min-width: 768px) {
+        display: flex;
+        margin-right: 30em;
+        padding: 0 0 0 1.1em;
+        border: 0;
+        overflow: inherit;
+    }
+
+    &__item {
+        text-decoration: none;
+        width: 2.6875em;
+        height: 2.6875em;
+        background: rgba(0, 110, 255, 0.19);
+        color: #006EFF;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5em;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        i {
+            font-size: 1.5em;
+        }
+
+        &.active {
+            background: #006EFF;
+            color: #fff;
+            cursor: default;
+
+            &:after {
+                content: '';
+                position: absolute;
+                border: 0.6em solid #006EFF;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                transform: rotate(45deg);
+                top: calc(100% + 0.7em);
+
+                @media (min-width: 768px) {
+                    top: calc(100% + 1em);
+                }
+            }
+
+        }
+    }
+}
