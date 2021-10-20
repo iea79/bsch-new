@@ -1,0 +1,56 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Настройки';
+    - isLogin = true;
+    - isCourse = false;
+
+block lkcontent
+    .lkContent__title Уведомления
+
+    .lkNotice
+        ul.lkNotice__list
+            li.lkNotice__item
+                input.lkNotice__checkbox(type="checkbox" checked="")
+                span.lkNotice__content Получать уведомления о проверенных работах
+                    span.lkNotice__box
+
+            li.lkNotice__item
+                input.lkNotice__checkbox(type="checkbox")
+                span.lkNotice__content Получать уведомления о проверенных работах
+                    input.lkNotice__quantity(type="number" value="5")
+                    span дней
+                    span.lkNotice__box
+
+            li.lkNotice__item
+                input.lkNotice__checkbox(type="checkbox")
+                span.lkNotice__content Получать уведомления о проверенных работах
+                    span.lkNotice__box
+
+            li.lkNotice__item
+                input.lkNotice__checkbox(type="checkbox")
+                span.lkNotice__content Получать уведомления о проверенных работах
+                    input.lkNotice__quantity(type="number" value="5")
+                    span дней
+                    span.lkNotice__box
+
+
+
+    .lkContent__title История входа
+
+    .lkLoginHistory
+        ul.lkLoginHistory__list
+            each item in ['', '', '']
+                li.lkLoginHistory__item
+                    span.lkLoginHistory__text.lkLoginHistory__date Выполнен вход 01.04.2021
+                    span.lkLoginHistory__text.lkLoginHistory__device Windows 10 - Opera в 15:39
+        .lkLoginHistory__action
+            button.btn.btn_sm.lkLoginHistory__button(type="submit") Выйти со всех устройств
+
+
+
+
+
+
+
+        //- include ../pug/inc/advProg
