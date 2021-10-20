@@ -132,6 +132,19 @@
 			}
 		}
 	}
+
+	&__check {
+		display: inline-flex;
+		align-items: center;
+
+		> input {
+			display: flex;
+			flex: none;
+			margin-right: 0.5625em;
+		}
+
+		> span {}
+	}
 }
 // Input text and textarea ================================================
 input:not([type]),
@@ -238,14 +251,17 @@ input[type=radio] {
 
 input[type=radio] {
 	border-radius: 50%;
+	background: #F6F6F6;
+	border: 1px solid rgba(29, 29, 27, 0.25);
 
 	&:checked:before {
 		content: '';
-		width: 6px;
-		height: 6px;
+		position: absolute;
+		width: 33.3%;
+		height: 33.3%;
 		display: block;
 		border-radius: 50%;
-		background: #000;
+		background: #006EFF;
 	}
 
 	&:disabled:checked:before {
