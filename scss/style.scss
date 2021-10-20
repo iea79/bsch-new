@@ -406,7 +406,7 @@ $icon_whatsapp: "\e903";
             padding-right: 0.125em;
             display: flex;
             flex-direction: column;
-            padding-bottom: 2em;
+            padding-bottom: 0;
             transition: left 0.4s;
 
             .nav_hidden & {
@@ -420,7 +420,7 @@ $icon_whatsapp: "\e903";
 
         @media (min-width: 768px) {
             padding: 0 2em 6.8125em 26.4em;
-
+            min-height: calc(100vh - 5.9em);
         }
     }
 

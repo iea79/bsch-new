@@ -341,7 +341,11 @@ function toggleProgramSteps() {
         item = $('.programSteps__item'),
         label = $('.programSteps__action span'),
         labelText = label.text(),
-        toggle = $('.programSteps__action');
+        toggle = $('.js-programm-toggle');
+
+    // if (isXsWidth()) {
+    //     toggle = $('.js-programm-toggle');
+    // }
 
     toggle.on('click', function() {
         toggleVisible();
