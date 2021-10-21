@@ -30,33 +30,24 @@
         }
     }
 
-    &__checkbox {}
-
     &__content {
         position: relative;
-        display: flex;
-        align-items: center;
         color: rgba($main_color, .5);
         transition: 0.3s;
         font-size: 0.875em;
 
         @media (min-width: 768px) {
             font-size: 1.063em;
-
         }
-    }
 
-    &__quantity {}
-
-    &__text {}
-
-    &__box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
     }
 
     // Input number ================================================
@@ -80,16 +71,17 @@
         &:checked + .lkNotice__content {
             color: rgba($main_color, .8);
 
+            &:after {
+                content: '';
+                z-index: -1;
+            }
+
             .lkSettings__text {
                 color: rgba($main_color, .8);
             }
 
             .lkNotice__quantity {
                 color: rgba($main_color, .8);
-            }
-
-            .lkNotice__box {
-                z-index: -1;
             }
 
         }
@@ -132,7 +124,6 @@
 
     &__text {
         color: rgba($main_color, .5);
-        // transition: 0.3s;
         font-size: 0.875em;
 
         @media (min-width: 768px) {
@@ -143,8 +134,6 @@
     &__date {
         margin-right: 0.5em;
     }
-
-    &__device {}
 
     &__action {
         padding: 1.25em 1em 1.5em;
