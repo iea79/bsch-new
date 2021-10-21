@@ -18,20 +18,13 @@ header.header
         if isLogin
             if isCourse
                 .coursNav
-                    a.coursNav__item.active(href="")
-                        i.icon_bullhorn
-                    a.coursNav__item(href="")
-                        i.icon_pencil
-                    a.coursNav__item(href="")
-                        i.icon_tasks
-                    a.coursNav__item(href="")
-                        i.icon_comments
-                    a.coursNav__item(href="")
-                        i.icon_cube
-                    a.coursNav__item(href="")
-                        i.icon_video
-                    a.coursNav__item(href="")
-                        i.icon_briefcase
+                    each icon in ['icon_bullhorn', 'icon_pencil', 'icon_tasks', 'icon_comments', 'icon_cube', 'icon_video', 'icon_briefcase']
+                        if courseIcon == icon
+                            a.coursNav__item.active(href="")
+                                i(class=icon)
+                        else
+                            a.coursNav__item(href="")
+                                i(class=icon)
 
                 nav.header__nav.nav.mobile
                     +lkNavbar()

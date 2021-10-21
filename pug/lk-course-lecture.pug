@@ -1,0 +1,49 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_pencil';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition
+            i.icon_caret-square
+            span Назначено
+        h2 Тестовая лекция
+        each item in ['', '', '']
+            p Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+
+    .lkCoursTask
+        .lkCoursTask__title Ваш ответ на задание
+
+        .lkCoursTask__item
+            .lkCoursTask__head
+                .lkCoursTask__question Сколько будет 33+7?
+                .lkCoursTask__counter 2 вопрос из 12
+            .lkCoursTask__body
+                .lkCoursTask__answer
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 40
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 34
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 434
+
+            .lkCoursTask__footer
+                .lkCoursTask__back Предыдущий вопрос
+                button.lkCoursTask__next.btn.btn_sm Следующий вопрос
+
+        .lkCoursTask__end
+            button.btn.btn_primary Завершить тест
+
+        .lkCoursTask__nav
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle

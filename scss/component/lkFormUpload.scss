@@ -1,0 +1,21 @@
+.lkFormUpload {
+    padding: 1.3em 1.6em 1.3em 1.8em;
+    background: rgba(0, 110, 255, 0.1);
+    color: rgba(0, 110, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__label {
+        font-size: $size_xxs;
+    }
+
+    input {
+        display: none;
+    }
+
+    .icon_paperclip {
+        font-size: 1.6em;
+    }
+}
