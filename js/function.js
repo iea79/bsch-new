@@ -358,10 +358,10 @@ function toggleProgramSteps() {
             label.text('Скрыть программу');
         } else {
             label.text(labelText);
+            $('html').animate({
+                scrollTop: $(".programSteps.section").offset().top
+            }, 500);
         }
-        $('html').animate({
-            scrollTop: $(".programSteps.section").offset().top
-        }, 500);
     }
 }
 
