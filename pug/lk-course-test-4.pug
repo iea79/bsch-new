@@ -1,0 +1,110 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_tasks';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition_success
+            .lkCoursePage__condition
+                i.icon_success-square
+                span Принято
+            .lkCoursePage__conditionTotal 
+                i Максимум 25 баллов за решение.
+                | 20 из 25 баллов получено
+
+    .lkCoursTask
+        .lkCoursTask__title Результаты тестирования
+        .lkCoursRezult
+            .lkCoursRezult__row
+                .lkCoursRezult__label Тест начат:
+                .lkCoursRezult__prop Понедельник, 11 октября 2021 12:37
+            .lkCoursRezult__row
+                .lkCoursRezult__label Состояние:
+                .lkCoursRezult__prop 
+                    span.success Завершено
+            .lkCoursRezult__row
+                .lkCoursRezult__label Завершен:
+                .lkCoursRezult__prop Понедельник, 11 октября 2021 14:12
+            .lkCoursRezult__row
+                .lkCoursRezult__label Потрачено времени:
+                .lkCoursRezult__prop 1 час 25 минут 10 секунд
+            .lkCoursRezult__row
+                .lkCoursRezult__label Баллы:
+                .lkCoursRezult__prop 
+                    span.success 20 
+                    | из 25
+            .lkCoursRezult__row
+                .lkCoursRezult__label Оценка:
+                .lkCoursRezult__prop 
+                    span.success 8 
+                    | из 10 (80%)
+
+        .lkCoursTask__title Ответы на тест
+        .lkCoursTask__item
+            .lkCoursTask__head
+                .lkCoursTask__question Сколько будет 33+7?
+                    .lkCoursTask__status Правильный ответ
+            .lkCoursTask__body
+                .lkCoursTask__answer
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 40
+                    .lkCoursTask__row.lkCoursTask__row_marks.success
+                        label.form__check
+                            input(type="radio" name="quest-1" checked="")
+                            span 34
+                        .lkCoursTask__marker
+                            i.icon_check 
+                            | верный ответ
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 434
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 10
+            .lkCoursTask__footer.lkCoursTask__footer_rezult Ваш ответ верный. Правильные ответ: 40
+
+        .lkCoursTask__item
+            .lkCoursTask__head
+                .lkCoursTask__question Сколько будет 1+1?
+                    .lkCoursTask__status.error Неверный ответ
+            .lkCoursTask__body
+                .lkCoursTask__answer
+                    .lkCoursTask__row.lkCoursTask__row_marks
+                        label.form__check
+                            input(type="radio" name="quest-2")
+                            span 2
+                        .lkCoursTask__marker
+                            i.icon_check 
+                            | правильный вариант
+                    .lkCoursTask__row.lkCoursTask__row_marks.error
+                        label.form__check
+                            input(type="radio" name="quest-2" checked)
+                            span 34
+                        .lkCoursTask__marker
+                            i.icon_close 
+                            | неверный ответ
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-2")
+                            span 22
+                    .lkCoursTask__row
+                        label.form__check
+                            input(type="radio" name="quest-2")
+                            span 11
+            .lkCoursTask__footer.lkCoursTask__footer_rezult Ваш ответ неверный. Правильные ответ: А. E=mc
+
+
+        .lkCoursTask__end
+            button.btn.btn_primary Закончить обзор
+
+        .lkCoursTask__nav
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle

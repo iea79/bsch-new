@@ -334,3 +334,45 @@ $icon_whatsapp: "\e903";
 @import "./component/lkToTop";
 @import "./component/lkNotif";
 @import "./component/lkCoursTask";
+
+.lkCoursRezult {
+    background: #fff;
+    padding: 1.4375em;
+    margin-bottom: 1.875em;
+
+    @media (min-width: 768px) {
+        margin-bottom: 3.125em;
+    }
+
+    &__row {
+        margin-bottom: 0.75em;
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
+        &:last-child {
+            // margin-bottom: 0;
+        }
+
+    }
+
+    &__label {
+        opacity: 0.5;
+        flex: none;
+        margin-bottom: 0.3em;
+
+        @media (min-width: 768px) {
+            width: 13.51em;
+            font-size: $size_xxs;
+            padding-right: 1em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__prop {}
+
+    .success {
+        color: #169F62;
+    }
+}

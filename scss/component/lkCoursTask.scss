@@ -32,6 +32,7 @@
     &__item {
         background: $color_withe;
         margin-bottom: 1.25em;
+        border: 1px solid #DBDBDB;
     }
 
     &__head {
@@ -46,7 +47,13 @@
         }
     }
 
-    &__question {}
+    &__question {
+        display: flex;
+        align-items: center;
+    }
+
+    &__status {
+        }
 
     &__counter {
         margin-top: 1em;
@@ -68,10 +75,99 @@
 
     &__answer {}
 
-    &__row:not(:last-child) {
-        margin-bottom: 1.125em;
+    &__marker {
+        margin-left: 3em;
+        color: #169F62;
+        position: relative;
+        @media (min-width: 768px) {
+            font-size: $size_xxxs;
+        }
 
-        .form__check {}
+        i {
+            font-size: 70%;
+            font-weight: 600;
+            margin-right: 0.6em;
+
+            &.icon_close {
+                font-size: 60%;
+            }
+        }
+    }
+
+    &__row {
+        &_marks {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -0.5em;
+                left: -1.1em;
+                right: -1.1em;
+                bottom: -0.5em;
+
+                @media (min-width: 768px) {
+                    left: -1.4375em;
+                    right: -1.4em;
+                }
+
+            }
+
+            &.success {
+                &:before {
+                    background: #D9EFE6;
+                }
+
+                input[type=radio] {
+                    &:checked {
+                        &:before {
+                            background: #169F62;
+                        }
+                    }
+                }
+            }
+
+            &.error {
+                .lkCoursTask__marker {
+                    color: #FF2828;
+                }
+
+                &:before {
+                    content: '';
+                    background: rgba(#FF2828, 0.2);
+                }
+            }
+
+            input[type=radio] {
+                &:checked {
+                    &:before {
+                        background: #FF2828;
+                    }
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.125em;
+
+            .form__check {
+                position: relative;
+
+                input[type=radio] {
+                    &:checked {
+                        &:before {
+                            .success & {
+                                background: #169F62;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__footer {
@@ -84,6 +180,13 @@
         align-items: center;
 
         .btn {}
+
+        &_rezult {
+            background: rgba(#F6F6F6, 0.7);
+            min-height: 64px;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__back {
