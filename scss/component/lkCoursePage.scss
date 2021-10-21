@@ -102,6 +102,16 @@
                     }
                 }
 
+                // добавил p9tno для страницы опрос 2
+                &_survey {
+                    width: 100%;
+                    justify-content: flex-start;
+
+                    @media (max-width: 767px) {
+                        align-items: flex-start;
+                    }
+                }
+
                 &Total {
                     color: #169F62;
                     padding: 0.5em 3.3em 0.5em 1.3em;
@@ -159,6 +169,10 @@
         @media (min-width: 768px) {
             padding-top: 2em;
             max-width: 60em;
+
+            &_survey {
+                max-width: 63.6875em;
+            }
         }
 
         h2 {
