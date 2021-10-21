@@ -1,0 +1,56 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_comments';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition
+            i.icon_check-square
+            span Назначено
+        h2 Итоги попытки
+
+
+    .lkCoursTest
+        .lkCoursTest__head
+            .lkCoursTest__row
+                span.lkCoursTest__question Вопрос
+                span.lkCoursTest__state Состояние
+
+
+        .lkCoursTest__body
+            .lkCoursTest__row
+                span.lkCoursTest__question 1
+                span.lkCoursTest__state Ответ сохранен
+            .lkCoursTest__row
+                span.lkCoursTest__question 2
+                span.lkCoursTest__state Ответ сохранен
+            .lkCoursTest__row
+                span.lkCoursTest__question 3
+                span.lkCoursTest__state Ответ сохранен
+            .lkCoursTest__row
+                span.lkCoursTest__question 4
+                span.lkCoursTest__state.lkCoursTest__state_error нет ответа
+            .lkCoursTest__row
+                span.lkCoursTest__question 5
+                span.lkCoursTest__state.lkCoursTest__state_error нет ответа
+            .lkCoursTest__row
+                span.lkCoursTest__question 6
+                span.lkCoursTest__state Ответ сохранен
+            .lkCoursTest__row
+                span.lkCoursTest__question 7
+                span.lkCoursTest__state Ответ сохранен
+
+
+
+
+        .lkCoursTest__end
+            button.btn Все курсы
+            button.btn.btn_primary Отправить все и завершить тест
+
+        .lkCoursTask__nav.lkCoursTask__nav_test
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle
