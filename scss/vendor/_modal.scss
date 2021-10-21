@@ -34,7 +34,7 @@
             position: absolute;
             display: block;
             width: 100%;
-            border-top: 2px solid;
+            border-top: 0.125em solid;
         }
 
         &:before {
@@ -71,7 +71,7 @@
         width: 100%;
         max-width: 39.1em;
 
-        @media (min-width: 768px) {}
+        @media (min-width: 48em) {}
     }
 
     &-content {
@@ -105,12 +105,12 @@
     }
 
     &-header {
-        min-height: 16.42857143px;
+        min-height: 16.2678571.4375em;
         color: #666;
-        font-size: 18px;
+        font-size: 1.125em;
 
         .close {
-            margin-top: -2px;
+            margin-top: -0.125em;
         }
     }
 
@@ -127,18 +127,18 @@
     }
 
     &-footer {
-        margin-top: 15px;
-        padding: 19px 20px 20px;
+        margin-top: 0.9375em;
+        padding: 1.1875em 1.25em 1.25em;
         text-align: right;
-        border-top: 1px solid #e5e5e5;
+        border-top: 0.0625em solid #e5e5e5;
 
         .btn+.btn {
-            margin-left: 5px;
+            margin-left: 0.3125em;
             margin-bottom: 0;
         }
 
         .btn-group .btn+.btn {
-            margin-left: -1px;
+            margin-left: -0.0625em;
         }
 
         .btn-block+.btn-block {

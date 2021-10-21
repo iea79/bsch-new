@@ -55,4 +55,13 @@
 	&_sm {
 		padding: 0.5em 1em;
 	}
+
+	&_link {
+		border-color: transparent;
+		color: rgba($main_color, 0.8);
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
 }

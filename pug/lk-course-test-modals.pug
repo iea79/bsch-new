@@ -1,0 +1,46 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_tasks';
+
+block course
+    // Button trigger modal modalNotice
+    button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeEnd") Завершить тест
+    // Begin Modal modalNotice
+    .modal.fade.modalNotice#modalNoticeEnd
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Подтверждение
+                .modalNotice__text После отправки Вы больше не сможете изменить свои ответы на эту попытку
+                .modalNotice__action
+                    button.btn.btn_primary Завершить тест
+                    button.btn.btn_link(data-dismiss="modal") Отмена
+
+    // End modal modalNotice
+
+    // Button trigger modal modalNotice
+    button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeComplete") Задание выполнено
+    // Begin Modal modalNotice
+    .modal.fade.modalNotice#modalNoticeComplete
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Задание выполнено
+                .modalNotice__text Поздравляем, вы успешно справились с заданием!
+                .modalNotice__action
+                    button.btn.btn_primary(data-dismiss="modal") Понятно
+    // End modal modalNotice
+
+    // Button trigger modal modalNotice
+    button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeError") Произошла ошибка
+    // Begin Modal modalNotice
+    .modal.fade.modalNotice#modalNoticeError
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Произошла ошибка
+                .modalNotice__text К сожалению во время выполнения задания  произошла ошибка, попробуйте позже
+                .modalNotice__action
+                    button.btn.btn_primary(data-dismiss="modal") Понятно
+    // End modal modalNotice
