@@ -1,0 +1,196 @@
+.lkCalendar {
+    .v-application {}
+
+    .v-application--is-ltr {}
+
+    .theme--light {}
+
+    .v-application--wrap {}
+
+    .v-main {
+        &__wrap {}
+
+    }
+
+    .row {}
+
+    .fill-height {}
+
+    .col {}
+
+    .v-sheet {}
+
+    .v-toolbar {
+        &__content {
+            .v-btn {
+                padding: 1em;
+
+                &--outlined {
+                    font-family: 'Igra Sans', sans;
+                    text-transform: none;
+                    background: rgba(0, 110, 255, 0.1);
+                    border: 0;
+                    color: #1D1D1B !important;
+                    font-weight: 400;
+                    font-size: 1.2em;
+                    line-height: 1;
+                    height: auto;
+                    min-width: inherit;
+                    padding: 0.49em 0.7em;
+                    border-radius: 0;
+                    letter-spacing: normal;
+
+                    .v-icon.v-icon--right {
+                        font-size: 1em;
+                        line-height: 1;
+                        width: 1em;
+                        height: 0.7em;
+                        flex: none;
+                        margin-right: -.4em;
+                        margin-left: 0.2em;
+                    }
+
+                    &__content {}
+                }
+            }
+        }
+
+        &__title {
+            font-family: 'Igra Sans', sans;
+            font-size: 1.375em;
+        }
+
+    }
+
+    .v-toolbar--flat {}
+
+    .mr-4 {}
+
+    .v-btn {
+        &__content {}
+
+    }
+
+    .v-btn--outlined {}
+
+    .v-size--default {}
+
+    .grey--text {}
+
+    .text--darken-2 {}
+
+    .v-btn--fab {}
+
+    .v-btn--round {}
+
+    .v-btn--text {}
+
+    .v-size--small {}
+
+    .v-icon {}
+
+    .notranslate {}
+
+    .mdi {}
+
+    .mdi-chevron-left {}
+
+    .mdi-chevron-right {}
+
+    .spacer {}
+
+    .v-menu {}
+
+    .v-icon--right {}
+
+    .mdi-menu-down {}
+
+    .v-calendar-monthly {}
+
+    .v-calendar-weekly {
+        &__head {}
+
+        &__head-weekday {}
+
+        &__week {}
+
+        &__day {}
+
+        &__day-label {}
+
+    }
+
+    .v-calendar {
+        &-weekly {
+            .v-calendar-weekly__day {
+                &.v-outside {
+                    // background: #D3D3D3;
+                }
+            }
+
+            &__head {}
+
+            &__head-weekday {}
+
+            &__week {}
+
+            &__day {
+                border-color: #D3D3D3;
+
+                &.v-present {
+                    background: #E6F1FF;
+
+                    .v-btn {
+                        background-color: transparent !important;
+                        border: 0;
+                        color: #006EFF;
+                    }
+                }
+
+            }
+
+            &__day-label {}
+        }
+
+    }
+
+    .v-calendar-events {}
+
+    .v-past {}
+
+    .v-outside {}
+
+    .v-present {}
+
+    .primary--text {}
+
+    .v-future {}
+
+    .v-btn--has-bg {}
+
+    .transparent {}
+
+    .v-event {
+        line-height: 1.4;
+        border-radius: 0.2em;
+        font-size: 0.875em;
+        padding: 0.1em 0.6em;
+        font-weight: 400;
+    }
+
+    .v-event-start {}
+
+    .deep-purple {
+        background: #394FBB !important;
+        border-color: #394FBB !important;
+    }
+
+    .white--text {}
+
+    .pl-1 {}
+
+    .primary {}
+
+    .v-event-end {}
+
+}
