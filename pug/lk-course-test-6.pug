@@ -1,0 +1,58 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_comments';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition_success
+            .lkCoursePage__condition
+                i.icon_success-square
+                span Принято
+            .lkCoursePage__conditionTotal 
+                i Максимум 25 баллов за тестирование.
+                | Лучшая попытка: 20 из 25 баллов получено
+
+        h2 Результаты ваших прыдыдущих попыток 
+
+    .lkCoursTest
+
+        .lkCoursTable.counter-reset
+            .lkCoursTable__head
+                .lkCoursTable__row
+                    .lkCoursTable__col Попытка
+                    .lkCoursTable__col Состояние
+                    .lkCoursTable__col Дата прохождения
+                    .lkCoursTable__col Баллы
+                    .lkCoursTable__col Оценка
+                    .lkCoursTable__col
+
+            .lkCoursTable__body
+
+                each test in [{date: 'Вторник, 12 марта 2021 12:34', point: '20 из 25', rating: '8 из 10'}, {date: 'Среда, 13 марта 2021 10:43', point: '12 из 25', rating: '5 из 10'}, {date: 'Среда, 13 марта 2021 10:43', point: '12 из 25', rating: '5 из 10'}, ]
+                    // start row
+                    .lkCoursTable__row.lkCoursTable__row_label
+                        .lkCoursTable__serial
+                            .lkCoursTable__label Попытка
+                            .lkCoursTable__number №
+                                span
+                        .lkCoursTable__date Понедельник, 18 марта 2021 12:34
+                    .lkCoursTable__row
+                        .lkCoursTable__col(data-label="Состояние")
+                        .lkCoursTable__col.succese.bold Завершено
+                        .lkCoursTable__col=test.date
+                        .lkCoursTable__col(data-label="Баллы")=test.point
+                        .lkCoursTable__col(data-label="Оценка")=test.rating
+                        .lkCoursTable__col
+                            a.lkCoursTable__link(href="#") Просмотреть
+                    // end row
+
+        .lkCoursTest__end
+            button.btn.btn_primary.btn_short Пройти тест заново
+
+        .lkCoursTask__nav.lkCoursTask__nav_test
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle

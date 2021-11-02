@@ -1,64 +1,8 @@
 .lkCoursTest {
     max-width: 63.6875em;
-    margin-top: 4em;
-
-    @media (min-width: 768px) {
-        margin-top: 4.375em;
-    }
-
-    &__head {
-        font-weight: 500;
-        margin-bottom: 0.625em;
-
-        .lkCoursTest__row {
-            background-color: #E9E9E9;
-            color: rgba($main_color, .5);
-        }
-    }
-
-    &__body {
-        .lkCoursTest__row {
-            background-color: $color_withe;
-            border: 1px solid #DBDBDB;
-        }
-
-        .lkCoursTest__state {
-            color: #169F62;
-
-            &_success {}
-
-            &_error {
-                color: #FF2828;
-            }
-        }
-    }
-
-    &__row {
-        display: flex;
-        padding: 0.875em 1.25em;
-        margin-bottom: 0.3125em;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        span {
-            font-size: 0.9375em;
-        }
-
-    }
-
-    &__question {
-        width: 30%;
-    }
-
-    &__state {
-        width: 70%;
-
-    }
 
     &__end {
-        margin-top: 4.875em;
+        margin-top: 1.2857em;
 
         @media (max-width: 767px) {
             .btn {
@@ -73,8 +17,12 @@
         }
 
         @media (min-width: 768px) {
-            display: flex;
-            justify-content: space-between;
+
+            margin-top: 4.875em;
+
+            &_right {
+                text-align: right;
+            }
 
             .btn {
                 padding-left: 5.25em;
@@ -85,6 +33,300 @@
                 padding-left: 7.188em;
                 padding-right: 7.188em;
             }
+
+            .btn_short {
+                padding-left: 4.175em;
+                padding-right: 4.175em;
+            }
         }
     }
+}
+
+.lkCoursTable {
+    &__head {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.625em;
+
+            .lkCoursTable__row {
+                background-color: #E9E9E9;
+                color: rgba($main_color, .5);
+            }
+
+        }
+    }
+
+    &__body {
+        .lkCoursTable__row {
+            border: 0.0625em solid #DBDBDB;
+        }
+
+        .lkCoursTable__row_label {
+            display: block;
+            background-color: #E9E9E9;
+            border: none;
+            margin-bottom: 0.3572em;
+            padding: 0.9286em 1.0714em 1.0714em;
+            display: flex;
+            flex-wrap: nowrap;
+
+            > * {
+                width: 50%;
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .lkCoursTable__col {
+
+            @media (max-width: 767px) {
+                margin-bottom: 0.8em;
+
+                &:nth-last-child(2) {
+                    margin-bottom: 1.2em;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+            }
+
+            &.succese {
+                color: #169F62;
+            };
+
+            &.error {
+                color: #FF2828;
+            }
+
+            &.bold {
+                font-weight: 500;
+            }
+        }
+
+        .lkCoursTable__row_sm {
+            padding: 0.9286em 1.0714em 1.0714em;
+
+            .lkCoursTable__col {
+                margin: 0;
+            }
+
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+
+        background-color: $color_withe;
+
+        padding: 0.929em 1.0714em 2.1429em;
+
+        margin-bottom: 0.7143em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            padding: 0.875em 1.25em;
+            margin-bottom: 0.3125em;
+        }
+
+    }
+
+    &__col {
+        font-size: 15px;
+
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+        }
+
+        &:nth-child(1) {
+            width: 50%;
+        }
+
+        &:nth-child(2) {
+            width: 50%;
+        }
+
+        &:nth-child(3) {
+            display: none;
+
+        }
+
+        &:nth-child(4) {
+            width: 100%;
+
+        }
+
+        &:nth-child(5) {
+            width: 100%;
+
+        }
+
+        &:nth-child(6) {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(1) {
+                width: 11%;
+            }
+
+            &:nth-child(2) {
+                width: 16%;
+            }
+
+            &:nth-child(3) {
+                display: block;
+                width: 29%;
+            }
+
+            &:nth-child(4) {
+                width: 17%;
+            }
+
+            &:nth-child(5) {
+                width: 14%;
+            }
+
+            &:nth-child(6) {
+                width: 13%;
+            }
+
+        }
+
+        &_sm {
+            @media (min-width: 768px) {
+                &:first-child {
+                    width: 30%;
+                }
+
+                &:last-child {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__serial {
+        font-weight: 500;
+        color: rgba($main_color, .5);
+
+    }
+
+    &__label {
+        margin-bottom: 0.3em;
+    }
+
+    &__number {}
+
+    &__date {
+        line-height: 1.4em;
+    }
+
+}
+
+.counter-reset {
+    counter-reset: line var(--line-num, 0);
+
+    .lkCoursTable__body {
+        //start mobil
+        .lkCoursTable__col {
+            &:nth-child(n) {
+                &:before {
+                    color: rgba($main_color, 0.5);
+                    font-weight: 500;
+
+                }
+            }
+
+            &:nth-child(1) {
+                &:before {
+                    content: attr(data-label);
+                }
+            }
+
+            &:nth-child(4) {
+                &:before {
+                    display: inline-block;
+                    width: 50%;
+                    content: attr(data-label);
+                }
+            }
+
+            &:nth-child(5) {
+                &:before {
+                    display: inline-block;
+                    width: 50%;
+                    content: attr(data-label);
+
+                }
+            }
+        }
+
+        .lkCoursTable__row_label {
+            counter-increment: line;
+
+            .lkCoursTable__serial span {
+                &:before {
+                    content: counter(line) ' ';
+                }
+            }
+        }
+        //end mobil
+
+        @media (min-width: 768px) {
+            .lkCoursTable__row {
+                counter-increment: line;
+            }
+
+            .lkCoursTable__col {
+                &:nth-child(n) {
+                    &:before {
+                        color: rgba($main_color, 1);
+                        font-weight: 400;
+
+                    }
+                }
+
+                &:nth-child(1) {
+                    &:before {
+                        content: counter(line) ' ';
+
+                    }
+                }
+
+                &:nth-child(4) {
+                    &:before {
+                        content: ' ';
+                        display: none;
+
+                    }
+                }
+
+                &:nth-child(5) {
+                    &:before {
+                        content: ' ';
+                        display: none;
+
+                    }
+                }
+
+            }
+        }
+
+    }
+
 }
