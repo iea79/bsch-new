@@ -125,79 +125,19 @@
             <div class="lkCoursePage__state">1 из 4 уроков пройден</div>
           </div>
           <div class="lkCoursePage__body">
-            <div class="lkCoursePage__condition_success">
-              <div class="lkCoursePage__condition"><i class="icon_success-square"></i><span>Принято</span></div>
-              <div class="lkCoursePage__conditionTotal"> <i>Максимум 25 баллов за тестирование.</i>Лучшая попытка: 20 из 25 баллов получено</div>
-            </div>
-            <h2>Результаты ваших прыдыдущих попыток </h2>
+            <div class="lkCoursePage__condition"><i class="icon_check-square"></i><span>Назначено</span></div>
+            <h2>Тест</h2>
+            <p>Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.</p>
           </div>
           <div class="lkCoursTest">
-            <div class="lkCoursTable counter-reset">
-              <div class="lkCoursTable__head">
-                <div class="lkCoursTable__row">
-                  <div class="lkCoursTable__col">Попытка</div>
-                  <div class="lkCoursTable__col">Состояние</div>
-                  <div class="lkCoursTable__col">Дата прохождения</div>
-                  <div class="lkCoursTable__col">Баллы</div>
-                  <div class="lkCoursTable__col">Оценка</div>
-                  <div class="lkCoursTable__col"></div>
-                </div>
+            <div class="lkCoursTest__mark">
+              <div class="lkCoursTest__markCheck">
+                <input type="checkbox" id="markcheck"/>
+                <label for="markcheck">Отметить пройденным</label>
               </div>
-              <div class="lkCoursTable__body">
-                <!-- start row-->
-                <div class="lkCoursTable__row lkCoursTable__row_label">
-                  <div class="lkCoursTable__serial">
-                    <div class="lkCoursTable__label">Попытка</div>
-                    <div class="lkCoursTable__number">№<span></span></div>
-                  </div>
-                  <div class="lkCoursTable__date">Понедельник, 18 марта 2021 12:34</div>
-                </div>
-                <div class="lkCoursTable__row">
-                  <div class="lkCoursTable__col" data-label="Состояние"></div>
-                  <div class="lkCoursTable__col succese bold">Завершено</div>
-                  <div class="lkCoursTable__col">Вторник, 12 марта 2021 12:34</div>
-                  <div class="lkCoursTable__col" data-label="Баллы">20 из 25</div>
-                  <div class="lkCoursTable__col" data-label="Оценка">8 из 10</div>
-                  <div class="lkCoursTable__col"><a class="lkCoursTable__link" href="#">Просмотреть</a></div>
-                </div>
-                <!-- end row-->
-                <!-- start row-->
-                <div class="lkCoursTable__row lkCoursTable__row_label">
-                  <div class="lkCoursTable__serial">
-                    <div class="lkCoursTable__label">Попытка</div>
-                    <div class="lkCoursTable__number">№<span></span></div>
-                  </div>
-                  <div class="lkCoursTable__date">Понедельник, 18 марта 2021 12:34</div>
-                </div>
-                <div class="lkCoursTable__row">
-                  <div class="lkCoursTable__col" data-label="Состояние"></div>
-                  <div class="lkCoursTable__col succese bold">Завершено</div>
-                  <div class="lkCoursTable__col">Среда, 13 марта 2021 10:43</div>
-                  <div class="lkCoursTable__col" data-label="Баллы">12 из 25</div>
-                  <div class="lkCoursTable__col" data-label="Оценка">5 из 10</div>
-                  <div class="lkCoursTable__col"><a class="lkCoursTable__link" href="#">Просмотреть</a></div>
-                </div>
-                <!-- end row-->
-                <!-- start row-->
-                <div class="lkCoursTable__row lkCoursTable__row_label">
-                  <div class="lkCoursTable__serial">
-                    <div class="lkCoursTable__label">Попытка</div>
-                    <div class="lkCoursTable__number">№<span></span></div>
-                  </div>
-                  <div class="lkCoursTable__date">Понедельник, 18 марта 2021 12:34</div>
-                </div>
-                <div class="lkCoursTable__row">
-                  <div class="lkCoursTable__col" data-label="Состояние"></div>
-                  <div class="lkCoursTable__col succese bold">Завершено</div>
-                  <div class="lkCoursTable__col">Среда, 13 марта 2021 10:43</div>
-                  <div class="lkCoursTable__col" data-label="Баллы">12 из 25</div>
-                  <div class="lkCoursTable__col" data-label="Оценка">5 из 10</div>
-                  <div class="lkCoursTable__col"><a class="lkCoursTable__link" href="#">Просмотреть</a></div>
-                </div>
-                <!-- end row-->
-              </div>
+              <div class="lkCoursTest__markItem"><span>Метод оценивания: Высшая оценка</span></div>
             </div>
-            <div class="lkCoursTest__end"><a class="btn btn_primary btn_short" href="">Пройти тест заново</a></div>
+            <div class="lkCoursTest__end lkCoursTest__end_group"><a class="btn" href="">Все курсы</a><a class="btn btn_primary btn_short" href="">Перейти к тестированию</a></div>
             <div class="lkCoursTask__nav lkCoursTask__nav_test"><a class="btn btn_secondary" href="">Следующий урок <i class="icon_angle"></i></a></div>
           </div>
         </div>

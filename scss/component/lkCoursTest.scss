@@ -1,6 +1,61 @@
 .lkCoursTest {
     max-width: 63.6875em;
 
+    &__mark {
+        display: flex;
+        flex-direction: column;
+        background: $color_withe;
+        padding: 1.1em;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            padding: 1.6875em 1.8125em 1.8125em;
+
+            align-items: center;
+        }
+
+        label,
+        span {
+            font-size: 1.0625em;
+        }
+
+        &Check {
+            // Input checkbox ===============================================
+            input[type=checkbox] {
+                height: 1.65em;
+                width: 1.65em;
+                color: #898988;
+                border: 0.15em solid;
+            }
+
+            input[type=checkbox] {
+                &:checked:before,
+                &:indeterminate:before {
+                    content: "";
+                    border-right: 0.15em solid;
+                    border-bottom: 0.15em solid;
+                }
+
+            }
+
+            label {
+                margin-left: 1.125em;
+                cursor: pointer;
+            }
+
+            margin-bottom: 1em;
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
+        &Item {
+            @media (min-width: 768px) {
+                margin-left: 11.0625em;
+            }
+        }
+    }
+
     &__end {
         margin-top: 1.2857em;
 
@@ -22,6 +77,15 @@
 
             &_right {
                 text-align: right;
+            }
+
+            &_group {
+                margin-top: 2.7987em;
+                @media (min-width: 768px) {
+                    display: flex;
+                    justify-content: space-between;
+
+                }
             }
 
             .btn {
