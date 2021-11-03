@@ -244,7 +244,11 @@
         margin-top: 3.125em;
 
         &_test {
-            margin-top: 2.5em;
+            margin-top: 1.0714em;
+            @media (min-width: 768px) {
+                margin-top: 2.5em;
+
+            }
         }
     }
 

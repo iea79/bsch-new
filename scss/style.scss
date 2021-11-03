@@ -346,44 +346,4 @@ $icon_whatsapp: "\e903";
 @import "./component/emailConfirm";
 @import "./component/lkFiveGrade";
 @import "./component/lkSertificate";
-
-.tooltipster {
-    &-base {}
-
-    &-sidetip {}
-
-    &-right {}
-
-    &-fade {}
-
-    &-show {}
-
-    &-box {
-        padding-left: 1.25em;
-    }
-
-    &-content {
-        background: #3D3098;
-        padding: 0.625em 1.25em;
-        color: $color_withe;
-    }
-
-    &-arrow {
-        position: absolute;
-        left: 0.9375em;
-        // margin-top: -21px;
-
-        &-uncropped {}
-
-        &-border {
-            background: #3D3098;
-            width: 0.6875em;
-            height: 0.6875em;
-            transform: rotate(45deg);
-            margin-top: -0.3125em;
-        }
-
-        &-background {}
-    }
-
-}
+@import "./component/tooltipster";

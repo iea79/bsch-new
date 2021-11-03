@@ -1,0 +1,101 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_comments';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition
+            i.icon_check-square
+            span Назначено
+        h2 Итоги попытки
+
+
+    .lkCoursTest
+
+        .lkCoursTable.counter-reset
+            .lkCoursTable__head
+                .lkCoursTable__row
+                    .lkCoursTable__col.lkCoursTable__col_sm Вопрос
+                    .lkCoursTable__col.lkCoursTable__col_sm Состояние
+
+            .lkCoursTable__body
+
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.succese Ответ сохранен
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.succese Ответ сохранен
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.succese Ответ сохранен
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.error Нет ответа
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.error Нет ответа
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.succese Ответ сохранен
+                // end row
+                // start row
+                .lkCoursTable__row.lkCoursTable__row_label
+                    .lkCoursTable__serial
+                        .lkCoursTable__number Вопрос №
+                            span
+                .lkCoursTable__row.lkCoursTable__row_sm
+                    .lkCoursTable__col.lkCoursTable__col_sm(data-label="Состояние")
+                    .lkCoursTable__col.lkCoursTable__col_sm.succese Ответ сохранен
+                // end row
+
+
+
+
+
+
+        .lkCoursTest__end.lkCoursTest__end_right
+            a(href="").btn.btn_primary Отправить все и завершить тест
+
+        .lkCoursTask__nav.lkCoursTask__nav_test
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle
