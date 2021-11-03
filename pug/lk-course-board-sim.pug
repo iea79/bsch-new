@@ -1,0 +1,44 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_comments';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition
+            i.icon_check-square
+            span Назначено
+        h2 Говорим и показываем — Симулятор Board Slim
+        p Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+
+        .lkCoursTest
+
+            .lkCoursTest__title Данные для авторизации
+
+            .lkCoursTest__list
+                .lkCoursTest__listRow
+                    .lkCoursTest__listLabel Email:
+                    .lkCoursTest__listData Test@test.ru
+                .lkCoursTest__listRow
+                    .lkCoursTest__listLabel Пароль:
+                    .lkCoursTest__listData sORPG
+                .lkCoursTest__listRow
+                    .lkCoursTest__listLabel Игры:
+                    .lkCoursTest__listData Тестовый поток
+
+            .lkCoursTest__mark
+                .lkCoursTest__markCheck
+                    input(type="checkbox" id="markcheck")
+                    label(for="markcheck") Отметить пройденным
+                .lkCoursTest__markItem
+                    span Метод оценивания: Высшая оценка
+
+        .lkCoursTest__end.lkCoursTest__end_right
+            a(href="") Ссылка для входа в симулятор
+
+        .lkCoursTask__nav
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle

@@ -1,6 +1,42 @@
 .lkCoursTest {
     max-width: 63.6875em;
 
+    &__title {
+        font-size: 1.45em;
+        margin-bottom: 1.6em;
+
+        @media (min-width: 768px) {
+            font-size: 2.1em;
+            margin-bottom: 0.9em;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2.5em;
+        font-size: $size_xxs;
+
+        &Row {
+            margin-bottom: 0.625em;
+
+            @media (min-width: 768px) {
+                display: flex;
+            }
+        }
+
+        &Label {
+            @media (min-width: 768px) {
+                width: 5em;
+                flex: none;
+            }
+        }
+
+        &Data {
+            font-weight: 500;
+        }
+    }
+
     &__mark {
         display: flex;
         flex-direction: column;
