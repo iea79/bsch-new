@@ -1,0 +1,26 @@
+.lkFiveGrade {
+    display: flex;
+    align-items: center;
+
+    &__label {
+        color: #8E8E8D;
+    }
+
+    &__line {
+        flex: none;
+        margin: 0 0.4em;
+        display: flex;
+        gap: 0.1875em;
+
+        span {
+            background: #EBEBEB;
+            width: 1.875em;
+            height: 0.125em;
+            border-radius: 0.125em;
+
+            &.active {
+                background: #006EFF;
+            }
+        }
+    }
+}
