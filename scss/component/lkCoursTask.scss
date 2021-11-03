@@ -56,7 +56,19 @@
         align-items: center;
     }
 
-    &__status {}
+    &__status {
+        margin-left: 2.3em;
+        font-size: 0.65em;
+        line-height: 1.46;
+        font-weight: 500;
+        padding: 0.5em 1em;
+        background: #169F62;
+        color: $color_withe;
+
+        &.error {
+            background: #FF2828;
+        }
+    }
 
     &__counter {
         margin-top: 1em;
