@@ -69,6 +69,16 @@ $( document ).ready( function () {
         minimumResultsForSearch: Infinity
     });
 
+    $('.lkCourseAside__parent > a').each(function(i, el) {
+        let content = $(el).find('.lkCourseAside__tooltip').html();
+        $(el).tooltipster({
+            content: $(content),
+            position: 'right',
+            // trigger: 'click'
+        });
+    });
+
+
 } );
 
 $( window ).resize( function () {

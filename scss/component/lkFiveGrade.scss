@@ -1,5 +1,5 @@
 .lkFiveGrade {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &__label {
@@ -10,13 +10,34 @@
         flex: none;
         margin: 0 0.4em;
         display: flex;
+        flex-direction: row-reverse;
         gap: 0.1875em;
 
-        span {
-            background: #EBEBEB;
+        input {
+            display: none;
+
+            &:checked + label,
+            &:checked ~ label {
+                &:before {
+                    background: #006EFF;
+                }
+            }
+        }
+
+        label {
             width: 1.875em;
-            height: 0.125em;
             border-radius: 0.125em;
+            cursor: pointer;
+            height: 1em;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 0.125em;
+                background: #EBEBEB;
+            }
 
             &.active {
                 background: #006EFF;

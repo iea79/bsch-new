@@ -166,7 +166,13 @@
 			margin-right: 0.5625em;
 		}
 
-		> span {}
+		> span {
+			min-width: 0;
+		}
+
+		p {
+			margin: 0;
+		}
 	}
 
 	&__valid {

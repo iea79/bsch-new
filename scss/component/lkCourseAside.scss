@@ -64,6 +64,11 @@
         }
 
         &__parent {
+            > a {
+                position: relative;
+
+            }
+
             a {
                 color: $color_withe;
                 text-decoration: none;
@@ -131,5 +136,23 @@
             }
         }
 
+    }
+
+    &__tooltip {
+        display: none;
+
+        &Name {
+            font-weight: 500;
+            line-height: 1.27;
+            margin-bottom: 8px;
+            font-size: $size_xxxs;
+            max-width: 12.5em;
+        }
+
+        &Progress {
+            font-size: $size_xxxs;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.65);
+        }
     }
 }

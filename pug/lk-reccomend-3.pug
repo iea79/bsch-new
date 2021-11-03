@@ -5,15 +5,17 @@ block variables
     - isLogin = true;
     - isCourse = false;
 
-mixin lkFiveGrade(arr = [false, false, false, false, false])
+mixin lkFiveGrade(name = 'a', num = 0)
     .lkFiveGrade
         .lkFiveGrade__label 1
         .lkFiveGrade__line
-            each active in arr
-                if active
-                    span.active
+            each active, i in [1,2,3,4,5]
+                - pref = name+'-'+i
+                if active == num
+                    input(id=pref name=name type="radio" value=num checked)
                 else
-                    span
+                    input(id=pref name=name type="radio" value=num)
+                label(for=pref)
         .lkFiveGrade__label 5
 
 block lkcontent
@@ -30,23 +32,23 @@ block lkcontent
 
             label.form__label Знаю методы проверки источников информации
             .form__row
-                +lkFiveGrade([true, true, true, false, false])
+                +lkFiveGrade('1', 3)
 
             label.form__label Знаю о “ловушках” сознания и когнитивных искажениях
             .form__row
-                +lkFiveGrade([true, false, false, false, false])
+                +lkFiveGrade('2', 1)
 
             label.form__label Знаю инструменты критиеского анализа
             .form__row
-                +lkFiveGrade([true, true, true, true, true])
+                +lkFiveGrade('3', 5)
 
             label.form__label Умею  определять манипуляции
             .form__row
-                +lkFiveGrade([true, true, false, false, false])
+                +lkFiveGrade('4', 2)
 
             label.form__label Умею противодействовать информационному “шуму”
             .form__row
-                +lkFiveGrade([true, true, true, true, false])
+                +lkFiveGrade('5', 4)
 
     .lkContent__footer
         a.btn.btn_link(href="#") Назад
