@@ -5,17 +5,6 @@ block variables
     - isLogin = true;
     - isCourse = false;
 
-mixin lkFiveGrade(arr = [false, false, false, false, false])
-    .lkFiveGrade
-        .lkFiveGrade__label 1
-        .lkFiveGrade__line
-            each active in arr
-                if active
-                    span.active
-                else
-                    span
-        .lkFiveGrade__label 5
-
 block lkcontent
     .lkContent__title Рекомендации
 

@@ -1,0 +1,35 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Мои сертификаты';
+    - isLogin = true;
+    - isCourse = false;
+
+block lkcontent
+    .lkContent__title Вы успешно завершили 5 программ обучения
+
+    .lkSertificate
+        each item in ['«Сертифицированный менеджер»', '«Старший специалист»', '«Менеджер по управлению проектами»']
+            .lkSertificate__row
+                .lkSertificate__content
+                    .lkProgress__name=item
+                    .lkSertificate__success
+                        i.icon_check-square 
+                        | Успешно завершено
+                .lkSertificate__img
+                    img(src="img/sertifacate.jpg", alt="")
+                .lkSertificate__after
+
+    .lkContent__title Сертификаты в процессе
+
+    .lkSertificate
+        each item in [{name: '«Старший менеджер»', perc: '77%', color: '#169F62'}, {name: '«Менеджер управления персоналом»', perc: '33%', color: '#FF0000'}, {name: '«Старший консультант»', perc: '50%', color: '#F3F803'}]
+            .lkSertificate__row
+                .lkSertificate__content
+                    .lkProgress__name=item.name
+                    .lkProgress__bar
+                        span(style="width: "+item.perc+"; background: "+item.color+"")
+                    .lkProgress__label=item.perc + ' выполнено'
+                .lkSertificate__img
+                    img(src="img/sertifacate.jpg", alt="")
+                .lkSertificate__after
