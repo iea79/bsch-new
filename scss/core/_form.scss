@@ -1,9 +1,32 @@
 .form {
+	input:not([type]),
+	input[type=date],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=search],
+	input[type=tel],
+	input[type=text],
+	input[type=url],
+	textarea {
+		background: #FFFFFF;
+		border: 1px solid #DBDBDB;
+		padding: 0.971em 1.175em;
+	}
+
 	&__row {
 		margin-bottom: 2.2em;
 
+		.form & {
+			margin-bottom: 1.3em;
+		}
+
 		@media (min-width: 768px) {
 			margin-bottom: 3.4em;
+
+			.form & {
+				margin-bottom: 1.875em;
+			}
 		}
 
 		.btn,
@@ -145,6 +168,35 @@
 
 		> span {}
 	}
+
+	&__valid {
+		margin-top: 0.5em;
+		color: #7F7F7F;
+
+		@media (min-width: 768px) {
+			font-size: $size_xxs;
+		}
+
+		.icon_check {
+			font-size: 0.75em;
+			color: #04CF00;
+			font-weight: 600;
+		}
+
+		.icon_close {
+			font-size: 0.75em;
+			color: #E47E1F;
+		}
+	}
+
+	&__label {
+		margin-bottom: 0.625em;
+		display: block;
+
+		@media (min-width: 768px) {
+			font-family: $size_xxs;
+		}
+	}
 }
 // Input text and textarea ================================================
 input:not([type]),
@@ -164,12 +216,15 @@ textarea {
 	color: $input_color;
 	padding: 0 0 1.1em;
 	outline: none;
-	font-size: $size_xxs;
 	font-weight: 400;
 	border-radius: 0;
 	transition: 0.3s;
 	transition-property: color background border;
 	width: 100%;
+
+	@media (min-width: 768px) {
+		font-size: $size_xxs;
+	}
 
 	&:hover {
 		border-color: $input_hover_border_color;
@@ -289,5 +344,167 @@ input[type=checkbox] {
 	&:disabled:checked:before,
 	&:disabled:indeterminate:before {
 		color: #aaa;
+	}
+}
+
+.select2 {
+	&-hidden-accessible {
+		display: none;
+	}
+
+	&-search__field {
+		display: none;
+	}
+
+	&-container {
+		span {
+			display: block;
+		}
+
+		.form__row & {
+			width: 100% !important;
+			// display: block;
+		}
+
+		&--open {
+			z-index: 1050;
+		}
+
+		&--default {
+			.select2 {
+				&-results {
+					&__options {
+						list-style: none;
+						padding: 0;
+						margin: 0;
+					}
+
+					&__option {
+						padding: 0.971em 1.175em;
+						cursor: pointer;
+						color: rgba(29, 29, 27, 0.5);
+
+						&--highlighted[aria-selected] {
+							background: rgba(0, 110, 255, 0.19);
+							color: rgba(29, 29, 27, 0.6);
+						}
+
+						&--selected {
+							background: rgba(0, 110, 255, 0.19);
+							color: $main_color;
+						}
+					}
+				}
+
+				&-dropdown {
+					position: absolute;
+					// z-index: 150;
+					background-color: #fff;
+					border-radius: 0;
+					margin-top: 0;
+					border: 1px solid #DBDBDB;
+					border-top: 0;
+					box-shadow: 0 2.1875em 4.6875em rgba(128, 125, 125, 0.15);
+
+					&--below {}
+
+					&--above {}
+				}
+
+				&-selection {
+					background: #FFFFFF;
+					border: 1px solid #DBDBDB;
+					font-family: $main_font_family;
+					color: $input_color;
+					padding: 0.971em 1.175em;
+					outline: none;
+					font-weight: 400;
+					border-radius: 0;
+					transition: 0.3s;
+					transition-property: color background border;
+					width: 100%;
+					height: auto;
+					position: relative;
+
+					@media (min-width: 768px) {
+						font-size: $size_xxs;
+					}
+
+					&:hover {
+						border-color: $input_hover_border_color;
+						background-color: transparentize($input_hover_bg_color, 0.9);
+					}
+
+					&:focus {
+						border-color: $input_focus_border_color;
+						background-color: transparentize($input_hover_bg_color, 0.9);
+					}
+
+					&--single {
+						.select2 {
+							&-selection {
+								&__rendered {
+									line-height: 1;
+									padding: 0 1em 0 0;
+									color: $input_color;
+								}
+
+								&__placeholder {
+									color: $input_placeholder_color;
+									overflow: hidden;
+									white-space: nowrap;
+									text-overflow: ellipsis;
+								}
+
+								&__arrow {
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									position: absolute;
+									top: 0;
+									right: 0;
+									height: 100%;
+									width: 2.5em;
+									padding-bottom: 0.3em;
+
+									b {
+										// rgba(29, 29, 27, 0.5);
+										// position: static;
+										left: auto;
+										top: auto;
+										margin: auto;
+										border: 0;
+										width: 0.6em;
+										height: 0.6em;
+										border-right: 2px solid rgba(29, 29, 27, 0.5);
+										border-bottom: 2px solid rgba(29, 29, 27, 0.5);
+										transform: rotate(45deg);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.select2-container {
+				&--open {
+					z-index: 1050;
+
+					.select2-selection--single .select2-selection__arrow {
+						padding-bottom: 0;
+
+						b {
+							border: 0;
+							width: 0.6em;
+							height: 0.6em;
+							border-right: 2px solid rgba(29, 29, 27, 0.5);
+							border-bottom: 2px solid rgba(29, 29, 27, 0.5);
+							transform: rotate(-135deg);
+						}
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,23 @@
+.centeredForm {
+    margin: 3.3125em auto 1.125em;
+    max-width: 33.375em;
+
+    p {
+        line-height: 1.12;
+        margin: 0 0 1.25em;
+
+        @media (min-width: 768px) {
+            font-size: 1.0625em;
+        }
+    }
+
+    &__action {
+        .btn {
+            width: 100%;
+
+            @media (min-width: 768px) {
+                max-width: 14.13em;
+            }
+        }
+    }
+}

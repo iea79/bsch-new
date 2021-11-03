@@ -1,0 +1,30 @@
+.whiteBox {
+    padding: 1.25em 0.9375em;
+    background: $color_withe;
+
+    @media (min-width: 768px) {
+        padding: 2.5em;
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-size: 1.6em;
+        line-height: 1.09;
+        margin: 0 0 0.531em;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+    }
+
+    &__sub {
+        margin: 0 0 1.765em;
+        color: #8E8E8D;
+        line-height: 1.12;
+        max-width: 41.25em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Рекомендации';
+    - isLogin = true;
+    - isCourse = false;
+
+mixin lkFiveGrade(arr = [false, false, false, false, false])
+    .lkFiveGrade
+        .lkFiveGrade__label 1
+        .lkFiveGrade__line
+            each active in arr
+                if active
+                    span.active
+                else
+                    span
+        .lkFiveGrade__label 5
+
+block lkcontent
+    .lkContent__title Рекомендации
+
+    .whiteBox
+        .whiteBox__title Анкета подбора рекомендаций
+        .whiteBox__sub Заполните анкету для индивидуального подбора рекомендаций
+
+        each mod, i in ['lkCoursTask__item_primary', '', '']
+            .lkCoursTask__item(class=mod)
+                .lkCoursTask__head
+                    .lkCoursTask__question Сколько будет 33+7?
+                    if mod !== ''
+                        .lkCoursTask__counter.lkCoursTask__counter_plate Есть ответ
+                    else
+                        .lkCoursTask__counter.lkCoursTask__counter_plate Пока нет ответа
+                .lkCoursTask__body
+                    .lkCoursTask__answer
+                        .lkCoursTask__row
+                            label.form__check
+                                if mod !== ''
+                                    input(type="radio" name="quest-"+i+"" checked="")
+                                else
+                                    input(type="radio" name="quest-"+i+"")
+                                span 40
+                        .lkCoursTask__row
+                            label.form__check
+                                input(type="radio" name="quest-"+i+"")
+                                span 34
+                        .lkCoursTask__row
+                            label.form__check
+                                input(type="radio" name="quest-"+i+"")
+                                span 434
+                        .lkCoursTask__row
+                            label.form__check
+                                input(type="radio" name="quest-"+i+"")
+                                span 10
+
+
+    .lkContent__footer
+        a.btn.btn_link(href="#") Назад
+        a.btn.btn_primary(href="#") Подобрать рекомендации

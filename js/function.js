@@ -64,6 +64,11 @@ $( document ).ready( function () {
 
     checkOnResize();
 
+    $('.select').select2({
+        placeholder: $(this).data('placeholder'),
+        minimumResultsForSearch: Infinity
+    });
+
 } );
 
 $( window ).resize( function () {

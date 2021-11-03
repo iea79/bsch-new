@@ -1,0 +1,53 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Рекомендации';
+    - isLogin = true;
+    - isCourse = false;
+
+mixin lkFiveGrade(arr = [false, false, false, false, false])
+    .lkFiveGrade
+        .lkFiveGrade__label 1
+        .lkFiveGrade__line
+            each active in arr
+                if active
+                    span.active
+                else
+                    span
+        .lkFiveGrade__label 5
+
+block lkcontent
+    .lkContent__title Рекомендации
+
+    .whiteBox
+        .whiteBox__title Анкета подбора рекомендаций
+        .whiteBox__sub Оцените по пятибалльной шкале, насколько соответствуют вашим профессиональным качествам эти утверждения
+
+        .form
+            label.form__label Знаю методы проверки информации
+            .form__row
+                +lkFiveGrade
+
+            label.form__label Знаю методы проверки источников информации
+            .form__row
+                +lkFiveGrade([true, true, true, false, false])
+
+            label.form__label Знаю о “ловушках” сознания и когнитивных искажениях
+            .form__row
+                +lkFiveGrade([true, false, false, false, false])
+
+            label.form__label Знаю инструменты критиеского анализа
+            .form__row
+                +lkFiveGrade([true, true, true, true, true])
+
+            label.form__label Умею  определять манипуляции
+            .form__row
+                +lkFiveGrade([true, true, false, false, false])
+
+            label.form__label Умею противодействовать информационному “шуму”
+            .form__row
+                +lkFiveGrade([true, true, true, true, false])
+
+    .lkContent__footer
+        a.btn.btn_link(href="#") Назад
+        a.btn.btn_primary(href="#") Подобрать рекомендации

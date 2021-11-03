@@ -1,0 +1,42 @@
+.emailConfirm {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @media (min-width: 768px) {
+        padding-top: 1.4375em;
+        padding-bottom: 2.875em;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            background: url("../img/form-confirm.jpg") right -1px top no-repeat;
+            background-size: auto 100%;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 15.75em;
+        }
+    }
+
+    &__content {
+        max-width: 24em;
+    }
+
+    &__text {
+        color: #8E8E8D;
+        margin-bottom: 1.765em;
+
+        @media (min-width: 768px) {
+            font-size: $size_xxs;
+        }
+    }
+
+    .centeredBox__title {
+        margin-bottom: 0.47em;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

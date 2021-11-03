@@ -1,0 +1,38 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Рекомендации';
+    - isLogin = true;
+    - isCourse = false;
+
+block lkcontent
+    .lkContent__title Рекомендации
+
+    .whiteBox
+        .whiteBox__title Выбор опций анкеты
+        .whiteBox__sub Заполните все поля для более точного подбора рекомендаций
+
+        .form
+            label.form__label Выбор проффесиональной области
+            .form__row
+                +select('Укажите вашу проффесиональную область')
+
+            label.form__label Выбор области компетенции
+            .form__row
+                +select('Укажите область компетенции')
+
+            label.form__label Выбор  компетенции
+            .form__row
+                +select('Укажите компетенцию')
+
+            label.form__label Я могу
+            .form__row
+                input(type="text" placeholder="Укажите ваши навыки")
+
+            label.form__label Я хочу
+            .form__row
+                +select('Укажите навык, который желаете приобрести')
+
+    .lkContent__footer
+        a.btn.btn_link(href="#") Назад
+        a.btn.btn_primary(href="#") Пройти анкету

@@ -11,7 +11,7 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
-        <div class="coursNav"><a class="coursNav__item" href=""><i class="icon_bullhorn"></i></a><a class="coursNav__item" href=""><i class="icon_pencil"></i></a><a class="coursNav__item active" href=""><i class="icon_tasks"></i></a><a class="coursNav__item" href=""><i class="icon_comments"></i></a><a class="coursNav__item" href=""><i class="icon_cube"></i></a><a class="coursNav__item" href=""><i class="icon_video"></i></a><a class="coursNav__item" href=""><i class="icon_briefcase"></i></a>
+        <div class="coursNav"><a class="coursNav__item" href=""><i class="icon_bullhorn"></i></a><a class="coursNav__item" href=""><i class="icon_pencil"></i></a><a class="coursNav__item" href=""><i class="icon_tasks"></i></a><a class="coursNav__item active" href=""><i class="icon_comments"></i></a><a class="coursNav__item" href=""><i class="icon_cube"></i></a><a class="coursNav__item" href=""><i class="icon_video"></i></a><a class="coursNav__item" href=""><i class="icon_briefcase"></i></a>
         </div>
         <nav class="header__nav nav mobile">
               <ul class="navbar">
@@ -120,52 +120,33 @@
         </div>
         <!-- end lkCourseAside-->
         <div class="lkCoursePage__content">
-          <!-- Button trigger modal modalNotice-->
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeEnd">Завершить тест</button>
-          <!-- Begin Modal modalNotice-->
-          <div class="modal fade modalNotice" id="modalNoticeEnd">
-            <div class="modal-dialog">
-              <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-                <div class="modal-title">Подтверждение</div>
-                <div class="modalNotice__text">После отправки Вы больше не сможете изменить свои ответы на эту попытку</div>
-                <div class="modalNotice__action">
-                  <button class="btn btn_primary">Завершить тест</button>
-                  <button class="btn btn_link" data-dismiss="modal">Отмена</button>
-                </div>
-              </div>
-            </div>
+          <div class="lkCoursePage__head"> 
+            <div class="lkCoursePage__title">1.1.2 Биологические факторы влияния на мышление</div>
+            <div class="lkCoursePage__state">1 из 4 уроков пройден</div>
           </div>
-          <!-- End modal modalNotice-->
-          <!-- Button trigger modal modalNotice-->
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeComplete">Задание выполнено</button>
-          <!-- Begin Modal modalNotice-->
-          <div class="modal fade modalNotice" id="modalNoticeComplete">
-            <div class="modal-dialog">
-              <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-                <div class="modal-title">Задание выполнено</div>
-                <div class="modalNotice__text">Поздравляем, вы успешно справились с заданием!</div>
-                <div class="modalNotice__action">
-                  <button class="btn btn_primary" data-dismiss="modal">Понятно</button>
-                </div>
-              </div>
-            </div>
+          <div class="lkCoursePage__body">
+            <div class="lkCoursePage__condition"><i class="icon_check-square"></i><span>Назначено</span></div>
+            <h2>Итоги попытки</h2>
           </div>
-          <!-- End modal modalNotice-->
-          <!-- Button trigger modal modalNotice-->
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNoticeError">Произошла ошибка</button>
-          <!-- Begin Modal modalNotice-->
-          <div class="modal fade modalNotice" id="modalNoticeError">
-            <div class="modal-dialog">
-              <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-                <div class="modal-title">Произошла ошибка</div>
-                <div class="modalNotice__text">К сожалению во время выполнения задания  произошла ошибка, попробуйте позже</div>
-                <div class="modalNotice__action">
-                  <button class="btn btn_primary" data-dismiss="modal">Понятно</button>
-                </div>
-              </div>
+          <div class="lkCoursTest">
+            <div class="lkCoursTest__head">
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">Вопрос</span><span class="lkCoursTest__state">Состояние</span></div>
             </div>
+            <div class="lkCoursTest__body">
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">1</span><span class="lkCoursTest__state">Ответ сохранен</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">2</span><span class="lkCoursTest__state">Ответ сохранен</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">3</span><span class="lkCoursTest__state">Ответ сохранен</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">4</span><span class="lkCoursTest__state lkCoursTest__state_error">нет ответа</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">5</span><span class="lkCoursTest__state lkCoursTest__state_error">нет ответа</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">6</span><span class="lkCoursTest__state">Ответ сохранен</span></div>
+              <div class="lkCoursTest__row"><span class="lkCoursTest__question">7</span><span class="lkCoursTest__state">Ответ сохранен</span></div>
+            </div>
+            <div class="lkCoursTest__end">
+              <button class="btn">Все курсы</button>
+              <button class="btn btn_primary">Отправить все и завершить тест</button>
+            </div>
+            <div class="lkCoursTask__nav lkCoursTask__nav_test"><a class="btn btn_secondary" href="">Следующий урок <i class="icon_angle"></i></a></div>
           </div>
-          <!-- End modal modalNotice-->
         </div>
         <div class="lkToTop"><i class="icon_angle"></i></div>
       </div>

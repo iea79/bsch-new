@@ -1,0 +1,6 @@
+mixin select(placeholder="", data=['Значение 1', 'Значение 2', 'Значение 3', 'Значение 4'])
+    select.select(data-placeholder=placeholder)
+        if placeholder !== ""
+            option(value="")
+        each val in data
+            option(value=val)=val

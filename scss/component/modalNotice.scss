@@ -1,0 +1,46 @@
+.modalNotice {
+    .modal {
+        &-close {
+            font-size: 0.57em;
+        }
+
+        &-title {
+            font-size: 1.875em;
+        }
+
+        &-dialog {
+            max-width: 26.5625em;
+
+        }
+
+        &-content {
+            padding: 2.75em 0.9375em 0.9375em;
+
+            @media (min-width: 768px) {
+                padding: 3.75em 1.875em 1.875em;
+            }
+        }
+    }
+
+    &_lg {
+        .modal-dialog {
+            max-width: 37.625em;
+        }
+    }
+
+    &__text {
+        margin-top: 0.4em;
+    }
+
+    &__action {
+        margin-top: 1.875em;
+        display: flex;
+
+        .btn {
+            &:first-child {
+                flex-grow: 1;
+                min-width: 0;
+            }
+        }
+    }
+}

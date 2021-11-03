@@ -8,6 +8,8 @@ block variables
 block courseVars
     - courseIcon = 'icon_bullhorn';
 
+include ../mixins/mixins.pug
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -16,6 +18,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
 
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"") 
     body
         include header.pug

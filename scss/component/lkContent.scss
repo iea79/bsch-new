@@ -51,4 +51,20 @@
         }
     }
 
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.9em;
+        margin-top: 3.25em;
+
+        .btn {
+            &_link {
+                text-transform: uppercase;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
 }
