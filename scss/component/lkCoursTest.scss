@@ -394,3 +394,130 @@
     }
 
 }
+
+.lkCoursTestTask {
+    max-width: 63.6875em;
+
+    &__wrap {
+
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__item {
+        background: $color_withe;
+        border: 0.0625em solid #DBDBDB;
+
+        @media (min-width: 768px) {
+            flex-grow: 1;
+        }
+
+    }
+
+    &__head {
+        background: #E9E9E9;
+        padding: 1.1em 1em;
+
+        @media (min-width: 48em) {
+            font-size: $size_xs;
+            padding: 1.4em 1.15em;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__question {
+        display: flex;
+        align-items: center;
+    }
+
+    &__status {
+        display: inline-block;
+        font-size: 0.65em;
+        font-weight: 500;
+        color: rgba(29, 29, 27, 0.5);
+        background-color: #CCCCCC;
+        padding: 0.6154em;
+
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__body {
+        padding: 1.1em;
+        @media (min-width: 48em) {
+            padding: 1.375em 1.4375em;
+        }
+    }
+
+    &__row {
+        margin-bottom: 1.125em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__footer {
+        padding: 1.1em;
+        @media (min-width: 48em) {
+            padding: 1.375em 1.4375em;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__naw {
+        margin: 0;
+        padding: 1.125em;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.625em;
+
+        max-width: 14.375em;
+        height: fit-content;
+
+        background-color: $color_withe;
+        border: 0.0625em solid #DBDBDB;
+
+        margin-top: 1.75em;
+
+        @media (min-width: 768px) {
+            margin-left: 1.75em;
+            margin-top: 0;
+
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 2.5em;
+            height: 2.5em;
+            border: 0.0625em solid;
+            border-color: #DBDBDB;
+
+            &.finish {
+                color: $color_primary;
+                border-color: $color_primary;
+                background-color: rgba($color_primary, .07);
+            }
+
+            &.current {
+                color: $color_primary;
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+        }
+    }
+
+}

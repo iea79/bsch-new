@@ -1,0 +1,81 @@
+extends layout/course.pug
+
+block courseVars
+    - courseIcon = 'icon_comments';
+
+block course
+    .lkCoursePage__head 
+        .lkCoursePage__title 1.1.2 Биологические факторы влияния на мышление
+        .lkCoursePage__state 1 из 4 уроков пройден
+    .lkCoursePage__body
+        .lkCoursePage__condition
+            i.icon_check-square
+            span Назначено
+        h2 Тест
+
+
+    .lkCoursTestTask
+        .lkCoursTestTask__wrap
+            .lkCoursTestTask__item
+
+                .lkCoursTestTask__head
+                    .lkCoursTestTask__question 7. Сколько будет 33+7?
+                    .lkCoursTestTask__status Пока нет ответа
+
+                .lkCoursTestTask__body
+                    .lkCoursTestTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 40
+                    .lkCoursTestTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 34
+                    .lkCoursTestTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 434
+                    .lkCoursTestTask__row
+                        label.form__check
+                            input(type="radio" name="quest-1")
+                            span 10
+
+                .lkCoursTestTask__footer
+                    .lkCoursTask__back Предыдущий вопрос
+                    button.lkCoursTask__next.btn.btn_sm Следующий вопрос
+
+            ul.lkCoursTestTask__naw
+                li.finish 1
+                li.finish 2
+                li.finish 3
+                li.finish 4
+                li.finish 5
+                li.finish 6
+                li.finish.current 7
+                li 8
+                li 9
+                li 10
+                li 11
+                li 12
+                li 13
+                li 14
+                li 15
+                li 16
+                li 17
+                li 18
+                li 19
+                li 20
+
+
+
+
+
+
+
+
+        .lkCoursTask__end
+            button.btn.btn_primary Завершить тест
+
+        .lkCoursTask__nav
+            a.btn.btn_secondary(href="") Следующий урок 
+                i.icon_angle
