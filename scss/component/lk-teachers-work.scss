@@ -1,0 +1,19 @@
+.lkTeachersWork {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        max-width: 310px;
+        margin-bottom: 33px;
+    }
+
+    &__link {
+        display: block;
+        color: #000;
+
+        &.active {
+            color: #006EFF;
+            text-decoration: underline;
+
+        }
+    }
+}

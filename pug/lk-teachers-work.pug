@@ -1,0 +1,60 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Личный кабинет';
+    - isLogin = true;
+
+block lkcontent
+
+
+
+    .lkTeachersWork
+        .lkContent__title Список работ
+        .lkTeachersWork__top 
+            a.lkTeachersWork__link.active(href="#") Все
+            a.lkTeachersWork__link(href="#") Непроверенные
+            a.lkTeachersWork__link(href="#") Проверенные
+
+
+        .lkTeachersWork__content
+
+            .list
+                - arr = [{name: 'Высший менеджмент', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', notverified: 'Не проверено'  }, {name: 'Критическое мышление в управлении и предпринимательстве', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', notverified: 'Не проверено'  },{name: 'Стратегическое мышление как конкурентное преимущество', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', notverified: 'Не проверено'  }, {name: 'Бизнес психология ', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', notverified: 'Не проверено'  }, {name: 'Высший менеджмент', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', verified: 'Проверено'  }, {name: 'От mvp до pitchdeck: инновационное мышление в бизнес-процессах ', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', verified: 'Проверено'  }, {name: 'Критическое мышление в управлении и предпринимательстве', columnname: 'Тема:', columncontent: 'Как общаться с клиентами', columnname2: 'Студент:', columncontent2: 'Иванов Ивана Ивановича', columnname3: 'Было сдано:', columncontent3: '05.04.2021 в 17:30', columnname4: 'Статус:', verified: 'Проверено'  }, ]
+                each item in arr
+                    .lkTeachers__item
+                        .lkProgress__name= item.name
+                        .lkTeachers__workContent
+                            .lkTeachers__column
+                                .lkTeachers__column-name= item.columnname
+                                .lkTeachers__column-content=item.columncontent 
+                            .lkTeachers__column
+                                .lkTeachers__column-name=item.columnname2  
+                                .lkTeachers__column-content=item.columncontent2 
+                            .lkTeachers__column
+                                .lkTeachers__column-name=item.columnname3 
+                                .lkTeachers__column-content=item.columncontent3 
+                            .lkTeachers__column
+                                .lkTeachers__column-name=item.columnname4  
+                                .lkTeachers__column-content.lkTeachers__column-not-verified=item.notverified
+                                .lkTeachers__column-content.lkTeachers__column-verified=item.verified
+
+                        .lkTeachers__action
+                            a.btn.btn_primary(href="#", target="_blank") Перейти к проверке
+
+        .pagination
+            .pagination__content
+                a.arrow(href="#")
+                    img(src="img/prev.svg", alt="")
+                ul
+                    li
+                        a(href="#") 1
+                    li
+                        a.active(href="#") 2
+                    li
+                        a(href="#") 3
+                    li
+                        a.dots(href="#") ...
+                    li
+                        a(href="#") 11
+                a.arrow(href="#")
+                    img(src="img/next.svg", alt="")

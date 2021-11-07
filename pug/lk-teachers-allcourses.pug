@@ -1,0 +1,59 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Управление курсами';
+    - isLogin = true;
+
+block lkcontent
+
+
+
+    .lkTeachersAllCourses
+        .lkContent__title Управление курсами
+        .lkTeachersAllCourses__btnBox
+            a.btn.btn_sm.lkTeachers__btn(href="#") Добавить курс
+
+
+
+        .lkTeachersAllCourses__content
+
+            .list
+                - arr = [{img: 'recommend-1.jpg', time: '16 часов', listener: '3051 слушатель', name: 'От mvp до pitchdeck: инновационное мышление в бизнес-процессах' }, {img: 'recommend-3.jpg', time: '16 часов', listener: '1892 слушателя', name: 'Стратегическое мышление для бизнеса  и жизни' }, {img: 'recommend-5.jpg', time: '15 часов', listener: '1892 слушателя', name: 'Критическое мышление в управлении  и предпринимательстве' }, {img: 'recommend-2.jpg', time: '15 часов', listener: '1892 слушателя', name: 'Бизнес психология' }, {img: 'recommend-3.jpg', time: '16 часов', listener: '1892 слушателя', name: 'Стратегическое мышление для бизнеса  и жизни' }, {img: 'recommend-1.jpg', time: '16 часов', listener: '3051 слушатель', name: 'От mvp до pitchdeck: инновационное мышление в бизнес-процессах' },]
+                each item in arr
+
+                    .lkRecommend__plate.lkTeachersAllCourses__plate
+                        .lkRecommend__item
+                            .lkRecommend__left(style="background: url('img/"+item.img+"') no-repeat")
+                            .lkRecommend__right.lkTeachersAllCourses__right
+                                .lkRecommend__timeBox.lkRecommend__timeBox-lkTeachers
+                                    .lkRecommend__timeBox-left
+                                        img.time__icon(src="img/time.svg", alt="")
+                                        span.lkRecommend__time= item.time
+                                    .lkRecommend__timeBox-right
+                                        img.time__icon(src="img/listener.svg", alt="")
+                                        span.lkRecommend__time= item.listener
+                                a.lkRecommend__title(href="#")= item.name
+                                .lkTeachersAllCourses__action
+                                    //- button.btn.btn_primary.lkRecommend__button(type="button" ) Редактировать
+                                    button.btn.btn_primary.lkTeachersAllCourses__btn(type="button" ) Редактировать
+                                    .lkTeachersAllCourses__deleteBox
+                                        img(src="img/delete.svg", alt="")
+                                        a.lkTeachersAllCourses__deleteText(href="#") Удалить
+
+        .pagination
+            .pagination__content
+                a.arrow(href="#")
+                    img(src="img/prev.svg", alt="")
+                ul
+                    li
+                        a(href="#") 1
+                    li
+                        a.active(href="#") 2
+                    li
+                        a(href="#") 3
+                    li
+                        a.dots(href="#") ...
+                    li
+                        a(href="#") 11
+                a.arrow(href="#")
+                    img(src="img/next.svg", alt="")

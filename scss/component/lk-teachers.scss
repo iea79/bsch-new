@@ -1,0 +1,92 @@
+.lkTeachers {
+    &__content {}
+
+    &__row {
+        align-items: center;
+    }
+
+    &__label {}
+
+    &__label-active {}
+
+    &__label-inactive {
+        color: rgba(29, 29, 27, 0.5);
+    }
+
+    &__work {}
+
+    &__item {
+        background-color: #fff;
+        padding: 31px 38px 44px;
+        margin-bottom: 30px;
+    }
+
+    &__workContent {
+
+        @media (min-width: 768px) {
+            display: flex;
+            padding-top: 0.7em;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__column {
+        margin-bottom: 20px;
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    &__column-name {
+        color: rgba(29, 29, 27, 0.5);
+        margin-bottom: 5px;
+    }
+
+    &__column-content {
+        font-weight: 400;
+    }
+
+    &__column-not-verified {
+        color: #EB592B;
+    }
+
+    &__column-verified {
+        color: #77B859;
+    }
+
+    &__action {
+        padding-top: 38px;
+    }
+
+    &__btn {
+        padding: 10px 37px;
+    }
+
+    &__btnBox {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+    }
+}
+
+.lkProgress__img-teachers {
+    width: 121px;
+    height: 171px;
+}
+
+.lkRecommend__timeBox-lkTeachers {
+    justify-content: space-between;
+}
+
+.lkRecommend__timeBox-left {
+    display: flex;
+    align-items: center;
+
+}
+
+.lkRecommend__timeBox-right {
+    display: flex;
+    align-items: center;
+}
