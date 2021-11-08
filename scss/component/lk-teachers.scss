@@ -13,12 +13,19 @@
         color: rgba(29, 29, 27, 0.5);
     }
 
-    &__work {}
+    &__work {
+        margin: 0 -0.9475em;
+
+    }
 
     &__item {
         background-color: #fff;
-        padding: 31px 38px 44px;
-        margin-bottom: 30px;
+        padding: 1.3125em 0.9375em;
+        @media (min-width: 768px) {
+            padding: 1.9375em 2.375em 2.75em;
+            margin-bottom: 1.875em;
+
+        }
     }
 
     &__workContent {
@@ -40,11 +47,26 @@
 
     &__column-name {
         color: rgba(29, 29, 27, 0.5);
-        margin-bottom: 5px;
+        margin-bottom: 0.3125em;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+        }
     }
 
     &__column-content {
         font-weight: 400;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        @media (min-width: 768px) {
+            width: inherit;
+        }
     }
 
     &__column-not-verified {
@@ -56,24 +78,28 @@
     }
 
     &__action {
-        padding-top: 38px;
+        padding-top: 1.375em;
+
+        @media (min-width: 768px) {
+            padding-top: 2.375em;
+        }
     }
 
     &__btn {
-        padding: 10px 37px;
+        padding: 0.625em 2.3125em;
     }
 
     &__btnBox {
         display: flex;
         justify-content: center;
-        margin-bottom: 50px;
+        margin-bottom: 3.125em;
 
     }
 }
 
 .lkProgress__img-teachers {
-    width: 121px;
-    height: 171px;
+    width: 7.5625em;
+    height: 10.6875em;
 }
 
 .lkRecommend__timeBox-lkTeachers {
