@@ -50,7 +50,7 @@ block lkcontent
                         .lkTeachers__column-content.lkTeachers__column-not-verified Не проверено
 
                 .lkTeachers__action
-                    .btn.btn_primary Перейти к проверке
+                    a.btn.btn_primary.lkTeachers__button(href="#") Перейти к проверке
 
             .lkTeachers__item
                 .lkProgress__name Критическое мышление в управлении и предпринимательстве
@@ -69,7 +69,7 @@ block lkcontent
                         .lkTeachers__column-content.lkTeachers__column-not-verified Не проверено
 
                 .lkTeachers__action
-                    .btn.btn_primary Перейти к проверке
+                    a.btn.btn_primary.lkTeachers__button(href="#") Перейти к проверке
 
             .lkTeachers__item
                 .lkProgress__name Стратегическое мышление как конкурентное преимущество
@@ -88,7 +88,7 @@ block lkcontent
                         .lkTeachers__column-content.lkTeachers__column-not-verified Не проверено
 
                 .lkTeachers__action
-                    .btn.btn_primary Перейти к проверке
+                    a.btn.btn_primary.lkTeachers__button(href="#") Перейти к проверке
 
         .lkTeachers__btnBox
             a.btn.btn_sm.lkTeachers__btn(href="#") Все работы
@@ -99,29 +99,29 @@ block lkcontent
             - arr = [{img: 'recommend-1.jpg', time: '16 часов', listener: '3051 слушатель', name: 'От mvp до pitchdeck: инновационное мышление в бизнес-процессах', total: '(4.2)', label: '1045 оценок', persent: '84%', }, {img: 'recommend-5.jpg', time: '16 часов', listener: '2584 слушателя', name: 'Критическое мышление в управлении  и предпринимательстве', total: '(4.2)', label: '1045 оценок', persent: '84%', }, {img: 'recommend-3.jpg', time: '15 часов', listener: '1892 слушателя', name: 'Стратегическое мышление для бизнеса  и жизни ', total: '(4.2)', label: '1045 оценок', persent: '84%', }, {img: 'recommend-2.jpg', time: '15 часов', listener: '921 слушатель', name: 'Бизнес психология ', total: '(4.2)', label: '1045 оценок', persent: '84%', },]
             each item in arr
                 .lkRecommend
-                    .lkRecommend__slider
-                        .lkRecommend__plate
-                            .lkRecommend__item
-                                .lkRecommend__left(style="background: url('img/"+item.img+"') no-repeat")
-                                .lkRecommend__right
-                                    .lkRecommend__timeBox.lkRecommend__timeBox-lkTeachers
-                                        .lkRecommend__timeBox-left
-                                            img.time__icon(src="img/time.svg", alt="")
-                                            span.lkRecommend__time= item.time
-                                        .lkRecommend__timeBox-right
-                                            img.time__icon(src="img/listener.svg", alt="")
-                                            span.lkRecommend__time= item.listener
-                                    a.lkRecommend__title(href="#")= item.name
-                                    .lkRecommend__action
-                                        .lkRecommend__buttonBox
-                                            button.btn.btn_primary.lkRecommend__button(type="button" ) Подробнее
-                                        .lkRecommend__ratingBox
-                                            .lkRecommend__full
-                                                .lkRecommend__total= item.total
-                                                .lkRecommend__rate
-                                                    .lkRecommend__label= item.label 
-                                                    .rating
-                                                        .rating__stars
-                                                        .rating__full(style="width: "+item.persent+"")
+                    .lkRecommend__plate
+                        .lkRecommend__item
+                            .lkRecommend__left
+                                img(src="img/"+item.img+"", alt="")
+                            .lkRecommend__right
+                                .lkRecommend__timeBox.lkRecommend__timeBox-lkTeachers
+                                    .lkRecommend__timeBox-left
+                                        img.time__icon(src="img/time.svg", alt="")
+                                        span.lkRecommend__time= item.time
+                                    .lkRecommend__timeBox-right
+                                        img.time__icon(src="img/listener.svg", alt="")
+                                        span.lkRecommend__time= item.listener
+                                a.lkRecommend__title(href="#")= item.name
+                                .lkRecommend__action
+                                    .lkRecommend__buttonBox
+                                        button.btn.btn_primary.lkRecommend__button(type="button" ) Подробнее
+                                    .lkRecommend__ratingBox
+                                        .lkRecommend__full
+                                            .lkRecommend__total= item.total
+                                            .lkRecommend__rate
+                                                .lkRecommend__label= item.label 
+                                                .rating
+                                                    .rating__stars
+                                                    .rating__full(style="width: "+item.persent+"")
         .lkTeachers__btnBox
             a.btn.btn_sm.lkTeachers__btn(href="#") Все курсы
