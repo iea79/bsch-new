@@ -2,6 +2,7 @@ extends layout.pug
 
 block variables
     - lk = true;
+    - asideHide = true;
     - lkPage = '';
     - isLogin = true;
     - isCourse = false;
@@ -16,12 +17,13 @@ block content
                 .lkContent__center
                     block lkcontent
 
-                .lkContent__right
-                    .lkAdvSlider
-                        each item in ['', '', '']
-                            .lkAdvSlider__item
-                                .lkAdvSlider__img
-                                    img(src="img/lkAdvSlider.jpg", alt="")
-                                .lkAdvSlider__name Стратегическое мышление для бизнеса и жизни
-                                .lkAdvSlider__action
-                                    a.btn.btn_primary.btn_sm(href="#") Подробнее
+                if !asideHide
+                    .lkContent__right
+                        .lkAdvSlider
+                            each item in ['', '', '']
+                                .lkAdvSlider__item
+                                    .lkAdvSlider__img
+                                        img(src="img/lkAdvSlider.jpg", alt="")
+                                    .lkAdvSlider__name Стратегическое мышление для бизнеса и жизни
+                                    .lkAdvSlider__action
+                                        a.btn.btn_primary.btn_sm(href="#") Подробнее

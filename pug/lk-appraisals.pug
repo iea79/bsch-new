@@ -1,0 +1,40 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Оценки';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+
+block lkcontent
+    .lkContent__title Оценки
+
+    table
+        thead
+            tr
+                th Элемент оценивания
+                th Рассчитанный вес
+                th Оценка
+                th Диапазон
+                th Проценты
+                th Отзыв
+                th Вклад в курс
+
+        tbody
+            each item in ['Отлично сделано задание. Вы молодец!', '', '', 'Могло бы быть и лучше. Тем не менее, вы старались! Зато честно', 'Отлично сделано задание. Вы молодец!', 'Могло бы быть и лучше. Тем не менее, вы старались! Зато честно', 'Вы молодец!']
+                tr
+                    td
+                        a.title(href="") Тестовая лекция
+                    td(data-th="Рассчитанный вес") 0,00%
+                    td(data-th="Оценка") 35
+                    td(data-th="Диапазон") 0 - 100
+                    td(data-th="Проценты") 25%
+                    td(data-th="Отзыв")=item
+                    td(data-th="Вклад в курс") 25%
+
+        tfoot
+            tr
+                td.title(colspan="2") Итоговая оценка за курс
+                td(data-th="Оценка") 1471,1
+                td(data-th="Диапазон") 0 - 1920
+                td(data-th="Проценты") 76,64%
