@@ -11,7 +11,7 @@ block lkcontent
     .lkTeachersAllCourses
         .lkContent__title Управление курсами
         .lkTeachersAllCourses__btnBox
-            a.btn.btn_sm.lkTeachers__btn(href="#") Добавить курс
+            button.btn.btn_sm.lkTeachers__btn(data-toggle="modal" data-target="#courseAdd") Добавить курс
 
 
 
@@ -34,8 +34,8 @@ block lkcontent
                                         span.lkRecommend__time= item.listener
                                 a.lkRecommend__title(href="#")= item.name
                                 .lkTeachersAllCourses__action
-                                    button.btn.btn_primary.lkTeachersAllCourses__btn(type="button" ) Редактировать
-                                    .lkTeachersAllCourses__deleteBox
+                                    button.btn.btn_primary.lkTeachersAllCourses__btn(data-toggle="modal" data-target="#courseEditRequest") Редактировать
+                                    .lkTeachersAllCourses__deleteBox(data-toggle="modal" data-target="#courseDelete")
                                         img(src="img/delete.svg", alt="")
                                         a.lkTeachersAllCourses__deleteText(href="#") Удалить
 
@@ -56,3 +56,73 @@ block lkcontent
                         a(href="#") 11
                 a.arrow(href="#")
                     img(src="img/next.svg", alt="")
+
+    // Begin Modal courseAdd
+    .modal.fade#courseAdd
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .form__wrapper
+                form
+                    .form__legend Запрос на добавление курса
+                    .form__row
+                        input(type="text", placeholder="Название курса")
+                    .form__row
+                        textarea(placeholder="Описание курса")
+                    .form__row
+                        textarea(placeholder="Предположительные темы курса")
+                    .form__action
+                        button.btn.btn_primary(type="submit") Отправить заявку
+                    .form__privacy *Заполнять курс можно будет после проверки модератором
+    // End modal courseAdd
+
+    // Begin Modal courseDelete
+    .modal.fade.modalNotice#courseDelete
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Удаление курса
+                .modalNotice__text Данный курс удалится после проверки модератором
+                .modalNotice__action
+                    button.btn.btn_primary(data-dismiss="modal") Понятно
+
+    // End modal courseDelete
+
+    // Begin Modal courseDeleteted
+    // Открывать через $('#courseDeleteted').modal('show');
+    .modal.fade.modalNotice#courseDeleteted
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Ваш курс удален
+                .modalNotice__text Курс полностью удален с нашего ресурса
+                .modalNotice__action
+                    button.btn.btn_primary(data-dismiss="modal") Понятно
+
+    // End modal courseDeleteted
+
+    // Begin Modal courseEditRequest
+    .modal.fade.modalNotice.modalNotice_lg#courseEditRequest
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Отправить запрос  на редактирование курса «От mvp  до pitchdeck: инновационное мышление в бизнес-процессах»? 
+                .modalNotice__action
+                    // Атрибуты для открытия следующей модалки. Удалить при ненадобности
+                    button.btn.btn_primary(data-dismiss="modal" data-toggle="modal" data-target="#courseEdited") Да, отправить заявку
+                    button.btn.btn_link(data-dismiss="modal") Нет, не отправлять
+                .modalNotice__text.muted *Редактировать курс можно будет после проверки модератором
+
+    // End modal courseEditRequest
+
+    // Begin Modal courseEdited
+    // Открывать можно через $('#courseEdited').modal('show');
+    .modal.fade.modalNotice#courseEdited
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Редактирование курса
+                .modalNotice__text Редактировать курс можно будет после проверки модератором
+                .modalNotice__action
+                    button.btn.btn_primary(data-dismiss="modal") Понятно
+
+    // End modal courseEdited

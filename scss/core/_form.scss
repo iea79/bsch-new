@@ -44,9 +44,9 @@
 		}
 
 		textarea {
-			max-width: 100%;
-			max-width: 100%;
-			min-height: 150px;
+			resize: vertical;
+			height: 9.375em;
+
 		}
 	}
 
@@ -249,6 +249,15 @@ textarea {
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
 		color: $input_placeholder_color;
+	}
+
+}
+
+textarea {
+	resize: vertical;
+
+	.modal & {
+		height: 5.25em;
 	}
 }
 

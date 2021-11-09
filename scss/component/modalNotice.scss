@@ -11,6 +11,9 @@
         &-dialog {
             max-width: 26.5625em;
 
+            .modalNotice_lg & {
+                max-width: 39.0625em;
+            }
         }
 
         &-content {
@@ -35,6 +38,11 @@
     &__action {
         margin-top: 1.875em;
         display: flex;
+        margin-bottom: 1.3em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         .btn {
             &:first-child {
