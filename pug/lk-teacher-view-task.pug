@@ -1,0 +1,70 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Оценки';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Просмотр задания : Тест
+
+    .lkCoursTask__title Тест
+    .lkCoursTask__item
+        .lkCoursTask__head
+            .lkCoursTask__question 1. Сколько будет 33+7?
+                .lkCoursTask__status.empty Пока нет ответа
+            .lkCoursTask__counter Баллов: 3,00
+        .lkCoursTask__body
+            .lkCoursTask__answer
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText A. 
+                            p 40
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText B. 
+                            p 34
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText C. 
+                            p 43
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText D. 
+                            p 37
+    .lkCoursTask__item
+        .lkCoursTask__head
+            .lkCoursTask__question 2. Формула Энштейна
+                .lkCoursTask__status.empty Пока нет ответа
+            .lkCoursTask__counter Баллов: 3,00
+        .lkCoursTask__body
+            .lkCoursTask__answer
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText A. 
+                            p E=mc
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText В. 
+                            p F=ad
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText С. 
+                            p x=2y
+                .lkCoursTask__row
+                    .form__check
+                        input(type="radio" name="quest-1")
+                        span.form__checkText D. 
+                            p P=3.1417
+
+    .lkCoursTask__end
+        a(href="").btn.btn_primary Вернуться на страницу редактирования курса

@@ -65,4 +65,43 @@
 			background-color: transparent;
 		}
 	}
+
+	&_add {
+		background-color: transparent;
+		border-color: transparent;
+		color: $main_color;
+		padding: 0;
+		display: flex;
+		align-items: center;
+
+		.icon_plus {
+			width: 0.9375em;
+			height: 0.9375em;
+			margin-right: 0.5625em;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #006EFF;
+
+			&:after,
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				border-top: 0.125em solid;
+			}
+
+			&:before {
+				transform: rotate(90deg);
+			}
+
+			&:after {}
+		}
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
 }

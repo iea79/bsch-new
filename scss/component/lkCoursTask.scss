@@ -68,6 +68,11 @@
         &.error {
             background: #FF2828;
         }
+
+        &.empty {
+            background: #CCCCCC;
+            color: rgba(29, 29, 27, 0.5);
+        }
     }
 
     &__counter {

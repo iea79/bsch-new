@@ -1,0 +1,55 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Оценки';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Создание курса: заполнение контентом
+
+    .lkSteps
+        .lkSteps__item.completed Шаг 1. 
+            sapn.desktop Структура курса
+        .lkSteps__item.current Шаг 2. Заполнение контентом
+        .lkSteps__item Шаг 3. 
+            sapn.desktop Публикация курса
+
+    .lsCourseAdd.form
+        .lsCourseAdd__title Подраздел 1: Знакомство с преподавателями
+
+        .lsCourseAdd__row
+            .lsCourseAdd__head
+                .lsCourseAdd__label Заголовок блока
+                    span.icon_help(title="Системная подсказка")
+            .lsCourseAdd__field
+                input(type="text", placeholder="Введите полное название заголовка блока")
+
+        .lsCourseAdd__row
+            .lsCourseAdd__head
+                .lsCourseAdd__label Описание
+                    span.icon_help(title="Системная подсказка")
+            .lsCourseAdd__field
+                textarea(placeholder="Введите текст")
+
+        .lsCourseAdd__row
+            .lsCourseAdd__head
+                .lsCourseAdd__label Учебные файлы
+                    span.icon_help(title="Системная подсказка")
+            .lsCourseAdd__field
+                .lkCoursMessage__file
+                    .lkCoursMessage__fileName Бизнес школа.doc
+                    .delete
+                label.lkFormUpload
+                    .lkFormUpload__label Прикрепить документ 
+                        span.desktop (Перетащите для загрузки)
+                    i.icon_paperclip
+                    input(type="file")
+
+
+        .lsCourseAdd__nav
+            a.btn.btn_link(href="") НАЗАД
+            a.btn.btn_secondary(href="") Следующий шаг
+                i.icon_angle

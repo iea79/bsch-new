@@ -11,7 +11,7 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
-        <nav class="header__nav nav">
+        <nav class="header__nav nav desktop">
               <ul class="navbar">
                 <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
                 <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
@@ -20,80 +20,86 @@
                 <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
               </ul>
         </nav>
+        <nav class="header__nav nav mobile">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="lk.html">Личный кабинет</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-courses.html">Мои курсы</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Мои сертификаты</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Уведомления</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-data.html">Мои данные</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-settings.html">Настройки</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="home.html">Выход</a></li>
+              </ul>
+        </nav>
         <div class="header__login">
-          <button class="btn btn_sm" data-toggle="modal" data-target="#loginModal">Вход</button>
+          <div class="header__user">
+            <div class="header__userNotif"><a href="#"><img src="img/notification.svg" alt=""/></a><span></span></div>
+            <div class="header__userImg"><img src="img/lk-data.jpg" alt=""/></div>
+          </div>
+          <div class="header__menu">
+            <div class="header__item"><img src="img/user-solid.svg" alt=""/><a href="#">Личный кабинет</a></div>
+            <div class="header__item"><img src="img/book-open-solid.svg" alt=""/><a href="#">Мои курсы</a></div>
+            <div class="header__item"><img src="img/certificate-solid.svg" alt=""/><a href="#">Мои сертификаты</a></div>
+            <div class="header__item"><img src="img/bell-solid.svg" alt=""/><a href="#">Уведомления</a></div>
+            <div class="header__item"><img src="img/address-card.svg" alt=""/><a href="#">Мои данные</a></div>
+            <div class="header__item"><img src="img/cog-solid.svg" alt=""/><a href="#">Настройки</a></div>
+            <div class="header__item"><img src="img/sign-out-alt-solid.svg" alt=""/><a href="#">Выход</a></div>
+          </div>
         </div>
         <div class="navbar__toggle"></div>
       </div>
     </header>
     <main class="main_content">
-      <div class="container_center">
-        <h2 class="lkContent__title">Внешние страницы</h2>
-        <div class="whiteBox">
-          <ul class="list">
-            <li><a href="home.html">Главная</a></li>
-            <li><a href="campus.html">Кампус</a></li>
-            <li><a href="program.html">Программа</a></li>
-            <li><a href="about.html">О школе</a></li>
-            <li><a href="news.html">Новости и события</a></li>
-            <li><a href="event-single.html">Событие</a></li>
-            <li><a href="news-single.html">Новость</a></li>
-            <li><a href="teachers.html">Преподаватели</a></li>
-          </ul>
+      <div class="lk">
+        <div class="container_center">
+          <div class="lkContent">
+            <div class="lkContent__aside">
+            </div>
+            <div class="lkContent__center">
+              <div class="lkContent__title">Создание курса: заполнение контентом</div>
+              <div class="lkSteps">
+                <div class="lkSteps__item completed">Шаг 1. 
+                  <sapn class="desktop">Структура курса</sapn>
+                </div>
+                <div class="lkSteps__item current">Шаг 2. Заполнение контентом</div>
+                <div class="lkSteps__item">Шаг 3. 
+                  <sapn class="desktop">Публикация курса</sapn>
+                </div>
+              </div>
+              <div class="lsCourseAdd form">
+                <div class="lsCourseAdd__title">Данные по курсу</div>
+                <div class="lsCourseAdd__row">
+                  <div class="lsCourseAdd__head">
+                    <div class="lsCourseAdd__label">Обложка курса<span class="icon_help" title="Системная подсказка"></span></div>
+                  </div>
+                  <div class="lsCourseAdd__field">
+                    <label class="lkFormUpload">
+                      <div class="lkFormUpload__label">Прикрепить документ <span class="desktop">(Перетащите для загрузки)</span></div><i class="icon_paperclip"></i>
+                      <input type="file"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="lsCourseAdd__row">
+                  <div class="lsCourseAdd__head">
+                    <div class="lsCourseAdd__label">Полное название курса<span class="icon_help" title="Системная подсказка"></span></div>
+                  </div>
+                  <div class="lsCourseAdd__field">
+                    <input type="text" placeholder="Введите полное название курса"/>
+                  </div>
+                </div>
+                <div class="lsCourseAdd__row">
+                  <div class="lsCourseAdd__head">
+                    <div class="lsCourseAdd__label">Стоимость курса<span class="icon_help" title="Системная подсказка"></span></div>
+                  </div>
+                  <div class="lsCourseAdd__field">
+                    <input type="text" placeholder="Введите стоимость курса в рублях"/>
+                  </div>
+                </div>
+                <div class="lsCourseAdd__nav"><a class="btn btn_link" href="">НАЗАД</a><a class="btn btn_secondary" href="">Следующий шаг<i class="icon_angle"></i></a></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 class="lkContent__title">Личный кабинет - Студент</h2>
-        <div class="whiteBox">
-          <ul class="list">
-            <li><a href="lk.html">Личный кабинет - Календарь</a></li>
-            <li><a href="lk-data.html">Личный кабинет - Мои данные</a></li>
-            <li><a href="lk-courses.html">Личный кабинет - Курсы</a></li>
-            <li><a href="lk-sertificate.html">Личный кабинет - Мои сертификаты</a></li>
-            <li><a href="lk-settings.html">Личный кабинет - Настройки</a></li>
-            <li><a href="lk-notification.html">Личный кабинет - Уведомления</a></li>
-            <li><a href="lk-appraisals.html">Личный кабинет - Оценки</a></li>
-            <li><a href="lk-course.html">Курс</a></li>
-            <li><a href="lk-course-appointed.html">Курс (назначено/заполняется)</a></li>
-            <li><a href="lk-course-sent.html">Курс (Отправлено. На проверке)</a></li>
-            <li><a href="lk-course-returned.html">Курс (Возвращено)</a></li>
-            <li><a href="lk-course-success.html">Курс (Принято)</a></li>
-            <li><a href="lk-course-survey.html">Курс (Опрос 1)</a></li>
-            <li><a href="lk-course-survey-2.html">Курс (Опрос 2)</a></li>
-            <li><a href="lk-course-ms.html">MS Teams</a></li>
-            <li><a href="lk-course-lecture.html">Лекция 1</a></li>
-            <li><a href="lk-course-lecture-2.html">Лекция 2</a></li>
-            <li><a href="lk-course-survey.html">Опрос 1</a></li>
-            <li><a href="lk-course-survey-2.html">Опрос 2</a></li>
-            <li><a href="lk-course-test-1.html">Тест 1</a></li>
-            <li><a href="lk-course-test-2.html">Тест 2</a></li>
-            <li><a href="lk-course-test-3.html">Тест 3</a></li>
-            <li><a href="lk-course-test-6.html">Тест 6</a></li>
-            <li><a href="lk-course-test-4.html">Тест 7</a></li>
-            <li><a href="lk-course-test-modals.html">Тест (Модалки)</a></li>
-            <li><a href="lk-course-board-sim.html">Симулятор Board Sim</a></li>
-            <li><a href="password-recovery.html">Восстановление пароля</a></li>
-            <li><a href="password-edit.html">Изменение пароля</a></li>
-            <li><a href="email-confirmation.html">Подверждение почты</a></li>
-            <li><a href="lk-reccomend-2.html">Рекомендации 2</a></li>
-            <li><a href="lk-reccomend-3.html">Рекомендации 3</a></li>
-            <li><a href="lk-reccomend-4.html">Рекомендации 4</a></li>
-          </ul>
-        </div>
-        <h2 class="lkContent__title">ЛК преподавателя</h2>
-        <div class="whiteBox">
-          <ul class="list">
-            <li><a href="lk-teachers.html">ЛК преподавателя</a></li>
-            <li><a href="lk-teachers-work.html">ЛК преподавателя - все работы</a></li>
-            <li><a href="lk-teachers-allcourses.html">ЛК преподавателя - управление курсами</a></li>
-            <li><a href="lk-teacher-add-course.html">ЛК преподавателя - Создание курса</a></li>
-            <li><a href="lk-teacher-add-course-1.1.html">ЛК преподавателя - Создание курса 1.1</a></li>
-            <li><a href="lk-teacher-add-course-1.2.html">ЛК преподавателя - Создание курса 1.2</a></li>
-            <li><a href="lk-teacher-add-course-1.3.html">ЛК преподавателя - Создание курса 1.3</a></li>
-            <li><a href="lk-teacher-view-task.html">ЛК преподавателя - Просмотр задания</a></li>
-            <li><a href="lk-teacher-appraisals.html">ЛК преподавателя - Оценка задания</a></li>
-          </ul>
-        </div>
-        <!-- Button trigger modal messageModal-->
-        <button class="btn btn_primary" data-toggle="modal" data-target="#messageModal">Успешная модалка</button>
       </div>
     </main>
     <footer class="footer">

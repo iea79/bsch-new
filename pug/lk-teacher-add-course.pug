@@ -11,15 +11,17 @@ block lkcontent
     .lkContent__title Создание курса: заполнение контентом
 
     .lkSteps
-        .lkSteps__item.completed Шаг 1. Структура курса
+        .lkSteps__item.completed Шаг 1. 
+            sapn.desktop Структура курса
         .lkSteps__item.current Шаг 2. Заполнение контентом
-        .lkSteps__item Шаг 3. Публикация курса
+        .lkSteps__item Шаг 3. 
+            sapn.desktop Публикация курса
 
     .lsCourseAdd.form
         .lsCourseAdd__row
             .lsCourseAdd__head
                 .lsCourseAdd__label Раздел 1
-                    span.icon_help
+                    span.icon_help(title="Системная подсказка")
             .lsCourseAdd__field
                 input(type="text", placeholder="Введите полное название раздела")
 
@@ -27,14 +29,14 @@ block lkcontent
                 .lsCourseAdd__row
                     .lsCourseAdd__head
                         .lsCourseAdd__label Подраздел 1
-                            span.icon_help
+                            span.icon_help(title="Системная подсказка")
                     .lsCourseAdd__field
                         input(type="text", placeholder="Введите полное название подраздела раздела")
 
                 .lsCourseAdd__row
                     .lsCourseAdd__head
                         .lsCourseAdd__label Подраздел 2
-                            span.icon_help
+                            span.icon_help(title="Системная подсказка")
                         .lsCourseAdd__delete
                             i.icon_close 
                             | Удалить
