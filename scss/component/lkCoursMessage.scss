@@ -4,9 +4,14 @@
     @media (min-width: 768px) {
         margin-top: 5.6em;
         max-width: 63.9em;
+
+        &_full {
+            max-width: none;
+        }
     }
 
     &__title {
+        font-family: $second_font_family;
         font-size: 1.45em;
         margin-bottom: 1.6em;
 
@@ -67,10 +72,23 @@
         .btn {
             width: 100%;
         }
+
+        &_start {
+            .btn {
+                @media (min-width: 768px) {
+                    width: auto;
+                }
+            }
+        }
     }
 
     &__nav {
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+
+        &_tripple {
+            justify-content: space-between;
+        }
 
         .btn {
             display: inline-flex;
@@ -78,6 +96,17 @@
 
             i {
                 margin-left: 0.8em;
+
+                &.icon_angle_inverse {
+                    margin-left: 0;
+                    margin-right: 0.8em;
+                }
+            }
+
+            &_link {
+                padding-left: 0;
+                padding-right: 0;
+                color: #898988;
             }
         }
     }
@@ -169,6 +198,16 @@
         color: #006EFF;
         display: inline-block;
         margin-bottom: 3em;
+    }
+
+    &__select {
+        margin-bottom: 1.5625em;
+
+        .lkCoursMessage__title + & {
+            @media (min-width: 768px) {
+                margin-top: -2.5em;
+            }
+        }
     }
 
 }

@@ -31,9 +31,20 @@ body {
 	color: #8E8E8D;
 }
 
+.danger {
+	color: #EB592B;
+}
+
 .wrapper {
 	font-size: $main_font_size;
 	// margin: 0 auto (-$footer_height); // отрицательный нижний отступ на высоту футера
+}
+
+hr {
+	margin: 2em 0;
+	padding: 0;
+	border: 0;
+	border-top: 1px solid rgba(29, 29, 27, 0.15);
 }
 
 /* Middle

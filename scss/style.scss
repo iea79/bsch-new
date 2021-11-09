@@ -264,6 +264,14 @@ $icon_whatsapp: "\e903";
     }
 }
 
+// ---------------
+.icon_angle_inverse {
+    &:before {
+        display: inline-block;
+        transform: rotate(180deg);
+    }
+}
+
 @import 'mixins/mixin';
 // Import files
 @import 'variables/variables';
@@ -351,3 +359,33 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-teachers";
 @import "./component/lk-teachers-work";
 @import "./component/lk-teachers-allcourses";
+
+.lkCoursInfo {
+    margin: 1.75em 0;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5625em;
+    }
+
+    &__item {
+        margin-bottom: 1.3em;
+
+        @media (min-width: 768px) {
+            width: calc(33.3% - 1.5625em);
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-size: 0.9375em;
+        color: rgba(29, 29, 27, 0.5);
+        margin-bottom: 0.1875em;
+        line-height: 1.16;
+    }
+
+    &__prop {
+        font-size: 0.9375em;
+    }
+}

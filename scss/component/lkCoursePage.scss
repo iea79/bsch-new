@@ -28,6 +28,33 @@
         }
     }
 
+    &__inline {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__left {
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            margin-right: 2.25em;
+            margin-bottom: 0;
+            flex-grow: 1;
+            min-width: 0;
+
+            p {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex: none;
+        width: 310px;
+    }
+
     &__content {
         padding: 0 1.1em;
 
@@ -167,7 +194,7 @@
     &__body {
 
         @media (min-width: 768px) {
-            padding-top: 2em;
+            margin: 2em 0;
             max-width: 60em;
 
             &_survey {

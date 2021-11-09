@@ -1,0 +1,101 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Оценки';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Оценка задания
+
+    .lkCoursTask__title Задание №1
+
+    .lkCoursInfo
+        .lkCoursInfo__item
+            .lkCoursInfo__label Студент:
+            .lkCoursInfo__prop Иванов Иван Иванович
+        .lkCoursInfo__item
+            .lkCoursInfo__label Курс:
+            .lkCoursInfo__prop Высший менеджмент
+        .lkCoursInfo__item
+            .lkCoursInfo__label Тема: 
+            .lkCoursInfo__prop Как общаться с клиентами
+        .lkCoursInfo__item
+            .lkCoursInfo__label Статус:
+            .lkCoursInfo__prop.danger Не проверено
+        .lkCoursInfo__item
+            .lkCoursInfo__label Было сдано:
+            .lkCoursInfo__prop 05.04.2021 в 17:30
+
+    hr
+
+    .lkCoursePage__body
+        h2 Текст задания
+        .lkCoursePage__inline
+            .lkCoursePage__left
+                p Мышление изучает как философия, так и психология. Психология  опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+            .lkCoursePage__right
+                h3 Прикрепленные к ответу файлы
+                ul.lkCoursePage__docs
+                    li
+                        a(href="document.docx") 
+                            i.icon_docx
+                            span Документ для пример..docx
+                    li
+                        a(href="document.pdf")
+                            i.icon_pdf
+                            span Документ для пример.pdf
+
+    hr
+
+    .lkCoursePage__body
+        h2 Ответ студента
+        .lkCoursePage__inline
+            .lkCoursePage__left
+                p Мышление изучает как философия, так и психология. Психология  опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. Феномен критического мышления объясняют следующие понятия: нейрогуморальная регуляция (влияние нервной системы и гормонов на регулирование когнитивных процессов), ассоциативно-рефлекторная теория И.П. Павлова, теория функциональных систем академика П. К. Анохина.
+            .lkCoursePage__right
+                h3 Прикрепленные к ответу файлы
+                ul.lkCoursePage__docs
+                    li
+                        a(href="document.docx") 
+                            i.icon_docx
+                            span Документ для пример..docx
+                    li
+                        a(href="document.pdf")
+                            i.icon_pdf
+                            span Документ для пример.pdf
+
+    hr
+
+    .lkCoursMessage.lkCoursMessage_full
+        .lkCoursMessage__title Ваш комментарий
+        .lkCoursMessage__select
+            +select('Поставьте оценку')
+        .lkCoursMessage__content
+            .lkCoursMessage__row
+                .lkCoursMessage__body
+                    .lkCoursMessage__area
+                        img(src="img/area.png", alt="")
+
+                    .lkCoursMessage__upload
+                        label.lkFormUpload
+                            .lkFormUpload__label Прикрепить документ 
+                                span.desktop (Перетащите для загрузки)
+                            i.icon_paperclip
+                            input(type="file")
+
+                    .lkCoursMessage__submit.lkCoursMessage__submit_start
+                        button.btn.btn_primary(type="submit") Отправить на проверку
+
+        hr
+
+        .lkCoursMessage__nav.lkCoursMessage__nav_tripple
+            a.btn.btn_sm.btn_link(href="")
+                i.icon_angle.icon_angle_inverse 
+                span.desktop Предыдущий студент 
+            a.btn.btn_sm(href="#") Все задания
+            a.btn.btn_sm.btn_link(href="")
+                span.desktop Следующий студент 
+                i.icon_angle
