@@ -173,6 +173,11 @@
 		p {
 			margin: 0;
 		}
+
+		&Text {
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__valid {
