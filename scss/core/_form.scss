@@ -348,6 +348,7 @@ input[type=checkbox] {
 	&:checked:before,
 	&:indeterminate:before {
 		content: "";
+		position: absolute;
 		width: 40%;
 		height: 60%;
 		color: #006EFF;

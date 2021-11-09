@@ -9,3 +9,46 @@ block variables
 
 block lkcontent
     .lkContent__title Создание курса: заполнение контентом
+
+    .lkSteps
+        .lkSteps__item.completed Шаг 1. Структура курса
+        .lkSteps__item.current Шаг 2. Заполнение контентом
+        .lkSteps__item Шаг 3. Публикация курса
+
+    .lsCourseAdd.form
+        .lsCourseAdd__row
+            .lsCourseAdd__head
+                .lsCourseAdd__label Раздел 1
+                    span.icon_help
+            .lsCourseAdd__field
+                input(type="text", placeholder="Введите полное название раздела")
+
+            .lsCourseAdd__subrow
+                .lsCourseAdd__row
+                    .lsCourseAdd__head
+                        .lsCourseAdd__label Подраздел 1
+                            span.icon_help
+                    .lsCourseAdd__field
+                        input(type="text", placeholder="Введите полное название подраздела раздела")
+
+                .lsCourseAdd__row
+                    .lsCourseAdd__head
+                        .lsCourseAdd__label Подраздел 2
+                            span.icon_help
+                        .lsCourseAdd__delete
+                            i.icon_close 
+                            | Удалить
+                    .lsCourseAdd__field
+                        input(type="text", placeholder="Введите полное название подраздела раздела")
+
+                button.btn.btn_add
+                    i.icon_plus 
+                    | Добавить подраздел или задание
+        hr
+
+        button.btn.btn_sm Добавить раздел
+
+        .lsCourseAdd__nav
+            a.btn.btn_link(href="") НАЗАД
+            a.btn.btn_secondary(href="") Следующий шаг
+                i.icon_angle

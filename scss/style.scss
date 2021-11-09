@@ -360,32 +360,94 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-teachers-work";
 @import "./component/lk-teachers-allcourses";
 
-.lkCoursInfo {
-    margin: 1.75em 0;
+@import "./component/lkCoursInfo";
 
-    @media (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5625em;
-    }
+.lkSteps {
+    display: flex;
+    margin-bottom: 2.8125em;
 
     &__item {
-        margin-bottom: 1.3em;
+        width: 19.25em;
+        clip-path: polygon(94% 0%, 100% 50%, 94% 100%, 0% 100%, 0% 0%);
+        background: #E9E9E9;
+        text-align: center;
+        // white-space: nowrap;
+        font-size: 0.9375em;
+        padding: 1.0625em 1.8125em 1.0625em 1.25em;
+        margin-right: 1.875em;
 
-        @media (min-width: 768px) {
-            width: calc(33.3% - 1.5625em);
-            margin-bottom: 0;
+        &.completed {
+            background: #DEE9F7;
+            color: #96ADCB;
+        }
+
+        &.current {
+            background: #C6DEFD;
         }
     }
 
-    &__label {
-        font-size: 0.9375em;
-        color: rgba(29, 29, 27, 0.5);
-        margin-bottom: 0.1875em;
-        line-height: 1.16;
+}
+
+.lsCourseAdd {
+    &__row {
+        margin-bottom: 1.875em;
     }
 
-    &__prop {
-        font-size: 0.9375em;
+    &__head {}
+
+    &__label {
+        display: flex;
+        align-items: center;
+        font-size: 1.25em;
+        margin-bottom: 0.6em;
+
+        .icon_help {
+            margin-left: 0.6em;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+    }
+
+    &__field {}
+
+    &__subrow {}
+
+    &__delete {}
+
+    &__nav {
+        .btn_link {}
+    }
+
+}
+
+.icon_help {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #2E42F1;
+
+    &:before {
+        content: '?';
+        font-size: 12px;
+        line-height: 1;
+        font-family: 'Roboto';
     }
 }
+
+.icon_close {}
+
+.btn {}
+
+.btn_add {}
+
+.icon_plus {}
+
+.btn_sm {}
+
+.btn_secondary {}
+
+.icon_angle {}
