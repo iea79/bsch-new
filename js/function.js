@@ -78,6 +78,8 @@ $( document ).ready( function () {
         });
     });
 
+    hScroll('.coursNav');
+
 
 } );
 
@@ -721,6 +723,29 @@ function teachersDescriptionCollapse() {
     }
 }
 teachersDescriptionCollapse();
+
+function hScroll(selector) {
+    let modifier = 1;
+    document.querySelectorAll(selector).forEach(function(item, i) {
+        item.addEventListener('wheel', function(event) {
+            if (event.deltaMode == event.DOM_DELTA_PIXEL) {
+                modifier = 1;
+                // иные режимы возможны в Firefox
+            } else if (event.deltaMode == event.DOM_DELTA_LINE) {
+                modifier = parseInt(getComputedStyle(this).lineHeight);
+            } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
+                modifier = this.clientHeight;
+            }
+            if (event.deltaY != 0) {
+                // замена вертикальной прокрутки горизонтальной
+                this.scrollLeft += modifier * event.deltaY;
+                event.preventDefault();
+            }
+        });
+    });
+
+}
+
 //
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.

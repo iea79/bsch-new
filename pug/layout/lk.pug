@@ -2,7 +2,8 @@ extends layout.pug
 
 block variables
     - lk = true;
-    - asideHide = true;
+    - asideHide = false;
+    - navHide = false;
     - lkPage = '';
     - isLogin = true;
     - isCourse = false;
@@ -12,7 +13,8 @@ block content
         .container_center
             .lkContent
                 .lkContent__aside
-                    include ../inc/lkNav.pug
+                    if !navHide
+                        include ../inc/lkNav.pug
 
                 .lkContent__center
                     block lkcontent
