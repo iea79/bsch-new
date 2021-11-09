@@ -208,6 +208,13 @@
                 margin-top: -2.5em;
             }
         }
+
+        .select2 {
+            width: 100% !important;
+            @media (min-width: 768px) {
+                width: 18.75em !important;
+            }
+        }
     }
 
 }
