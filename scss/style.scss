@@ -359,6 +359,7 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-teachers";
 @import "./component/lk-teachers-work";
 @import "./component/lk-teachers-allcourses";
+@import "./component/lk-teacher-publication";
 
 @import "./component/lkCoursInfo";
 
@@ -398,6 +399,10 @@ $icon_whatsapp: "\e903";
 }
 
 .lsCourseAdd {
+    @media (min-width: 768px) {
+        max-width: 71.8125em;
+    }
+
     &__title {
         font-size: 1.3em;
         font-weight: 400;
@@ -407,6 +412,39 @@ $icon_whatsapp: "\e903";
 
         @media (min-width: 768px) {
             font-size: 2em;
+        }
+
+        &_collapse {
+            cursor: pointer;
+
+            &:after {
+                display: inline-block;
+                font-family: 'bsch';
+                content: $icon_angle;
+
+                transform: rotate(90deg);
+                font-size: 0.71875em;
+                margin-left: 0.8696em;
+                color: #006EFF;
+                transition: transform 0.3s;
+            }
+
+            &.open {
+                &:after {
+                    transform: rotate(270deg);
+
+                }
+            }
+        };
+    }
+
+    &__headline {
+        color: rgba($main_color, .5);
+        margin-bottom: 2.8125em;
+
+        @media (min-width: 768px) {
+            max-width: 45.9em;
+            font-size: 1.25em;
         }
     }
 
@@ -628,5 +666,11 @@ $icon_whatsapp: "\e903";
 
     &__foot {
         margin-top: 3.125em;
+    }
+}
+
+.collapseList {
+    &__body {
+        display: none;
     }
 }

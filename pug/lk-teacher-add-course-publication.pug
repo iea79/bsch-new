@@ -1,0 +1,136 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = 'Оценки';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Создание курса
+
+    .lkSteps
+        .lkSteps__item.completed Шаг 1. 
+            span.desktop Структура курса
+        .lkSteps__item.completed Шаг 2.
+            span.desktop Заполнение контентом
+        .lkSteps__item.current  Шаг 3. Публикация курса
+
+    .lsCourseAdd
+        .lsCourseAdd__headline Проверьте правильность введенных вами данных. После нажатия кнопки «Опубликовать» курс будет отправлен на модерацию и затем опубликован.
+        .lsCourseAdd__title Общая информация
+        .generalInfo
+            .generalInfo__content
+                each generalInfo in [ {label: 'Название курса', desk: 'Системное мышление как основа принятия управленческих решений'}, {label: 'Стоимость курса', desk: 'От 29 990 руб'}, {label: 'Количество разделов', desk: '8'}, {label: 'Количество уроков', desk: '29'}, {label: 'Краткое описание', desk: 'Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы. За 29 уроков вы научитесь принимать решения. '} ]
+                    .generalInfo__row
+                        .lsCourseAdd__label=generalInfo.label
+                            span.icon_help(title="Системная подсказка")
+                        .generalInfo__desk=generalInfo.desk
+
+            .generalInfo__img
+                img(src="/img/home-slide-2.jpg", alt="alt")
+
+
+
+        .collapseList(data-collapse-wrapper="")
+
+            .lsCourseAdd__title.lsCourseAdd__title_collapse(data-collapse="" ) Структура курса
+
+            .structureCourse.collapseList__body(data-collapse-body="")
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 1. 
+                        span.structureCourse__title Зачем нужно работать с мышлением
+
+                ul
+                    li 1.1 Знакомство с преподавателем и введение в курс
+                    li 1.2 Подходы к критическому мышлению
+                    li Формирование команд
+                    li Задание
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 2. 
+                        span.structureCourse__title Призмы мышления. Зачем нужны максимально четкие картины мира?
+
+                ul
+                    li 2.1 Скептицизм и объективность 
+                    li 2.2 Современные процессы и критическое мышление
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 3. 
+                        span.structureCourse__title Как научиться распознавать эвристики и манипуляции?
+
+                ul
+                    li 3.1 Искажения восприятия фактов
+                    li 3.2 Искажения подачи фактов
+                    li 3.3 Выявление и описание проблемы
+                    li 3.4 Анализ ситуации
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 4. 
+                        span.structureCourse__title Как эффективно работать с информацией?
+
+                ul
+                    li 4.1 Данные, информация, знание, правда
+                    li 4.2 Социальное доказательство и системные искажения
+                    li Кейс «Хонда» 
+                    li Кейс «DNS»
+                    li Сообщество студентов
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 5. 
+                        span.structureCourse__title Азы конструктивного мышления
+
+                ul
+                    li 5.1 Синтез и креативность
+                    li 5.2 Конструктивный подход к решению проблем
+                    li Кейс «Хонда» 
+                    li Кейс «DNS»
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 6. 
+                        span.structureCourse__title Креативное мышление
+
+                ul
+                    li 6.1 Модели креативного мышления (часть 1)
+                    li 6.1 Модели креативного мышления (часть 2)
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 7. 
+                        span.structureCourse__title Выявление проблем
+
+                ul
+                    li 7.1 Выявление проблем
+                    li 7.2 Анализ ситуации
+                //- end item
+                //- start item
+                .structureCourse__item
+                    .structureCourse__titleBox
+                        span.structureCourse__titleNumber 8. 
+                        span.structureCourse__title Решение проблем
+
+                ul
+                    li 8.1 Подготовка, принятие и оформление решений
+                    li 8.2 Оценка решения или суждения
+                    li Кейс «Хонда»
+                    li Кейс «DNS»
+                //- end item
+
+        .lsCourseAdd__nav
+            a.btn.btn_link(href="") НАЗАД
+            a.btn.btn_secondary(href="") Следующий шаг
+                i.icon_angle

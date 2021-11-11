@@ -746,6 +746,29 @@ function hScroll(selector) {
 
 }
 
+function collapsed() {
+    let toggle = $('[data-collapse]');
+
+    toggle.on('click', function() {
+        let id = $(this).data('collapse'),
+            body = $('[data-collapse-body="'+id+'"]'),
+            wrap = body.closest('[data-collapse-wrapper]');
+
+        if (id === 'all') {
+            // $('[data-collapse-wrapper]').removeClass('open');
+            $('[data-collapse-body]').slideUp();
+            toggle.removeClass('open')
+        } else {
+            // wrap.toggleClass('open');
+            body.slideToggle();
+            toggle.toggleClass('open');
+        }
+
+
+    });
+}
+collapsed();
+
 //
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
