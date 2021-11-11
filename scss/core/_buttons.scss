@@ -53,7 +53,16 @@
 	}
 
 	&_sm {
-		padding: 0.5em 1em;
+		@media (min-width: 768px) {
+			padding: 0.5em 1em;
+		}
+	}
+
+	&_md {
+
+		@media (min-width: 768px) {
+			padding: 0.95em 1em;
+		}
 	}
 
 	&_link {

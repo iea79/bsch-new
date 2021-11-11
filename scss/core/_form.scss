@@ -18,7 +18,9 @@
 		margin-bottom: 2.2em;
 
 		.form & {
-			margin-bottom: 1.3em;
+			&:not(:last-child) {
+				margin-bottom: 1.3em;
+			}
 		}
 
 		@media (min-width: 768px) {
@@ -26,6 +28,36 @@
 
 			.form & {
 				margin-bottom: 1.875em;
+
+				&_inline {
+					&:not(:last-child) {
+						margin-bottom: 0.625em;
+					}
+				}
+			}
+		}
+
+		&_inline {
+			margin-bottom: 0.625em;
+
+			@media (min-width: 768px) {
+				display: flex;
+				align-items: center;
+			}
+
+			.form__label {
+
+				@media (min-width: 768px) {
+					flex: none;
+					width: 24.375em;
+					margin-bottom: 0;
+					padding-right: 1em;
+				}
+			}
+
+			.form__field {
+				min-width: 0;
+				flex-grow: 1;
 			}
 		}
 
@@ -202,10 +234,28 @@
 
 	&__label {
 		margin-bottom: 0.625em;
-		display: block;
+		display: flex;
+		align-items: center;
+
+		.icon_help {
+			margin-left: 0.4em;
+		}
 
 		@media (min-width: 768px) {
 			font-family: $size_xxs;
+		}
+	}
+
+	&__date {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.625em;
+
+		.icon_calendar {
+			color: #006EFF;
+			font-size: 1.5em;
+			margin-right: 0.5em;
 		}
 	}
 }
@@ -488,6 +538,26 @@ input[type=checkbox] {
 									width: 2.5em;
 									padding-bottom: 0.3em;
 
+									.form__date & {
+										padding-bottom: 0;
+
+										&:before {
+											content: '';
+											display: block;
+											border: 0;
+											width: 0.6em;
+											height: 0.6em;
+											border-right: 2px solid rgba(29, 29, 27, 0.5);
+											border-bottom: 2px solid rgba(29, 29, 27, 0.5);
+											transform: rotate(-135deg);
+											margin-bottom: 0.5em;
+										}
+
+										b {
+											margin-top: 0.5em;
+										}
+									}
+
 									b {
 										// rgba(29, 29, 27, 0.5);
 										// position: static;
@@ -522,6 +592,44 @@ input[type=checkbox] {
 							border-right: 2px solid rgba(29, 29, 27, 0.5);
 							border-bottom: 2px solid rgba(29, 29, 27, 0.5);
 							transform: rotate(-135deg);
+
+						}
+
+						.form__date & {
+							// padding-bottom: 0.3em;
+
+							b {
+								transform: rotate(45deg);
+							}
+						}
+
+					}
+				}
+
+				&--disabled {
+					.select2 {
+						&-selection {
+							background: #FFFFFF;
+							border: 1px solid #DBDBDB;
+							font-family: $main_font_family;
+							color: $input_color;
+							padding: 0.971em 1.175em;
+							outline: none;
+							font-weight: 400;
+							border-radius: 0;
+							transition: 0.3s;
+							transition-property: color background border;
+							width: 100%;
+							height: auto;
+							position: relative;
+
+							&--single {
+								background: #FFFFFF;
+							}
+
+							&__rendered {
+								color: rgba(29, 29, 27, 0.5);
+							}
 						}
 					}
 				}

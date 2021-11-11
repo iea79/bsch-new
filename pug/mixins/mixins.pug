@@ -1,5 +1,5 @@
-mixin select(placeholder="", data=['Значение 1', 'Значение 2', 'Значение 3', 'Значение 4'])
-    select.select(data-placeholder=placeholder)
+mixin select(placeholder="", data=['Значение 1', 'Значение 2', 'Значение 3', 'Значение 4'], disabled=false)
+    select.select(data-placeholder=placeholder disabled=disabled)
         if placeholder !== ""
             option(value="")
         each val in data
