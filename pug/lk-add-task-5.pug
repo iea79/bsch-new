@@ -1,0 +1,173 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Добавление задания: MS Teams Meeting
+
+    .lkCoursTask__title Добавление задания: MS Teams Meeting
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Регистрация в  MS Teams Meeting
+        // Добавить класс open для открытого состояния
+        .lkCollapse__body.open(data-collapse-body="")
+            img(src="img/ms-teams.jpg", alt="")
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Общее
+        // Добавить класс open для открытого состояния
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row
+                    .form__label Название симуляции*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        input(type="text", placeholder="Введите полное название заголовка блока")
+                .form__row
+                    .form__label Описание*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        textarea(placeholder="Введите текст")
+                .form__row
+                    .form__check
+                        input(type="checkbox")
+                        .form__checkText Отображать описание/вступление на странице курса
+                .form__row.form__row_inline
+                    .form__label Дополнительные попытки*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Потоки → Игры')
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Общие настройки модуля
+        // Добавить класс open для открытого состояния
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Доступность*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Отображать на странице страницу курса')
+
+                .form__row.form__row_inline
+                    .form__label Идентификатор (ID)*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Введите идентификатор")
+
+                .form__row.form__row_inline
+                    .form__label Групповой режим*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Нет групп')
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Ограничение доступа
+        // Добавить класс open для открытого состояния
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Ограничение доступа*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Пусто")
+                            .col.col_50
+                                button.btn.btn_primary.btn_md Добавить ограничения
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Выполнение элементов курса
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Отслеживание выполнения*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col.col_100
+                                +select('Студенты могут вручную отмечать элемент курса как выполненный')
+
+                .form__row.form__row_inline
+                    .form__label Планируется выполнение до*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .form__date
+                            .form__day
+                                +select('', [14, 15, 16, 17], true)
+                            .form__month
+                                +select('', ['Сентября', 'Октября', 'Ноября'], true)
+                            .form__year
+                                +select('', [2021, 2022, 2023], true)
+                            .form__time
+                                +select('', ['15:00', '15:30', '16:00', '16:30'], true)
+                            i.icon_calendar
+                            .form__check
+                                input(type="checkbox")
+                                .form__checkText Включить
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Теги
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Теги
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        input(type="text", placeholder="Введите теги")
+
+                .form__row.form__row_inline
+                    .form__label Управление стандартными тегами*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Компетенции
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Компетенции курса*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Не выбрано')
+
+                .form__row.form__row_inline
+                    .form__label По завершению элемента*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Ничего не делать')
+
+    .lkCollapse__info * - обязательно
+
+    .lkCollapse__foot
+        button.btn.btn_primary Сохранить
+        button.btn.btn_link ОТМЕНА

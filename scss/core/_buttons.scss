@@ -83,6 +83,11 @@
 		display: flex;
 		align-items: center;
 
+		&_primary {
+			color: #006EFF;
+		}
+
+		.icon_minus,
 		.icon_plus {
 			width: 0.9375em;
 			height: 0.9375em;
@@ -107,6 +112,12 @@
 			}
 
 			&:after {}
+		}
+
+		.icon_minus {
+			&:before {
+				display: none;
+			}
 		}
 
 		&:hover {

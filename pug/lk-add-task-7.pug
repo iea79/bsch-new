@@ -1,0 +1,333 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Добавление задания: Лекция
+
+    .lkCoursTask__title Добавление задания: Лекция
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Общее
+        // Добавить класс open для открытого состояния
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row
+                    .form__label Название задания*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        input(type="text", placeholder="Введите полное название заголовка блока")
+                .form__row
+                    .form__label Вступление*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        textarea(placeholder="Введите текст")
+                .form__row
+                    .form__check
+                        input(type="checkbox")
+                        .form__checkText Отображать описание/вступление на странице курса
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Внешний вид
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row
+                    button.btn.btn_add.btn_add_primary
+                        i.icon_plus 
+                        | Показать больше...
+                .form__row.form__row_inline
+                    .form__label Отображать индикатор выполнения*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+                .form__row.form__row_inline
+                    .form__label Показывать меню
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Доступность
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Разрешить отвечать с*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .form__date
+                            .form__day
+                                +select('', [14, 15, 16, 17], true)
+                            .form__month
+                                +select('', ['Сентября', 'Октября', 'Ноября'], true)
+                            .form__year
+                                +select('', [2021, 2022, 2023], true)
+                            .form__time
+                                +select('', ['15:00', '15:30', '16:00', '16:30'], true)
+                            i.icon_calendar
+                            .form__check
+                                input(type="checkbox")
+                                .form__checkText Включить
+
+                .form__row.form__row_inline
+                    .form__label Разрешить отвечать до*
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .form__date
+                            .form__day
+                                +select('', [14, 15, 16, 17], true)
+                            .form__month
+                                +select('', ['Сентября', 'Октября', 'Ноября'], true)
+                            .form__year
+                                +select('', [2021, 2022, 2023], true)
+                            .form__time
+                                +select('', ['15:00', '15:30', '16:00', '16:30'], true)
+                            i.icon_calendar
+                            .form__check
+                                input(type="checkbox")
+                                .form__checkText Включить
+
+                .form__row.form__row_inline
+                    .form__label Ограничение по времени
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .form__date
+                            .form__time
+                                +select('00', [14, 15, 16, 17], true)
+                            .form__time
+                                +select('', ['Минут', 'Секунд', 'Часов'], true)
+                            .form__check
+                                input(type="checkbox")
+                                .form__checkText Включить
+
+                .form__row.form__row_inline
+                    button.btn.btn_add.btn_add_primary
+                        i.icon_plus 
+                        | Показать больше...
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Контроль прохождения
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Разрешить студентам повторное  прохождение
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+                .form__row.form__row_inline
+                    .form__label Давать возможность повторно ответить на вопрос
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+                .form__row.form__row_inline
+                    .form__label Максимальное количество попыток ответа на вопрос
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('', [1,2,3,4,5])
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Оценка
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Тип оценки*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Балл')
+
+                .form__row.form__row_inline
+                    .form__label Максимальная оценка*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Введите значение от 0 до 100")
+
+                .form__row.form__row_inline
+                    .form__label Категория оценки*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Непосредственное оценивание')
+
+                .form__row.form__row_inline
+                    .form__label Проходной балл*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Введите балл")
+
+                .form__row.form__row_inline
+                    .form__label Тренировочная лекция
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+
+                .form__row
+                    button.btn.btn_add.btn_add_primary
+                        i.icon_plus 
+                        | Показать больше...
+
+                .form__row.form__row_inline
+                    .form__label Разрешить студентам повторное  прохождение
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Общие настройки модуля
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Доступность*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Отображать на странице курса', ['Нет', 'Да'])
+                .form__row.form__row_inline
+                    .form__label Идентификатор (ID)*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Введите идентификатор")
+                .form__row
+                    .form__row_inline
+                        .form__label Групповой режим*
+                            .icon_help(title="Системная подсказка")
+
+                        .form__field
+                            .grid
+                                .col.col_50
+                                    +select('Нет групп', ['Нет', 'Да'])
+
+                .form__row.form__row_inline
+                    .form__label
+                    .form__field
+                        button.btn.btn_add
+                            i.icon_plus 
+                            | Добавить поле в форму
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Ограничение доступа
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Ограничение доступа*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                input(type="text", placeholder="Пусто")
+                            .col.col_50
+                                button.btn.btn_primary.btn_md Добавить ограничения
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Выполнение элементов курса
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Отслеживание выполнения*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        +select('Студенты могут вручную отмечать элемент курса как выполненный')
+
+                .form__row.form__row_inline
+                    .form__label Планируется выполнение до*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .form__date
+                            .form__day
+                                +select('', [14, 15, 16, 17], true)
+                            .form__month
+                                +select('', ['Сентября', 'Октября', 'Ноября'], true)
+                            .form__year
+                                +select('', [2021, 2022, 2023], true)
+                            .form__time
+                                +select('', ['15:00', '15:30', '16:00', '16:30'], true)
+                            i.icon_calendar
+                            .form__check
+                                input(type="checkbox")
+                                .form__checkText Включить
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Теги
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Теги
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        input(type="text", placeholder="Введите теги")
+
+                .form__row.form__row_inline
+                    .form__label Управление стандартными тегами*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col
+                                +select('', ['Нет', 'Да'])
+
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title(data-collapse="") Компетенции
+        .lkCollapse__body(data-collapse-body="")
+            .form
+                .form__row.form__row_inline
+                    .form__label Компетенции курса*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Не выбрано')
+
+                .form__row.form__row_inline
+                    .form__label По завершению элемента*
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Ничего не делать')
+
+    .lkCollapse__info * - обязательно
+
+    .lkCollapse__foot
+        button.btn.btn_primary Сохранить
+        button.btn.btn_link ОТМЕНА
