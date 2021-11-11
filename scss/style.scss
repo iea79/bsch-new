@@ -644,6 +644,14 @@ $icon_whatsapp: "\e903";
             transform: rotate(45deg);
             margin-left: 1.1em;
             margin-top: -0.5em;
+
+        }
+
+        &.open {
+            &:after {
+                transform: rotate(-135deg);
+                margin-top: 0;
+            }
         }
     }
 

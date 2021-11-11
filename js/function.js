@@ -754,14 +754,21 @@ function collapsed() {
             body = $('[data-collapse-body="'+id+'"]'),
             wrap = body.closest('[data-collapse-wrapper]');
 
-        if (id === 'all') {
+        if (!id) {
             // $('[data-collapse-wrapper]').removeClass('open');
-            $('[data-collapse-body]').slideUp();
-            toggle.removeClass('open')
+            body = $(this).parent().find('[data-collapse-body]');
+            $(this).toggleClass('open');
+            if ($(this).hasClass('open')) {
+                body.slideDown();
+            } else {
+                body.slideUp();
+            }
+        } else if (id === 'all') {
+            body.slideDown();
+            toggle.addClass('open');
         } else {
-            // wrap.toggleClass('open');
             body.slideToggle();
-            toggle.toggleClass('open');
+            $(this).toggleClass('open');
         }
 
 
