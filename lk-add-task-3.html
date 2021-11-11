@@ -56,15 +56,15 @@
             <div class="lkContent__aside">
             </div>
             <div class="lkContent__center">
-              <div class="lkContent__title">Добавление задания: Опрос</div>
-              <div class="lkCoursTask__title">Добавление задания: Опрос</div>
+              <div class="lkContent__title">Добавление задания: Симулятор Board Slim</div>
+              <div class="lkCoursTask__title">Добавление задания: Симулятор Board Slim</div>
               <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">Общее</div>
+                <div class="lkCollapse__title open" data-collapse="">Общее</div>
                 <!-- Добавить класс open для открытого состояния-->
-                <div class="lkCollapse__body" data-collapse-body="">
+                <div class="lkCollapse__body open" data-collapse-body="">
                   <div class="form">
                     <div class="form__row">
-                      <div class="form__label">Название задания*
+                      <div class="form__label">Название симуляции*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
@@ -72,7 +72,7 @@
                       </div>
                     </div>
                     <div class="form__row">
-                      <div class="form__label">Вступление*
+                      <div class="form__label">Описание*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
@@ -86,13 +86,13 @@
                       </div>
                     </div>
                     <div class="form__row form__row_inline">
-                      <div class="form__label">Режим отображения*
+                      <div class="form__label">Дополнительные попытки*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
                         <div class="grid">
                           <div class="col col_50">
-                            <select class="select" data-placeholder="Отображать горизонтально">
+                            <select class="select" data-placeholder="Потоки → Игры">
                               <option value=""></option>
                               <option value="Значение 1">Значение 1</option>
                               <option value="Значение 2">Значение 2</option>
@@ -107,159 +107,66 @@
                 </div>
               </div>
               <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">Доступность</div>
-                <div class="lkCollapse__body" data-collapse-body="">
-                  <div class="form">
-                    <div class="form__row form__row_inline">
-                      <div class="form__label">Разрешить отвечать с*
-                        <div class="icon_help" title="Системная подсказка"></div>
-                      </div>
-                      <div class="form__field">
-                        <div class="form__date">
-                          <div class="form__day">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="14">14</option>
-                              <option value="15">15</option>
-                              <option value="16">16</option>
-                              <option value="17">17</option>
-                            </select>
-                          </div>
-                          <div class="form__month">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="Сентября">Сентября</option>
-                              <option value="Октября">Октября</option>
-                              <option value="Ноября">Ноября</option>
-                            </select>
-                          </div>
-                          <div class="form__year">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="2021">2021</option>
-                              <option value="2022">2022</option>
-                              <option value="2023">2023</option>
-                            </select>
-                          </div>
-                          <div class="form__time">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="15:00">15:00</option>
-                              <option value="15:30">15:30</option>
-                              <option value="16:00">16:00</option>
-                              <option value="16:30">16:30</option>
-                            </select>
-                          </div><i class="icon_calendar"></i>
-                          <div class="form__check">
-                            <input type="checkbox"/>
-                            <div class="form__checkText">Включить</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__row form__row_inline">
-                      <div class="form__label">Разрешить отвечать до*
-                        <div class="icon_help" title="Системная подсказка"></div>
-                      </div>
-                      <div class="form__field">
-                        <div class="form__date">
-                          <div class="form__day">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="14">14</option>
-                              <option value="15">15</option>
-                              <option value="16">16</option>
-                              <option value="17">17</option>
-                            </select>
-                          </div>
-                          <div class="form__month">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="Сентября">Сентября</option>
-                              <option value="Октября">Октября</option>
-                              <option value="Ноября">Ноября</option>
-                            </select>
-                          </div>
-                          <div class="form__year">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="2021">2021</option>
-                              <option value="2022">2022</option>
-                              <option value="2023">2023</option>
-                            </select>
-                          </div>
-                          <div class="form__time">
-                            <select class="select" data-placeholder="" disabled="disabled">
-                              <option value="15:00">15:00</option>
-                              <option value="15:30">15:30</option>
-                              <option value="16:00">16:00</option>
-                              <option value="16:30">16:30</option>
-                            </select>
-                          </div><i class="icon_calendar"></i>
-                          <div class="form__check">
-                            <input type="checkbox"/>
-                            <div class="form__checkText">Включить</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title open" data-collapse="">Параметры вопросов и ответов</div>
+                <div class="lkCollapse__title open" data-collapse="">Оценка</div>
+                <!-- Добавить класс open для открытого состояния-->
                 <div class="lkCollapse__body open" data-collapse-body="">
                   <div class="form">
                     <div class="form__row form__row_inline">
-                      <div class="form__label">Вид респондента*
+                      <div class="form__label">Тип оценки*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
                         <div class="grid">
                           <div class="col col_50">
-                            <select class="select" data-placeholder="">
-                              <option value="Анонимный">Анонимный</option>
-                              <option value="Анонимный">Анонимный</option>
-                              <option value="Анонимный">Анонимный</option>
+                            <select class="select" data-placeholder="Балл">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
                             </select>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="form__row form__row_inline">
-                      <div class="form__label">Разрешать многократную отправку ответа*
+                      <div class="form__label">Максимальная оценка*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
                         <div class="grid">
-                          <div class="col">
-                            <select class="select" data-placeholder="">
-                              <option value="Нет">Нет</option>
-                              <option value="Да">Да</option>
+                          <div class="col col_50">
+                            <input type="text" placeholder="Введите значение от 0 до 100"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__row form__row_inline">
+                      <div class="form__label">Категория оценки*
+                        <div class="icon_help" title="Системная подсказка"></div>
+                      </div>
+                      <div class="form__field">
+                        <div class="grid">
+                          <div class="col col_50">
+                            <select class="select" data-placeholder="Без категории">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
                             </select>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="form__row form__row_inline">
-                      <div class="form__label">Рассылать уведомления по электронной почте*
+                      <div class="form__label">Проходной балл*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
                         <div class="grid">
-                          <div class="col">
-                            <select class="select" data-placeholder="">
-                              <option value="Нет">Нет</option>
-                              <option value="Да">Да</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__row form__row_inline">
-                      <div class="form__label">Автоматическая нумерация вопросов*
-                        <div class="icon_help" title="Системная подсказка"></div>
-                      </div>
-                      <div class="form__field">
-                        <div class="grid">
-                          <div class="col">
-                            <select class="select" data-placeholder="">
-                              <option value="Нет">Нет</option>
-                              <option value="Да">Да</option>
-                            </select>
+                          <div class="col col_50">
+                            <input type="text" placeholder="Введите балл"/>
                           </div>
                         </div>
                       </div>
@@ -268,48 +175,9 @@
                 </div>
               </div>
               <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">После ответа</div>
-                <div class="lkCollapse__body" data-collapse-body="">
-                  <div class="form">
-                    <div class="form__row">
-                      <div class="form__row_inline">
-                        <div class="form__label">Показать страницу с анализом*
-                          <div class="icon_help" title="Системная подсказка"></div>
-                        </div>
-                        <div class="form__field">
-                          <div class="grid">
-                            <div class="col">
-                              <select class="select" data-placeholder="">
-                                <option value="Нет">Нет</option>
-                                <option value="Да">Да</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <div class="form__label">Сообщение о завершении*
-                        <div class="icon_help" title="Системная подсказка"></div>
-                      </div>
-                      <div class="form__field">
-                        <textarea placeholder="Введите текст"></textarea>
-                      </div>
-                    </div>
-                    <div class="form__row form__row_inline">
-                      <div class="form__label">Ссылка на следующий элемент курса*
-                        <div class="icon_help" title="Системная подсказка"></div>
-                      </div>
-                      <div class="form__field">
-                        <input type="text" placeholder="Введите полное название заголовка блока"/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">Общие настройки модуля</div>
-                <div class="lkCollapse__body" data-collapse-body="">
+                <div class="lkCollapse__title open" data-collapse="">Общие настройки модуля</div>
+                <!-- Добавить класс open для открытого состояния-->
+                <div class="lkCollapse__body open" data-collapse-body="">
                   <div class="form">
                     <div class="form__row form__row_inline">
                       <div class="form__label">Доступность*
@@ -318,10 +186,12 @@
                       <div class="form__field">
                         <div class="grid">
                           <div class="col col_50">
-                            <select class="select" data-placeholder="Отображать на странице курса">
+                            <select class="select" data-placeholder="Отображать на странице страницу курса">
                               <option value=""></option>
-                              <option value="Нет">Нет</option>
-                              <option value="Да">Да</option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
                             </select>
                           </div>
                         </div>
@@ -339,36 +209,31 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form__row">
-                      <div class="form__row_inline">
-                        <div class="form__label">Групповой режим*
-                          <div class="icon_help" title="Системная подсказка"></div>
-                        </div>
-                        <div class="form__field">
-                          <div class="grid">
-                            <div class="col col_50">
-                              <select class="select" data-placeholder="Нет групп">
-                                <option value=""></option>
-                                <option value="Нет">Нет</option>
-                                <option value="Да">Да</option>
-                              </select>
-                            </div>
+                    <div class="form__row form__row_inline">
+                      <div class="form__label">Групповой режим*
+                        <div class="icon_help" title="Системная подсказка"></div>
+                      </div>
+                      <div class="form__field">
+                        <div class="grid">
+                          <div class="col col_50">
+                            <select class="select" data-placeholder="Нет групп">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="form__row form__row_inline">
-                      <div class="form__label"></div>
-                      <div class="form__field">
-                        <button class="btn btn_add"><i class="icon_plus"> </i>Добавить поле в форму</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">Ограничение доступа</div>
-                <div class="lkCollapse__body" data-collapse-body="">
+                <div class="lkCollapse__title open" data-collapse="">Ограничение доступа</div>
+                <!-- Добавить класс open для открытого состояния-->
+                <div class="lkCollapse__body open" data-collapse-body="">
                   <div class="form">
                     <div class="form__row form__row_inline">
                       <div class="form__label">Ограничение доступа*
@@ -389,21 +254,25 @@
                 </div>
               </div>
               <div class="lkCollapse" data-collapse-wrapper="">
-                <div class="lkCollapse__title" data-collapse="">Выполнение элементов курса</div>
-                <div class="lkCollapse__body" data-collapse-body="">
+                <div class="lkCollapse__title open" data-collapse="">Выполнение элементов курса</div>
+                <div class="lkCollapse__body open" data-collapse-body="">
                   <div class="form">
                     <div class="form__row form__row_inline">
                       <div class="form__label">Отслеживание выполнения*
                         <div class="icon_help" title="Системная подсказка"></div>
                       </div>
                       <div class="form__field">
-                        <select class="select" data-placeholder="Студенты могут вручную отмечать элемент курса как выполненный">
-                          <option value=""></option>
-                          <option value="Значение 1">Значение 1</option>
-                          <option value="Значение 2">Значение 2</option>
-                          <option value="Значение 3">Значение 3</option>
-                          <option value="Значение 4">Значение 4</option>
-                        </select>
+                        <div class="grid">
+                          <div class="col col_100">
+                            <select class="select" data-placeholder="Студенты могут вручную отмечать элемент курса как выполненный">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="form__row form__row_inline">
