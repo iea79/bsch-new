@@ -46,12 +46,13 @@
 			}
 
 			.form__label {
+				display: block;
 
 				@media (min-width: 768px) {
 					flex: none;
 					width: 24.375em;
 					margin-bottom: 0;
-					padding-right: 1em;
+					padding-right: 3em;
 				}
 			}
 
@@ -210,6 +211,12 @@
 			display: flex;
 			align-items: center;
 		}
+
+		.icon_help {
+			margin-left: 0.3em;
+			flex: none;
+			vertical-align: text-bottom;
+		}
 	}
 
 	&__valid {
@@ -239,6 +246,7 @@
 
 		.icon_help {
 			margin-left: 0.4em;
+			flex: none;
 		}
 
 		@media (min-width: 768px) {

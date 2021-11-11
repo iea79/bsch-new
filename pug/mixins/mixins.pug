@@ -4,3 +4,19 @@ mixin select(placeholder="", data=['Значение 1', 'Значение 2', '
             option(value="")
         each val in data
             option(value=val)=val
+
+mixin upload(label="Прикрепить документ")
+    label.lkFormUpload
+        .lkFormUpload__label=label 
+            | 
+            span.desktop (Перетащите для загрузки)
+        i.icon_paperclip
+        input(type="file")
+
+mixin checkbox(label, help=false, checked=false)
+    .form__check
+        input(type="checkbox" checked=checked)
+        .form__checkText=label 
+            | 
+            if help
+                i.icon_help(title="Системная подсказка")
