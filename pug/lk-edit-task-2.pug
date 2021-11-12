@@ -1,0 +1,69 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Лекция
+
+    .lkCoursTask__title Редактирование задания: Лекция
+
+    .lkEditTask__wrap
+
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Добавить информационную страницу/оглавление раздела
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Заголовок страницы*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            input(type="text", placeholder="Введите полное название заголовка блока")
+                    .form__row
+                        .form__label Содержание страницы*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            textarea(placeholder="Введите текст")
+                    .form__row.form__row_inline
+                        .col.col_33
+                            .form__check
+                                input(type="checkbox" checked="checked")
+                                .form__checkText Расположить кнопки горизонтально
+                        .col.col_33
+                            .form__check
+                                input(type="checkbox" checked="checked")
+                                .form__checkText Показывать в меню
+
+
+
+        each item in ['Содержимое 1', 'Содержимое 2', 'Содержимое 3', 'Содержимое 4', 'Содержимое 5']
+
+            .lkCollapse(data-collapse-wrapper="")
+                .lkCollapse__title.open(data-collapse="")=item
+                // Добавить класс open для открытого состояния
+                .lkCollapse__body.open(data-collapse-body="")
+                    .form
+                        .form__row
+                            .form__label Описание*
+                                .icon_help(title="Системная подсказка")
+                            .form__field
+                                textarea(placeholder="Введите текст")
+
+                        .form__row.form__row_inline
+                            .form__label Переход
+                                .icon_help(title="Системная подсказка")
+                            .form__field
+                                .col.col_50
+                                    +select('Текущая страница')
+
+
+        .lkCollapse__info * - обязательно
+
+        .lkCollapse__foot
+            button.btn.btn_primary Сохранить
+            button.btn.btn_link ОТМЕНА

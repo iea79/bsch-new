@@ -1,0 +1,76 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Лекция
+
+    .lkCoursTask__title Редактирование задания: Лекция
+
+    .lkEditTask__wrap
+
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Создать страницу с вопросом типа «Множественный выбор»
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Заголовок страницы*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            input(type="text", placeholder="Введите полное название заголовка блока")
+                    .form__row
+                        .form__label Содержание страницы*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            textarea(placeholder="Введите текст")
+                    .form__row
+                        .form__check
+                            input(type="checkbox" checked="checked")
+                            .form__checkText Множественный ответ
+
+
+
+
+        each item in ['Ответ 1', 'Ответ 2', 'Ответ 3', 'Ответ 4']
+
+            .lkCollapse(data-collapse-wrapper="")
+                .lkCollapse__title.open(data-collapse="")=item
+                // Добавить класс open для открытого состояния
+                .lkCollapse__body.open(data-collapse-body="")
+                    .form
+                        .form__row
+                            .form__label Ответ*
+                                .icon_help(title="Системная подсказка")
+                            .form__field
+                                textarea(placeholder="Введите текст")
+                        .form__row
+                            .form__label Отзыв
+                            .form__field
+                                textarea(placeholder="Введите текст")
+
+                        .form__row.form__row_inline
+                            .form__label Переход
+                                .icon_help(title="Системная подсказка")
+                            .form__field
+                                .col.col_50
+                                    +select('Следующая страница')
+
+                        .form__row.form__row_inline
+                            .form__label Баллы за ответ
+                                .icon_help(title="Системная подсказка")
+                            .form__field
+                                .col.col_50
+                                    input(type="number", placeholder="Введите баллы за ответ")
+
+
+        .lkCollapse__info * - обязательно
+
+        .lkCollapse__foot
+            button.btn.btn_primary Сохранить
+            button.btn.btn_link ОТМЕНА
