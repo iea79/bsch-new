@@ -1,0 +1,20 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Лекция
+
+    .lkCoursTask__title Что вы хотите сделать в первую очередь?
+
+    .lkEditTask__wrap
+
+        ul.lkEditTask__naw
+            each link in ['Импортировать вопросы', 'Добавить инф. страницу/оглавление раздела', 'Добавить кластер', 'Добавить страницу с вопросом']
+                li.lkEditTask__item
+                    a.lkEditTask__link(href="#")=link

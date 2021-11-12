@@ -361,6 +361,8 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-teachers-allcourses";
 @import "./component/lk-teacher-publication";
 
+@import "./component/lkEditTask";
+
 @import "./component/lkCoursInfo";
 
 .lkSteps {
@@ -413,29 +415,6 @@ $icon_whatsapp: "\e903";
         @media (min-width: 768px) {
             font-size: 2em;
         }
-
-        &_collapse {
-            cursor: pointer;
-
-            &:after {
-                display: inline-block;
-                font-family: 'bsch';
-                content: $icon_angle;
-
-                transform: rotate(90deg);
-                font-size: 0.71875em;
-                margin-left: 0.8696em;
-                color: #006EFF;
-                transition: transform 0.3s;
-            }
-
-            &.open {
-                &:after {
-                    transform: rotate(270deg);
-
-                }
-            }
-        };
     }
 
     &__headline {
@@ -630,6 +609,7 @@ $icon_whatsapp: "\e903";
         line-height: 1;
         margin-bottom: 1em;
         display: flex;
+        width: max-content;
         align-items: center;
         cursor: pointer;
 
@@ -678,11 +658,5 @@ $icon_whatsapp: "\e903";
 
     .lkCoursMessage__file {
         margin-top: 1em;
-    }
-}
-
-.collapseList {
-    &__body {
-        display: none;
     }
 }

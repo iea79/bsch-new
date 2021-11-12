@@ -1,0 +1,46 @@
+.lkEditTask {
+    &__wrap {
+        max-width: 71.8125em;
+    }
+
+    &__naw {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.3em;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        background-color: $color_withe;
+        padding: 1em 1.5em;
+        margin-bottom: 1em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            width: 14.5em;
+            height: 5.9375em;
+            padding: 1.125em 2.125em 1.125em 1.5em;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        opacity: 0.8;
+
+        @media (min-width: 768px) {
+            font-size: 0.9375em;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Лекция
+
+    .lkCoursTask__title Редактирование задания: Лекция
+
+    .lkEditTask__wrap
+        .lkCollapse
+            .form
+                .form__row.form__row_inline
+                    .form__label Выберите тип вопроса
+
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Множественный выбор')
+
+        .lkCollapse__foot
+            button.btn.btn_primary Добавить страницу
+            button.btn.btn_link ОТМЕНА
