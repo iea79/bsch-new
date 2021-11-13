@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.2"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+        <nav class="header__nav nav desktop">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
+                <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="programs.html">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              </ul>
+        </nav>
+        <nav class="header__nav nav mobile">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="lk.html">Личный кабинет</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-courses.html">Мои курсы</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Мои сертификаты</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Уведомления</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-data.html">Мои данные</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-settings.html">Настройки</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="home.html">Выход</a></li>
+              </ul>
+        </nav>
+        <div class="header__login">
+          <div class="header__user">
+            <div class="header__userNotif"><a href="#"><img src="img/notification.svg" alt=""/></a><span></span></div>
+            <div class="header__userImg"><img src="img/lk-data.jpg" alt=""/></div>
+          </div>
+          <div class="header__menu">
+            <div class="header__item"><img src="img/user-solid.svg" alt=""/><a href="#">Личный кабинет</a></div>
+            <div class="header__item"><img src="img/book-open-solid.svg" alt=""/><a href="#">Мои курсы</a></div>
+            <div class="header__item"><img src="img/certificate-solid.svg" alt=""/><a href="#">Мои сертификаты</a></div>
+            <div class="header__item"><img src="img/bell-solid.svg" alt=""/><a href="#">Уведомления</a></div>
+            <div class="header__item"><img src="img/address-card.svg" alt=""/><a href="#">Мои данные</a></div>
+            <div class="header__item"><img src="img/cog-solid.svg" alt=""/><a href="#">Настройки</a></div>
+            <div class="header__item"><img src="img/sign-out-alt-solid.svg" alt=""/><a href="#">Выход</a></div>
+          </div>
+        </div>
+        <div class="navbar__toggle"></div>
+      </div>
+    </header>
+    <main class="main_content">
+      <div class="lk">
+        <div class="container_center">
+          <div class="lkContent">
+            <div class="lkContent__aside">
+            </div>
+            <div class="lkContent__center">
+              <div class="lkContent__title">Редактирование задания: Тест</div>
+              <div class="lkCoursTask__title">Добавление вопроса «В закрытой форме (множественный выбор)»</div>
+              <div class="lkEditTask__wrap">
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Общее</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row">
+                        <div class="form__label">Категория</div>
+                        <div class="form__field">
+                          <input type="text" placeholder="Введите полное название заголовка блока"/>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Название вопроса*</div>
+                        <div class="form__field">
+                          <input type="text" placeholder="Введите полное название заголовка блока"/>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Текст вопроса*</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Балл по умолчанию*</div>
+                        <div class="form__field">
+                          <div class="col col_50">
+                            <input type="number" placeholder="Введите значение от 0 до 100"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Общий отзыв к вопросу
+                          <div class="icon_help" title="Системная подсказка"></div>
+                        </div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">ID-номер
+                          <div class="icon_help" title="Системная подсказка">       </div>
+                        </div>
+                        <div class="form__field">
+                          <div class="col col_50">
+                            <input type="number" placeholder="Введите значение от 0 до 100"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Один или несколько вопросов?</div>
+                        <div class="form__field">
+                          <div class="col col_33">
+                            <select class="select" data-placeholder="а.., b.., c..,">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Показать стандартные инструкции?
+                          <div class="icon_help" title="Системная подсказка"></div>
+                        </div>
+                        <div class="form__field">
+                          <div class="col col_20">
+                            <select class="select" data-placeholder="Нет">
+                              <option value=""></option>
+                              <option value="Нет">Нет</option>
+                              <option value="Да">Да</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Ответ 1</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row">
+                        <div class="form__label">Ответ*
+                          <div class="icon_help" title="Системная подсказка"></div>
+                        </div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Оценка</div>
+                        <div class="form__field">
+                          <div class="col col_50">
+                            <input type="number" placeholder="Введите баллы за ответ"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Отзыв</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Ответ 2</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row">
+                        <div class="form__label">Ответ*
+                          <div class="icon_help" title="Системная подсказка"></div>
+                        </div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Оценка</div>
+                        <div class="form__field">
+                          <div class="col col_50">
+                            <input type="number" placeholder="Введите баллы за ответ"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Отзыв</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <button class="btn btn_add"><i class="icon_plus"> </i>Добавить ответ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Комбинированный отзыв</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row">
+                        <div class="form__label">Для любого правильного ответа</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">На любой частично правильный ответ</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__check">
+                          <input type="checkbox" checked="checked"/>
+                          <div class="form__checkText">Показать количество правильных ответов после окончания</div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">На любой неправильный ответ</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Несколько попыток</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Показать стандартные инструкции
+                          <div class="icon_help" title="Системная подсказка">       </div>
+                        </div>
+                        <div class="form__field">
+                          <div class="col col_33">
+                            <select class="select" data-placeholder="33,33333%">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Подказка 1</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Варианты подсказок 1</div>
+                        <div class="form__field">
+                          <div class="grid">
+                            <div class="col">
+                              <div class="form__check">
+                                <input type="checkbox" checked="checked"/>
+                                <div class="form__checkText">Удалить некорректные ответы</div>
+                              </div>
+                            </div>
+                            <div class="col"> 
+                              <div class="form__check">
+                                <input type="checkbox" checked="checked"/>
+                                <div class="form__checkText">Показать количество правильных ответов</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__label">Подказка 2</div>
+                        <div class="form__field">
+                          <textarea placeholder="Введите текст"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Варианты подсказок 2</div>
+                        <div class="form__field">
+                          <div class="grid">
+                            <div class="col">
+                              <div class="form__check">
+                                <input type="checkbox" checked="checked"/>
+                                <div class="form__checkText">Удалить некорректные ответы</div>
+                              </div>
+                            </div>
+                            <div class="col"> 
+                              <div class="form__check">
+                                <input type="checkbox" checked="checked"/>
+                                <div class="form__checkText">Показать количество правильных ответов</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <button class="btn btn_add"><i class="icon_plus"> </i>Добавить ещё подсказку</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse" data-collapse-wrapper="">
+                  <div class="lkCollapse__title open" data-collapse="">Теги</div>
+                  <!-- Добавить класс open для открытого состояния-->
+                  <div class="lkCollapse__body open" data-collapse-body="">
+                    <div class="form">
+                      <div class="form__row form__row_inline">
+                        <div class="form__label">Теги</div>
+                        <div class="form__label">Выбранные элементы: любые теги</div>
+                      </div>
+                      <div class="form__row form__row_inline">
+                        <div class="form__label"> </div>
+                        <div class="form__field">
+                          <div class="col col_50">
+                            <select class="select" data-placeholder="Найти">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse__info">* - обязательно</div>
+                <div class="lkCollapse__foot">
+                  <div class="lkCollapse__saveAndEdit">
+                    <button class="btn btn_primary">Сохранить изменения и продолжить редактирование</button>
+                  </div>
+                  <button class="btn btn_secondary">Сохранить</button>
+                  <button class="btn btn_link">ОТМЕНА</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__quatro"><span></span><span></span><span></span></div>
+      </div>
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__col"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+          <div class="footer__col">
+            <div class="footer__head">Контакты</div>
+            <div class="footer__contact"><a href="mailto: gazetny@universitas.ru">gazetny@universitas.ru</a><a href="tel: + 7 (499) 110-90-08">+ 7 (499) 110-90-08</a></div>
+            <div class="footer__message"><a href=""><i class="icon_whatsapp"> </i><span>Поговорить <br>с БШГ в вотсап</span></a><a href=""> <i class="icon_telegram"> </i><span>Поговорить <br>с БШГ в телеграм</span></a></div>
+          </div>
+          <div class="footer__col desktop">
+            <div class="footer__head">Меню</div>
+            <nav class="footer__nav">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Преподаватели и спикеры</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">О школе</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Кампус</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col">
+            <div class="footer__head">Мы в соцсетях</div>
+            <div class="footer__soc">
+              <div class="soc"><a class="icon_instagram" href="" target="_blank"></a><a class="icon_facebook" href="" target="_blank"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__temp">
+            <div class="footer__copy">&copy; 2021</div>Бизнес-Школа на Газетном. <br>Московская высшая школа социальных и экономических наук
+          </div>
+          <div class="footer__policy"><a href="">Пользовательское соглашение</a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal infoModal-->
+    <div class="modal fade infoModal" id="loginModal">
+      <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="form__wrapper">
+          <form>
+            <div class="form__legend">Авторизация</div>
+            <div class="form__row">
+              <input type="text" placeholder="E-mail"/>
+            </div>
+            <div class="form__row">
+              <input type="password" placeholder="Пароль"/>
+            </div>
+            <div class="form__action">
+              <button class="btn btn_primary" type="submit">Войти</button>
+            </div>
+            <div class="form__link"><a href="">Напомнить пароль</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End modal infoModal-->
+    <!-- Begin Modal messageModal-->
+    <div class="modal fade messageModal" id="messageModal">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="messageModal__content">
+            <div class="messageModal__icon"><i class="icon_check"></i></div>
+            <div class="messageModal__title">Спасибо. <br>Ваша заявка принята.</div>
+            <div class="messageModal__text">Наш менеджер свяжется с Вами в ближайшее время.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal messageModal-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.2"></script>
+  </body>
+</html>

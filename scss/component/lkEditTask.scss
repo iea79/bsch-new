@@ -43,4 +43,50 @@
             font-size: 0.9375em;
         }
     }
+
+    &__desk {
+        color: rgba($main_color, .5);
+        margin-bottom: 1.875em;
+
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+    }
+
+    &__info {
+        color: rgba($main_color, .5);
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+    }
+
+    &__status {
+        max-width: 63.625em;
+        padding: 1.4375em 1.25em;
+        background-color: #F7EAD1;
+
+        span {
+            color: #9B6701;
+            @media (min-width: 768px) {
+                font-size: 1.0625em;
+            }
+        }
+    }
+
+    &__more {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 2.8125em;
+
+        &.borderTop {
+            padding-top: 2.8125em;
+            border-top: 0.0625em solid rgba($main_color, .15);
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: 1.0625em;
+        }
+    }
 }

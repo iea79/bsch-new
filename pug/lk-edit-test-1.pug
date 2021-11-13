@@ -1,0 +1,43 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Тест
+
+    .lkCoursTask__title Редактирование задания: Тест
+
+    .lkEditTask__wrap
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Описание
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .lkEditTask__desk Мышление изучает как философия, так и психология. Психология опирается в материалистической концепции на физиологию высшей нервной деятельности. В связи с этим биологические знания нам крайне необходимы.  За 29 уроков вы научитесь принимать решения.
+                .form__row.form__row_inline
+                    .col.col_25
+                        .form__label Метод оценивания
+                            .icon_help(title="Системная подсказка")
+                    .col.col_25
+                        .lkEditTask__info Высшая оценка
+
+
+
+
+
+
+
+        .lkEditTask__status
+            span Пока не добавлено ни одного вопроса
+
+        .lkCollapse__foot
+            button.btn.btn_primary Редактировать тест
+            button.btn.btn_link Вернуться к курсу
+
+        .lkEditTask__more.borderTop
+            a(href="#") ОБЪЯВЛЕНИЯ
+            a(href="#") Вводная лекция

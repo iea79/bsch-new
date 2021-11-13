@@ -1,0 +1,227 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+
+block lkcontent
+    .lkContent__title Редактирование задания: Тест
+
+    .lkCoursTask__title Добавление вопроса «В закрытой форме (множественный выбор)»
+
+    .lkEditTask__wrap
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Общее
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Категория
+                        .form__field
+                            input(type="text", placeholder="Введите полное название заголовка блока")
+
+                    .form__row
+                        .form__label Название вопроса*
+                        .form__field
+                            input(type="text", placeholder="Введите полное название заголовка блока")
+
+                    .form__row
+                        .form__label Текст вопроса*
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label Балл по умолчанию*
+                        .form__field
+                            .col.col_50
+                                input(type="number", placeholder="Введите значение от 0 до 100")
+
+                    .form__row
+                        .form__label Общий отзыв к вопросу
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label ID-номер
+                            .icon_help(title="Системная подсказка")        
+                        .form__field
+                            .col.col_50
+                                input(type="number", placeholder="Введите значение от 0 до 100")
+
+                    .form__row.form__row_inline
+                        .form__label Один или несколько вопросов?
+                        .form__field
+                            .col.col_33
+                                +select('а.., b.., c..,')
+
+                    .form__row.form__row_inline
+                        .form__label Показать стандартные инструкции?
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            .col.col_20
+                                select.select(data-placeholder="Нет")
+                                    option(value="")
+                                    option(value="Нет") Нет
+                                    option(value="Да") Да
+        //- end Collapse
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Ответ 1
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Ответ*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label Оценка
+                        .form__field
+                            .col.col_50
+                                input(type="number", placeholder="Введите баллы за ответ")
+
+                    .form__row
+                        .form__label Отзыв
+                        .form__field
+                            textarea(placeholder="Введите текст")
+        //- end Collapse
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Ответ 2
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Ответ*
+                            .icon_help(title="Системная подсказка")
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label Оценка
+                        .form__field
+                            .col.col_50
+                                input(type="number", placeholder="Введите баллы за ответ")
+
+                    .form__row
+                        .form__label Отзыв
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row
+                        .form__field
+                            button.btn.btn_add
+                                i.icon_plus 
+                                | Добавить ответ
+        //- end Collapse
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Комбинированный отзыв
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row
+                        .form__label Для любого правильного ответа
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row
+                        .form__label На любой частично правильный ответ
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row
+                        .form__check
+                            input(type="checkbox" checked="checked")
+                            .form__checkText Показать количество правильных ответов после окончания
+
+                    .form__row
+                        .form__label На любой неправильный ответ
+                        .form__field
+                            textarea(placeholder="Введите текст")
+        //- end Collapse
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Несколько попыток
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row.form__row_inline
+                        .form__label Показать стандартные инструкции
+                            .icon_help(title="Системная подсказка")        
+                        .form__field
+                            .col.col_33
+                                +select('33,33333%')
+                    .form__row
+                        .form__label Подказка 1
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label Варианты подсказок 1
+                        .form__field
+                            .grid
+                                .col
+                                    .form__check
+                                        input(type="checkbox" checked="checked")
+                                        .form__checkText Удалить некорректные ответы
+                                .col 
+                                    .form__check
+                                        input(type="checkbox" checked="checked")
+                                        .form__checkText Показать количество правильных ответов
+                    .form__row
+                        .form__label Подказка 2
+                        .form__field
+                            textarea(placeholder="Введите текст")
+
+                    .form__row.form__row_inline
+                        .form__label Варианты подсказок 2
+                        .form__field
+                            .grid
+                                .col
+                                    .form__check
+                                        input(type="checkbox" checked="checked")
+                                        .form__checkText Удалить некорректные ответы
+                                .col 
+                                    .form__check
+                                        input(type="checkbox" checked="checked")
+                                        .form__checkText Показать количество правильных ответов
+
+                    .form__row
+                        .form__field
+                            button.btn.btn_add
+                                i.icon_plus 
+                                | Добавить ещё подсказку
+
+        //- end Collapse
+        //- start Collapse
+        .lkCollapse(data-collapse-wrapper="")
+            .lkCollapse__title.open(data-collapse="") Теги
+            // Добавить класс open для открытого состояния
+            .lkCollapse__body.open(data-collapse-body="")
+                .form
+                    .form__row.form__row_inline
+                        .form__label Теги
+                        .form__label Выбранные элементы: любые теги
+                    .form__row.form__row_inline
+                        .form__label 
+                        .form__field
+                            .col.col_50
+                                +select('Найти')
+        //- end Collapse
+
+        .lkCollapse__info * - обязательно
+
+
+        .lkCollapse__foot
+            .lkCollapse__saveAndEdit
+                button.btn.btn_primary Сохранить изменения и продолжить редактирование
+            button.btn.btn_secondary Сохранить
+            button.btn.btn_link ОТМЕНА
