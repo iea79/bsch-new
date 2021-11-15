@@ -16,22 +16,22 @@ block lkcontent
 
     .lkTaskSimulator__title Одиночный вид
 
-    .form
-        .form__row.form__row_inline
-            .form__label Оцениваемый элемент
-            .form__field
-                .grid
-                    .col.col_50
-                        +select('Все')
-
-        .form__row.form__row_inline
-            .form__label Пользователь
-            .form__field
-                .grid
-                    .col.col_50
-                        +select('Все')
-
     .lkTaskSimulatorAppraisals
+        .form
+            .form__row.horizontal__input
+                .form__label Оцениваемый элемент
+                .form__field
+                    .grid
+                        .col.horizontal__col
+                            +select('Все')
+
+
+                .form__label Пользователь
+                .form__field
+                    .grid
+                        .col.horizontal__col
+                            +select('Все')
+
         .lkTaskSimulatorAppraisals__table
             table
                 thead
@@ -60,12 +60,12 @@ block lkcontent
                         td(data-th="Оценка") 
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Отзыв")
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input2
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Выбрать все") 
                             input(type="checkbox")
@@ -87,12 +87,12 @@ block lkcontent
                         td(data-th="Оценка") 
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Отзыв")
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input2
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Выбрать все") 
                             input(type="checkbox")
@@ -114,12 +114,12 @@ block lkcontent
                         td(data-th="Оценка") 
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Отзыв")
                             .form.lkTaskSimulatorAppraisals__table-form
                                 .form__input.lkTaskSimulatorAppraisals__table-input2
-                                    input(type="text", placeholder="")
+                                    input.sm(type="text", placeholder="")
 
                         td(data-th="Выбрать все") 
                             input(type="checkbox")
@@ -135,17 +135,19 @@ block lkcontent
                         input(type="checkbox")
                         .form__checkText Выполнить загрузку оценок
 
-                .form__row.form__row_inline
-                    .form__label Оцениваемый элемент
-                    .form__field
-                        .grid
-                            .col.col_50
-                                +select('Все')
+        .form.horizontal__input
+            .form__row.horizontal__input
+                .form__label Для
+                .form__field
+                    .grid
+                        .col
+                            +select('Пустых ячеек')
+                .form__label Вставить значение
+                .form__input
+                    input(type="text", placeholder="0")
 
-                    .form__input
-                        input(type="text", placeholder="Введите ФИО для поиска")
-                        i.icon_search.lkTaskSimulator__search
+
 
 
         .lkCollapse__foot
-            button.btn.btn_primary Запись выбранных пользователей на курс
+            button.btn.btn_primary Сохранить

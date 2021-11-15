@@ -12,6 +12,10 @@
 		background: #FFFFFF;
 		border: 1px solid #DBDBDB;
 		padding: 0.971em 1.175em;
+
+		&.sm {
+			padding: 5px 10px;
+		}
 	}
 
 	&__row {

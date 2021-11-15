@@ -1,17 +1,17 @@
 .lkTaskSimulator {
     &__form {
-        margin-top: 30px;
+        margin-top: 1.875em;
     }
 
     &__title {
         color: #1D1D1B;
         font-family: $second_font_family;
-        margin-top: 15px;
+        margin-top: 0.9375em;
         font-size: 1.2em;
 
         @media (min-width: 768px) {
-            margin-top: 30px;
-            font-size: 26px;
+            margin-top: 1.875em;
+            font-size: 1.625em;
 
         }
     }
@@ -23,26 +23,26 @@
 
     &__table-edit {
         color: #006EFF;
-        margin-left: 5px;
+        margin-left: 0.3125em;
 
     }
 
     &__search {
         color: #006EFF;
         position: absolute;
-        right: 10px;
-        top: 20px;
+        right: 0.625em;
+        top: 1.25em;
     }
 
     &__table-setting {
         color: #006EFF;
-        margin-left: 50px;
+        margin-left: 3.125em;
 
     }
 
     &__table-delete {
         color: #006EFF;
-        margin-left: 20px;
+        margin-left: 1.25em;
 
     }
 }
@@ -65,7 +65,7 @@
 // *********************************************************************************************
 
 .lkTaskSimulatorGroup {
-    margin-top: 30px;
+    margin-top: 1.875em;
     flex-direction: column;
     @media (min-width: 768px) {
         display: flex;
@@ -74,12 +74,12 @@
     }
 
     &__plate {
-        margin-top: 30px;
+        margin-top: 1.875em;
         @media (min-width: 768px) {
             margin-top: 0;
-            max-width: 560px;
+            max-width: 35em;
             width: 100%;
-            margin-right: 30px;
+            margin-right: 1.875em;
 
         }
 
@@ -93,11 +93,10 @@
 
     &__whiteBox {
         background-color: #fff;
-        padding: 20px 0;
-        min-height: 212px;
+        padding: 1.25em 0;
+        min-height: 13.25em;
         border: 1px solid #DBDBDB;
-
-        margin-top: 20px;
+        margin-top: 1.25em;
 
     }
 
@@ -105,7 +104,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 20px;
+        padding: 0.3125em 1.25em;
         color: rgba(29, 29, 27, 0.5);
 
         &:hover {
@@ -117,22 +116,22 @@
     }
 
     &__bottom {
-        margin-top: 32px;
+        margin-top: 2em;
     }
 
     &__btn {
-        padding: 8px 20px;
-        margin: 5px 0;
+        padding: 0.5em 1.25em;
+        margin: 0.3125em 0;
         width: 100%;
         @media (min-width: 768px) {
-            margin-right: 20px;
+            margin-right: 1.25em;
             width: auto;
 
         }
     }
 
     &__linkBtn {
-        padding: 8px 15px;
+        padding: 0.5em 0.9375em;
         width: 100%;
         @media (min-width: 768px) {
             width: auto;
@@ -145,35 +144,45 @@
     &__icon {}
 
     &__form {
-        max-width: 400px;
-        margin-top: 15px;
+        max-width: 25em;
+        margin-top: 0.9375em;
     }
 
     &__icon-blue {
         color: #006EFF;
-        font-size: 24px;
+        font-size: 1.5em;
         font-weight: 300;
     }
 }
 // ****************************************************************************************************
 .lkTaskSimulatorFlow {
     &__table {
-        margin-top: 20px;
+        margin-top: 1.25em;
     }
 
     &__icon-setting {
-        margin: 0 28px;
+        margin: 0 1.75em;
     }
 
     &__table-icon {
         color: #006EFF;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.icon_download {
+    &:before {
+        content: url("../img/download.svg");
+        margin: 0 20px;
+
     }
 }
 // **************************************************************************************************************
 .lkTaskSimulatorReport {
     &__table {
         border: none;
-        margin-top: 30px;
+        margin-top: 1.875em;
     }
 
     &__table-total {
@@ -183,25 +192,56 @@
 }
 // *********************************************************************************************************************
 .lkTaskSimulatorAppraisals {
-    span {
-        margin-left: 20px;
+    margin-top: 30px;
+
+    table span {
+        margin-left: 1.25em;
     }
 
     &__table {}
 
+    &__form {
+        display: flex;
+    }
+
     &__table-form {}
 
     &__table-input {
-        max-width: 50px;
+        max-width: 3.125em;
     }
 
     &__table-input2 {
-        max-width: 130px;
+        max-width: 8.125em;
     }
 
     &__title {
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 20px;
+        font-size: 1.25em;
+        margin-top: 1.875em;
+        margin-bottom: 1.25em;
+    }
+}
+
+.horizontal__input {
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 1.88em;
+        align-items: center;
+
+    }
+
+    &.form__label {
+        @media (min-width: 768px) {
+            width: auto;
+
+        }
+
+    }
+
+}
+
+.horizontal__col {
+    @media (min-width: 768px) {
+
+        width: 200px;
     }
 }
