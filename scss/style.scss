@@ -708,3 +708,92 @@ $icon_whatsapp: "\e903";
         margin-top: 1em;
     }
 }
+
+.errorPage {
+    position: relative;
+    text-align: center;
+    margin-top: 6.25em;
+
+    &:before {
+
+        @media (min-width: 768px) {
+            content: '';
+            position: absolute;
+            display: block;
+            right: $quat_size;
+            top: $quat_size;
+            background: #3D3098;
+            width: $quat_size;
+            height: $quat_size;
+        }
+    }
+
+    &__quadr {
+        &:after,
+        &:before {
+            @media (min-width: 768px) {
+                content: '';
+                position: absolute;
+                display: block;
+                left: $quat_size*2;
+                top: 0;
+                background: #fff;
+                width: $quat_size;
+                height: $quat_size;
+            }
+        }
+
+        &:before {}
+
+        &:after {
+            @media (min-width: 768px) {
+                left: $quat_size;
+                top: $quat_size;
+                background: #006EFF;
+            }
+        }
+    }
+
+    &__num {
+        font-family: 'Igra Sans';
+        font-weight: normal;
+        font-size: 8.25em;
+        line-height: 116%;
+        color: #006EFF;
+        margin: 0;
+
+        @media (min-width: 768px) {
+            font-size: 11.25em;
+        }
+    }
+
+    &__text {
+        font-family: 'Igra Sans';
+        font-size: 1.5em;
+        margin-bottom: 1.13em;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+
+        @media (min-width: 768px) {
+            gap: 1.88em;
+            flex-direction: row;
+        }
+
+        .btn {
+            @media (min-width: 768px) {
+                padding-left: 78px;
+                padding-right: 78px;
+            }
+        }
+    }
+}
