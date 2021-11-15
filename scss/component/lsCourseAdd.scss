@@ -1,0 +1,159 @@
+.lsCourseAdd {
+    @media (min-width: 768px) {
+        max-width: 71.8125em;
+    }
+
+    &__title {
+        font-size: 1.3em;
+        font-weight: 400;
+        font-family: $second_font_family;
+        line-height: 1.1;
+        margin: 0 0 0.87em;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+    }
+
+    &__headline {
+        color: rgba($main_color, .5);
+        margin-bottom: 2.8125em;
+
+        @media (min-width: 768px) {
+            max-width: 45.9em;
+            font-size: 1.25em;
+        }
+    }
+
+    &__row {
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.875em;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.6em;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        line-height: 1.16;
+
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+        }
+
+        .icon_help {
+            margin-left: 0.6em;
+            font-size: 0.8em;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+    }
+
+    &__field {}
+
+    &__subrow {
+        margin-top: 1em;
+        padding-left: 1em;
+
+        @media (min-width: 768px) {
+            margin-top: 1.875em;
+            padding-left: 1.875em;
+        }
+    }
+
+    &__delete {
+        display: flex;
+        align-items: center;
+        color: #A9A9A9;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            font-size: 1.0625em;
+        }
+
+        &:hover {
+            color: darken(#A9A9A9, 10%);
+        }
+
+        i {
+            font-size: 0.6em;
+            margin-right: 0.7em;
+        }
+    }
+
+    &__nav {
+        margin-top: 2.5em;
+        display: flex;
+        gap: 1.875em;
+        justify-content: space-between;
+
+        .btn_link {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .lkCoursMessage__file {
+        margin-top: 1.25em;
+    }
+
+    textarea {
+        height: 10.125em;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875em;
+
+        @media (min-width: 768px) {
+            align-items: flex-start;
+            flex-direction: row;
+        }
+
+        .btn {
+            @media (min-width: 768px) {
+                padding: 0.9em 2em;
+            }
+        }
+    }
+
+    &__select {
+        @media (min-width: 768px) {
+            width: 18.75em;
+        }
+
+        .select2 {
+            width: 100% !important;
+        }
+
+        .valid {
+            font-size: 0.875em;
+            font-weight: 500;
+            margin-top: 0.3125em;
+            color: #169F62;
+        }
+    }
+
+    &__show {
+        padding-top: 1em;
+        display: flex;
+        align-items: center;
+        color: #A9A9A9;
+
+        i {
+            margin-right: 5px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: $size_xxxs;
+        }
+    }
+
+}

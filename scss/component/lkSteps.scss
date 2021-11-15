@@ -1,0 +1,34 @@
+.lkSteps {
+    display: flex;
+    margin-bottom: 2.8125em;
+    gap: 1em;
+
+    @media (min-width: 768px) {
+        gap: 1.875em;
+    }
+
+    &__item {
+        width: 19.25em;
+        clip-path: polygon(94% 0%, 100% 50%, 94% 100%, 0% 100%, 0% 0%);
+        background: #E9E9E9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9375em;
+        padding: 0.66em 1.8125em 0.66em 0.75em;
+
+        @media (min-width: 768px) {
+            padding: 1.0625em 1.8125em 1.0625em 1.25em;
+        }
+
+        &.completed {
+            background: #DEE9F7;
+            color: #96ADCB;
+        }
+
+        &.current {
+            background: #C6DEFD;
+        }
+    }
+
+}
