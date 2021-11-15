@@ -1,0 +1,114 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Редактирование задания: Симулятор
+    .lkTaskSimulator
+        .lkTaskSimulator__title Записанные на курс пользователи
+        .form.lkTaskSimulator__form
+            .form__row.form__row_inline
+                .form__label-search Соответствие
+                .form__field-search
+                    .grid
+                        .col
+                            +select('Любое')
+                .form__input-search
+                    input(type="text", placeholder="Введите ФИО для поиска")
+                    i.icon_search.lkTaskSimulator__search
+
+        .lkTaskSimulator__table
+            table
+                thead
+                    tr
+                        th
+                            input(type="checkbox")
+                        th Имя и фамилия
+                        th E-mail
+                        th Роли
+                        th Группы
+                        th Посл. доступ к курсу
+                        th Состояние
+
+                tbody
+                    tr
+                        td
+                            input(type="checkbox")
+                            td(data-th="Имя и фамилия") Пантюков Сергей
+                            td(data-th="E-mail")
+                                a.title(href="#") Pantuckiv@mail.ru
+                            td(data-th="Роли") Студент
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Группы") Группа №2
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Посл. доступ к курсу") 2 дня 22 часа
+                            td.lkTaskSimulator__table-active(data-th="Состояние") Активно
+                                i.icon_setting.lkTaskSimulator__table-setting
+                                i.icon_delete_round.lkTaskSimulator__table-delete
+                    tr
+                        td
+                            input(type="checkbox")
+                            td(data-th="Имя и фамилия") Пантюков Сергей
+                            td(data-th="E-mail")
+                                a.title(href="#") Pantuckiv@mail.ru
+                            td(data-th="Роли") Учитель
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Группы") Нет группы
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Посл. доступ к курсу") 2 дня 22 часа
+                            td.lkTaskSimulator__table-active(data-th="Состояние") Активно
+                                i.icon_setting.lkTaskSimulator__table-setting
+                                i.icon_delete_round.lkTaskSimulator__table-delete
+                    tr
+                        td
+                            input(type="checkbox")
+                            td(data-th="Имя и фамилия") Пантюков Сергей
+                            td(data-th="E-mail") 
+                                a.title(href="#") Pantuckiv@mail.ru
+                            td(data-th="Роли") Студент
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Группы") Группа №1
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Посл. доступ к курсу") 2 дня 22 часа
+                            td.lkTaskSimulator__table-active(data-th="Состояние") Активно
+                                i.icon_setting.lkTaskSimulator__table-setting
+                                i.icon_delete_round.lkTaskSimulator__table-delete
+
+                    tr
+                        td
+                            input(type="checkbox")
+                            td(data-th="Имя и фамилия") Пантюков Сергей
+                            td(data-th="E-mail")
+                                a.title(href="#") Pantuckiv@mail.ru
+                            td(data-th="Роли") Абитуриент
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Группы") Группа №14
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Посл. доступ к курсу") 2 дня 22 часа
+                            td.lkTaskSimulator__table-active(data-th="Состояние") Активно
+                                i.icon_setting.lkTaskSimulator__table-setting
+                                i.icon_delete_round.lkTaskSimulator__table-delete
+
+                    tr
+                        td
+                            input(type="checkbox")
+                            td(data-th="Имя и фамилия") Пантюков Сергей
+                            td(data-th="E-mail")
+                                a.title(href="#") Pantuckiv@mail.ru
+                            td(data-th="Роли") Студент
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Группы") Группа №4
+                                i.icon_edit.lkTaskSimulator__table-edit
+                            td(data-th="Посл. доступ к курсу") 2 дня 22 часа
+                            td.lkTaskSimulator__table-active(data-th="Состояние") Активно
+                                i.icon_setting.lkTaskSimulator__table-setting
+                                i.icon_delete_round.lkTaskSimulator__table-delete
+
+        .lkCollapse__foot
+            button.btn.btn_primary Запись выбранных пользователей на курс

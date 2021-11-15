@@ -1,0 +1,151 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Редактирование задания: Симулятор
+    .lkTaskSurvey__top
+        a.lkTaskSurvey__link-top(href="#", target="_blank") Отчет по оценкам
+        a.lkTaskSurvey__link-top.active(href="#", target="_blank") Одиночный вид
+
+    .lkTaskSimulator__title Одиночный вид
+
+    .form
+        .form__row.form__row_inline
+            .form__label Оцениваемый элемент
+            .form__field
+                .grid
+                    .col.col_50
+                        +select('Все')
+
+        .form__row.form__row_inline
+            .form__label Пользователь
+            .form__field
+                .grid
+                    .col.col_50
+                        +select('Все')
+
+    .lkTaskSimulatorAppraisals
+        .lkTaskSimulatorAppraisals__table
+            table
+                thead
+                    tr
+                        th Элемент оценивания
+                        th Категория оценки
+                        th Диапазон
+                        th Оценка
+                        th Отзыв
+                        th 
+                            input(type="checkbox")
+                            span Выбрать все
+                        th 
+                            input(type="checkbox")
+                            span Выбрать все
+
+                tbody
+                    tr
+                        td(data-th="Элемент оценивания") Еуые
+                            i.icon_edit.lkTaskSimulator__table-edit
+
+                        td(data-th="Категория оценки") Говорим и показываем
+
+                        td(data-th="Диапазон") 0,00 - 100,00
+
+                        td(data-th="Оценка") 
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Отзыв")
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input2
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Переопределить
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Исключить
+
+
+                    tr
+                        td(data-th="Элемент оценивания") Тестовый симулятор
+                            i.icon_edit.lkTaskSimulator__table-edit
+
+                        td(data-th="Категория оценки") Говорим и показываем
+
+                        td(data-th="Диапазон") 0,00 - 100,00
+
+                        td(data-th="Оценка") 
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Отзыв")
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input2
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Переопределить
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Исключить
+
+
+                    tr
+                        td(data-th="Элемент оценивания") Итоговая оценка за курс
+                            i.icon_edit.lkTaskSimulator__table-edit
+
+                        td(data-th="Категория оценки") Говорим и показываем
+
+                        td(data-th="Диапазон") 0,00 - 100,00
+
+                        td(data-th="Оценка") 
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Отзыв")
+                            .form.lkTaskSimulatorAppraisals__table-form
+                                .form__input.lkTaskSimulatorAppraisals__table-input2
+                                    input(type="text", placeholder="")
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Переопределить
+
+                        td(data-th="Выбрать все") 
+                            input(type="checkbox")
+                            span Исключить
+            .lkTaskSimulatorAppraisals__title Загрузка оценок
+            .form
+                .form__row.form__row_inline
+                    .form__check
+                        input(type="checkbox")
+                        .form__checkText Выполнить загрузку оценок
+
+                .form__row.form__row_inline
+                    .form__label Оцениваемый элемент
+                    .form__field
+                        .grid
+                            .col.col_50
+                                +select('Все')
+
+                    .form__input
+                        input(type="text", placeholder="Введите ФИО для поиска")
+                        i.icon_search.lkTaskSimulator__search
+
+
+        .lkCollapse__foot
+            button.btn.btn_primary Запись выбранных пользователей на курс

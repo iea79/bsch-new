@@ -1,0 +1,26 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Опрос
+
+    .lkCoursTask__title Редактирование задания: Опрос
+    .lkTaskSurvey
+        .lkTaskSurvey__top
+            a.lkTaskSurvey__link-top(href="#", target="_blank") Просмотр
+            a.lkTaskSurvey__link-top.active(href="#", target="_blank") Редактировать вопросы
+        .lkEditTask__wrap
+            .lkCollapse
+                .form
+                    .form__row.form__row_inline
+                        .form__label Добавить вопрос
+
+                        .form__field
+                            .grid
+                                .col.col_100
+                                    +select('Выберите тип задания')

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.2"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+        <nav class="header__nav nav desktop">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="about.html">О школе </a></li>
+                <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="programs.html">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              </ul>
+        </nav>
+        <nav class="header__nav nav mobile">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="lk.html">Личный кабинет</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-courses.html">Мои курсы</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Мои сертификаты</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Уведомления</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-data.html">Мои данные</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="lk-settings.html">Настройки</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="home.html">Выход</a></li>
+              </ul>
+        </nav>
+        <div class="header__login">
+          <div class="header__user">
+            <div class="header__userNotif"><a href="#"><img src="img/notification.svg" alt=""/></a><span></span></div>
+            <div class="header__userImg"><img src="img/lk-data.jpg" alt=""/></div>
+          </div>
+          <div class="header__menu">
+            <div class="header__item"><img src="img/user-solid.svg" alt=""/><a href="#">Личный кабинет</a></div>
+            <div class="header__item"><img src="img/book-open-solid.svg" alt=""/><a href="#">Мои курсы</a></div>
+            <div class="header__item"><img src="img/certificate-solid.svg" alt=""/><a href="#">Мои сертификаты</a></div>
+            <div class="header__item"><img src="img/bell-solid.svg" alt=""/><a href="#">Уведомления</a></div>
+            <div class="header__item"><img src="img/address-card.svg" alt=""/><a href="#">Мои данные</a></div>
+            <div class="header__item"><img src="img/cog-solid.svg" alt=""/><a href="#">Настройки</a></div>
+            <div class="header__item"><img src="img/sign-out-alt-solid.svg" alt=""/><a href="#">Выход</a></div>
+          </div>
+        </div>
+        <div class="navbar__toggle"></div>
+      </div>
+    </header>
+    <main class="main_content">
+      <div class="lk">
+        <div class="container_center">
+          <div class="lkContent">
+            <div class="lkContent__aside">
+            </div>
+            <div class="lkContent__center">
+              <div class="lkContent__title">Редактирование задания: Симулятор</div>
+              <div class="lkCoursTask__title">Редактирование задания: Симулятор</div>
+              <div class="lkTaskSurvey__top"><a class="lkTaskSurvey__link-top" href="#" target="_blank">Отчет по оценкам</a><a class="lkTaskSurvey__link-top active" href="#" target="_blank">Одиночный вид</a></div>
+              <div class="lkTaskSimulator__title">Одиночный вид</div>
+              <div class="form">
+                <div class="form__row form__row_inline">
+                  <div class="form__label">Оцениваемый элемент</div>
+                  <div class="form__field">
+                    <div class="grid">
+                      <div class="col col_50">
+                        <select class="select" data-placeholder="Все">
+                          <option value=""></option>
+                          <option value="Значение 1">Значение 1</option>
+                          <option value="Значение 2">Значение 2</option>
+                          <option value="Значение 3">Значение 3</option>
+                          <option value="Значение 4">Значение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row form__row_inline">
+                  <div class="form__label">Пользователь</div>
+                  <div class="form__field">
+                    <div class="grid">
+                      <div class="col col_50">
+                        <select class="select" data-placeholder="Все">
+                          <option value=""></option>
+                          <option value="Значение 1">Значение 1</option>
+                          <option value="Значение 2">Значение 2</option>
+                          <option value="Значение 3">Значение 3</option>
+                          <option value="Значение 4">Значение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lkTaskSimulatorAppraisals">
+                <div class="lkTaskSimulatorAppraisals__table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Элемент оценивания</th>
+                        <th>Категория оценки</th>
+                        <th>Диапазон</th>
+                        <th>Оценка</th>
+                        <th>Отзыв</th>
+                        <th> 
+                          <input type="checkbox"/><span>Выбрать все</span>
+                        </th>
+                        <th> 
+                          <input type="checkbox"/><span>Выбрать все</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-th="Элемент оценивания">Еуые<i class="icon_edit lkTaskSimulator__table-edit"></i></td>
+                        <td data-th="Категория оценки">Говорим и показываем</td>
+                        <td data-th="Диапазон">0,00 - 100,00</td>
+                        <td data-th="Оценка"> 
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Отзыв">
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input2">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Переопределить</span>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Исключить</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-th="Элемент оценивания">Тестовый симулятор<i class="icon_edit lkTaskSimulator__table-edit"></i></td>
+                        <td data-th="Категория оценки">Говорим и показываем</td>
+                        <td data-th="Диапазон">0,00 - 100,00</td>
+                        <td data-th="Оценка"> 
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Отзыв">
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input2">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Переопределить</span>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Исключить</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-th="Элемент оценивания">Итоговая оценка за курс<i class="icon_edit lkTaskSimulator__table-edit"></i></td>
+                        <td data-th="Категория оценки">Говорим и показываем</td>
+                        <td data-th="Диапазон">0,00 - 100,00</td>
+                        <td data-th="Оценка"> 
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Отзыв">
+                          <div class="form lkTaskSimulatorAppraisals__table-form">
+                            <div class="form__input lkTaskSimulatorAppraisals__table-input2">
+                              <input type="text" placeholder=""/>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Переопределить</span>
+                        </td>
+                        <td data-th="Выбрать все"> 
+                          <input type="checkbox"/><span>Исключить</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="lkTaskSimulatorAppraisals__title">Загрузка оценок</div>
+                  <div class="form">
+                    <div class="form__row form__row_inline">
+                      <div class="form__check">
+                        <input type="checkbox"/>
+                        <div class="form__checkText">Выполнить загрузку оценок</div>
+                      </div>
+                    </div>
+                    <div class="form__row form__row_inline">
+                      <div class="form__label">Оцениваемый элемент</div>
+                      <div class="form__field">
+                        <div class="grid">
+                          <div class="col col_50">
+                            <select class="select" data-placeholder="Все">
+                              <option value=""></option>
+                              <option value="Значение 1">Значение 1</option>
+                              <option value="Значение 2">Значение 2</option>
+                              <option value="Значение 3">Значение 3</option>
+                              <option value="Значение 4">Значение 4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__input">
+                        <input type="text" placeholder="Введите ФИО для поиска"/><i class="icon_search lkTaskSimulator__search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lkCollapse__foot">
+                  <button class="btn btn_primary">Запись выбранных пользователей на курс</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__quatro"><span></span><span></span><span></span></div>
+      </div>
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__col"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/></a></div>
+          <div class="footer__col">
+            <div class="footer__head">Контакты</div>
+            <div class="footer__contact"><a href="mailto: gazetny@universitas.ru">gazetny@universitas.ru</a><a href="tel: + 7 (499) 110-90-08">+ 7 (499) 110-90-08</a></div>
+            <div class="footer__message"><a href=""><i class="icon_whatsapp"> </i><span>Поговорить <br>с БШГ в вотсап</span></a><a href=""> <i class="icon_telegram"> </i><span>Поговорить <br>с БШГ в телеграм</span></a></div>
+          </div>
+          <div class="footer__col desktop">
+            <div class="footer__head">Меню</div>
+            <nav class="footer__nav">
+              <ul class="navbar">
+                <li class="navbar__item"><a class="navbar__link" href="">Программы обучения</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Преподаватели и спикеры</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">О школе</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Новости</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Кампус</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col">
+            <div class="footer__head">Мы в соцсетях</div>
+            <div class="footer__soc">
+              <div class="soc"><a class="icon_instagram" href="" target="_blank"></a><a class="icon_facebook" href="" target="_blank"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__temp">
+            <div class="footer__copy">&copy; 2021</div>Бизнес-Школа на Газетном. <br>Московская высшая школа социальных и экономических наук
+          </div>
+          <div class="footer__policy"><a href="">Пользовательское соглашение</a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal infoModal-->
+    <div class="modal fade infoModal" id="loginModal">
+      <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+        <div class="form__wrapper">
+          <form>
+            <div class="form__legend">Авторизация</div>
+            <div class="form__row">
+              <input type="text" placeholder="E-mail"/>
+            </div>
+            <div class="form__row">
+              <input type="password" placeholder="Пароль"/>
+            </div>
+            <div class="form__action">
+              <button class="btn btn_primary" type="submit">Войти</button>
+            </div>
+            <div class="form__link"><a href="">Напомнить пароль</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End modal infoModal-->
+    <!-- Begin Modal messageModal-->
+    <div class="modal fade messageModal" id="messageModal">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="messageModal__content">
+            <div class="messageModal__icon"><i class="icon_check"></i></div>
+            <div class="messageModal__title">Спасибо. <br>Ваша заявка принята.</div>
+            <div class="messageModal__text">Наш менеджер свяжется с Вами в ближайшее время.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal messageModal-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.2"></script>
+  </body>
+</html>

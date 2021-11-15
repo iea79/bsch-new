@@ -1,0 +1,64 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Добавить/удалить группы: Тестовый поток 1
+    .lkTaskSimulatorGroup
+        .lkTaskSimulatorGroup__plate
+            .lkTaskSimulatorGroup__title Существующие участники (6)
+
+            .lkTaskSimulatorGroup__whiteBox
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 12
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 6
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 8
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 15
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 18
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 21
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+            .lkTaskSimulatorGroup__bottom
+                button.btn.btn_primary Сохранить и вернуться назад
+
+
+        .lkTaskSimulatorGroup__plate
+            .lkTaskSimulatorGroup__title Возможные участники
+            .lkTaskSimulatorGroup__whiteBox
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 1
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 2
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Группа 3
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name-blue Группа 4
+                    .lkTaskSimulatorGroup__icon-blue +

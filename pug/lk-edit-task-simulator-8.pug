@@ -1,0 +1,52 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Редактирование задания: Симулятор
+    .lkTaskSurvey__top
+        a.lkTaskSurvey__link-top.active(href="#", target="_blank") Отчет по оценкам
+        a.lkTaskSurvey__link-top(href="#", target="_blank") Одиночный вид
+
+    .lkTaskSimulator__title Отчет по оценкам
+    .form.lkTaskSimulatorGroup__form
+        .form__input-search
+            input(type="text", placeholder="Введите ФИО для поиска")
+            i.icon_search.lkTaskSimulator__search
+
+    .lkTaskSimulatorReport
+        .lkTaskSimulatorReport__table
+            table
+                thead
+                    tr
+                        th Имя и фамилия
+                        th E-mail
+                        th Еуые
+                            i.icon_edit.lkTaskSimulator__table-edit
+                        th Тестовый симулятор
+                            i.icon_edit.lkTaskSimulator__table-edit
+                        th Итоговая оценка за курс
+                            i.icon_edit.lkTaskSimulator__table-edit
+
+                tbody
+                    tr
+                        td(data-th="Имя и фамилия") Пантюков Сергей
+                            i.icon_edit.lkTaskSimulator__table-edit
+                        td(data-th="E-mail")
+                            a.title(href="#") Pantuckiv@mail.ru
+                        td(data-th="Еуые") -
+                        td(data-th="Тестовый симулятор") 1
+                        td(data-th="Итоговая оценка за курс") 1
+
+                    tr.lkTaskSimulatorReport__table-total
+                        td.lkTaskSimulatorReport__table-total.lkTaskSimulatorReport__table-total(data-th="Имя и фамилия") Общее среднее
+                        td.lkTaskSimulatorReport__table-total(data-th="E-mail")
+                        td.lkTaskSimulatorReport__table-total(data-th="Еуые") -
+                        td.lkTaskSimulatorReport__table-total(data-th="Тестовый симулятор") 1
+                        td.lkTaskSimulatorReport__table-total(data-th="Итоговая оценка за курс") 1

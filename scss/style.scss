@@ -36,6 +36,12 @@ $quat_size_sm: 2.6em;
 $icomoon-font-family: "bsch" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon_listener: "\e91d";
+$icon_delete_round: "\e91e";
+$icon_delete: "\e91f";
+$icon_edit: "\e920";
+$icon_search: "\e921";
+$icon_setting: "\e922";
 $icon_bell: "\e91b";
 $icon_close: "\e91c";
 $icon_success-square: "\e917";
@@ -88,6 +94,42 @@ $icon_whatsapp: "\e903";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_listener {
+    &:before {
+        content: $icon_listener;
+    }
+}
+
+.icon_delete_round {
+    &:before {
+        content: $icon_delete_round;
+    }
+}
+
+.icon_delete {
+    &:before {
+        content: $icon_delete;
+    }
+}
+
+.icon_edit {
+    &:before {
+        content: $icon_edit;
+    }
+}
+
+.icon_search {
+    &:before {
+        content: $icon_search;
+    }
+}
+
+.icon_setting {
+    &:before {
+        content: $icon_setting;
+    }
 }
 
 .icon_bell {
@@ -362,6 +404,8 @@ $icon_whatsapp: "\e903";
 @import "./component/lk-teacher-publication";
 
 @import "./component/lkEditTask";
+@import "./component/lk-edit-task-survey";
+@import "./component/lk-edit-task-simulator";
 
 @import "./component/lkCoursInfo";
 

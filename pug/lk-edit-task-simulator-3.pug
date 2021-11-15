@@ -1,0 +1,59 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Редактирование задания: Симулятор
+    .lkCollapse(data-collapse-wrapper="")
+        .lkCollapse__title.open(data-collapse="") Общее
+        .lkCollapse__body.open(data-collapse-body="")
+            .form
+
+                .form__row
+                    .form__label Название группы*
+                    .form__field
+                        input(type="text", placeholder="Введите полное название группы")
+
+                .form__row
+                    .form__label ID группы
+                    .form__field
+                        input(type="text", placeholder="Введите ID группы")
+
+
+                .form__row
+                    .form__label Описание группы
+                    .form__field
+                        textarea(placeholder="Введите текст")
+
+
+                .form__row
+                    .form__label Кодовое слово
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        input(type="text", placeholder="Введите кодовое слово")
+
+                .form__row
+                    .form__label Групповые сообщения
+                        .icon_help(title="Системная подсказка")
+                    .form__field
+                        .grid
+                            .col
+                                +select('Нет')
+
+                .form__row
+                    .form__label Новое изображение
+                        .icon_help(title="Системная подсказка")
+
+                    .form__field
+                        +upload()
+
+    .lkCollapse__info * - обязательно
+    .lkCollapse__foot
+        button.btn.btn_primary Сохранить
+        button.btn.btn_link ОТМЕНА
