@@ -1,0 +1,81 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Добавить/удалить участников: Группа 1
+    .lkTaskSimulatorGroup
+        .lkTaskSimulatorGroup__plate
+            .lkTaskSimulatorGroup__title Участники группы
+            .form.lkTaskSimulatorGroup__form
+                .form__input-search
+                    input(type="text", placeholder="Введите ФИО для поиска")
+                    i.icon_search.lkTaskSimulator__search
+
+
+            .lkTaskSimulatorGroup__whiteBox
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Садвокасов Сергей
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Панин Алексей
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Марченко Игорь
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Плеховский Илья
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Девятериков Александр
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Шестернин Максим
+                    .lkTaskSimulatorGroup__icon
+                        i.icon_delete_round
+            .lkTaskSimulatorGroup__bottom
+                button.btn.btn_primary Сохранить и вернуться назад
+
+
+        .lkTaskSimulatorGroup__plate
+            .lkTaskSimulatorGroup__title Возможные участники
+            .form.lkTaskSimulatorGroup__form
+                .form__input-search
+                    input(type="text", placeholder="Введите ФИО для поиска")
+                    i.icon_search.lkTaskSimulator__search
+            .lkTaskSimulatorGroup__whiteBox
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Федоров Е.В.
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Медведев А.В.
+
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name Софрыгин А.В.
+
+                    .lkTaskSimulatorGroup__icon-blue +
+
+                .lkTaskSimulatorGroup__item
+                    .lkTaskSimulatorGroup__name-blue Тимонов У.Е.
+
+                    .lkTaskSimulatorGroup__icon-blue +
+
+
+            .lkTaskSimulatorGroup__bottom
+                i.icon_edit.lkTaskSimulator__table-edit
+                button.btn.btn_link.lkTaskSimulatorGroup__linkBtn Добавить или удалить участников группы

@@ -1,0 +1,70 @@
+extends layout/lk.pug
+
+block variables
+    - lkPage = '';
+    - isLogin = true;
+    - isCourse = false;
+    - asideHide = true;
+    - navHide = true;
+block lkcontent
+    .lkContent__title Редактирование задания: Симулятор
+
+    .lkCoursTask__title Редактирование задания: Симулятор
+    .lkTaskSurvey__top
+        a.lkTaskSurvey__link-top(href="#", target="_blank") Группы
+        a.lkTaskSurvey__link-top.active(href="#", target="_blank") Потоки
+    .lkTaskSimulator__title Потоки
+    .lkTaskSimulatorFlow
+        .lkTaskSimulatorFlow__table
+            table
+                thead
+                    tr
+                        th Поток
+                        th Группы
+                        th Элементы курса
+                        th Редактирование
+
+                tbody
+                    tr
+                        td(data-th="Поток") Тестовый поток 1
+                        td(data-th="Группы") Группа №1,2,3,12,23,34,45
+                        td(data-th="Элементы курса") Здесь будет элемент
+                        td.lkTaskSimulatorFlow__table-icon(data-th="Редактирование") 
+                            i.icon_edit
+                            i.icon_setting.lkTaskSimulatorFlow__icon-setting
+                            i.icon_delete_round
+                    tr
+                        td(data-th="Поток") Тестовый поток 1
+                        td(data-th="Группы") Группа №1,2,3,12,23,34,45
+                        td(data-th="Элементы курса") Здесь будет элемент
+                        td.lkTaskSimulatorFlow__table-icon(data-th="Редактирование") 
+                            i.icon_edit
+                            i.icon_setting.lkTaskSimulatorFlow__icon-setting
+                            i.icon_delete_round
+                    tr
+                        td(data-th="Поток") Тестовый поток 1
+                        td(data-th="Группы") Группа №1,2,3,12,23,34,45
+                        td(data-th="Элементы курса") Здесь будет элемент
+                        td.lkTaskSimulatorFlow__table-icon(data-th="Редактирование") 
+                            i.icon_edit
+                            i.icon_setting.lkTaskSimulatorFlow__icon-setting
+                            i.icon_delete_round
+                    tr
+                        td(data-th="Поток") Тестовый поток 1
+                        td(data-th="Группы") Группа №1,2,3,12,23,34,45
+                        td(data-th="Элементы курса") Здесь будет элемент
+                        td.lkTaskSimulatorFlow__table-icon(data-th="Редактирование") 
+                            i.icon_edit
+                            i.icon_setting.lkTaskSimulatorFlow__icon-setting
+                            i.icon_delete_round
+                    tr
+                        td(data-th="Поток") Тестовый поток 1
+                        td(data-th="Группы") Группа №1,2,3,12,23,34,45
+                        td(data-th="Элементы курса") Здесь будет элемент
+                        td.lkTaskSimulatorFlow__table-icon(data-th="Редактирование") 
+                            i.icon_edit
+                            i.icon_setting.lkTaskSimulatorFlow__icon-setting
+                            i.icon_delete_round
+
+            .lkTaskSimulatorGroup__bottom
+                button.btn.btn_primary Создать поток

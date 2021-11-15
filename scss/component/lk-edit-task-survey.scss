@@ -1,0 +1,69 @@
+.lkTaskSurvey {
+    &__desc {
+        color: rgba(29, 29, 27, 0.5);
+
+    }
+
+    &__action {
+        margin-top: 30px;
+        padding-bottom: 45px;
+    }
+
+    &__linkBottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+    }
+
+    &__top {
+        padding: 15px 0;
+    }
+
+    &__edit {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        display: block;
+        font-size: 17px;
+        line-height: 1.17;
+        text-transform: uppercase;
+        color: #006EFF;
+
+    }
+
+    &__link-top {
+        display: inline-block;
+        color: #000;
+        margin-right: 35px;
+
+        &.active {
+            color: #006EFF;
+            text-decoration: underline;
+
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 300px;
+        padding: 10px 0;
+    }
+
+    &__label {
+        font-size: 20px;
+        line-height: 1.16;
+        color: #0C0B0D;
+    }
+
+    &__value {
+        color: #898988;
+    }
+
+    &__text {
+        padding: 10px 0;
+    }
+}
