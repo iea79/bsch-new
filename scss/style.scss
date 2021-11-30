@@ -440,3 +440,30 @@ $icon_whatsapp: "\e903";
 @import "./component/lkCollapse";
 @import "./component/errorPage";
 @import "./component/teacherNav";
+
+.cookiConfirm {
+    display: none;
+    position: fixed;
+    width: 100%;
+    max-width: 90%;
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(#000, 0.1);
+    background: #fff;
+    padding: 0.7em 1.3em;
+
+    @media (min-width: 768px) {
+        max-width: 46em;
+        border-radius: 2em;
+        padding: 0.5em 1.7em;
+    }
+
+    &__text {
+        margin-right: 1em;
+    }
+}

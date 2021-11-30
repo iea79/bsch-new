@@ -110,6 +110,21 @@ function checkOnResize() {
     replaceTeachersButton();
 }
 
+function hideCoockiesAllert() {
+    const btn = document.querySelector('#cookiConfirm'),
+          wrap = document.querySelector('.cookiConfirm');
+
+    if (!localStorage.getItem('cookies_confirm')) {
+        wrap.style.display = 'flex';
+    }
+    btn.addEventListener('click', () => {
+        localStorage.setItem('cookies_confirm', 1);
+        wrap.style.display = 'none';
+    });
+}
+hideCoockiesAllert();
+
+
 // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
 function stikyMenu() {
     let HeaderTop = $( 'header' ).offset().top + $( '.home' ).innerHeight();
@@ -775,6 +790,7 @@ function collapsed() {
     });
 }
 collapsed();
+
 
 //
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
