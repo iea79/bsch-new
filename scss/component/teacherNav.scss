@@ -1,5 +1,8 @@
 .teacherNav {
-    padding-top: 6.1em;
+    margin-bottom: 2em;
+    @media (min-width: 768px) {
+        padding-top: 6.1em;
+    }
 
     &__list {
         white-space: nowrap;

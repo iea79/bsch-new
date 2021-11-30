@@ -117,10 +117,13 @@ function hideCoockiesAllert() {
     if (!localStorage.getItem('cookies_confirm')) {
         wrap.style.display = 'flex';
     }
-    btn.addEventListener('click', () => {
-        localStorage.setItem('cookies_confirm', 1);
-        wrap.style.display = 'none';
-    });
+    try {
+        btn.addEventListener('click', () => {
+            localStorage.setItem('cookies_confirm', 1);
+            wrap.style.display = 'none';
+        });
+    } catch (e) {
+    }
 }
 hideCoockiesAllert();
 

@@ -1,9 +1,15 @@
 .lkContent {
-    display: flex;
     padding: 2em 0;
+    @media (min-width: 768px) {
+        display: flex;
+    }
 
     &__aside {
         display: none;
+
+        &_show {
+            display: block;
+        }
         @media (min-width: 768px) {
             display: block;
             margin-right: 2em;
