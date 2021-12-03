@@ -246,7 +246,13 @@
 
     &__nav {
         text-align: right;
-        margin-top: 3.125em;
+        margin-top: 2.13em;
+
+        .btn {
+            @media (max-width: 767px) {
+                margin-top: 1em;
+            }
+        }
 
         &_test {
             margin-top: 1.0714em;
